@@ -1,0 +1,104 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-mkdocs", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/user/t/", 
+            "text": "tt\n\n\nt1\n\n\nssss\n\n\nt2\n\n\nsaaa\n\n\nt3\n\n\ndfdfd\n\n\ntt1\n\n\ndfdf\n\n\ntt2\n\n\nass\n\n\ntt3\n\n\nfdfdfdss", 
+            "title": "Writing your docs"
+        }, 
+        {
+            "location": "/user/t/#tt", 
+            "text": "", 
+            "title": "tt"
+        }, 
+        {
+            "location": "/user/t/#t1", 
+            "text": "ssss", 
+            "title": "t1"
+        }, 
+        {
+            "location": "/user/t/#t2", 
+            "text": "saaa", 
+            "title": "t2"
+        }, 
+        {
+            "location": "/user/t/#t3", 
+            "text": "dfdfd", 
+            "title": "t3"
+        }, 
+        {
+            "location": "/user/t/#tt1", 
+            "text": "dfdf", 
+            "title": "tt1"
+        }, 
+        {
+            "location": "/user/t/#tt2", 
+            "text": "ass", 
+            "title": "tt2"
+        }, 
+        {
+            "location": "/user/t/#tt3", 
+            "text": "fdfdfdss", 
+            "title": "tt3"
+        }, 
+        {
+            "location": "/api/mkdocs/about/", 
+            "text": "about\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nco\n\n\n111\n\n\ncs\n\n\n2222", 
+            "title": "License"
+        }, 
+        {
+            "location": "/api/mkdocs/about/#about", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "about"
+        }, 
+        {
+            "location": "/api/mkdocs/about/#co", 
+            "text": "111", 
+            "title": "co"
+        }, 
+        {
+            "location": "/api/mkdocs/about/#cs", 
+            "text": "2222", 
+            "title": "cs"
+        }, 
+        {
+            "location": "/api/mkdocs/", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Release Notes"
+        }, 
+        {
+            "location": "/api/mkdocs/#welcome-to-mkdocs", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/api/mkdocs/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/api/mkdocs/#project-layout", 
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }
+    ]
+}
