@@ -1,0 +1,10 @@
+site_name: MkLorum
+# theme: 'material'
+theme: 'cinder'
+pages:
+- Home: 'index.md'
+- User Guide:
+    - 'Writing your docs': 'user/t.md'
+- About:
+    - 'License': 'api/mkdocs/about.md'
+    - 'Release Notes': 'api/mkdocs/index.md'
