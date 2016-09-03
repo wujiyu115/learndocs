@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>编译过程 - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                c++基础 <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        编译过程
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="编译过程" href="./">
+      编译过程
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="一 语言类型概念" href="#_1">
+                一 语言类型概念
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="二 c++编译过程" href="#c_1">
+                二 c++编译过程
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="三 java编译过程与c++的区别" href="#javac">
+                三 java编译过程与c++的区别
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../../python/py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../python/py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../../python/py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../../python/py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../../python/py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../../python/py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../python/py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../../python/py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../../python/py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../../python/py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../../python/py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../../python/py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../../python/py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../../python/py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../../python/py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../../python/py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../../python/py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../../python/py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../../python/py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../../python/py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../../python/py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../../python/py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../../python/py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="c">c++ 第四章  编译过程</h1>
+<h2 id="_1">一 <strong>语言类型概念</strong></h2>
+<ul>
+<li><code>解释型语言</code>:在运行期逐行解释源码为机器码,如javascript.</li>
+<li><code>编译型语言</code>:在编译期一次性将源码转换成机器码的语言，平台依赖性较高。如c,c++.</li>
+</ul>
+<p>像java,actionscript。这种则属于混合型的语言了，java编译成的并非机器码，由jvm去解释所生成的java字节码，而actioncript也有avm类似的解释器。</p>
+<ul>
+<li><code>动态语言</code>:在运行期才去检测数据类型的语言。像javascript.</li>
+<li><code>静态语言</code>:在编译期检查数据类型,如c,c++等.</li>
+</ul>
+<h2 id="c_1">二 <strong>c++编译过程</strong></h2>
+<p><a href="http://farwmarth.com/wp-content/uploads/2013/08/image11.png"><img alt="image" src="http://farwmarth.com/wp-content/uploads/2013/08/image_thumb11.png" title="image" /></a></p>
+<ul>
+<li><code>预处理</code>: 对预处理指令作一些替换操作,处理#include,#define,#if等，还有注释的删除工作.</li>
+<li><code>编译</code>:将预处理文件进行进行一系列<strong>词法分析</strong>（<a href="http://en.wikipedia.org/wiki/Lex_(software)">lex</a>）、<strong>语法分析</strong>（<a href="http://en.wikipedia.org/wiki/Yacc">yacc</a>）、<strong>语义分析</strong>及<strong>优化</strong>后生成汇编代码</li>
+<li>
+<p><code>汇编</code>:汇编代码到目标文件,<strong>目标文件</strong>以机器码的形式包含了<strong>编译单元</strong>(每一个cpp文件就是一个编译单元)里所有的代码和数据，以及一些其他的信息.
+目标文件除了自己数据和二进制外还提供三个表:</p>
+<ul>
+<li><strong>未解决符号表</strong>:被编译单元引用却不定义在其中的符号和地址.</li>
+<li><strong>导出符号表</strong>: 定义在些编译单元并提供给其他编译单元的符号和地址.</li>
+<li><strong>地址重定向表</strong>:本编译单元对自身引用的记录.</li>
+</ul>
+</li>
+<li>
+<p><code>链接</code>:将多个目标文件,库，链接为一个可执行文件</p>
+</li>
+</ul>
+<p><a href="http://farwmarth.com/wp-content/uploads/2013/08/image12.png"><img alt="image" src="http://farwmarth.com/wp-content/uploads/2013/08/image_thumb12.png" title="image" /></a></p>
+<p>链接器进行链接时，先确定各个编译单元的位置，然后遍历编译单元的未解决符号表，并且在所有导出符号表时查找匹配的符号并填上地址。最后将目标文件的内容写在各自的位置上。一个可执行文件就链接完成了。</p>
+<h2 id="javac">三 <strong>java编译过程与c++的区别</strong></h2>
+<p>c++编译代码时，依据特定平台将未解决符表转换为特定的的内存偏移量，平台依赖性较强.</p>
+<p>java编译器在编译器却不确定内存布局。而是在运行期，在代码通用classLoader载入完成，校验完代码后才确定了内存布局.在运行期通过查表的方式来确定一个方法所在的地址。这才是java一次编译，到处运行的原因.</p>
+<p><a href="http://www.cnblogs.com/hongfenglee/archive/2012/02/18/2356808.html">http://www.cnblogs.com/hongfenglee/archive/2012/02/18/2356808.html</a>
+<a href="http://www.xue5.com/Developer/C++/738463_2.html">http://www.xue5.com/Developer/C++/738463_2.html</a>
+<a href="http://blog.163.com/zhaoxin851055@126/blog/static/81129298200987112318323/">http://blog.163.com/zhaoxin851055@126/blog/static/81129298200987112318323/</a>
+<a href="http://developer.51cto.com/art/201009/226884.htm">http://developer.51cto.com/art/201009/226884.htm</a></p>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../cplus3_memory/" title="内存分配">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                内存分配
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../cplus5_const/" title="常量修饰符">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                常量修饰符
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>模块管理 - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                python <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        模块管理
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="模块管理" href="./">
+      模块管理
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Python 包管理工具" href="#python_1">
+                Python 包管理工具
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Python 虚拟环境" href="#python_4">
+                Python 虚拟环境
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="python技巧" href="#python_5">
+                python技巧
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="python">﻿Python 模块管理</h1>
+<h2 id="python_1">Python 包管理工具</h2>
+<h3 id="distutils">distutils</h3>
+<p>python 标准库的一部分，2000年发布。使用它能够进行python模块的安装和发布setup.py就是利用distutils的功能写成.
+简单打包示例:创建两个文件test.py和setup.py,setup.py内空如下:</p>
+<pre><code class="py">from distutils.core import setup
+setup(
+    name='test',
+    version='1.0',
+    author='far',
+    author_email='wujiyu115@gmail.com',
+    url='htt://www.farwmarth.com',
+    py_modules=['test'],
+)
+</code></pre>
+
+<p>运行<code>python setup.py sdist</code>,会生成一个"test-1.0.zip"包.解压缩使用<code>python setup.py install</code> 就可以安装并使用test模块了</p>
+<h4 id="distutils_1">distutils包管理</h4>
+<pre><code class="shell">#安装包
+python setup.py install
+#打包成压缩文件
+python setup.py sdist
+#打包成exe安装
+python setup.py bdist_wininst
+</code></pre>
+
+<h3 id="setuptoolsdistribute">setuptools,distribute</h3>
+<p>一个为了增强 distutils 而开发的集合，2004年发布。它包含了 easy_install
+这个工具setuptools是一个项目的名称,是基础组件,而 easy_install 是这个项目中提供的工具,它依赖基础组件工作.setuptools使用了一种新的文件格式（.egg），可以为Python包创建 egg文件。setuptools 可以识别.egg文件，并解析、安装它.
+至于distribute，它是setuptools的一个分支版本。分支的原因是有一部分开发者认为 setuptools 开发太慢。但现在，distribute 又合并回了 setuptools 中，所以可以认为它们是同一个东西.
+总的来说:</p>
+<ul>
+<li>setuptools/distribute 都扩展了 distutils，提供了更多的功能</li>
+<li>easy_install是基于setuptools/distribute的一个工具，方便了包的安装和省级
+<a href="https://pypi.python.org/pypi/setuptools">setuptools包</a></li>
+</ul>
+<h4 id="_1">安装</h4>
+<pre><code class="shell">#windows 安装 :下载  https://bootstrap.pypa.io/ez_setup.py 并执行python
+#linux
+wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+#mac
+curl https://bootstrap.pypa.io/ez_setup.py -o - | python
+</code></pre>
+
+<h4 id="_2">反安装</h4>
+<p>在windows上如果用exe或者是msi安装的,用安装包添加/删除项来进行反安装
+其他情况先删除所有在<code>site-packages</code>目录和<code>sys.pyath</code>目录下的所有带<code>setuptools*</code> 和 <code>distribute*</code> 文件,然后移除在<code>scripts</code> 目录的<code>easy_install</code>和   <code>easy_install-x.x</code>可执行文件</p>
+<h4 id="easy_install">用easy_install管理包</h4>
+<p><a href="https://pythonhosted.org/setuptools/easy_install.html#installing-easy-install">installing-easy-install</a></p>
+<pre><code class="shell">#版本
+easy_install --version
+#根据包名安装
+easy_install SQLObject
+#安装解压的目录
+easy_install .
+#安装egg,网址或者本地路径
+easy_install http://example.com/downloads/ExamplePackage-2.0-py2.4.egg
+
+#升级
+easy_install --upgrade PyProtocols
+easy_install &quot;SomePackage==2.0&quot;
+
+#移除
+easy_install -m PackageName
+</code></pre>
+
+<h3 id="pip">pip</h3>
+<h4 id="pip_1">安装pip</h4>
+<pre><code class="shell">##安装pip
+easy_install pip
+## 安装pip2
+curl https://bootstrap.pypa.io/get-pip.py | python
+</code></pre>
+
+<h4 id="pip_2">pip包管理</h4>
+<pre><code class="shell">#安装:
+pip install SomePackage
+#安装指定版本号
+pip install SomePackage==1.0.4
+#指定源安装
+pip install SomePackage -i https://pypi.doubanio.com/
+#升级
+pip install --upgrade SomePackage
+#卸载:
+pip uninstall SomePackage
+#查看已安装
+pip list
+#查看可升级
+pip list --outdated
+#查看安装的路径及文件信息
+pip show --files SomePackage
+
+
+# 使用pip导出依赖文件列表
+pip freeze &gt; requirements.txt
+# 根据依赖文件列表，自动安装对应的软件包
+pip install -r requirements.txt
+</code></pre>
+
+<h4 id="python_2">显示python安装的模块</h4>
+<pre><code class="shell">#在pyhton环境中输入
+help('modules')
+#列出某一模块版本
+import yaml; print(yaml.__version__)
+</code></pre>
+
+<h4 id="python_3">显示python库路径</h4>
+<pre><code class="shell">python -c &quot;import sys;print(sys.path)&quot;
+</code></pre>
+
+<h4 id="pip_3">不同环境pip安装</h4>
+<pre><code class="shell">python3 -m pip install xxx
+</code></pre>
+
+<h3 id="wheeleggs">wheel,eggs</h3>
+<p><a href="http://wheel.readthedocs.io/en/latest/#">wheel doc</a>
+wheel 本质上是一个 zip 包格式，它使用 .whl 扩展名，用于 python 模块的安装，它的出现是为了替代 Eggs。</p>
+<ul>
+<li>对纯python或者c扩展安装速度更快</li>
+<li>不用执意任意代码如:setup.py</li>
+<li>在win或者mac上安装c扩展不需要编译环境</li>
+<li>测试和持续集成提供更好的缓存</li>
+<li>创建pyc文件有来匹配编译器</li>
+<li>更好的跨平台安装能力</li>
+</ul>
+<h4 id="_3">使用</h4>
+<pre><code># Make sure you have the latest pip that supports wheel
+pip install --upgrade pip
+
+# Install wheel
+pip install wheel
+
+# Build a directory of wheels for pyramid and all its dependencies
+pip wheel --wheel-dir=/tmp/wheelhouse pyramid
+
+# Install from cached wheels
+pip install --use-wheel --no-index --find-links=/tmp/wheelhouse pyramid
+
+# Install from cached wheels remotely
+pip install --use-wheel --no-index --find-links=https://wheelhouse.example.com/ pyramid
+</code></pre>
+
+<h2 id="python_4">Python 虚拟环境</h2>
+<h3 id="virtualenv">virtualenv</h3>
+<p>virtualenv用于创建独立的Python环境，多个Python相互独立，互不影响.
+实测默认情况下虚拟环境不会依赖系统环境的global site-packages。比如系统环境里安装了MySQLdb模块，在虚拟环境里import MySQLdb会提示ImportError。如果想依赖系统环境的第三方软件包，可以使用参数<code>--system-site-packages</code></p>
+<p>安装</p>
+<pre><code class="shell">sudo apt-get install python-virtualenv
+#or
+pip install virtualenv
+</code></pre>
+
+<p>使用</p>
+<pre><code class="shell">#创建
+virtualenv  test
+#启动虚拟环境
+cd test
+source ./bin/activate
+#退出虚拟环境
+deactivate
+</code></pre>
+
+<h3 id="virtualenvwrapper">Virtualenvwrapper</h3>
+<p>Virtaulenvwrapper是virtualenv的扩展包，可以方便的创建、删除、复制、切换不同的虚拟环境。</p>
+<p>安装</p>
+<pre><code class="shell">sudo easy_install virtualenvwrapper
+mkdir $HOME/.virtualenvs
+#在~/.bashrc中添加行：
+export WORKON_HOME=$HOME/.virtualenvs
+#在~/.bashrc中添加行：
+source /usr/local/bin/virtualenvwrapper.sh
+#运行：
+ source ~/.bashrc
+</code></pre>
+
+<p>使用</p>
+<pre><code class="shell">#列出虚拟环境列表
+workon
+#也可以使用
+lsvirtualenv
+#新建虚拟环境
+mkvirtualenv [虚拟环境名称]
+#启动/切换虚拟环境
+workon [虚拟环境名称]
+#删除虚拟环境
+rmvirtualenv [虚拟环境名称]
+#离开虚拟环境
+deactivate
+</code></pre>
+
+<h2 id="python_5">python技巧</h2>
+<h3 id="consider-a-more-secure-location-set-with-set_extraction_path-or-the-python_egg_cache-environment-variable">Consider a more secure location (set with .set_extraction_path or the PYTHON_EGG_CACHE environment variable)</h3>
+<pre><code>chmod g-wx,o-wx . /home/far/.python-eggs/
+</code></pre>
+
+<h3 id="insecureplatformwarning-a-true-sslcontext-object-is-not-available">InsecurePlatformWarning: A true SSLContext object is not available.</h3>
+<pre><code> pip install pyopenssl ndg-httpsclient pyasn1
+</code></pre>
+
+<h3 id="pip-cache-location">pip cache location</h3>
+<pre><code>%USERPROFILE%\AppData\Local\pip\cache
+</code></pre>
+
+<h3 id="pythoneasy_install">python安装easy_install失败的解决办法</h3>
+<p>错误详情:</p>
+<pre><code>File &quot;C:\Python27\lib\mimetypes.py&quot;, line 249, in enum_types
+ctype = ctype.encode(default_encoding) # omit in 3.x!
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xd7 in position 9: ordinal not in range(128)
+</code></pre>
+
+<p>解决:
+在python安装目录Lib的<code>mimetypes.py</code>中，
+<code>default_encoding = sys.getdefaultencoding()</code>
+这句之前加上设置默认编码，添加如下语句：</p>
+<pre><code class="py">reload(sys)
+sys.setdefaultencoding(&quot;cp936&quot;)
+</code></pre>
+
+<h3 id="python2python3">兼容python2和python3</h3>
+<h4 id="2to3">2to3</h4>
+<pre><code>python C:\Python33\Tools\Scripts\2to3.py -w 2to3Test.py
+</code></pre>
+
+<p>https://github.com/mitsuhiko/python-modernize
+http://haoluobo.com/2013/01/python2and3/</p>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../py_urllib/" title="网络库">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                网络库
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../py_thread/" title="线程">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                线程
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

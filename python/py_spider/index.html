@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>爬虫 - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                python <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        爬虫
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="爬虫" href="./">
+      爬虫
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="pyspider" href="#pyspider">
+                pyspider
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="scrapy" href="#scrapy">
+                scrapy
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="python">python爬虫初探</h1>
+<h2 id="pyspider">pyspider</h2>
+<p><code>github</code> : <a href="https://github.com/binux/pyspider">https://github.com/binux/pyspider</a></p>
+<p>其他文档
++ <a href="http://docs.pyspider.org/en/latest/">http://docs.pyspider.org/en/latest/</a>
++ <a href="http://blog.binux.me/2015/01/pyspider-tutorial-level-1-html-and-css-selector/">http://blog.binux.me/2015/01/pyspider-tutorial-level-1-html-and-css-selector/</a></p>
+<h3 id="_1">安装</h3>
+<h3 id="python_1">安装依赖环境和python</h3>
+<pre><code class="shell">sudo apt-get install python python-dev python-distribute python-pip libcurl4-openssl-dev libxml2-dev libxslt1-dev python-lxml
+sudo apt-get install python-pip
+</code></pre>
+
+<h4 id="phantomjs">安装PhantomJS</h4>
+<p>官网:<a href="http://phantomjs.org/">http://phantomjs.org/</a>
+PhantomJS是一个基于 WebKit 的非界面渲染html的引擎,用于 页面自动化 ， 网络监测 ， 网页截屏 ，以及 无界面测试 等</p>
+<pre><code class="shell">sudo apt-get install phantomjs
+</code></pre>
+
+<h4 id="pyspider_1">安装pyspider</h4>
+<pre><code class="shell">pip install pyspider
+</code></pre>
+
+<h4 id="_2">错误</h4>
+<ul>
+<li>connect to scheduler rpc error: error(111, 'Connection refused')</li>
+</ul>
+<pre><code class="shell">pip install -U supernova
+</code></pre>
+
+<h3 id="_3">启动</h3>
+<pre><code class="shell">pyspider
+</code></pre>
+
+<h3 id="_4">创建项目</h3>
+<p>打开<code>localhost:5000</code>打开<code>dashboard</code>,<code>create new project</code>
+<img alt="spider" src="../../_static/spider.png" /></p>
+<p>创建脚本:我这里以抓取一下云风的所有博文链接为例:</p>
+<pre><code class="python"># -*- coding: utf-8 -*-
+from pyspider.libs.base_handler import *
+import re
+class Handler(BaseHandler):
+    crawl_config = {
+        &quot;message_queue&quot;: &quot;redis://localhost:6379/db&quot;
+    }
+    #开启启动任务入口,一般为主页
+    @every(minutes=24 * 60)
+    def on_start(self):
+        self.crawl('http://blog.codingnow.com/', callback=self.index_page)
+
+    #根据标签过滤,页面上有个[enable css selector helper]可以快速定位
+    @config(age=10 * 24 * 60 * 60)
+    def index_page(self, response):
+        for each in response.doc('.module-archives li &gt; a[href^=&quot;http&quot;]').items():
+            if re.match(&quot;^http://blog.codingnow.com.*/$&quot;, each.attr.href):
+                self.crawl(each.attr.href, callback=self.second_index_page)
+
+    #我这里做了一个二级抓取,第一级为日期分类
+    @config(age=10 * 24 * 60 * 60)
+    def second_index_page(self, response):
+        for each in response.doc('.permalink[href^=&quot;http&quot;]').items():
+            if re.match(&quot;^http://blog.codingnow.com&quot;, each.attr.href):
+                self.crawl(each.attr.href, callback=self.detail_page)
+
+     #详情页我只抓了title和url.这里也可以分析正文
+    @config(priority=2)
+    def detail_page(self, response):
+        return {
+            &quot;url&quot;: response.url,
+            &quot;title&quot;: response.doc('title').text(),
+        }
+
+</code></pre>
+
+<p><img alt="spider_result.png" src="../../_static/spider_result.png" /></p>
+<p><a href="http://demo.pyspider.org/">http://demo.pyspider.org/</a></p>
+<h2 id="scrapy">scrapy</h2>
+<p><code>doc</code> : <a href="http://doc.scrapy.org/en/0.24/">http://doc.scrapy.org/en/0.24/</a></p>
+<h3 id="scrapy_1">安装scrapy</h3>
+<pre><code class="shell">pip install scrapy
+</code></pre>
+
+<h3 id="_5">创建工程</h3>
+<p><code>scrapy startproject codeingnow</code></p>
+<p>结构如下:</p>
+<pre><code class="shell">codeingnow
+│  scrapy.cfg  # 项目配置文件
+└─codeingnow
+    │  items.py #项目items文件
+    │  pipelines.py #项目管道文件
+    │  settings.py #项目配置文件
+    └─spiders
+</code></pre>
+
+<p>在<code>spiders</code>创建爬虫程序 <code>codeingnow_scrapy.py</code> </p>
+<pre><code class="py"># -*- coding: utf-8 -*-
+import scrapy
+class CodeingNowSpider(scrapy.Spider):
+    name = 'codeingnow'
+    start_urls = ['http://blog.codingnow.com/']
+
+    def parse(self, response):
+        for url in response.css('div[class*=module-archives]  a::attr(href)').re('^http://blog.codingnow.com.*/$'):
+            yield scrapy.Request(url, self.parse_content_url)
+            # break
+
+    def parse_content_url(self, response):
+        for content_url in response.css('a[class*=permalink]::attr(href)').extract():
+            yield {'content_url': content_url}
+</code></pre>
+
+<ul>
+<li>
+<p>直接运行spider:<code>scrapy runspider codeingnow_scrapy.py</code>
+<img alt="scrapy.png" src="../../_static/scrapy.png" /></p>
+</li>
+<li>
+<p>在工程目录中运行,并导出数据为json
+<code>scrapy crawl codeingnow -o items.json -t json</code>
+结果:
+<img alt="scrapy.png" src="../../_static/scrapy_json.png" /></p>
+</li>
+</ul>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../py_tornado/" title="tornado">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                tornado
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../py_mq/" title="消息队列">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                消息队列
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

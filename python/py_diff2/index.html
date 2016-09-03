@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>python2/3对比 - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                python <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        python2/3对比
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="python2/3对比" href="./">
+      python2/3对比
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="使用 future 模块" href="#future">
+                使用 future 模块
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="print 函数" href="#print">
+                print 函数
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="整除 Integer division" href="#integer-division">
+                整除 Integer division
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Unicode" href="#unicode">
+                Unicode
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="xrange" href="#xrange">
+                xrange
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Raising exceptions" href="#raising-exceptions">
+                Raising exceptions
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Handling exceptions" href="#handling-exceptions">
+                Handling exceptions
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="next() 函数 和 .next() 方法" href="#next-next">
+                next() 函数 和 .next() 方法
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="For 循环变量和全局命名空间泄漏" href="#for">
+                For 循环变量和全局命名空间泄漏
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="比较不可排序类型" href="#_1">
+                比较不可排序类型
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="通过 input()解析用户的输入" href="#input">
+                通过 input()解析用户的输入
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="返回可迭代对象，而不是列表" href="#_2">
+                返回可迭代对象，而不是列表
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Link" href="#link">
+                Link
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="python-27x-python-3x">Python 2.7.x 和 Python 3.x 的主要区别</h1>
+<p>许多 Python 初学者想知道他们应该从 Python 的哪个版本开始学习。对于这个问题我的答案是 “你学习你喜欢的教程的版本，然后检查他们之间的不同。"</p>
+<p>但是如果你开始一个新项目，并且有选择权？我想说的是目前没有对错，只要你计划使用的库 Python 2.7.x 和 Python 3.x 双方都支持的话。尽管如此，当在编写它们中的任何一个的代码，或者是你计划移植你的项目的时候，是非常值得看看这两个主要流行的 Python 版本之间的差别的，以便避免常见的陷阱。</p>
+<h2 id="future">使用 <strong>future</strong> 模块</h2>
+<p>用途:在 Python 2 里导入那些在 Python 3 里才生效的模块和函数:</p>
+<pre><code class="py">from __future__ import division
+</code></pre>
+
+<h2 id="print">print 函数</h2>
+<p>很琐碎，而 print 语法的变化可能是最广为人知的了，但是仍值得一提的是： Python 2 的 print 声明已经被 print() 函数取代了，这意味着我们必须包装我们想打印在小括号中的对象。
+Python 2 不具有额外的小括号问题。但对比一下，如果我们按照 Python 2 的方式不使用小括号调用 print 函数，Python 3 将抛出一个语法异常（SyntaxError）。</p>
+<h3 id="python-2">Python 2</h3>
+<pre><code class="py">print 'Python', python_version()
+print 'Hello, World!'
+print('Hello, World!')
+print &quot;text&quot;, ; print 'print more text on the same line'
+</code></pre>
+
+<h3 id="python-3">Python 3</h3>
+<pre><code class="py">print('Python', python_version())
+print('Hello, World!')
+
+print(&quot;some text,&quot;, end=&quot;&quot;) 
+print(' print more text on the same line')
+</code></pre>
+
+<h2 id="integer-division">整除 Integer division</h2>
+<p>如果你正在移植代码，这个变化是特别危险的。或者你在 Python 2 上执行 Python 3 的代码。因为这个整除的变化表现在它会被忽视（即它不会抛出语法异常）。</p>
+<p>因此，我还是倾向于使用一个 float(3)/2 或 3/2.0 代替在我的 Python 3 脚本保存在 Python 2 中的 3/2 的一些麻烦（并且反而过来也一样，我建议在你的 Python 2 脚本中使用 from <strong>future</strong> import division）</p>
+<h3 id="python-2_1">Python 2</h3>
+<pre><code class="py">print 'Python', python_version()
+print '3 / 2 =', 3 / 2
+print '3 // 2 =', 3 // 2
+print '3 / 2.0 =', 3 / 2.0
+print '3 // 2.0 =', 3 // 2.0
+
+'''
+Python 2.7.6
+3 / 2 = 1
+3 // 2 = 1
+3 / 2.0 = 1.5
+3 // 2.0 = 1.0
+'''
+</code></pre>
+
+<h3 id="python-3_1">Python 3</h3>
+<pre><code class="py">print('Python', python_version())
+print('3 / 2 =', 3 / 2)
+print('3 // 2 =', 3 // 2)
+print('3 / 2.0 =', 3 / 2.0)
+print('3 // 2.0 =', 3 // 2.0)
+'''
+Python 3.4.1
+3 / 2 = 1.5
+3 // 2 = 1
+3 / 2.0 = 1.5
+3 // 2.0 = 1.0
+'''
+</code></pre>
+
+<h2 id="unicode">Unicode</h2>
+<p>Python 2 有 <code>ASCII str()</code> 类型，<code>unicode()</code> 是单独的，不是<code>byte</code> 类型。
+现在， 在 Python 3，我们最终有了<code>Unicode (utf-8)</code> 字符串，以及一个字节类：<code>byte</code> 和<code>bytearrays</code>。</p>
+<h3 id="python-2_2">Python 2</h3>
+<pre><code class="py">print type(unicode('this is like a python3 str type'))
+'''output is :&lt;type 'unicode'&gt;'''
+
+print type(b'byte type does not exist')
+'''output is : &lt;type 'str'&gt;'''
+
+print 'they are really' + b' the same'
+'''output is :they are really the same'''
+
+print type(bytearray(b'bytearray oddly does exist though'))
+'''output is :&lt;type 'bytearray'&gt;'''
+</code></pre>
+
+<h3 id="python-3_2">Python 3</h3>
+<pre><code class="py">print('Python', python_version(), end=&quot;&quot;)
+print(' has', type(b' bytes for storing data'))
+'''Python 3.4.1 has &lt;class 'bytes'&gt;'''
+
+print('and Python', python_version(), end=&quot;&quot;)
+print(' also has', type(bytearray(b'bytearrays')))
+'''and Python 3.4.1 also has &lt;class 'bytearray'&gt;'''
+
+</code></pre>
+
+<h2 id="xrange">xrange</h2>
+<p>Python 2 里的range() 和 xrange() 还是有点区别的. xrange() 更像一个生成器.range()生成的是list.
+Python 3 里取消了xrange() 代之以range() 实际上 Python 3 把很多返回为List的改成了itrable.</p>
+<h2 id="raising-exceptions">Raising exceptions</h2>
+<h3 id="python2">python2</h3>
+<pre><code class="py">raise IOError, &quot;file error&quot;
+</code></pre>
+
+<h3 id="python3">python3</h3>
+<pre><code class="py">raise (IOError, &quot;file error&quot;)
+</code></pre>
+
+<h2 id="handling-exceptions">Handling exceptions</h2>
+<h3 id="python2_1">python2</h3>
+<pre><code class="py">try:
+    let_us_cause_a_NameError
+except NameError, err:
+    print err, '--&gt; our error message'
+</code></pre>
+
+<h3 id="python3_1">python3</h3>
+<pre><code class="py">try:
+    let_us_cause_a_NameError
+except NameError as err:
+    print(err, '--&gt; our error message')
+</code></pre>
+
+<h2 id="next-next">next() 函数 和 .next() 方法</h2>
+<p><code>.next()</code>在python中被移除,两个版本都可以用<code>next()</code></p>
+<h3 id="python2_2">python2</h3>
+<pre><code class="py">my_generator = (letter for letter in 'abcdefg')
+
+next(my_generator)
+my_generator.next()
+</code></pre>
+
+<h3 id="python3_2">python3</h3>
+<pre><code class="py">my_generator = (letter for letter in 'abcdefg')
+
+next(my_generator)
+</code></pre>
+
+<h2 id="for">For 循环变量和全局命名空间泄漏</h2>
+<p>在 Python 3.x 中 for 循环变量不会再导致命名空间泄漏</p>
+<h3 id="python2_3">python2</h3>
+<pre><code class="py">i = 1
+print 'before: i =', i
+
+print 'comprehension: ', [i for i in range(5)]
+
+print 'after: i =', i
+
+'''
+before: i = 1
+comprehension:  [0, 1, 2, 3, 4]
+after: i = 4
+'''
+</code></pre>
+
+<h3 id="python3_3">python3</h3>
+<pre><code class="py">i = 1
+print('before: i =', i)
+
+print('comprehension:', [i for i in range(5)])
+
+print('after: i =', i)
+
+'''
+before: i = 1
+comprehension: [0, 1, 2, 3, 4]
+after: i = 1
+'''
+</code></pre>
+
+<h2 id="_1">比较不可排序类型</h2>
+<p>在 Python 3 中的另外一个变化就是当对不可排序类型做比较的时候，会抛出一个类型错误。</p>
+<h3 id="python2_4">python2</h3>
+<pre><code class="py">print &quot;(1, 2) &gt; 'foo' = &quot;, (1, 2) &gt; 'foo'
+'''
+(1, 2) &gt; 'foo' =  True
+'''
+</code></pre>
+
+<h3 id="python3_4">python3</h3>
+<pre><code class="py">print(&quot;[1, 2] &gt; 'foo' = &quot;, [1, 2] &gt; 'foo')
+'''
+TypeError
+'''
+</code></pre>
+
+<h2 id="input">通过 <code>input()</code>解析用户的输入</h2>
+<p>python 2里 我们有<code>input()</code>和<code>raw_input()</code>,区别是<code>raw_input()</code>会讲输入返回str.而i<code>nput()</code>会试图执行输入.
+Python 3 里的<code>input()</code>返回字符串,不再有<code>raw_input()</code>,如果想执行输入,可以<code>eval(input())</code></p>
+<h2 id="_2">返回可迭代对象，而不是列表</h2>
+<h3 id="python-2_3">Python 2</h3>
+<pre><code class="py">print 'Python', python_version() 
+
+print range(3) 
+print type(range(3))
+
+'''
+Python 2.7.6
+[0, 1, 2]
+&lt;type 'list'&gt;
+'''
+</code></pre>
+
+<h3 id="python-3_3">Python 3</h3>
+<pre><code class="py">print('Python', python_version())
+
+print(range(3))
+print(type(range(3)))
+print(list(range(3)))
+
+'''
+Python 3.4.1
+range(0, 3)
+&lt;class 'range'&gt;
+[0, 1, 2]
+'''
+</code></pre>
+
+<p>在 Python 3 中一些经常使用到的不再返回列表的函数和方法：
++ zip()
++ map()
++ filter()
++ dictionary's .keys() method
++ dictionary's .values() method
++ dictionary's .items() method</p>
+<h2 id="link">Link</h2>
+<ul>
+<li><a href="https://docs.python.org/3/whatsnew/3.0.html">What’s New In Python 3.0?</a></li>
+</ul>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../py_gui/" title="图形界面编程">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                图形界面编程
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../py_modules/" title="常用库">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                常用库
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

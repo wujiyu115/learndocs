@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>消息队列 - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                python <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        消息队列
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="消息队列" href="./">
+      消息队列
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="zeromq" href="#zeromq">
+                zeromq
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="_1">消息队列</h1>
+<h2 id="zeromq">zeromq</h2>
+<p>zeromq是一个为可伸缩的分布式或并发应用程序设计的高性能异步消息库。它提供一个消息队列, 但是与面向消息的中间件不同，ZeroMQ的运行不需要专门的消息代理（message broker）。该库设计成常见的套接字风格的API</p>
+<ul>
+<li>支持高并发的异步 Socket 框架</li>
+<li>协议比 TCP 更快、适用于大型集群和分布式计算</li>
+<li>提供多种消息传递机制，如 inproc/IPC/TCP/multicast 等</li>
+<li>内置丰富的组合模式，可用于简化大型分步式计算架构</li>
+<li>提供异步 I/O 模式，适用于可扩展的多核应用开发</li>
+<li>拥有活跃的开发者社区提供技术支持，发展相当迅速</li>
+<li>支持超过 30 种的编程语言，如 C/C++/Java/.NET/Python/PHP 等</li>
+<li>良好的跨平台性，支持多种 OS，如 Linux/Windows/OS X 等</li>
+<li>拥有 iMatix 公司的商业级别支持，却是完全免费的</li>
+</ul>
+<p><a href="http://zeromq.org/intro:get-the-software">http://zeromq.org/intro:get-the-software</a></p>
+<h3 id="zeromq_1">编译zeromq</h3>
+<pre><code class="shell">git clone https://github.com/zeromq/libzmq
+./autogen.sh &amp;&amp; ./configure &amp;&amp; make -j 4
+make check &amp;&amp; make install &amp;&amp; sudo ldconfig
+#autogen需要libtool
+apt-get install libtool
+</code></pre>
+
+<h3 id="pyzmq">pyzmq安装</h3>
+<pre><code class="shell">pip install pyzmq
+</code></pre>
+
+<p>检测安装</p>
+<pre><code class="py">import zmq
+print (&quot; version is  %s&quot;%zmq.zmq_version())
+</code></pre>
+
+<h3 id="_2">协议支持</h3>
+<ul>
+<li><code>INPROC</code> an In-Process communication model</li>
+<li><code>IPC</code> an Inter-Process communication model</li>
+<li><code>MULTICAST</code> multicast via PGM, possibly encapsulated in UDP</li>
+<li><code>TCP</code> a network based transport</li>
+</ul>
+<h3 id="_3">建立基础</h3>
+<p>由于在网络中两个端点是相对动态的，很难有一个稳定的单一连接点。
+如果是这种情况，可以使用由0MQ提供的转发设备。
+转发设备可以绑定2个不同端口，并且转发消息从一个端点到另一个端点。
+这样做的话，在网络中转发设备能够变成一个稳定的点，其它组件都可以去连接。</p>
+<p>0MQ提供了3种类型的设备</p>
+<ul>
+<li><code>QUEUE</code>, a forwarder for the request/response messaging pattern</li>
+<li><code>FORWARDER</code>, a forwarder for the publish/subscribe messaging pattern</li>
+<li><code>STREAMER</code>, a forwarder for the pipelined messaging pattern</li>
+</ul>
+<h3 id="_4">多路复用模式</h3>
+<ul>
+<li>select（支持unix/windows）</li>
+<li>poll（支持unix）</li>
+<li>epoll（支持linux）</li>
+<li>kqueue（支持freebsd）</li>
+<li>devpoll（zmq自研的poll）
+其中,Linux 下默认使用的是 <code>epoll</code> 方式</li>
+</ul>
+<h3 id="_5">通讯模式</h3>
+<ul>
+<li><code>REQUEST/REPLY</code>, bidirectional, load balanced and state based</li>
+<li><code>PUBLISH/SUBSCRIBE</code>, publish to multiple recipients at once</li>
+<li><code>UPSTREAM / DOWNSTREAM</code>, distribute data to nodes arranged in a pipeline</li>
+<li><code>PAIR</code>, communication exclusively between peers</li>
+</ul>
+<h4 id="requestreply">应答模式(REQUEST/REPLY)</h4>
+<p>由请求端发起请求，并等待回应端回应请求</p>
+<p><strong>普通应答模式</strong></p>
+<p><img alt="reqrep" src="../../_static/reqrep.png" /></p>
+<p>server.py</p>
+<pre><code class="py">import zmq
+import time
+
+context = zmq.Context()
+socket = context.socket(zmq.REP)
+socket.bind(&quot;tcp://*:5555&quot;)
+
+while True:
+    #  Wait for next request from client
+    message = socket.recv()
+    print &quot;Received request: &quot;, message
+
+    #  Do some 'work'
+    time.sleep (1)        #   Do some 'work'
+
+    #  Send reply back to client
+    socket.send(&quot;World&quot;)
+</code></pre>
+
+<p>client.py:</p>
+<pre><code class="py">import zmq
+context = zmq.Context()
+#  Socket to talk to server
+print &quot;Connecting to hello world server...&quot;
+socket = context.socket(zmq.REQ)
+socket.connect (&quot;tcp://localhost:5555&quot;)
+
+#  Do 10 requests, waiting each time for a response
+for request in range (1,10):
+    print &quot;Sending request &quot;, request,&quot;...&quot;
+    socket.send (&quot;Hello&quot;)
+
+    #  Get the reply.
+    message = socket.recv()
+    print &quot;Received reply &quot;, request, &quot;[&quot;, message, &quot;]&quot;
+</code></pre>
+
+<p><strong>负载均衡</strong></p>
+<p><img alt="reqrep1" src="../../_static/reqrep1.png" /></p>
+<p><code>client</code>的请求会被均衡的分配给多个<code>server</code>中</p>
+<p>server1.py</p>
+<pre><code class="py">import zmq
+import time
+
+context = zmq.Context()
+socket = context.socket(zmq.REP)
+socket.bind(&quot;tcp://*:5555&quot;)
+
+while True:
+    #  Wait for next request from client
+    message = socket.recv()
+    print &quot;Received request server1: &quot;, message
+
+    #  Do some 'work'
+    time.sleep (1)        #   Do some 'work'
+
+    #  Send reply back to client
+    socket.send(&quot;World&quot;)
+</code></pre>
+
+<p>server2.py</p>
+<pre><code class="py">import zmq
+import time
+
+context = zmq.Context()
+socket = context.socket(zmq.REP)
+socket.bind(&quot;tcp://*:5556&quot;)
+
+while True:
+    #  Wait for next request from client
+    message = socket.recv()
+    print &quot;Received request server2: &quot;, message
+
+    #  Do some 'work'
+    time.sleep (1)        #   Do some 'work'
+
+    #  Send reply back to client
+    socket.send(&quot;World&quot;)
+</code></pre>
+
+<p>client.py:</p>
+<pre><code class="py">import zmq
+
+context = zmq.Context()
+
+#  Socket to talk to server
+print &quot;Connecting to hello world server...&quot;
+socket = context.socket(zmq.REQ)
+socket.connect (&quot;tcp://localhost:5555&quot;)
+socket.connect (&quot;tcp://localhost:5556&quot;)
+
+#  Do 10 requests, waiting each time for a response
+for request in range (1,10):
+    print &quot;Sending request &quot;, request,&quot;...&quot;
+    socket.send (&quot;Hello&quot;)
+
+    #  Get the reply.
+    message = socket.recv()
+    print &quot;Received reply &quot;, request, &quot;[&quot;, message, &quot;]&quot;
+</code></pre>
+
+<p><img alt="zeromq_rq" src="../../_static/zeromq_rq.png" /></p>
+<h4 id="publishsubscribe">发布订阅模型(PUBLISH/SUBSCRIBE)</h4>
+<p>发布订阅模型,有一个发布消息的服务端,有若干接收端,接收端只关注感兴趣的事件.在编程模型中早被大量应用,如消息推送等,在发布/订阅模式中的组件是松散耦合的,发布端不需要关心订阅端,就像一个广播电台一样,接收端就像收音机.所以发布端发布过的消息如果在订阅之前是没办法获取的.
+<img alt="broadcast" src="../../_static/broadcast.png" /></p>
+<p>pubserver.py:</p>
+<pre><code class="py">import zmq
+import time
+from random import choice
+context = zmq.Context()
+socket = context.socket(zmq.PUB)
+socket.bind(&quot;tcp://127.0.0.1:5000&quot;)
+
+countries = ['netherlands','brazil','germany','portugal']
+events = ['yellow card', 'red card', 'goal', 'corner', 'foul']
+
+def print_t(*args):
+    from time import gmtime, strftime
+    t= strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, gmtime())
+    print(t,args)
+while True:
+    msg = choice( countries ) +&quot; &quot;+ choice( events )
+    print_t (&quot;-&gt;&quot;,msg )
+    time.sleep(1)
+    socket.send( msg )
+</code></pre>
+
+<p>pubclient.py:</p>
+<pre><code class="py">import zmq
+
+context = zmq.Context()
+socket = context.socket(zmq.SUB)
+socket.connect(&quot;tcp://127.0.0.1:5000&quot;)
+socket.setsockopt(zmq.SUBSCRIBE, &quot;netherlands&quot;)
+socket.setsockopt(zmq.SUBSCRIBE, &quot;germany&quot;)
+
+def print_t(*args):
+    from time import gmtime, strftime
+    t= strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, gmtime())
+    print(t,args)
+
+while True:
+    print_t( socket.recv())
+</code></pre>
+
+<p>pubclient2.py:</p>
+<pre><code class="py">import zmq
+
+context = zmq.Context()
+socket = context.socket(zmq.SUB)
+socket.connect(&quot;tcp://127.0.0.1:5000&quot;)
+socket.setsockopt(zmq.SUBSCRIBE, &quot;brazil&quot;)
+socket.setsockopt(zmq.SUBSCRIBE, &quot;portugal&quot;)
+
+def print_t(*args):
+    from time import gmtime, strftime
+    t= strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, gmtime())
+    print(t,args)
+while True:
+    print_t( socket.recv())
+</code></pre>
+
+<p><img alt="zeromq_sub" src="../../_static/zeromq_sub.png" /></p>
+<h4 id="_6">管道模型</h4>
+<p><img alt="pipeline2" src="../../_static/pipeline2.png" /></p>
+<p>管道模型和应答模式很类似,不同的是服务端并不直接把信息回馈给请求者.</p>
+<p>pipeline_ventilator.py</p>
+<pre><code class="py">import zmq
+import random
+import time
+
+try:
+    raw_input
+except NameError:
+    # Python 3
+    raw_input = input
+
+context = zmq.Context()
+
+# Socket to send messages on
+sender = context.socket(zmq.PUSH)
+sender.bind(&quot;tcp://*:5557&quot;)
+
+# Socket with direct access to the sink: used to syncronize start of batch
+sink = context.socket(zmq.PUSH)
+sink.connect(&quot;tcp://localhost:5558&quot;)
+
+print(&quot;Press Enter when the workers are ready: &quot;)
+_ = raw_input()
+print(&quot;Sending tasks to workers…&quot;)
+
+# The first message is &quot;0&quot; and signals start of batch
+sink.send(b'0')
+
+# Initialize random number generator
+random.seed()
+
+# Send 100 tasks
+total_msec = 0
+for task_nbr in range(100):
+
+    # Random workload from 1 to 100 msecs
+    workload = random.randint(1, 100)
+    total_msec += workload
+
+    sender.send_string(u'%i' % workload)
+
+print(&quot;Total expected cost: %s msec&quot; % total_msec)
+
+# Give 0MQ time to deliver
+time.sleep(1)
+</code></pre>
+
+<p>pipeline_worker.py</p>
+<pre><code class="py">import sys
+import time
+import zmq
+
+context = zmq.Context()
+
+# Socket to receive messages on
+receiver = context.socket(zmq.PULL)
+receiver.connect(&quot;tcp://localhost:5557&quot;)
+
+# Socket to send messages to
+sender = context.socket(zmq.PUSH)
+sender.connect(&quot;tcp://localhost:5558&quot;)
+
+# Process tasks forever
+while True:
+    s = receiver.recv()
+
+    # Simple progress indicator for the viewer
+    sys.stdout.write('.')
+    sys.stdout.flush()
+
+    # Do the work
+    time.sleep(int(s)*0.001)
+
+    # Send results to sink
+    sender.send(b'')
+</code></pre>
+
+<p>pipeline_sink.py</p>
+<pre><code class="py">import sys
+import time
+import zmq
+
+context = zmq.Context()
+
+# Socket to receive messages on
+receiver = context.socket(zmq.PULL)
+receiver.bind(&quot;tcp://*:5558&quot;)
+
+# Wait for start of batch
+s = receiver.recv()
+
+# Start our clock now
+tstart = time.time()
+
+# Process 100 confirmations
+for task_nbr in range(100):
+    s = receiver.recv()
+    if task_nbr % 10 == 0:
+        sys.stdout.write(':')
+    else:
+        sys.stdout.write('.')
+    sys.stdout.flush()
+
+# Calculate and report duration of batch
+tend = time.time()
+print(&quot;Total elapsed time: %d msec&quot; % ((tend-tstart)*1000))
+</code></pre>
+
+<p>启动<code>pipeline_sink</code>---&gt;<code>pipeline_ventilator</code>---&gt;<code>pipeline_worker</code>,启动多个<code>work</code>消耗时间明显比单<code>work</code>要小</p>
+<p><img alt="pipeline" src="../../_static/pipeline.png" /></p>
+<h4 id="pair">PAIR模型</h4>
+<p><code>PAIR</code>模式其实也就是传统的<code>socket</code>连接方式，客户端与服务器端通过点对点的进行通讯,通讯是双向的,无状态,客户端通过服务端监听的端口与之通讯.</p>
+<p><img alt="paired" src="../../_static/paired.png" /></p>
+<p>pair_server.py</p>
+<pre><code class="py">import zmq
+context = zmq.Context()
+socket = context.socket(zmq.PAIR)
+socket.bind(&quot;tcp://127.0.0.1:5555&quot;)
+</code></pre>
+
+<p>pair_client.py</p>
+<pre><code class="py">context = zmq.Context()
+socket = context.socket(zmq.PAIR)
+socket.connect(&quot;tcp://127.0.0.1:5555&quot;)
+</code></pre>
+
+<p><a href="http://nichol.as/zeromq-an-introduction">http://nichol.as/zeromq-an-introduction</a>
+<a href="http://zguide.zeromq.org/page:all">http://zguide.zeromq.org/page:all</a>
+<a href="http://iyuan.iteye.com/blog/982185">http://iyuan.iteye.com/blog/982185</a></p>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../py_spider/" title="爬虫">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                爬虫
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../../lua/lua1_data/" title="数据类型">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                数据类型
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

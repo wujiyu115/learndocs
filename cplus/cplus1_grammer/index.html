@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>基础语法 - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                c++基础 <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        基础语法
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="基础语法" href="./">
+      基础语法
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="一 定义变量:" href="#_1">
+                一 定义变量:
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="二 控制流程:" href="#_2">
+                二 控制流程:
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="三 数据类型" href="#_3">
+                三 数据类型
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../../python/py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../python/py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../../python/py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../../python/py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../../python/py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../../python/py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../python/py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../../python/py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../../python/py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../../python/py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../../python/py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../../python/py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../../python/py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../../python/py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../../python/py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../../python/py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../../python/py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../../python/py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../../python/py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../../python/py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../../python/py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../../python/py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../../python/py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="c">c++　第一章 基础语法,控制流程,数据类型</h1>
+<h3 id="_1">一 定义变量:</h3>
+<pre><code class="c++">double a=2.0
+</code></pre>
+
+<h3 id="_2">二 控制流程:</h3>
+<ol>
+<li><strong>if ...else </strong></li>
+</ol>
+<pre><code class="c++">  void control() {
+      int a = 10;
+      if (a &gt; 5) {
+          cout &lt;&lt; &quot;ok&quot; &lt;&lt; endl;
+      } else {
+          cout &lt;&lt; &quot;not ok&quot; &lt;&lt; endl;
+      }
+  }
+</code></pre>
+
+<ol>
+<li><strong>switch:表达式只能是整型，字符型，枚举型</strong></li>
+</ol>
+<pre><code class="c++">  void control() {
+      int a = 10;
+      if (a &gt; 5) {
+          cout &lt;&lt; &quot;ok&quot; &lt;&lt; endl;
+      } else {
+          cout &lt;&lt; &quot;not ok&quot; &lt;&lt; endl;
+      }
+  }
+</code></pre>
+
+<ol>
+<li><strong>for..i</strong></li>
+</ol>
+<pre><code class="c++">  for (int i = 0;  i &lt; 10; ++ i) {
+          cout &lt;&lt;&quot;hello&quot;;
+  }
+</code></pre>
+
+<ol>
+<li><strong>while</strong></li>
+</ol>
+<pre><code class="c++">    int test=0;
+    while (test &lt; 100) {
+      test++;
+      cout &lt;&lt; test&lt;&lt;&quot;\t&quot;;
+    }
+</code></pre>
+
+<h3 id="_3">三 数据类型</h3>
+<p><code>int ,char,bool,float,double,int[],double&amp;amp;,char*,enum</code>
++ <strong>整数类型:int</strong>
+<a href="http://farwmarth.com/wp-content/uploads/2013/03/image18.png"><img alt="image" src="http://farwmarth.com/wp-content/uploads/2013/03/image_thumb18.png" title="image" /></a>
+所有的c++编译器都应该满足c++标准所规定的整数长度关系式: <code>char&lt;short int&lt;int&lt;long int</code></p>
+<ul>
+<li><strong>字符型:char</strong></li>
+</ul>
+<pre><code class="c++">  char ch = 'A';
+  cout &lt;&lt; ch &lt;&lt; endl;
+</code></pre>
+
+<p>值得注意的是ASCII码并不是最终标准，所以为了代码的可移植性，不要用数字对字符变量进行赋值。</p>
+<ul>
+<li><strong>枚举型:enum</strong></li>
+</ul>
+<pre><code class="c++">  enum Week {
+          Mon, Tue, Wed, Thu, Fri, Sta, Sun
+      };
+  Week mon = Tue;
+  cout&lt;&lt;mon&lt;&lt;endl;
+</code></pre>
+
+<p>枚举一量定义不能改变，所以常用来代替整数常量，作用更优的是常量需要初始化，而枚举是一种类型，无须定义其实体。</p>
+<ul>
+<li>
+<p><strong>布尔型:bool :非0为真</strong>
+还有:float,double,int[],double&amp;,char*</p>
+</li>
+<li>
+<p><strong>c-串</strong>
+c-串 :从c语言中延续的字符数组，以0结尾。字符长度要加1.</p>
+</li>
+</ul>
+<pre><code class="c++">const char str=&quot;Hello&quot;;
+char str=&quot;Hello&quot;; //字符串常量赋予char指针错误deprecated conversion from string constant to ‘char’
+char str=&quot;Hello&quot;; //指针地址赋予char类型错误invalid conversion from ‘const char’ to ‘char’
+cout&lt;&lt;*str&lt;&lt;endl;  //Hello
+cout&lt;&lt;str&lt;&lt;endl;  //Hello
+cout&lt;&lt;str&lt;&lt;endl; //Hello
+const char chars= &quot;s&quot;,chars1= &quot;s&quot;;
+cout&lt;&lt;(chars==chars1)&lt;&lt;endl;   //true
+char is_char[]=&quot;s&quot;,is_char1[] = &quot;s&quot;;
+cout&lt;&lt;(is_char==is_char1)&lt;&lt;endl;  //false
+string s = &quot;hello&quot;, s1 = &quot;hello&quot;;
+cout&lt;&lt;(s==s1)&lt;&lt;endl;    //true
+</code></pre>
+
+<p><a href="http://farwmarth.com/wp-content/uploads/2013/03/image19.png"><img alt="image" src="http://farwmarth.com/wp-content/uploads/2013/03/image_thumb19.png" title="image" /></a>
+在比较同个字符相同的c-串是用==会不相等，因为是指向两个不同位置的指针。而应该用strcmp</p>
+<ul>
+<li><strong>string:</strong>
+string是一种自定义类型，可以方便地操作。不像字符指针一样蛋疼。</li>
+</ul>
+<pre><code class="c++">  string a, s1 = &quot;hello&quot;;
+  string s2 = &quot;123&quot;;
+  //比较
+  cout &lt;&lt; (a == s1) &lt;&lt; endl; //false
+  a = s1;
+  cout &lt;&lt; (a == s1) &lt;&lt; endl; //true
+  //连接
+  cout &lt;&lt; (a + s2) &lt;&lt; endl;
+  //查找
+  cout &lt;&lt; (a.find(&quot;e&quot;)) &lt;&lt; endl
+</code></pre>
+
+<ul>
+<li><strong>数组:</strong>
+定义格式:<code>类型名 数组名[常量表达式]</code></li>
+</ul>
+<pre><code class="c++">  int arr1[3] = { 1 };
+  int arr2[3];
+  void arrays() {
+      int arr3[3] = { 1 };
+      int arr4[3];
+     static int arr5[3];
+
+      int i = 0;
+      for (i = 0; i &lt; 3; ++i) {
+          cout &lt;&lt; arr1[i] &lt;&lt; &quot;\t&quot;;
+      }
+      cout &lt;&lt; endl;
+      for (i = 0; i &lt; 3; ++i) {
+          cout &lt;&lt; arr2[i] &lt;&lt; &quot;\t&quot;;
+      }
+      cout &lt;&lt; endl;
+      for (i = 0; i &lt; 3; ++i) {
+          cout &lt;&lt; arr3[i] &lt;&lt; &quot;\t&quot;;
+      }
+      cout &lt;&lt; endl;
+      for (i = 0; i &lt; 3; ++i) {
+          cout &lt;&lt; arr4[i] &lt;&lt; &quot;\t&quot;;
+      }
+      cout &lt;&lt; endl;
+      for (i = 0; i &lt; 3; ++i) {
+          cout &lt;&lt; arr5[i] &lt;&lt; &quot;\t&quot;;
+      }
+
+</code></pre>
+
+<p><a href="http://farwmarth.com/wp-content/uploads/2013/03/image20.png"><img alt="image" src="http://farwmarth.com/wp-content/uploads/2013/03/image_thumb20.png" title="image" /></a></p>
+<p>全局数组和静态数组未初始化，系统会默认为清零，局部数组未初始化会出现随机数。</p>
+<ul>
+<li><strong>vector容器</strong></li>
+</ul>
+<pre><code class="c++">  void vectors() {
+
+      vector&lt;int&gt; ve;
+      for (int i = 0; i &lt; 10; ++i) {
+          ve.push_back(i);
+      }
+
+      vector&lt;int&gt;::iterator p = ve.begin();
+      for (; p&lt;ve.end(); p++) {
+        cout&lt;&lt;*p;
+      }
+
+  }
+</code></pre>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../cplus_win/" title="c++环境搭建(Win)">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                c++环境搭建(Win)
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../cplus2_class/" title="类">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                类
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

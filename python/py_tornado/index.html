@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>tornado - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                python <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        tornado
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="tornado" href="./">
+      tornado
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Tornado" href="#tornado">
+                Tornado
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="python-web-tornado">python web框架 tornado 初探</h1>
+<h2 id="tornado">Tornado</h2>
+<p>tornado 是一个基于python的非阻塞式 web 服务器</p>
+<h3 id="module-map">Module Map</h3>
+<ul>
+<li>
+<p>Web framework</p>
+<ul>
+<li>tornado.web — RequestHandler and Application 类</li>
+<li>tornado.template —  可扩展输出模板</li>
+<li>tornado.escape — 转义和字符串操作</li>
+<li>tornado.locale — 国际化支持</li>
+<li>tornado.websocket —  利用websocket双向通信</li>
+</ul>
+</li>
+<li>
+<p>HTTP servers and clients</p>
+<ul>
+<li>tornado.httpserver — 非阻塞http服务器</li>
+<li>tornado.httpclient —  异步http请求</li>
+<li>tornado.httputil — 处理HTTP标头和URL</li>
+<li>tornado.http1connection – HTTP/1.x 客户端/服务器实现</li>
+</ul>
+</li>
+<li>
+<p>Asynchronous networking</p>
+<ul>
+<li>tornado.ioloop —  事件驱动主循环</li>
+<li>tornado.iostream — 非阻塞socket包装类</li>
+<li>tornado.netutil — 其他网络工具</li>
+<li>tornado.tcpclient —基础的tcpclient</li>
+<li>tornado.tcpserver — 基础的tcpserver</li>
+</ul>
+</li>
+<li>
+<p>Coroutines and concurrency</p>
+<ul>
+<li>tornado.gen — 简化异步代码的模块</li>
+<li>tornado.concurrent —  同步相关的threads 和 futures</li>
+<li>tornado.locks – 同步原语</li>
+<li>tornado.queues – 协程队列</li>
+<li>tornado.process — 多处理器工具类</li>
+</ul>
+</li>
+<li>
+<p>Integration with other services</p>
+<ul>
+<li>tornado.auth —  登录验证</li>
+<li>tornado.wsgi —  适配其他python,web框架</li>
+<li>tornado.platform.asyncio — 和python3.4的异步IO库asyncio做适配</li>
+<li>tornado.platform.caresresolver — 异步DNS解析,C-Ares</li>
+<li>tornado.platform.twisted — 适配Twisted框架</li>
+</ul>
+</li>
+<li>
+<p>Utilities</p>
+<ul>
+<li>tornado.autoreload — Automatically detect code changes in development</li>
+<li>tornado.log —  日志</li>
+<li>tornado.options — 命令行选项</li>
+<li>tornado.stack_context — 异步回调异常处理</li>
+<li>tornado.testing — 异步代码的测试用例支持</li>
+<li>tornado.util — 常规工具类</li>
+</ul>
+</li>
+</ul>
+<h3 id="hello-world">hello world</h3>
+<pre><code class="py">import tornado.ioloop
+import tornado.web
+class MainHandler(tornado.web.RequestHandler):
+  def get(self):
+    self.write(&quot;Hello, world,&quot;+subdomain)
+
+def make_app():
+  return tornado.web.Application([
+    (r&quot;/&quot;, MainHandler),
+  ])
+
+if __name__ == &quot;__main__&quot;:
+  app = make_app()
+  app.listen(8888)
+  tornado.ioloop.IOLoop.current().start()
+
+  #在浏览器中输入`http://localhost:8888/` 可以看到`Hello,world`的输出
+</code></pre>
+
+<h3 id="handler">handler</h3>
+<h4 id="staticfilehandler">StaticFileHandler</h4>
+<pre><code class="py">def make_app():
+  return tornado.web.Application([
+    (r&quot;/static/(.*)&quot;, tornado.web.StaticFileHandler, {&quot;path&quot;: &quot;C:\\Users\\Administrator.PC-20150720QKHJ\\Desktop\\static&quot;}),
+  ])
+
+  # 输入: http://localhost:8888/static/a.txt 可访问static目录下的文件内容
+</code></pre>
+
+<h4 id="get_argument">get_argument 获取参数</h4>
+<pre><code class="py">class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write('&lt;html&gt;&lt;body&gt;&lt;form action=&quot;/&quot; method=&quot;post&quot;&gt;'
+                   '&lt;input type=&quot;text&quot; name=&quot;message&quot;&gt;'
+                   '&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;'
+                   '&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;')
+
+    def post(self):
+        self.set_header(&quot;Content-Type&quot;, &quot;text/plain&quot;)
+        self.write(&quot;You wrote &quot; + self.get_argument(&quot;message&quot;))
+
+</code></pre>
+
+<ul>
+<li>arguments - 所有的 GET 或 POST 的参数</li>
+<li>files - 所有通过 multipart/form-data POST 请求上传的文件</li>
+<li>path - 请求的路径（ ? 之前的所有内容）</li>
+<li>headers - 请求的开头信息</li>
+</ul>
+<h3 id="coroutine">coroutine</h3>
+<pre><code class="py">import tornado.ioloop
+import tornado.web
+from tornado import gen
+from tornado.httpclient import AsyncHTTPClient
+
+class MainHandler(tornado.web.RequestHandler):
+    @gen.coroutine
+    def get(self):
+        response = yield self.fetch_json(&quot;http://www.baidu.com&quot;)
+        self.write(response)
+
+    @gen.coroutine
+    def fetch_json(self, url):
+        response = yield AsyncHTTPClient().fetch(url)
+        raise gen.Return(response.body)
+
+application = tornado.web.Application([
+    (r&quot;/&quot;, MainHandler),
+])
+
+if __name__ == &quot;__main__&quot;:
+    application.listen(8888)
+    tornado.ioloop.IOLoop.current().start()
+</code></pre>
+
+<h3 id="tornado_1">tornado   泛域名</h3>
+<pre><code class="py">import tornado.ioloop
+import tornado.web
+class MainHandler(tornado.web.RequestHandler):
+  def get(self):
+    subdomain = self.request.host.split(&quot;.&quot;)[0]
+    self.write(&quot;Hello, world,&quot;+subdomain)
+
+class DomainHandler(tornado.web.RequestHandler):
+  def get(self):
+    self.write(&quot;Hello, a.com&quot;)
+
+def make_app():
+  return tornado.web.Application([
+    (r&quot;/&quot;, MainHandler),
+  ])
+
+if __name__ == &quot;__main__&quot;:
+  app = make_app()
+  app.add_handlers(r&quot;^(www\.)?a\.com$&quot;, [
+    (r&quot;/&quot;, DomainHandler),
+  ])
+  app.listen(8888)
+  tornado.ioloop.IOLoop.current().start()
+
+  # 在Host中加入这行 127.0.0.1 a.com
+  #浏览器中输入:http://a.com:8888  则输出:Hello, a.com
+</code></pre>
+
+<h3 id="tornado-ngnix">tornado ngnix 反向代理配置</h3>
+<p>如果在tornado层不想做泛域名解析,可以通过ngnix的反向代理指向tornado的端口,ngnix配置如下:</p>
+<pre><code>upstream tornado {
+    server 127.0.0.1:8888;
+}
+server {
+      listen 80;
+      server_name test.com www.test.com;
+      location = /favicon.ico {
+          rewrite (.*) /static/favicon.ico;
+      }
+      location = /robots.txt {
+          rewrite (.*) /static/robots.txt;
+      }
+      location / {
+          proxy_pass_header Server;
+          proxy_set_header Host $http_host;
+          proxy_redirect off;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Scheme $scheme;
+          proxy_pass http://tornado;
+      }
+}
+</code></pre>
+
+<h3 id="nginx">nginx反向代理长链接</h3>
+<pre><code>upstream chat_cluster{
+     ##多server负载,根据ip_hash作分流也可以用weight权重分流
+    server 127.0.0.1:10000;
+    server 127.0.0.1:10001;
+    ip_hash;
+    keepalive 1024;
+}
+
+server
+{
+    listen 80;
+    server_name chat.rootk.com;
+
+    location / {
+        proxy_pass http://chat_cluster;
+        proxy_http_version 1.1;
+        # very important, nginx will waitting for the response from tornado
+        # if the time have passed more than 7200, nginx send http 504 to client
+        proxy_read_timeout 7200;
+        proxy_set_header Connection &quot;&quot;;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-Ip $remote_addr;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+    }
+}
+</code></pre>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../py_qt/" title="pyqt使用">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                pyqt使用
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../py_spider/" title="爬虫">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                爬虫
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

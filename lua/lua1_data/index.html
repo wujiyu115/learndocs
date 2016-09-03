@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>数据类型 - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                lua <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        数据类型
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../../python/py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../python/py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../../python/py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../../python/py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../../python/py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../../python/py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../python/py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../../python/py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../../python/py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../../python/py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../../python/py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../../python/py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../../python/py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../../python/py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../../python/py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../../python/py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../../python/py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../../python/py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../../python/py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../../python/py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../../python/py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../../python/py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../../python/py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="数据类型" href="./">
+      数据类型
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="文档" href="#_2">
+                文档
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="值与类型" href="#_3">
+                值与类型
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="环境与全局环境" href="#_4">
+                环境与全局环境
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="错误处理" href="#_5">
+                错误处理
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="元表及元方法" href="#_8">
+                元表及元方法
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="垃圾收集" href="#_9">
+                垃圾收集
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="协程" href="#_12">
+                协程
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="_1">基本概念</h1>
+<h2 id="_2">文档</h2>
+<ul>
+<li><code>lua5.1</code> :<a href="http://www.codingnow.com/2000/download/lua_manual.html">http://www.codingnow.com/2000/download/lua_manual.html</a></li>
+<li><code>lua5.3</code> :<a href="http://cloudwu.github.io/lua53doc/">http://cloudwu.github.io/lua53doc/</a></li>
+</ul>
+<h2 id="_3">值与类型</h2>
+<p>Lua 中有八种基本类型： <code>nil</code>、<code>boolean</code>、<code>number</code>、<code>string</code>、<code>function</code>、<code>userdata</code>、 <code>thread</code> 和 <code>table</code>
+userdata 类型允许将 C 中的数据保存在 Lua 变量中</p>
+<h2 id="_4">环境与全局环境</h2>
+<h3 id="upvalue"><code>upvalue</code></h3>
+<p>当执行完g1 = f1(1979)后，局部变量n的生命本该结束，但因为它已经成了内嵌函数f2(它又被赋给了变量g1)的upvalue</p>
+<pre><code class="lua">local function f1(n)
+    -- 函数参数也是局部变量
+    local function f2()
+        print(n) -- 引用外包函数的局部变量
+    end
+    return f2
+end
+g1 = f1(1979)
+</code></pre>
+
+<h3 id="_env"><code>_ENV</code></h3>
+<p>lua5.2中load代码后返回函数的upvalue.原先虚无缥缈只能通过 setfenv、getfenv 访问的所谓「环境」终于实体化为一个始终存在的变量 _ENV 了
+<a href="http://timothyqiu.com/archives/lua-note-sandboxes/">http://timothyqiu.com/archives/lua-note-sandboxes/</a></p>
+<p>lua_setglobal/lua_getglobal都是操作lua_State注册表中LUA_RIDX_GLOBALS伪索引指向的全局变量表，与lua中访问_ENV['a']或者a是不同的。
+lua_load加载lua代码后会返回一个函数，默认会给这个函数设置一个upvalue就叫_ENV，起值是LUA_RIDX_GLOBALS的全局变量表，你可以lua_setupvalue设置这个函数的upvalue，即下标1的upvalue，因为这个位置是这个函数的_ENV表存放位置（你可以通过lua_setupvalue的返回值印证这一点）</p>
+<h3 id="_g"><code>_G</code></h3>
+<p>全局环境.
+lua_State会在创建时保证LUA_RIDX_GLOBALS的全局变量表中包含一个指向自己的_G元素，这样就保证了在不调用lua_setupvalue的情况下该返回函数的_ENV['_G']是指向自己的，即LUA_RIDX_GLOBALS这个全局表。（其实你的lua解释器就是简单的lua_load后pcall的，对于一个刚启动lua_State来说是没有_ENV的，是lua解释器load你的代码时自动给带上的_ENV，其值是lua_state的LUA_RIDX_GLOBALS全局表。）
+lua_state启动后在注册表里LUA_RIDX_GLOBALS下标存放的全局表一定有一个元素是指向自己的，即_G.</p>
+<h2 id="_5">错误处理</h2>
+<h3 id="_6">抛出异常</h3>
+<p><code>error (message [, level]) :</code></p>
+<h3 id="_7">捕获</h3>
+<h4 id="pcall">pcall</h4>
+<p><code>pcall (f [, arg1, ···])</code>
+以保护模式 调用函数 f ,返回值<code>[flag,errorinfo]</code>,运行正常是<code>flag</code>为<code>true</code></p>
+<pre><code class="lua">local  function er( ... )
+    error(&quot;error&quot;)
+end
+local flag,errorinfo = pcall(er)
+print(flag,errorinfo)
+--false   ...:\lua_error.lua:7: error
+</code></pre>
+
+<h4 id="xpcall">xpcall</h4>
+<p><code>xpcall (f, msgh [, arg1, ···])</code>
+与<code>pcall</code>区别:自定义消息处理,不返回<code>errorinfo</code></p>
+<pre><code class="lua">local flag = xpcall(function() error('error..') end, function() print(debug.traceback()) end, 33)
+print(flag)
+--[[
+stack traceback:
+    ...:\git\code_research\lua_study\lua_code\lua_error.lua:12: in function &lt;...:\git\code_research\lua_study\lua_code\lua_error.lua:12&gt;
+    [C]: in function 'error'
+    ...:\git\code_research\lua_study\lua_code\lua_error.lua:12: in function &lt;...:\git\code_research\lua_study\lua_code\lua_error.lua:12&gt;
+    [C]: in function 'xpcall'
+    ...:\git\code_research\lua_study\lua_code\lua_error.lua:12: in main chunk
+    [C]: ?
+
+false
+]]--
+
+</code></pre>
+
+<h3 id="debug">debug</h3>
+<ul>
+<li><code>debug.traceback</code> :输出堆栈信息</li>
+</ul>
+<h2 id="_8">元表及元方法</h2>
+<h3 id="metatable">元表(metatable)</h3>
+<p>与js原型链(prototype)类似</p>
+<ul>
+<li>"add": + 操作。 如果任何不是数字的值（包括不能转换为数字的字符串）做加法， Lua 就会尝试调用元方法。 首先、Lua 检查第一个操作数（即使它是合法的）， 如果这个操作数没有为 "__add" 事件定义元方法， Lua 就会接着检查第二个操作数。 一旦 Lua 找到了元方法， 它将把两个操作数作为参数传入元方法， 元方法的结果（调整为单个值）作为这个操作的结果。 如果找不到元方法，将抛出一个错误。</li>
+</ul>
+<pre><code class="lua">local met = {}
+met.__add = function(op1, op2)
+   for _, item in pairs(op2) do
+      table.insert(op1, item)
+   end
+   return op1
+end
+
+local a = {1,2}
+local b={3,4}
+setmetatable(a,met)
+local d = a +b
+
+for k,v in pairs(d) do
+    print(k,v)
+end
+--[[
+1   1
+2   2
+3   3
+4   4
+]]
+</code></pre>
+
+<ul>
+<li>
+<p>"concat": .. （连接）操作。 行为和 "add" 操作类似， 不同的是 Lua 在任何操作数即不是一个字符串 也不是数字（数字总能转换为对应的字符串）的情况下尝试元方法。</p>
+</li>
+<li>
+<p>"len": # （取长度）操作。 如果对象不是字符串，Lua 会尝试它的元方法。 如果有元方法，则调用它并将对象以参数形式传入， 而返回值（被调整为单个）则作为结果。 如果对象是一张表且没有元方法， Lua 使用表的取长度操作（参见 §3.4.7）。 其它情况，均抛出错误。</p>
+</li>
+<li>
+<p>"index": 索引 table[key]。 当 table 不是表或是表 table 中不存在 key 这个键时，这个事件被触发。 此时，会读出 table 相应的元方法。
+尽管名字取成这样， 这个事件的元方法其实可以是一个函数也可以是一张表。 如果它是一个函数，则以 table 和 key 作为参数调用它。 如果它是一张表，最终的结果就是以 key 取索引这张表的结果。 （这个索引过程是走常规的流程，而不是直接索引， 所以这次索引有可能引发另一次元方法。）</p>
+</li>
+<li>
+<p>"newindex": 索引赋值 table[key] = value 。 和索引事件类似，它发生在 table 不是表或是表 table 中不存在 key 这个键的时候。 此时，会读出 table 相应的元方法。
+同索引过程那样， 这个事件的元方法即可以是函数，也可以是一张表。 如果是一个函数， 则以 table、 key、以及 value 为参数传入。 如果是一张表， Lua 对这张表做索引赋值操作。 （这个索引过程是走常规的流程，而不是直接索引赋值， 所以这次索引赋值有可能引发另一次元方法。）</p>
+</li>
+</ul>
+<p>一旦有了 "newindex" 元方法， Lua 就不再做最初的赋值操作。 （如果有必要，在元方法内部可以调用 rawset 来做赋值。）</p>
+<ul>
+<li>"call": 函数调用操作 func(args)。 当 Lua 尝试调用一个非函数的值的时候会触发这个事件 （即 func 不是一个函数）。 查找 func 的元方法， 如果找得到，就调用这个元方法， func 作为第一个参数传入，原来调用的参数（args）后依次排在后面</li>
+</ul>
+<h2 id="_9">垃圾收集</h2>
+<p>Lua 实现了一个增量标记-扫描收集器。 它使用这两个数字来控制垃圾收集循环： 垃圾收集器间歇率 和 垃圾收集器步进倍率。 这两个数字都使用百分数为单位 （例如：值 100 在内部表示 1 ）。</p>
+<p>垃圾收集器间歇率控制着收集器需要在开启新的循环前要等待多久。 增大这个值会减少收集器的积极性。 当这个值比 100 小的时候，收集器在开启新的循环前不会有等待。 设置这个值为 200 就会让收集器等到总内存使用量达到 之前的两倍时才开始新的循环。</p>
+<p>垃圾收集器步进倍率控制着收集器运作速度相对于内存分配速度的倍率。 增大这个值不仅会让收集器更加积极，还会增加每个增量步骤的长度。 不要把这个值设得小于 100 ， 那样的话收集器就工作的太慢了以至于永远都干不完一个循环。 默认值是 200 ，这表示收集器以内存分配的“两倍”速工作。</p>
+<p>如果你把步进倍率设为一个非常大的数字 （比你的程序可能用到的字节数还大 10% ）， 收集器的行为就像一个 stop-the-world 收集器。 接着你若把间歇率设为 200 ， 收集器的行为就和过去的 Lua 版本一样了： 每次 Lua 使用的内存翻倍时，就做一次完整的收集。</p>
+<h3 id="_10">垃圾收集的元方法</h3>
+<p>使用 C API,可以设置一个垃圾收集的元方法,<code>__gc</code>,来做一些特殊的资源释放操作,比如关闭数据库连接等,一个 userdata 可被回收，若它的 metatable 中有 __gc 这个域　， 垃圾收集器就不立即收回它。 取而代之的是，Lua 把它们放到一个列表中。 最收集结束后，Lua 针对列表中的每个 userdata 执行了下面这个函数的等价操作：</p>
+<pre><code class="lua">   function gc_event (udata)
+       local h = metatable(udata).__gc
+       if h then
+         h(udata)
+       end
+     end
+</code></pre>
+
+<p>在每个垃圾收集周期的结尾，每个在当前周期被收集起来的 userdata 的结束子会以 它们构造时的逆序依次调用。 也就是说，收集列表中，最后一个在程序中被创建的 userdata 的 结束子会被第一个调用。
+参考:
+<a href="http://blog.codingnow.com/cloud/LuaReferObject">http://blog.codingnow.com/cloud/LuaReferObject</a></p>
+<h3 id="_11">弱表</h3>
+<p>如果一个对象只被弱引用引用到， 垃圾收集器就会回收这个对象
+一张表的元表中的 <strong>mode 域控制着这张表的弱属性。 当 </strong>mode 域是一个包含字符 'k' 的字符串时，这张表的所有键皆为弱引用。 当 __mode 域是一个包含字符 'v' 的字符串时，这张表的所有值皆为弱引用</p>
+<p>值为弱表</p>
+<pre><code class="lua">local weakTable = {}
+weakTable[1] = function() print(&quot;i am the first element&quot;) end
+weakTable[2] = function() print(&quot;i am the second element&quot;) end
+weakTable[3] = {10, 20, 30}
+
+setmetatable(weakTable, {__mode = &quot;v&quot;})  --值为弱表
+print(table.getn(weakTable))  --未gc前3个
+
+ele = weakTable[1]  --第一个元素被引用
+collectgarbage()
+print(table.getn(weakTable))  --gc后只剩第一个元素
+
+ele= nil   --引用置空
+collectgarbage()
+print(table.getn(weakTable))  --全部gc
+
+</code></pre>
+
+<p>键为弱表</p>
+<pre><code class="lua">local function getkeyn( t )
+    local count = 0
+    for k,v in pairs(t or {}) do
+     count= count+1
+   end
+return count
+end
+
+local weakKey= {}
+local t1={}
+local t2={}
+weakKey[t1] = 1
+weakKey[t2] = 2
+
+setmetatable(weakKey,{__mode=&quot;k&quot;}) --键为弱表
+print(getkeyn(weakKey)) --2
+
+t1= nil
+collectgarbage()
+print(getkeyn(weakKey)) --1
+</code></pre>
+
+<h2 id="_12">协程</h2>
+<p>支持协程，也叫 协同式多线程。 一个协程在 Lua 中代表了一段独立的执行线程。 然而，与多线程系统中的线程的区别在于， 协程仅在显式调用一个让出（yield）函数时才挂起当前的执行.</p>
+<h3 id="_13">接口</h3>
+<h4 id="coroutinecreatef">coroutine.create(f)</h4>
+<p>函数参数[接受单个参数，这个参数为coroutine的主函数]
+函数返回值[返回一个thread对象]
+函数作用[创建一个新的协程，协程的主函数定义了该协程内的任务流程]</p>
+<h4 id="coroutineresumeco-var1">coroutine.resume(co, [, var1, ...])</h4>
+<p>函数参数[第一个参数：coroutine.create的返回值，即一个thread对象]
+函数参数[第二个参数：coroutine中执行需要的参数，是一个变长参数，可以传任意多个]
+函数返回值[如果程序没有任何运行错误，则返回true，之后的返回值是前一个调用coroutine.yield中传入的参数值]
+函数返回值[如果程序遇到运行错误，则返回false，加上错误信息]
+函数作用[当你第一次调用coroutine.rusume方法时，coroutine从主函数的第一行开始执行，之后在coroutine开始执行后，它会一直运行到
+自身终止或者是coroutine的下一次yield函数]</p>
+<h4 id="coroutineyield">coroutine.yield(...)</h4>
+<p>函数参数[变长参数]
+函数返回值[如果程序没有任何运行错误，则返回true，之后的返回值是前一个调用coroutine.resume()中传入的参数值]
+函数返回值[如果程序遇到运行错误，则返回false，加上错误信息]
+函数作用[挂起当前执行的协程]</p>
+<h4 id="coroutinerunning">coroutine.running()</h4>
+<p>函数参数[空]
+函数返回值[返回当前协程，如果它被主线程调用的话，返回nil]</p>
+<h4 id="coroutinestatus">coroutine.status()</h4>
+<p>函数参数[空]
+函数返回值[返回当前协程的状态，有suspended, running, normal, dead]</p>
+<h3 id="_14">例子</h3>
+<pre><code class="lua">function foo (a)
+       print(&quot;[step2] foo&quot;, a)
+       return coroutine.yield(2*a)
+ end
+
+local  co = coroutine.create(function (a,b)
+       print(&quot;[step1] co-body&quot;, a, b)
+       local r = foo(a+1)
+       print(&quot;[step4] co-body&quot;, r)
+       local r, s = coroutine.yield(a+b, a-b)
+       print(&quot;[step6] co-body&quot;, r, s)
+       return b, &quot;end&quot;
+ end)
+
+ print(&quot;[step3] main&quot;, coroutine.resume(co, 1, 10))
+ print(&quot;[step5] main&quot;, coroutine.resume(co, &quot;r&quot;))
+ print(&quot;[step7] main&quot;, coroutine.resume(co, &quot;x&quot;, &quot;y&quot;))
+ print(&quot;[step8] main&quot;, coroutine.resume(co, &quot;x&quot;, &quot;y&quot;))
+
+--[[
+[step1] co-body 1   10
+[step2] foo 2
+[step3] main    true    4
+[step4] co-body r
+[step5] main    true    11  -9
+[step6] co-body x   y
+[step7] main    true    10  end
+[step8] main    false   cannot resume dead coroutine
+]]--
+</code></pre>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../../python/py_mq/" title="消息队列">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                消息队列
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../../swift/swift1_intro/" title="swift基础入门">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                swift基础入门
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

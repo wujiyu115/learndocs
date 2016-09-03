@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>数据类型 - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                python <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        数据类型
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="数据类型" href="./">
+      数据类型
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="变量" href="#_1">
+                变量
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="数据类型" href="#_2">
+                数据类型
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="python">Python 数据类型</h1>
+<h2 id="_1">变量</h2>
+<p>声明变量,变量定义无需关键字,必须赋值，与js一样,变量为动态类型，变量类型可变化</p>
+<pre><code class="python">x=1
+x=True
+print(x)
+</code></pre>
+
+<p>多元赋值</p>
+<pre><code class="python">x,y,z = 1,2,3
+</code></pre>
+
+<p>变量交换值</p>
+<pre><code class="python">x,y=y,x
+</code></pre>
+
+<h2 id="_2">数据类型</h2>
+<p>python数据类型有很多种,常见</p>
+<ul>
+<li><code>Booleans</code> ［布尔型］或为True［真］或为False［假］。</li>
+<li><code>Numbers</code> ［数值型］可以是Integers［整数］Floats［浮点数］Fractions［分数］(1/2)甚至是ComplexNumber［复数］。</li>
+<li><code>Lists</code> ［列表］是值的有序序列。</li>
+<li><code>Tuples</code> ［元组］是有序而不可变的值序列。</li>
+<li><code>Sets［</code> 集合］是装满无序值的包裹。</li>
+<li><code>Dictionaries</code> ［字典］是键值对的无序包裹。</li>
+<li><code>Strings</code> ［字符串型］是Unicode字符序列</li>
+<li><code>Bytes</code> ［字节］和ByteArrays［字节数组］，例如:一份JPEG图像文件。</li>
+<li><code>None</code></li>
+</ul>
+<h3 id="_3">布尔类型</h3>
+<p><code>True</code>和<code>False</code>,布尔值可以用<code>and</code>、<code>or</code>和<code>not</code>运算</p>
+<pre><code class="py">three = True
+</code></pre>
+
+<pre><code class="py">&gt;&gt;&gt; True and True
+True
+&gt;&gt;&gt; True and False
+False
+&gt;&gt;&gt; False and False
+False
+&gt;&gt;&gt; 5 &gt; 3 and 3 &gt; 1
+True
+</code></pre>
+
+<h3 id="_4">数值类型</h3>
+<p>python的数值类型包括int,float,分数等,int和float仅通过小数点来区分它们.</p>
+<pre><code class="py">#判断数据类型
+one = 1
+two = 2.0
+print(type(one))
+print(type(two))
+#判断是否是int类型
+print(isinstance(one, float))
+# 分数
+import fractions
+print(fractions.Fraction(1, 2))
+</code></pre>
+
+<h3 id="_5">列表(数组) :可以有相同元素,有序</h3>
+<pre><code class="py">a =['a','b','c','d','e']
+#第一个
+print(a[0])
+#倒数第一个
+print(a[-1])
+#第二个到第四个，(包括前不包括末尾)
+print(a[1:3])
+#第一个到第四个
+print(a[:3])
+#第二个到倒数第一个
+print(a[1:-1])
+#第四个到最后
+print(a[3:])
+#rang,a=[0,1,2,3,4]
+a=list(range(5))
+</code></pre>
+
+<p>输出:</p>
+<pre><code>a
+e
+['b', 'c']
+['a', 'b', 'c']
+['b', 'c', 'd']
+['d', 'e']
+</code></pre>
+
+<h4 id="_6">列表遍历</h4>
+<pre><code class="py">x = [ 2,5,8]
+for y in x:
+    print (y)
+</code></pre>
+
+<h4 id="_7">列表添加项 :</h4>
+<pre><code class="py">a =['a','b','c','d','e']
+a = a+['f']
+print(a)
+a.append(True)
+print(a)
+a.insert(0,'g')
+print(a)
+a.extend(['h'])
+print(a)
+a.append(['j']);
+print(a)
+</code></pre>
+
+<p>输出:</p>
+<pre><code>['a', 'b', 'c', 'd', 'e', 'f']
+['a', 'b', 'c', 'd', 'e', 'f', True]
+['g', 'a', 'b', 'c', 'd', 'e', 'f', True]
+['g', 'a', 'b', 'c', 'd', 'e', 'f', True, 'h']
+['g', 'a', 'b', 'c', 'd', 'e', 'f', True, 'h', ['j']]
+</code></pre>
+
+<ul>
+<li><code>加号连接符</code>:不适合处理大型列表，应该他是创建新的列表然后赋值，消耗内存</li>
+<li><code>insert</code>:是才索引位置之前插入</li>
+<li><code>extend</code>:只可接受列表</li>
+<li><code>append</code>:可接受列表和单独元素</li>
+</ul>
+<h4 id="_8">列表检索值</h4>
+<pre><code class="py">  a = ['a','a', 'b', 'c', 'd', 'e']
+  print(a.count('a'))
+  print(a.index('a'))
+  print('a' in a)
+</code></pre>
+
+<ul>
+<li><code>count</code>:计算元素出现的次数</li>
+<li><code>index</code>:返回元素第一次出现的索引位置，不在在会引发异常</li>
+<li><code>in</code> :用于搜索元素是否存在于此列表中，比count速度快</li>
+</ul>
+<h4 id="_9">列表删除元素:</h4>
+<pre><code class="py">a = ['a', 'b', 'c', 'd', 'e']
+a.remove('a')
+print(a)
+a.pop()
+print(a)
+a.pop(0)
+print(a)
+</code></pre>
+
+<ul>
+<li><code>remove</code>:删除指定元素，元素不在在会引发异常</li>
+<li><code>pop</code>:不带参数时 删除最后一个元素,空列表引发异常</li>
+</ul>
+<h3 id="_10">元组 :不可改变的列表，用于常量</h3>
+<pre><code class="py">arr=(1,2,3)
+a=list(arr)
+print(a)
+b= tuple(a)
+print(b)
+</code></pre>
+
+<ul>
+<li><code>list</code>:将元组转换成列表</li>
+<li><code>tuple</code>:将列表转换成元组</li>
+</ul>
+<h3 id="_11">集合:无序，唯一</h3>
+<pre><code class="py">sets = {1, 2, 3, 4}
+</code></pre>
+
+<h4 id="_12">修改集合</h4>
+<ul>
+<li><code>add</code>:只可添加一个参数,不能是集合,列表</li>
+<li><code>update</code>:只能是集合或列表,可多个参数</li>
+</ul>
+<pre><code class="py">arr  = [5,6,7]
+sets = {1, 2, 3, 4}
+sets.add(8)
+print(sets)
+sets.update(arr);
+print(sets)
+</code></pre>
+
+<h4 id="_13">删除集合</h4>
+<ul>
+<li><code>discard</code>: 接受一个参数,不会引发异常</li>
+<li><code>remove</code>:接受一个参数,会引发异常</li>
+<li><code>pop</code>:随机弹出一个元素,会引发异常</li>
+<li><code>clear</code>:清除所有值，相当于重置集合</li>
+</ul>
+<pre><code class="py">sets = {1, 2, 3, 4}
+sets.discard(1)
+print(sets)
+sets.remove(2)
+print(sets)
+sets.pop()
+print(sets)
+sets.clear()
+print(sets)
+</code></pre>
+
+<h4 id="_14">常见集合操作</h4>
+<pre><code class="py">sets = {1, 2, 3, 4}
+setsA = {4,5,6,7}
+
+'''并集'''
+setsB =sets.union(setsA)
+print(setsB)
+
+'''交集'''
+setsC = sets.intersection(setsA)
+print(setsC)
+
+'''只出现在sets不在setsA中的元素'''
+setsD = sets.difference(setsA)
+print(setsD)
+
+'''两个集合不相同的元素集合'''
+setsE = sets.symmetric_difference(setsA)
+print(setsE)
+
+'''sets是否是setsA的子集(sets元素在setsA中全有)'''
+print(sets.issubset(setsA))
+'''sets是否是setsA的超集'''
+print(sets.issuperset(setsA))
+</code></pre>
+
+<h3 id="_15">字典:有键值对的无序集合</h3>
+<h4 id="_16">操作</h4>
+<pre><code class="py">dic = {1000:1, 2000:2}
+print(dic[1000])
+dic[1000]=3
+print(dic[1000])
+</code></pre>
+
+<p>字典不允许有重复值，对现有键的赋值会覆盖旧值。 添加新键值和修改值语法一样</p>
+<h4 id="_17">遍历字典</h4>
+<pre><code class="py">dict={&quot;a&quot;:&quot;apple&quot;,&quot;b&quot;:&quot;banana&quot;,&quot;o&quot;:&quot;orange&quot;}
+for i in dict:
+        print (&quot;dict[%s]=&quot; % i,dict[i] )
+for (k,v) in  dict.items():
+        print (&quot;dict[%s]=&quot; % k,v  )
+</code></pre>
+
+<h3 id="_18">字符串</h3>
+<h4 id="_19">格式化</h4>
+<pre><code class="py">str = 'myname is {0}'
+print(str.format('wujiyu'))
+
+dics =['kb','mb']
+'''参数可以是复合元素1mb=1024kb'''
+strarr = '1{0[1]}=1024{0[0]}'
+print(strarr.format(dics))
+
+'''.1 保留到小数点第一位'''
+print('{0:.1f}{1}'.format(698.24,'GB'))
+</code></pre>
+
+<h4 id="_20">其他</h4>
+<pre><code class="py">str = 'Myname=2&amp;pas=3'
+'''小写'''
+print(str.lower())
+'''分段'''
+print(str.split('&amp;'))
+'''计数'''
+print(str.count('a'))
+'''切片'''
+print(str[0:3])
+</code></pre>
+
+<h3 id="byte">Byte</h3>
+<pre><code class="py">x = b'ABC'
+</code></pre>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../py1_intro/" title="语言简介">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                语言简介
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../py3_controller/" title="控制流程">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                控制流程
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

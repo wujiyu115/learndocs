@@ -12,7 +12,7 @@
     
         
     <url>
-     <loc>None/user/t/</loc>
+     <loc>None/data_algorithms/algorithms1_intro/</loc>
      <lastmod>2016-09-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -22,13 +22,209 @@
     
         
     <url>
-     <loc>None/api/mkdocs/about/</loc>
+     <loc>None/cplus/cplus_win/</loc>
      <lastmod>2016-09-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/api/mkdocs/</loc>
+     <loc>None/cplus/cplus1_grammer/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/cplus/cplus2_class/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/cplus/cplus3_memory/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/cplus/cplus4_complier/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/cplus/cplus5_const/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/python/py1_intro/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py2_data/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py3_controller/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py4_func/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py5_step/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py6_organize/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_class/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_enum/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_error/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_test/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_fileio/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_inmodule/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_urllib/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_module_manager/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_thread/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_coroutine/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_gui/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_diff2/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_modules/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_qt/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_tornado/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_spider/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/python/py_mq/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/lua/lua1_data/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/swift/swift1_intro/</loc>
+     <lastmod>2016-09-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/php/php1_intro/</loc>
      <lastmod>2016-09-03</lastmod>
      <changefreq>daily</changefreq>
     </url>

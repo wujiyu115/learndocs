@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>文件io - farwmarth’s note</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                python <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        文件io
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="文件io" href="./">
+      文件io
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="文件读写" href="#_1">
+                文件读写
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="序列化" href="#_5">
+                序列化
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="python-io">python  文件io</h1>
+<h2 id="_1">文件读写</h2>
+<h3 id="_2">文件读取</h3>
+<pre><code class="py">  o_file = open(os.path.realpath(&quot;python.txt&quot;), 'r',encoding='GBK')
+  print(o_file.read())
+  o_file.close()
+</code></pre>
+
+<p>os.path.realpath　拿到当前脚本的目录. r 设置属性，只读，mode=’rb’读取为二进制数据 encoding  指定编码方式 o_file.close()　 显式地关闭文件，但是未销毁文件对象，而且在出现异常时不一定能关闭文件流，所有python3有另一种写法 用with来创建运行时环境，不管是否有异常在with块结束后文件都会关闭，类似于函数作用域中的局部变量</p>
+<pre><code class="py">  with open(os.path.realpath(&quot;python.txt&quot;), 'r',encoding='GBK') as o_file:
+      print(o_file.read())
+</code></pre>
+
+<p>每次读取一行:</p>
+<pre><code class="py">  line_number=0
+  with open(os.path.realpath(&quot;python.txt&quot;), 'r',encoding='GBK') as o_file:
+      for a_line in o_file:
+          line_number+=1
+          print('{0}\t{1}'.format(line_number,a_line.rstrip()))
+</code></pre>
+
+<p>因为流对象也是一个迭代器，所以可以用for循环来读取，python会自动识别行结束符。rstrip()是去空白字符串的方法.
+使用<code>readlines</code>:</p>
+<pre><code class="py">f = open(&quot;python.txt&quot;,&quot;r&quot;)
+for  line in f.readlines():
+  print(line.strip())# 把末尾的'\n'删掉
+  f.close()
+</code></pre>
+
+<h3 id="_3">写入文本</h3>
+<pre><code class="py">  with open(os.path.realpath(&quot;python.txt&quot;), mode='w') as o_file:
+      o_file.write('test success\n')
+  with open(os.path.realpath(&quot;python.txt&quot;), 'r',encoding='GBK') as o_file:
+      print(o_file.read())
+</code></pre>
+
+<p>与读取文本方式相同，mode=’w’代表覆盖，mode=’a’代表追加 。</p>
+<h3 id="stringio">StringIO</h3>
+<p>内存中的字符缓冲流</p>
+<pre><code class="py">from io import StringIO
+f = StringIO()
+f.write(&quot;hello\n&quot;)
+f.write(&quot;far&quot;)
+print(f.getvalue())
+f.close()
+</code></pre>
+
+<h3 id="bytesio">BytesIO</h3>
+<p>内存中的字节缓冲流</p>
+<pre><code class="py">from io import BytesIO
+f = BytesIO()
+f.write('中文'.encode('utf-8'))
+print(f.getvalue())
+f.close()
+</code></pre>
+
+<h3 id="xml">XML操作</h3>
+<h3 id="xml_1">解析XML</h3>
+<p>python解析有Dom和Sax解析器，现在我们来用另外一个库:xml.etree.ElementTree来解析</p>
+<pre><code class="xml">  &lt;data&gt;
+       &lt;name id='1'&gt;wujiyu&lt;/name&gt;
+       &lt;name id='2'&gt;wujiyu&lt;/name&gt;
+  &lt;/data&gt;
+</code></pre>
+
+<pre><code class="py">  import os
+  import xml.etree.ElementTree as etree
+  tree = etree.parse(os.path.realpath(&quot;py.xml&quot;))
+  root=tree.getroot()
+  print(root)#&lt;Element 'data' at 0x02B1A330&gt;
+  print(root[0].tag)#name
+  print(root[0].attrib['id'])#1
+  print(len(root.findall('name')))#2
+</code></pre>
+
+<p>所有节点都为列表，所有属性都为字典,findall用来查找元素，可嵌套查找。 对于大型xml可用lxml来代替ElementTree,lxml是一个第三方的开源库，findall查找语法更强大,api与ElementTree相同</p>
+<h3 id="xml_2">创建xml</h3>
+<p>我们用下lxml吧，lxml是第三方库，需要安装，地址: <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml">http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml</a> 看准对应的二进制版本</p>
+<p>开始创建xml</p>
+<pre><code class="py">  from lxml import etree
+  import os
+  newfeed = etree.Element('feed')
+  names = etree.SubElement(newfeed,'name',attrib={'old':'yes','id':'1'})
+  names.text='wujiyu'
+  print(etree.tostring(newfeed))
+
+</code></pre>
+
+<p>tutorial：<a href="http://lxml.de/tutorial.html" title="http://lxml.de/tutorial.html">http://lxml.de/tutorial.html</a></p>
+<p>## 文件路径操作</p>
+<pre><code class="py">   import  os
+   # 列出当前目录文件
+   print(os.listdir(path='.'))  # ['python.txt', 'init.py']
+   # 切割地址
+   print(os.path.split('ab/a.txt'))  # ('ab', 'a.txt')
+   # 把文件名分成文件名称和扩展名
+   print(os.path.splitext('ab/a.txt'))  # ('ab/a', '.txt')
+   # 文件+扩展名
+   print(os.path.basename('bcd/abc'))  # abc
+  # 创建一级目录
+  os.mkdir('test1')
+  # 创建多级目录
+  os.makedirs('test2/test')
+  # 删除一个目录下所有东西
+  os.removedirs('path')
+  # 删除一个目录，而且一定要空，否则os.errer
+  os.rmdir('path')
+</code></pre>
+
+<h4 id="_4">相对路径,绝对路径</h4>
+<pre><code>print(&quot;sys.path:&quot;+sys.path[0])
+print(&quot;sys.argv:&quot;+sys.argv[0])
+print(&quot;__file__:&quot;+__file__)
+print(&quot;os.getcwd():&quot;+os.getcwd())
+print(&quot;os.path.realpath():&quot;+os.path.realpath(__file__))
+print(&quot;(os.path.abspath(__file__)):&quot;+os.path.abspath(__file__))
+print(&quot;os.path.dirname(os.path.realpath()):&quot;+os.path.dirname(os.path.realpath(__file__)))
+print(&quot;os.path.dirname(os.path.abspath(__file__)):&quot;+os.path.dirname(os.path.abspath(__file__)))
+
+结果:
+
+sys.path:/Users/far/Develop/git/py_search/cloudapps/auto_sign
+sys.argv:/Users/far/Develop/git/py_search/cloudapps/auto_sign/test.py
+__file__:/Users/far/Develop/git/py_search/cloudapps/auto_sign/zimuzu/zumuzu_tv.py
+os.getcwd():/Users/far/Develop/git/py_search/cloudapps/auto_sign
+os.path.realpath():/Users/far/Develop/git/py_search/cloudapps/auto_sign/zimuzu/zumuzu_tv.py
+(os.path.abspath(__file__)):/Users/far/Develop/git/py_search/cloudapps/auto_sign/zimuzu/zumuzu_tv.py
+os.path.dirname(os.path.realpath()):/Users/far/Develop/git/py_search/cloudapps/auto_sign/zimuzu
+os.path.dirname(os.path.abspath(__file__)):/Users/far/Develop/git/py_search/cloudapps/auto_sign/zimuzu
+[Finished in 0.1s]
+</code></pre>
+
+<h2 id="_5">序列化</h2>
+<h3 id="pickle">pickle</h3>
+<ul>
+<li><code>dump</code>: 将对象系列化到文件中</li>
+<li><code>load</code>: 从文件中加载系列化信息</li>
+</ul>
+<pre><code class="py">import pickle
+
+t = {&quot;name&quot;:&quot;far&quot;}
+with open('dump.txt', 'wb') as f:
+  pickle.dump(t,f)
+with open('dump.txt', 'rb') as f:
+  d = pickle.load(f)
+  print(d)
+
+'''
+{'name': 'far'}
+'''
+</code></pre>
+
+<h3 id="json">json</h3>
+<h4 id="_6">基础</h4>
+<ul>
+<li><code>dumps</code>:将对象转化成字符串</li>
+<li><code>loads</code>:将字符串转化成对象</li>
+<li><code>load</code>:加载文件对象将字符串转化成对象</li>
+</ul>
+<pre><code class="py">import json
+
+t = {&quot;name&quot;:&quot;far&quot;}
+t_str= json.dumps(t)
+print(t_str)
+d = json.loads(t_str)
+print(d)
+d = json.load(open(&quot;dump.json&quot;,&quot;r&quot;))
+print(d)
+'''
+{&quot;name&quot;: &quot;far&quot;}
+{'name': 'far'}
+{'name': 'far'}
+'''
+</code></pre>
+
+<h4 id="_7">转换类对象</h4>
+<pre><code class="py">import json
+
+class Student(object):
+  def __init__(self, name, age, score):
+    self.name = name
+    self.age = age
+    self.score = score
+
+#转换成可解析字符串对象
+def student2dict(std):
+  return {
+    'name': std.name,
+    'age': std.age,
+    'score': std.score
+  }
+
+#转换成对象
+def dict2student(d):
+  return Student(d['name'], d['age'], d['score'])
+
+s = Student('Bob', 20, 88)
+d = json.dumps(s,default=student2dict) #自定义一个转换函数
+print(d)
+d =json.dumps(s,default=lambda obj: obj.__dict__)#使用对象的dict属性
+print(d)
+s1 = json.loads(d,object_hook=dict2student)
+print(s1.name,s1.age,s1.score)
+'''
+{&quot;score&quot;: 88, &quot;name&quot;: &quot;Bob&quot;, &quot;age&quot;: 20}
+{&quot;score&quot;: 88, &quot;age&quot;: 20, &quot;name&quot;: &quot;Bob&quot;}
+Bob 20 88
+'''
+</code></pre>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../py_test/" title="调试">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                调试
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../py_inmodule/" title="模块">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                模块
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
