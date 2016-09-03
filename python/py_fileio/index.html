@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_fileio/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_fileio/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_fileio//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -523,6 +534,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -531,117 +556,127 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python-io">python  文件io</h1>
-<h2 id="_1">文件读写</h2>
-<h3 id="_2">文件读取</h3>
-<pre><code class="py">  o_file = open(os.path.realpath(&quot;python.txt&quot;), 'r',encoding='GBK')
-  print(o_file.read())
-  o_file.close()
-</code></pre>
+          <h1 id="python-io">python  文件io<a class="headerlink" href="#python-io" title="Permanent link">#</a></h1>
+<h2 id="_1">文件读写<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="_2">文件读取<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>  <span class="n">o_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s2">&quot;python.txt&quot;</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;GBK&#39;</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">o_file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+  <span class="n">o_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
 
 <p>os.path.realpath　拿到当前脚本的目录. r 设置属性，只读，mode=’rb’读取为二进制数据 encoding  指定编码方式 o_file.close()　 显式地关闭文件，但是未销毁文件对象，而且在出现异常时不一定能关闭文件流，所有python3有另一种写法 用with来创建运行时环境，不管是否有异常在with块结束后文件都会关闭，类似于函数作用域中的局部变量</p>
-<pre><code class="py">  with open(os.path.realpath(&quot;python.txt&quot;), 'r',encoding='GBK') as o_file:
-      print(o_file.read())
-</code></pre>
+<div class="code"><pre><span></span>  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s2">&quot;python.txt&quot;</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;GBK&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">o_file</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">o_file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+
 
 <p>每次读取一行:</p>
-<pre><code class="py">  line_number=0
-  with open(os.path.realpath(&quot;python.txt&quot;), 'r',encoding='GBK') as o_file:
-      for a_line in o_file:
-          line_number+=1
-          print('{0}\t{1}'.format(line_number,a_line.rstrip()))
-</code></pre>
+<div class="code"><pre><span></span>  <span class="n">line_number</span><span class="o">=</span><span class="mi">0</span>
+  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s2">&quot;python.txt&quot;</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;GBK&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">o_file</span><span class="p">:</span>
+      <span class="k">for</span> <span class="n">a_line</span> <span class="ow">in</span> <span class="n">o_file</span><span class="p">:</span>
+          <span class="n">line_number</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{0}</span><span class="se">\t</span><span class="s1">{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">line_number</span><span class="p">,</span><span class="n">a_line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()))</span>
+</pre></div>
+
 
 <p>因为流对象也是一个迭代器，所以可以用for循环来读取，python会自动识别行结束符。rstrip()是去空白字符串的方法.
 使用<code>readlines</code>:</p>
-<pre><code class="py">f = open(&quot;python.txt&quot;,&quot;r&quot;)
-for  line in f.readlines():
-  print(line.strip())# 把末尾的'\n'删掉
-  f.close()
-</code></pre>
+<div class="code"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;python.txt&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="k">for</span>  <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span><span class="c1"># 把末尾的&#39;\n&#39;删掉</span>
+  <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
 
-<h3 id="_3">写入文本</h3>
-<pre><code class="py">  with open(os.path.realpath(&quot;python.txt&quot;), mode='w') as o_file:
-      o_file.write('test success\n')
-  with open(os.path.realpath(&quot;python.txt&quot;), 'r',encoding='GBK') as o_file:
-      print(o_file.read())
-</code></pre>
+
+<h3 id="_3">写入文本<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s2">&quot;python.txt&quot;</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">o_file</span><span class="p">:</span>
+      <span class="n">o_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;test success</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s2">&quot;python.txt&quot;</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;GBK&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">o_file</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">o_file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+
 
 <p>与读取文本方式相同，mode=’w’代表覆盖，mode=’a’代表追加 。</p>
-<h3 id="stringio">StringIO</h3>
+<h3 id="stringio">StringIO<a class="headerlink" href="#stringio" title="Permanent link">#</a></h3>
 <p>内存中的字符缓冲流</p>
-<pre><code class="py">from io import StringIO
-f = StringIO()
-f.write(&quot;hello\n&quot;)
-f.write(&quot;far&quot;)
-print(f.getvalue())
-f.close()
-</code></pre>
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;hello</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;far&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
 
-<h3 id="bytesio">BytesIO</h3>
+
+<h3 id="bytesio">BytesIO<a class="headerlink" href="#bytesio" title="Permanent link">#</a></h3>
 <p>内存中的字节缓冲流</p>
-<pre><code class="py">from io import BytesIO
-f = BytesIO()
-f.write('中文'.encode('utf-8'))
-print(f.getvalue())
-f.close()
-</code></pre>
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;中文&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
 
-<h3 id="xml">XML操作</h3>
-<h3 id="xml_1">解析XML</h3>
+
+<h3 id="xml">XML操作<a class="headerlink" href="#xml" title="Permanent link">#</a></h3>
+<h3 id="xml_1">解析XML<a class="headerlink" href="#xml_1" title="Permanent link">#</a></h3>
 <p>python解析有Dom和Sax解析器，现在我们来用另外一个库:xml.etree.ElementTree来解析</p>
-<pre><code class="xml">  &lt;data&gt;
-       &lt;name id='1'&gt;wujiyu&lt;/name&gt;
-       &lt;name id='2'&gt;wujiyu&lt;/name&gt;
-  &lt;/data&gt;
-</code></pre>
+<div class="code"><pre><span></span>  <span class="nt">&lt;data&gt;</span>
+       <span class="nt">&lt;name</span> <span class="na">id=</span><span class="s">&#39;1&#39;</span><span class="nt">&gt;</span>wujiyu<span class="nt">&lt;/name&gt;</span>
+       <span class="nt">&lt;name</span> <span class="na">id=</span><span class="s">&#39;2&#39;</span><span class="nt">&gt;</span>wujiyu<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;/data&gt;</span>
+</pre></div>
 
-<pre><code class="py">  import os
-  import xml.etree.ElementTree as etree
-  tree = etree.parse(os.path.realpath(&quot;py.xml&quot;))
-  root=tree.getroot()
-  print(root)#&lt;Element 'data' at 0x02B1A330&gt;
-  print(root[0].tag)#name
-  print(root[0].attrib['id'])#1
-  print(len(root.findall('name')))#2
-</code></pre>
+
+<div class="code"><pre><span></span>  <span class="kn">import</span> <span class="nn">os</span>
+  <span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="kn">as</span> <span class="nn">etree</span>
+  <span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s2">&quot;py.xml&quot;</span><span class="p">))</span>
+  <span class="n">root</span><span class="o">=</span><span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">root</span><span class="p">)</span><span class="c1">#&lt;Element &#39;data&#39; at 0x02B1A330&gt;</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">root</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span><span class="c1">#name</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">root</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span><span class="c1">#1</span>
+  <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)))</span><span class="c1">#2</span>
+</pre></div>
+
 
 <p>所有节点都为列表，所有属性都为字典,findall用来查找元素，可嵌套查找。 对于大型xml可用lxml来代替ElementTree,lxml是一个第三方的开源库，findall查找语法更强大,api与ElementTree相同</p>
-<h3 id="xml_2">创建xml</h3>
+<h3 id="xml_2">创建xml<a class="headerlink" href="#xml_2" title="Permanent link">#</a></h3>
 <p>我们用下lxml吧，lxml是第三方库，需要安装，地址: <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml">http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml</a> 看准对应的二进制版本</p>
 <p>开始创建xml</p>
-<pre><code class="py">  from lxml import etree
-  import os
-  newfeed = etree.Element('feed')
-  names = etree.SubElement(newfeed,'name',attrib={'old':'yes','id':'1'})
-  names.text='wujiyu'
-  print(etree.tostring(newfeed))
+<div class="code"><pre><span></span>  <span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+  <span class="kn">import</span> <span class="nn">os</span>
+  <span class="n">newfeed</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s1">&#39;feed&#39;</span><span class="p">)</span>
+  <span class="n">names</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">newfeed</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="n">attrib</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;old&#39;</span><span class="p">:</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span><span class="s1">&#39;id&#39;</span><span class="p">:</span><span class="s1">&#39;1&#39;</span><span class="p">})</span>
+  <span class="n">names</span><span class="o">.</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;wujiyu&#39;</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">etree</span><span class="o">.</span><span class="n">tostring</span><span class="p">(</span><span class="n">newfeed</span><span class="p">))</span>
+</pre></div>
 
-</code></pre>
 
 <p>tutorial：<a href="http://lxml.de/tutorial.html" title="http://lxml.de/tutorial.html">http://lxml.de/tutorial.html</a></p>
 <p>## 文件路径操作</p>
-<pre><code class="py">   import  os
-   # 列出当前目录文件
-   print(os.listdir(path='.'))  # ['python.txt', 'init.py']
-   # 切割地址
-   print(os.path.split('ab/a.txt'))  # ('ab', 'a.txt')
-   # 把文件名分成文件名称和扩展名
-   print(os.path.splitext('ab/a.txt'))  # ('ab/a', '.txt')
-   # 文件+扩展名
-   print(os.path.basename('bcd/abc'))  # abc
-  # 创建一级目录
-  os.mkdir('test1')
-  # 创建多级目录
-  os.makedirs('test2/test')
-  # 删除一个目录下所有东西
-  os.removedirs('path')
-  # 删除一个目录，而且一定要空，否则os.errer
-  os.rmdir('path')
-</code></pre>
+<div class="code"><pre><span></span>   <span class="kn">import</span>  <span class="nn">os</span>
+   <span class="c1"># 列出当前目录文件</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>  <span class="c1"># [&#39;python.txt&#39;, &#39;init.py&#39;]</span>
+   <span class="c1"># 切割地址</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;ab/a.txt&#39;</span><span class="p">))</span>  <span class="c1"># (&#39;ab&#39;, &#39;a.txt&#39;)</span>
+   <span class="c1"># 把文件名分成文件名称和扩展名</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="s1">&#39;ab/a.txt&#39;</span><span class="p">))</span>  <span class="c1"># (&#39;ab/a&#39;, &#39;.txt&#39;)</span>
+   <span class="c1"># 文件+扩展名</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="s1">&#39;bcd/abc&#39;</span><span class="p">))</span>  <span class="c1"># abc</span>
+  <span class="c1"># 创建一级目录</span>
+  <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;test1&#39;</span><span class="p">)</span>
+  <span class="c1"># 创建多级目录</span>
+  <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;test2/test&#39;</span><span class="p">)</span>
+  <span class="c1"># 删除一个目录下所有东西</span>
+  <span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+  <span class="c1"># 删除一个目录，而且一定要空，否则os.errer</span>
+  <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+</pre></div>
 
-<h4 id="_4">相对路径,绝对路径</h4>
-<pre><code>print(&quot;sys.path:&quot;+sys.path[0])
+
+<h4 id="_4">相对路径,绝对路径<a class="headerlink" href="#_4" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span>print(&quot;sys.path:&quot;+sys.path[0])
 print(&quot;sys.argv:&quot;+sys.argv[0])
 print(&quot;__file__:&quot;+__file__)
 print(&quot;os.getcwd():&quot;+os.getcwd())
@@ -661,86 +696,91 @@ os.path.realpath():/Users/far/Develop/git/py_search/cloudapps/auto_sign/zimuzu/z
 os.path.dirname(os.path.realpath()):/Users/far/Develop/git/py_search/cloudapps/auto_sign/zimuzu
 os.path.dirname(os.path.abspath(__file__)):/Users/far/Develop/git/py_search/cloudapps/auto_sign/zimuzu
 [Finished in 0.1s]
-</code></pre>
+</pre></div>
 
-<h2 id="_5">序列化</h2>
-<h3 id="pickle">pickle</h3>
+
+<h2 id="_5">序列化<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<h3 id="pickle">pickle<a class="headerlink" href="#pickle" title="Permanent link">#</a></h3>
 <ul>
 <li><code>dump</code>: 将对象系列化到文件中</li>
 <li><code>load</code>: 从文件中加载系列化信息</li>
 </ul>
-<pre><code class="py">import pickle
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
 
-t = {&quot;name&quot;:&quot;far&quot;}
-with open('dump.txt', 'wb') as f:
-  pickle.dump(t,f)
-with open('dump.txt', 'rb') as f:
-  d = pickle.load(f)
-  print(d)
+<span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;far&quot;</span><span class="p">}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dump.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dump.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="n">d</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 
-'''
-{'name': 'far'}
-'''
-</code></pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">{&#39;name&#39;: &#39;far&#39;}</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h3 id="json">json</h3>
-<h4 id="_6">基础</h4>
+
+<h3 id="json">json<a class="headerlink" href="#json" title="Permanent link">#</a></h3>
+<h4 id="_6">基础<a class="headerlink" href="#_6" title="Permanent link">#</a></h4>
 <ul>
 <li><code>dumps</code>:将对象转化成字符串</li>
 <li><code>loads</code>:将字符串转化成对象</li>
 <li><code>load</code>:加载文件对象将字符串转化成对象</li>
 </ul>
-<pre><code class="py">import json
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 
-t = {&quot;name&quot;:&quot;far&quot;}
-t_str= json.dumps(t)
-print(t_str)
-d = json.loads(t_str)
-print(d)
-d = json.load(open(&quot;dump.json&quot;,&quot;r&quot;))
-print(d)
-'''
-{&quot;name&quot;: &quot;far&quot;}
-{'name': 'far'}
-{'name': 'far'}
-'''
-</code></pre>
+<span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;far&quot;</span><span class="p">}</span>
+<span class="n">t_str</span><span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">t_str</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">t_str</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;dump.json&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">{&quot;name&quot;: &quot;far&quot;}</span>
+<span class="sd">{&#39;name&#39;: &#39;far&#39;}</span>
+<span class="sd">{&#39;name&#39;: &#39;far&#39;}</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h4 id="_7">转换类对象</h4>
-<pre><code class="py">import json
 
-class Student(object):
-  def __init__(self, name, age, score):
-    self.name = name
-    self.age = age
-    self.score = score
+<h4 id="_7">转换类对象<a class="headerlink" href="#_7" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 
-#转换成可解析字符串对象
-def student2dict(std):
-  return {
-    'name': std.name,
-    'age': std.age,
-    'score': std.score
-  }
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">score</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">score</span>
 
-#转换成对象
-def dict2student(d):
-  return Student(d['name'], d['age'], d['score'])
+<span class="c1">#转换成可解析字符串对象</span>
+<span class="k">def</span> <span class="nf">student2dict</span><span class="p">(</span><span class="n">std</span><span class="p">):</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">std</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">std</span><span class="o">.</span><span class="n">age</span><span class="p">,</span>
+    <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="n">std</span><span class="o">.</span><span class="n">score</span>
+  <span class="p">}</span>
 
-s = Student('Bob', 20, 88)
-d = json.dumps(s,default=student2dict) #自定义一个转换函数
-print(d)
-d =json.dumps(s,default=lambda obj: obj.__dict__)#使用对象的dict属性
-print(d)
-s1 = json.loads(d,object_hook=dict2student)
-print(s1.name,s1.age,s1.score)
-'''
-{&quot;score&quot;: 88, &quot;name&quot;: &quot;Bob&quot;, &quot;age&quot;: 20}
-{&quot;score&quot;: 88, &quot;age&quot;: 20, &quot;name&quot;: &quot;Bob&quot;}
-Bob 20 88
-'''
-</code></pre>
+<span class="c1">#转换成对象</span>
+<span class="k">def</span> <span class="nf">dict2student</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">Student</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">])</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">88</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="n">student2dict</span><span class="p">)</span> <span class="c1">#自定义一个转换函数</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="k">lambda</span> <span class="n">obj</span><span class="p">:</span> <span class="n">obj</span><span class="o">.</span><span class="n">__dict__</span><span class="p">)</span><span class="c1">#使用对象的dict属性</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">object_hook</span><span class="o">=</span><span class="n">dict2student</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">s1</span><span class="o">.</span><span class="n">age</span><span class="p">,</span><span class="n">s1</span><span class="o">.</span><span class="n">score</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">{&quot;score&quot;: 88, &quot;name&quot;: &quot;Bob&quot;, &quot;age&quot;: 20}</span>
+<span class="sd">{&quot;score&quot;: 88, &quot;age&quot;: 20, &quot;name&quot;: &quot;Bob&quot;}</span>
+<span class="sd">Bob 20 88</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

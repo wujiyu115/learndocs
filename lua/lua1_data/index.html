@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/lua/lua1_data/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/lua/lua1_data/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/lua/lua1_data//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -553,6 +564,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -561,104 +586,107 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="_1">基本概念</h1>
-<h2 id="_2">文档</h2>
+          <h1 id="_1">基本概念<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h2 id="_2">文档<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ul>
 <li><code>lua5.1</code> :<a href="http://www.codingnow.com/2000/download/lua_manual.html">http://www.codingnow.com/2000/download/lua_manual.html</a></li>
 <li><code>lua5.3</code> :<a href="http://cloudwu.github.io/lua53doc/">http://cloudwu.github.io/lua53doc/</a></li>
 </ul>
-<h2 id="_3">值与类型</h2>
+<h2 id="_3">值与类型<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>Lua 中有八种基本类型： <code>nil</code>、<code>boolean</code>、<code>number</code>、<code>string</code>、<code>function</code>、<code>userdata</code>、 <code>thread</code> 和 <code>table</code>
 userdata 类型允许将 C 中的数据保存在 Lua 变量中</p>
-<h2 id="_4">环境与全局环境</h2>
-<h3 id="upvalue"><code>upvalue</code></h3>
+<h2 id="_4">环境与全局环境<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<h3 id="upvalue"><code>upvalue</code><a class="headerlink" href="#upvalue" title="Permanent link">#</a></h3>
 <p>当执行完g1 = f1(1979)后，局部变量n的生命本该结束，但因为它已经成了内嵌函数f2(它又被赋给了变量g1)的upvalue</p>
-<pre><code class="lua">local function f1(n)
-    -- 函数参数也是局部变量
-    local function f2()
-        print(n) -- 引用外包函数的局部变量
-    end
-    return f2
-end
-g1 = f1(1979)
-</code></pre>
+<div class="code"><pre><span></span><span class="kd">local</span> <span class="k">function</span> <span class="nf">f1</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="c1">-- 函数参数也是局部变量</span>
+    <span class="kd">local</span> <span class="k">function</span> <span class="nf">f2</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1">-- 引用外包函数的局部变量</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="n">f2</span>
+<span class="k">end</span>
+<span class="n">g1</span> <span class="o">=</span> <span class="n">f1</span><span class="p">(</span><span class="mi">1979</span><span class="p">)</span>
+</pre></div>
 
-<h3 id="_env"><code>_ENV</code></h3>
+
+<h3 id="_env"><code>_ENV</code><a class="headerlink" href="#_env" title="Permanent link">#</a></h3>
 <p>lua5.2中load代码后返回函数的upvalue.原先虚无缥缈只能通过 setfenv、getfenv 访问的所谓「环境」终于实体化为一个始终存在的变量 _ENV 了
 <a href="http://timothyqiu.com/archives/lua-note-sandboxes/">http://timothyqiu.com/archives/lua-note-sandboxes/</a></p>
 <p>lua_setglobal/lua_getglobal都是操作lua_State注册表中LUA_RIDX_GLOBALS伪索引指向的全局变量表，与lua中访问_ENV['a']或者a是不同的。
 lua_load加载lua代码后会返回一个函数，默认会给这个函数设置一个upvalue就叫_ENV，起值是LUA_RIDX_GLOBALS的全局变量表，你可以lua_setupvalue设置这个函数的upvalue，即下标1的upvalue，因为这个位置是这个函数的_ENV表存放位置（你可以通过lua_setupvalue的返回值印证这一点）</p>
-<h3 id="_g"><code>_G</code></h3>
+<h3 id="_g"><code>_G</code><a class="headerlink" href="#_g" title="Permanent link">#</a></h3>
 <p>全局环境.
 lua_State会在创建时保证LUA_RIDX_GLOBALS的全局变量表中包含一个指向自己的_G元素，这样就保证了在不调用lua_setupvalue的情况下该返回函数的_ENV['_G']是指向自己的，即LUA_RIDX_GLOBALS这个全局表。（其实你的lua解释器就是简单的lua_load后pcall的，对于一个刚启动lua_State来说是没有_ENV的，是lua解释器load你的代码时自动给带上的_ENV，其值是lua_state的LUA_RIDX_GLOBALS全局表。）
 lua_state启动后在注册表里LUA_RIDX_GLOBALS下标存放的全局表一定有一个元素是指向自己的，即_G.</p>
-<h2 id="_5">错误处理</h2>
-<h3 id="_6">抛出异常</h3>
+<h2 id="_5">错误处理<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<h3 id="_6">抛出异常<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
 <p><code>error (message [, level]) :</code></p>
-<h3 id="_7">捕获</h3>
-<h4 id="pcall">pcall</h4>
+<h3 id="_7">捕获<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<h4 id="pcall">pcall<a class="headerlink" href="#pcall" title="Permanent link">#</a></h4>
 <p><code>pcall (f [, arg1, ···])</code>
 以保护模式 调用函数 f ,返回值<code>[flag,errorinfo]</code>,运行正常是<code>flag</code>为<code>true</code></p>
-<pre><code class="lua">local  function er( ... )
-    error(&quot;error&quot;)
-end
-local flag,errorinfo = pcall(er)
-print(flag,errorinfo)
---false   ...:\lua_error.lua:7: error
-</code></pre>
+<div class="code"><pre><span></span><span class="kd">local</span>  <span class="k">function</span> <span class="nf">er</span><span class="p">(</span> <span class="o">...</span> <span class="p">)</span>
+    <span class="nb">error</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">error&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="kd">local</span> <span class="n">flag</span><span class="p">,</span><span class="n">errorinfo</span> <span class="o">=</span> <span class="nb">pcall</span><span class="p">(</span><span class="n">er</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">,</span><span class="n">errorinfo</span><span class="p">)</span>
+<span class="c1">--false   ...:\lua_error.lua:7: error</span>
+</pre></div>
 
-<h4 id="xpcall">xpcall</h4>
+
+<h4 id="xpcall">xpcall<a class="headerlink" href="#xpcall" title="Permanent link">#</a></h4>
 <p><code>xpcall (f, msgh [, arg1, ···])</code>
 与<code>pcall</code>区别:自定义消息处理,不返回<code>errorinfo</code></p>
-<pre><code class="lua">local flag = xpcall(function() error('error..') end, function() print(debug.traceback()) end, 33)
-print(flag)
---[[
-stack traceback:
-    ...:\git\code_research\lua_study\lua_code\lua_error.lua:12: in function &lt;...:\git\code_research\lua_study\lua_code\lua_error.lua:12&gt;
-    [C]: in function 'error'
-    ...:\git\code_research\lua_study\lua_code\lua_error.lua:12: in function &lt;...:\git\code_research\lua_study\lua_code\lua_error.lua:12&gt;
-    [C]: in function 'xpcall'
-    ...:\git\code_research\lua_study\lua_code\lua_error.lua:12: in main chunk
-    [C]: ?
+<div class="code"><pre><span></span><span class="kd">local</span> <span class="n">flag</span> <span class="o">=</span> <span class="nb">xpcall</span><span class="p">(</span><span class="k">function</span><span class="p">()</span> <span class="nb">error</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">error..&#39;</span><span class="p">)</span> <span class="k">end</span><span class="p">,</span> <span class="k">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="nb">debug.traceback</span><span class="p">())</span> <span class="k">end</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+<span class="cm">--[[</span>
+<span class="cm">stack traceback:</span>
+<span class="cm">    ...:\git\code_research\lua_study\lua_code\lua_error.lua:12: in function &lt;...:\git\code_research\lua_study\lua_code\lua_error.lua:12&gt;</span>
+<span class="cm">    [C]: in function &#39;error&#39;</span>
+<span class="cm">    ...:\git\code_research\lua_study\lua_code\lua_error.lua:12: in function &lt;...:\git\code_research\lua_study\lua_code\lua_error.lua:12&gt;</span>
+<span class="cm">    [C]: in function &#39;xpcall&#39;</span>
+<span class="cm">    ...:\git\code_research\lua_study\lua_code\lua_error.lua:12: in main chunk</span>
+<span class="cm">    [C]: ?</span>
 
-false
-]]--
+<span class="cm">false</span>
+<span class="cm">]]</span><span class="c1">--</span>
+</pre></div>
 
-</code></pre>
 
-<h3 id="debug">debug</h3>
+<h3 id="debug">debug<a class="headerlink" href="#debug" title="Permanent link">#</a></h3>
 <ul>
 <li><code>debug.traceback</code> :输出堆栈信息</li>
 </ul>
-<h2 id="_8">元表及元方法</h2>
-<h3 id="metatable">元表(metatable)</h3>
+<h2 id="_8">元表及元方法<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<h3 id="metatable">元表(metatable)<a class="headerlink" href="#metatable" title="Permanent link">#</a></h3>
 <p>与js原型链(prototype)类似</p>
 <ul>
 <li>"add": + 操作。 如果任何不是数字的值（包括不能转换为数字的字符串）做加法， Lua 就会尝试调用元方法。 首先、Lua 检查第一个操作数（即使它是合法的）， 如果这个操作数没有为 "__add" 事件定义元方法， Lua 就会接着检查第二个操作数。 一旦 Lua 找到了元方法， 它将把两个操作数作为参数传入元方法， 元方法的结果（调整为单个值）作为这个操作的结果。 如果找不到元方法，将抛出一个错误。</li>
 </ul>
-<pre><code class="lua">local met = {}
-met.__add = function(op1, op2)
-   for _, item in pairs(op2) do
-      table.insert(op1, item)
-   end
-   return op1
-end
+<div class="code"><pre><span></span><span class="kd">local</span> <span class="n">met</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">met</span><span class="p">.</span><span class="n">__add</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">op1</span><span class="p">,</span> <span class="n">op2</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">item</span> <span class="k">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">op2</span><span class="p">)</span> <span class="k">do</span>
+      <span class="nb">table.insert</span><span class="p">(</span><span class="n">op1</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+   <span class="k">end</span>
+   <span class="k">return</span> <span class="n">op1</span>
+<span class="k">end</span>
 
-local a = {1,2}
-local b={3,4}
-setmetatable(a,met)
-local d = a +b
+<span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span>
+<span class="kd">local</span> <span class="n">b</span><span class="o">=</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}</span>
+<span class="nb">setmetatable</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">met</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span><span class="n">b</span>
 
-for k,v in pairs(d) do
-    print(k,v)
-end
---[[
-1   1
-2   2
-3   3
-4   4
-]]
-</code></pre>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="k">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">do</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="cm">--[[</span>
+<span class="cm">1   1</span>
+<span class="cm">2   2</span>
+<span class="cm">3   3</span>
+<span class="cm">4   4</span>
+<span class="cm">]]</span>
+</pre></div>
+
 
 <ul>
 <li>
@@ -680,126 +708,130 @@ end
 <ul>
 <li>"call": 函数调用操作 func(args)。 当 Lua 尝试调用一个非函数的值的时候会触发这个事件 （即 func 不是一个函数）。 查找 func 的元方法， 如果找得到，就调用这个元方法， func 作为第一个参数传入，原来调用的参数（args）后依次排在后面</li>
 </ul>
-<h2 id="_9">垃圾收集</h2>
+<h2 id="_9">垃圾收集<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
 <p>Lua 实现了一个增量标记-扫描收集器。 它使用这两个数字来控制垃圾收集循环： 垃圾收集器间歇率 和 垃圾收集器步进倍率。 这两个数字都使用百分数为单位 （例如：值 100 在内部表示 1 ）。</p>
 <p>垃圾收集器间歇率控制着收集器需要在开启新的循环前要等待多久。 增大这个值会减少收集器的积极性。 当这个值比 100 小的时候，收集器在开启新的循环前不会有等待。 设置这个值为 200 就会让收集器等到总内存使用量达到 之前的两倍时才开始新的循环。</p>
 <p>垃圾收集器步进倍率控制着收集器运作速度相对于内存分配速度的倍率。 增大这个值不仅会让收集器更加积极，还会增加每个增量步骤的长度。 不要把这个值设得小于 100 ， 那样的话收集器就工作的太慢了以至于永远都干不完一个循环。 默认值是 200 ，这表示收集器以内存分配的“两倍”速工作。</p>
 <p>如果你把步进倍率设为一个非常大的数字 （比你的程序可能用到的字节数还大 10% ）， 收集器的行为就像一个 stop-the-world 收集器。 接着你若把间歇率设为 200 ， 收集器的行为就和过去的 Lua 版本一样了： 每次 Lua 使用的内存翻倍时，就做一次完整的收集。</p>
-<h3 id="_10">垃圾收集的元方法</h3>
+<h3 id="_10">垃圾收集的元方法<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
 <p>使用 C API,可以设置一个垃圾收集的元方法,<code>__gc</code>,来做一些特殊的资源释放操作,比如关闭数据库连接等,一个 userdata 可被回收，若它的 metatable 中有 __gc 这个域　， 垃圾收集器就不立即收回它。 取而代之的是，Lua 把它们放到一个列表中。 最收集结束后，Lua 针对列表中的每个 userdata 执行了下面这个函数的等价操作：</p>
-<pre><code class="lua">   function gc_event (udata)
-       local h = metatable(udata).__gc
-       if h then
-         h(udata)
-       end
-     end
-</code></pre>
+<div class="code"><pre><span></span>   <span class="k">function</span> <span class="nf">gc_event</span> <span class="p">(</span><span class="n">udata</span><span class="p">)</span>
+       <span class="kd">local</span> <span class="n">h</span> <span class="o">=</span> <span class="n">metatable</span><span class="p">(</span><span class="n">udata</span><span class="p">).</span><span class="n">__gc</span>
+       <span class="k">if</span> <span class="n">h</span> <span class="k">then</span>
+         <span class="n">h</span><span class="p">(</span><span class="n">udata</span><span class="p">)</span>
+       <span class="k">end</span>
+     <span class="k">end</span>
+</pre></div>
+
 
 <p>在每个垃圾收集周期的结尾，每个在当前周期被收集起来的 userdata 的结束子会以 它们构造时的逆序依次调用。 也就是说，收集列表中，最后一个在程序中被创建的 userdata 的 结束子会被第一个调用。
 参考:
 <a href="http://blog.codingnow.com/cloud/LuaReferObject">http://blog.codingnow.com/cloud/LuaReferObject</a></p>
-<h3 id="_11">弱表</h3>
+<h3 id="_11">弱表<a class="headerlink" href="#_11" title="Permanent link">#</a></h3>
 <p>如果一个对象只被弱引用引用到， 垃圾收集器就会回收这个对象
 一张表的元表中的 <strong>mode 域控制着这张表的弱属性。 当 </strong>mode 域是一个包含字符 'k' 的字符串时，这张表的所有键皆为弱引用。 当 __mode 域是一个包含字符 'v' 的字符串时，这张表的所有值皆为弱引用</p>
 <p>值为弱表</p>
-<pre><code class="lua">local weakTable = {}
-weakTable[1] = function() print(&quot;i am the first element&quot;) end
-weakTable[2] = function() print(&quot;i am the second element&quot;) end
-weakTable[3] = {10, 20, 30}
+<div class="code"><pre><span></span><span class="kd">local</span> <span class="n">weakTable</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">weakTable</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">i am the first element&quot;</span><span class="p">)</span> <span class="k">end</span>
+<span class="n">weakTable</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">i am the second element&quot;</span><span class="p">)</span> <span class="k">end</span>
+<span class="n">weakTable</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">}</span>
 
-setmetatable(weakTable, {__mode = &quot;v&quot;})  --值为弱表
-print(table.getn(weakTable))  --未gc前3个
+<span class="nb">setmetatable</span><span class="p">(</span><span class="n">weakTable</span><span class="p">,</span> <span class="p">{</span><span class="n">__mode</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">v&quot;</span><span class="p">})</span>  <span class="c1">--值为弱表</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">.</span><span class="n">getn</span><span class="p">(</span><span class="n">weakTable</span><span class="p">))</span>  <span class="c1">--未gc前3个</span>
 
-ele = weakTable[1]  --第一个元素被引用
-collectgarbage()
-print(table.getn(weakTable))  --gc后只剩第一个元素
+<span class="n">ele</span> <span class="o">=</span> <span class="n">weakTable</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1">--第一个元素被引用</span>
+<span class="nb">collectgarbage</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">.</span><span class="n">getn</span><span class="p">(</span><span class="n">weakTable</span><span class="p">))</span>  <span class="c1">--gc后只剩第一个元素</span>
 
-ele= nil   --引用置空
-collectgarbage()
-print(table.getn(weakTable))  --全部gc
+<span class="n">ele</span><span class="o">=</span> <span class="kc">nil</span>   <span class="c1">--引用置空</span>
+<span class="nb">collectgarbage</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">.</span><span class="n">getn</span><span class="p">(</span><span class="n">weakTable</span><span class="p">))</span>  <span class="c1">--全部gc</span>
+</pre></div>
 
-</code></pre>
 
 <p>键为弱表</p>
-<pre><code class="lua">local function getkeyn( t )
-    local count = 0
-    for k,v in pairs(t or {}) do
-     count= count+1
-   end
-return count
-end
+<div class="code"><pre><span></span><span class="kd">local</span> <span class="k">function</span> <span class="nf">getkeyn</span><span class="p">(</span> <span class="n">t</span> <span class="p">)</span>
+    <span class="kd">local</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="k">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">t</span> <span class="ow">or</span> <span class="p">{})</span> <span class="k">do</span>
+     <span class="n">count</span><span class="o">=</span> <span class="n">count</span><span class="o">+</span><span class="mi">1</span>
+   <span class="k">end</span>
+<span class="k">return</span> <span class="n">count</span>
+<span class="k">end</span>
 
-local weakKey= {}
-local t1={}
-local t2={}
-weakKey[t1] = 1
-weakKey[t2] = 2
+<span class="kd">local</span> <span class="n">weakKey</span><span class="o">=</span> <span class="p">{}</span>
+<span class="kd">local</span> <span class="n">t1</span><span class="o">=</span><span class="p">{}</span>
+<span class="kd">local</span> <span class="n">t2</span><span class="o">=</span><span class="p">{}</span>
+<span class="n">weakKey</span><span class="p">[</span><span class="n">t1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">weakKey</span><span class="p">[</span><span class="n">t2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
 
-setmetatable(weakKey,{__mode=&quot;k&quot;}) --键为弱表
-print(getkeyn(weakKey)) --2
+<span class="nb">setmetatable</span><span class="p">(</span><span class="n">weakKey</span><span class="p">,{</span><span class="n">__mode</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">k&quot;</span><span class="p">})</span> <span class="c1">--键为弱表</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getkeyn</span><span class="p">(</span><span class="n">weakKey</span><span class="p">))</span> <span class="c1">--2</span>
 
-t1= nil
-collectgarbage()
-print(getkeyn(weakKey)) --1
-</code></pre>
+<span class="n">t1</span><span class="o">=</span> <span class="kc">nil</span>
+<span class="nb">collectgarbage</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getkeyn</span><span class="p">(</span><span class="n">weakKey</span><span class="p">))</span> <span class="c1">--1</span>
+</pre></div>
 
-<h2 id="_12">协程</h2>
+
+<h2 id="_12">协程<a class="headerlink" href="#_12" title="Permanent link">#</a></h2>
 <p>支持协程，也叫 协同式多线程。 一个协程在 Lua 中代表了一段独立的执行线程。 然而，与多线程系统中的线程的区别在于， 协程仅在显式调用一个让出（yield）函数时才挂起当前的执行.</p>
-<h3 id="_13">接口</h3>
-<h4 id="coroutinecreatef">coroutine.create(f)</h4>
+<h3 id="_13">接口<a class="headerlink" href="#_13" title="Permanent link">#</a></h3>
+<h4 id="coroutinecreatef">coroutine.create(f)<a class="headerlink" href="#coroutinecreatef" title="Permanent link">#</a></h4>
 <p>函数参数[接受单个参数，这个参数为coroutine的主函数]
 函数返回值[返回一个thread对象]
 函数作用[创建一个新的协程，协程的主函数定义了该协程内的任务流程]</p>
-<h4 id="coroutineresumeco-var1">coroutine.resume(co, [, var1, ...])</h4>
+<h4 id="coroutineresumeco-var1">coroutine.resume(co, [, var1, ...])<a class="headerlink" href="#coroutineresumeco-var1" title="Permanent link">#</a></h4>
 <p>函数参数[第一个参数：coroutine.create的返回值，即一个thread对象]
 函数参数[第二个参数：coroutine中执行需要的参数，是一个变长参数，可以传任意多个]
 函数返回值[如果程序没有任何运行错误，则返回true，之后的返回值是前一个调用coroutine.yield中传入的参数值]
 函数返回值[如果程序遇到运行错误，则返回false，加上错误信息]
 函数作用[当你第一次调用coroutine.rusume方法时，coroutine从主函数的第一行开始执行，之后在coroutine开始执行后，它会一直运行到
 自身终止或者是coroutine的下一次yield函数]</p>
-<h4 id="coroutineyield">coroutine.yield(...)</h4>
+<h4 id="coroutineyield">coroutine.yield(...)<a class="headerlink" href="#coroutineyield" title="Permanent link">#</a></h4>
 <p>函数参数[变长参数]
 函数返回值[如果程序没有任何运行错误，则返回true，之后的返回值是前一个调用coroutine.resume()中传入的参数值]
 函数返回值[如果程序遇到运行错误，则返回false，加上错误信息]
 函数作用[挂起当前执行的协程]</p>
-<h4 id="coroutinerunning">coroutine.running()</h4>
+<h4 id="coroutinerunning">coroutine.running()<a class="headerlink" href="#coroutinerunning" title="Permanent link">#</a></h4>
 <p>函数参数[空]
 函数返回值[返回当前协程，如果它被主线程调用的话，返回nil]</p>
-<h4 id="coroutinestatus">coroutine.status()</h4>
+<h4 id="coroutinestatus">coroutine.status()<a class="headerlink" href="#coroutinestatus" title="Permanent link">#</a></h4>
 <p>函数参数[空]
 函数返回值[返回当前协程的状态，有suspended, running, normal, dead]</p>
-<h3 id="_14">例子</h3>
-<pre><code class="lua">function foo (a)
-       print(&quot;[step2] foo&quot;, a)
-       return coroutine.yield(2*a)
- end
+<h3 id="_14">例子<a class="headerlink" href="#_14" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">function</span> <span class="nf">foo</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[step2] foo&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+       <span class="k">return</span> <span class="nb">coroutine.yield</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+ <span class="k">end</span>
 
-local  co = coroutine.create(function (a,b)
-       print(&quot;[step1] co-body&quot;, a, b)
-       local r = foo(a+1)
-       print(&quot;[step4] co-body&quot;, r)
-       local r, s = coroutine.yield(a+b, a-b)
-       print(&quot;[step6] co-body&quot;, r, s)
-       return b, &quot;end&quot;
- end)
+<span class="kd">local</span>  <span class="n">co</span> <span class="o">=</span> <span class="nb">coroutine.create</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[step1] co-body&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+       <span class="kd">local</span> <span class="n">r</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[step4] co-body&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+       <span class="kd">local</span> <span class="n">r</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="nb">coroutine.yield</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[step6] co-body&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+       <span class="k">return</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">end&quot;</span>
+ <span class="k">end</span><span class="p">)</span>
 
- print(&quot;[step3] main&quot;, coroutine.resume(co, 1, 10))
- print(&quot;[step5] main&quot;, coroutine.resume(co, &quot;r&quot;))
- print(&quot;[step7] main&quot;, coroutine.resume(co, &quot;x&quot;, &quot;y&quot;))
- print(&quot;[step8] main&quot;, coroutine.resume(co, &quot;x&quot;, &quot;y&quot;))
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[step3] main&quot;</span><span class="p">,</span> <span class="nb">coroutine.resume</span><span class="p">(</span><span class="n">co</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[step5] main&quot;</span><span class="p">,</span> <span class="nb">coroutine.resume</span><span class="p">(</span><span class="n">co</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">r&quot;</span><span class="p">))</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[step7] main&quot;</span><span class="p">,</span> <span class="nb">coroutine.resume</span><span class="p">(</span><span class="n">co</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">x&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">y&quot;</span><span class="p">))</span>
+ <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">[step8] main&quot;</span><span class="p">,</span> <span class="nb">coroutine.resume</span><span class="p">(</span><span class="n">co</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">x&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">y&quot;</span><span class="p">))</span>
 
---[[
-[step1] co-body 1   10
-[step2] foo 2
-[step3] main    true    4
-[step4] co-body r
-[step5] main    true    11  -9
-[step6] co-body x   y
-[step7] main    true    10  end
-[step8] main    false   cannot resume dead coroutine
-]]--
-</code></pre>
+<span class="cm">--[[</span>
+<span class="cm">[step1] co-body 1   10</span>
+<span class="cm">[step2] foo 2</span>
+<span class="cm">[step3] main    true    4</span>
+<span class="cm">[step4] co-body r</span>
+<span class="cm">[step5] main    true    11  -9</span>
+<span class="cm">[step6] co-body x   y</span>
+<span class="cm">[step7] main    true    10  end</span>
+<span class="cm">[step8] main    false   cannot resume dead coroutine</span>
+<span class="cm">]]</span><span class="c1">--</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

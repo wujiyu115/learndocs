@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_error/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_error/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_error//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -529,6 +540,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -537,67 +562,71 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python">python 异常处理</h1>
-<h2 id="_1">异常捕捉</h2>
+          <h1 id="python">python 异常处理<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
+<h2 id="_1">异常捕捉<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>异常捕捉可以使我们的程序更加健壮
 当我们认为某些代码可能会出错时，就可以用<code>try</code>来运行这段代码，如果执行出错，则后续代码不会继续执行，而是直接跳转至错误处理代码，即<code>except</code>语句块，执行完<code>except</code>后，如果有<code>finally</code>语句块，则执行<code>finally</code>语句块，至此，执行完毕</p>
-<pre><code class="py">try:
-    print('try...')
-    r = 10 / int('a')
-    print('result:', r)
-except ValueError as e:
-    print('ValueError:', e)
-except ZeroDivisionError as e:
-    print('ZeroDivisionError:', e)
-else:
-    print('no error!')
-finally:
-    print('finally...')
-print('END')
-'''
-try...
-ValueError: invalid literal for int() with base 10: 'a'
-finally...
-END
-'''
-</code></pre>
+<div class="code"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;try...&#39;</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;result:&#39;</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;ValueError:&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;ZeroDivisionError:&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;no error!&#39;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;finally...&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">try...</span>
+<span class="sd">ValueError: invalid literal for int() with base 10: &#39;a&#39;</span>
+<span class="sd">finally...</span>
+<span class="sd">END</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h2 id="_2">记录错误</h2>
+
+<h2 id="_2">记录错误<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p><code>traceback</code>:堆栈信息
 <code>logging</code>:日志记录</p>
-<pre><code class="py">import logging,traceback
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span><span class="o">,</span><span class="nn">traceback</span>
 
-def foo(s):
-    return 10 / int(s)
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-def bar(s):
-    return foo(s) * 2
+<span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">foo</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
 
-def main():
-    try:
-        bar('0')
-    except Exception as e:
-        print(traceback.print_exc() )
-        # logging.exception(e)
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">bar</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span> <span class="p">)</span>
+        <span class="c1"># logging.exception(e)</span>
 
-main()
-print('END')
-</code></pre>
+<span class="n">main</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">)</span>
+</pre></div>
 
-<h2 id="_3">抛出错误</h2>
+
+<h2 id="_3">抛出错误<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>自定义<code>error</code>类继承Python已有的内置的错误类型（比如ValueError，TypeError）,<code>raise</code>语句抛出一个错误的实例</p>
-<pre><code class="py">class SelfError(ValueError):
-    pass
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">SelfError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="k">pass</span>
 
-def foo(s):
-    n = int(s)
-    if n==0:
-        raise SelfError('invalid value: %s' % s)
-    return n
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">SelfError</span><span class="p">(</span><span class="s1">&#39;invalid value: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">n</span>
 
-foo('0')
-</code></pre>
+<span class="n">foo</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

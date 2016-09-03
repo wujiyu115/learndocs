@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py1_intro/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py1_intro/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py1_intro//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -541,6 +552,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -549,41 +574,43 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python-3">Python 3 入门介绍</h1>
-<h2 id="python">python 简介</h2>
+          <h1 id="python-3">Python 3 入门介绍<a class="headerlink" href="#python-3" title="Permanent link">#</a></h1>
+<h2 id="python">python 简介<a class="headerlink" href="#python" title="Permanent link">#</a></h2>
 <p>Python是一种解释型、面向对象、动态数据类型的高级程序设计语言.设计者开发时总的指导思想是，对于一个特定的问题，只要有一种最好的方法来解决就好了.Python是完全面向对象的语言。函数、模块、数字、字符串都是对象。并且完全支持继承、重载、派生、多继承，有益于增强源代码的复用性。Python支持重载运算符和动态类型,python应用很广泛(系统编程 图形处理 数学处理 文本处理 数据库编程 网络编程 Web编程 多媒体应用).</p>
-<h2 id="python-3_1">python 3 的变化</h2>
+<h2 id="python-3_1">python 3 的变化<a class="headerlink" href="#python-3_1" title="Permanent link">#</a></h2>
 <p><a href="https://gist.github.com/scturtle/3060332" title="https://gist.github.com/scturtle/3060332">https://gist.github.com/scturtle/3060332</a></p>
-<h2 id="_1">开发环境</h2>
+<h2 id="_1">开发环境<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
 <li>python: <a href="http://www.python.org/getit/" title="http://www.python.org/getit/">http://www.python.org/getit/</a></li>
 <li>IDE : eclipse + pydev</li>
 </ul>
 <p>安装完pydev后 配置python解释器</p>
 <p><a href="http://farwmarth.com/?attachment_id=471"><img alt="4" src="http://farwmarth.com/wp-content/uploads/2013/03/4.jpg" /></a></p>
-<h2 id="_2">语法</h2>
-<h3 id="_3">缩进</h3>
+<h2 id="_2">语法<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h3 id="_3">缩进<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>Python开发者有意让违反了缩进规则的程序不能通过编译，以此来强制程序员养成良好的编程习惯。并且在Python语言里，缩进而非花括号或者某种关键字，被用于表示语句块的开始和退出。增加缩进表示语句块的开始，而减少缩进则表示语句块的退出。缩进成为了语法的一部分。例如</p>
-<pre><code class="python">if age &lt; 21:
-    print(&quot;你不能買酒。&quot;)
-    print(&quot;不過你能買口香糖。&quot;)
-    print(&quot;這句話處於if語句塊的外面。&quot;)
-</code></pre>
+<div class="code"><pre><span></span><span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">21</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;你不能買酒。&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;不過你能買口香糖。&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;這句話處於if語句塊的外面。&quot;</span><span class="p">)</span>
+</pre></div>
+
 
 <p>根据PEP的规定，必须使用4个空格来表示每级缩进。使用Tab字符和其它数目的空格虽然都可以编译通过，但不符合编码规范。支持Tab字符和其它数目的空格仅仅是为了兼容很旧的Python程序和某些有问题的编辑器。</p>
-<h3 id="_4">注释</h3>
+<h3 id="_4">注释<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <p>标示注释:以<code>#</code>号开头，一行都为注释内容
 文档注释:<code>‘‘‘</code> 三个单引号开头，三个单引号结尾</p>
-<h2 id="_5">输入输出</h2>
-<h3 id="print">输出:<code>print</code></h3>
-<pre><code class="python">#多参数输出
-print(&quot;hello&quot;,&quot;world&quot;)
-#格式输出
-pi=3.14
-print(&quot;%d,haha&quot;%3)
-</code></pre>
+<h2 id="_5">输入输出<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<h3 id="print">输出:<code>print</code><a class="headerlink" href="#print" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="c1">#多参数输出</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span><span class="s2">&quot;world&quot;</span><span class="p">)</span>
+<span class="c1">#格式输出</span>
+<span class="n">pi</span><span class="o">=</span><span class="mf">3.14</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">,haha&quot;</span><span class="o">%</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
 
-<h4 id="_6">字符串格式化转换类型</h4>
+
+<h4 id="_6">字符串格式化转换类型<a class="headerlink" href="#_6" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -643,11 +670,13 @@ print(&quot;%d,haha&quot;%3)
 </tbody>
 </table>
 <p>|s        |           字符串（使用str转换任意python对象）|</p>
-<h3 id="input">输入:<code>input</code></h3>
-<pre><code class="python">name = input('please enter your name:')
-print(&quot;hello&quot;,name)
-</code></pre>
+<h3 id="input">输入:<code>input</code><a class="headerlink" href="#input" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;please enter your name:&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

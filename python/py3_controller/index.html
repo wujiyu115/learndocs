@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py3_controller/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py3_controller/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py3_controller//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -529,6 +540,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -537,67 +562,70 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python">python控制流程</h1>
-<h2 id="_1">条件判断</h2>
-<h3 id="if"><code>if</code>判断</h3>
-<pre><code class="py"># if
-if True:
-    print(&quot;It is True&quot;)
+          <h1 id="python">python控制流程<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
+<h2 id="_1">条件判断<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="if"><code>if</code>判断<a class="headerlink" href="#if" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="c1"># if</span>
+<span class="k">if</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;It is True&quot;</span><span class="p">)</span>
 
-#if ..else
-age =18
-if age&gt;=18:
-    print(&quot;adlut&quot;)
-else:
-    print(&quot;child&quot;)
+<span class="c1">#if ..else</span>
+<span class="n">age</span> <span class="o">=</span><span class="mi">18</span>
+<span class="k">if</span> <span class="n">age</span><span class="o">&gt;=</span><span class="mi">18</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;adlut&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;child&quot;</span><span class="p">)</span>
 
-#if ..elif..else
-v=1
-if v==1:
-    print(&quot;v1&quot;)
-elif v==2:
-    print(&quot;v2&quot;)
-else:
-    print(&quot;vother&quot;)
-</code></pre>
+<span class="c1">#if ..elif..else</span>
+<span class="n">v</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">if</span> <span class="n">v</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;v1&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">v</span><span class="o">==</span><span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;v2&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;vother&quot;</span><span class="p">)</span>
+</pre></div>
 
-<h2 id="_2">循环</h2>
+
+<h2 id="_2">循环<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>python 循环作用对象:<code>list</code> ,<code>tuple</code>,<code>dict</code>,<code>set</code>,<code>str</code>,<code>generator</code>,这些可以直接作用于for循环的对象统称为可迭代对象:<code>Iterable</code></p>
-<h3 id="for"><code>for</code>循环</h3>
-<pre><code class="python">#for...in
-names = ['a', 'b', 'c']
-for name in names:
-    print(name)
+<h3 id="for"><code>for</code>循环<a class="headerlink" href="#for" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="c1">#for...in</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
-# 加索引
-for index,name in enumerate(names):
-    print(index,name)
+<span class="c1"># 加索引</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
 
-# 多个变量
-for x, y in [(1, 1), (2, 4), (3, 9)]:
-    print(x,y)
+<span class="c1"># 多个变量</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">)]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 
-#循环字符串
-fo_str = &quot;hello&quot;
-for word in fo_str:
-    print(word)
+<span class="c1">#循环字符串</span>
+<span class="n">fo_str</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">fo_str</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</pre></div>
 
-</code></pre>
 
-<h3 id="while"><code>while</code>循环</h3>
-<pre><code class="py">n = 0
-while n &lt;5:
-    n = n +1
-</code></pre>
+<h3 id="while"><code>while</code>循环<a class="headerlink" href="#while" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span><span class="mi">1</span>
+</pre></div>
 
-<h2 id="_3">表达式</h2>
-<pre><code class="py">  print(11/2) #5.5
-  print(11//2)#5
-  print(-11//2)#-6
-  print(11.0//2)#5.0
-  print(11**2)#121
-  print(11%2)#1
-</code></pre>
+
+<h2 id="_3">表达式<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span>  <span class="k">print</span><span class="p">(</span><span class="mi">11</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#5.5</span>
+  <span class="k">print</span><span class="p">(</span><span class="mi">11</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="c1">#5</span>
+  <span class="k">print</span><span class="p">(</span><span class="o">-</span><span class="mi">11</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="c1">#-6</span>
+  <span class="k">print</span><span class="p">(</span><span class="mf">11.0</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="c1">#5.0</span>
+  <span class="k">print</span><span class="p">(</span><span class="mi">11</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="c1">#121</span>
+  <span class="k">print</span><span class="p">(</span><span class="mi">11</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span><span class="c1">#1</span>
+</pre></div>
+
 
 <ol>
 <li>/ 运算符执行浮点除法。即便分子和分母都是 int，它也返回一个 float 浮点数。</li>
@@ -608,6 +636,8 @@ while n &lt;5:
 <li>% 运算符给出了进行整除之后的余数。11 除以 2 结果为 5 以及余数 1，因此此处的结果为 1。 7  不支持自增(++)自减(—)</li>
 </ol>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

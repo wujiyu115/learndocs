@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_module_manager/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_module_manager/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_module_manager//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -529,6 +540,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -537,33 +562,35 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python">﻿Python 模块管理</h1>
-<h2 id="python_1">Python 包管理工具</h2>
-<h3 id="distutils">distutils</h3>
+          <h1 id="python">﻿Python 模块管理<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
+<h2 id="python_1">Python 包管理工具<a class="headerlink" href="#python_1" title="Permanent link">#</a></h2>
+<h3 id="distutils">distutils<a class="headerlink" href="#distutils" title="Permanent link">#</a></h3>
 <p>python 标准库的一部分，2000年发布。使用它能够进行python模块的安装和发布setup.py就是利用distutils的功能写成.
 简单打包示例:创建两个文件test.py和setup.py,setup.py内空如下:</p>
-<pre><code class="py">from distutils.core import setup
-setup(
-    name='test',
-    version='1.0',
-    author='far',
-    author_email='wujiyu115@gmail.com',
-    url='htt://www.farwmarth.com',
-    py_modules=['test'],
-)
-</code></pre>
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s1">&#39;far&#39;</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;wujiyu115@gmail.com&#39;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;htt://www.farwmarth.com&#39;</span><span class="p">,</span>
+    <span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+
 
 <p>运行<code>python setup.py sdist</code>,会生成一个"test-1.0.zip"包.解压缩使用<code>python setup.py install</code> 就可以安装并使用test模块了</p>
-<h4 id="distutils_1">distutils包管理</h4>
-<pre><code class="shell">#安装包
+<h4 id="distutils_1">distutils包管理<a class="headerlink" href="#distutils_1" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="c1">#安装包</span>
 python setup.py install
-#打包成压缩文件
+<span class="c1">#打包成压缩文件</span>
 python setup.py sdist
-#打包成exe安装
+<span class="c1">#打包成exe安装</span>
 python setup.py bdist_wininst
-</code></pre>
+</pre></div>
 
-<h3 id="setuptoolsdistribute">setuptools,distribute</h3>
+
+<h3 id="setuptoolsdistribute">setuptools,distribute<a class="headerlink" href="#setuptoolsdistribute" title="Permanent link">#</a></h3>
 <p>一个为了增强 distutils 而开发的集合，2004年发布。它包含了 easy_install
 这个工具setuptools是一个项目的名称,是基础组件,而 easy_install 是这个项目中提供的工具,它依赖基础组件工作.setuptools使用了一种新的文件格式（.egg），可以为Python包创建 egg文件。setuptools 可以识别.egg文件，并解析、安装它.
 至于distribute，它是setuptools的一个分支版本。分支的原因是有一部分开发者认为 setuptools 开发太慢。但现在，distribute 又合并回了 setuptools 中，所以可以认为它们是同一个东西.
@@ -573,85 +600,92 @@ python setup.py bdist_wininst
 <li>easy_install是基于setuptools/distribute的一个工具，方便了包的安装和省级
 <a href="https://pypi.python.org/pypi/setuptools">setuptools包</a></li>
 </ul>
-<h4 id="_1">安装</h4>
-<pre><code class="shell">#windows 安装 :下载  https://bootstrap.pypa.io/ez_setup.py 并执行python
-#linux
-wget https://bootstrap.pypa.io/ez_setup.py -O - | python
-#mac
-curl https://bootstrap.pypa.io/ez_setup.py -o - | python
-</code></pre>
+<h4 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="c1">#windows 安装 :下载  https://bootstrap.pypa.io/ez_setup.py 并执行python</span>
+<span class="c1">#linux</span>
+wget https://bootstrap.pypa.io/ez_setup.py -O - <span class="p">|</span> python
+<span class="c1">#mac</span>
+curl https://bootstrap.pypa.io/ez_setup.py -o - <span class="p">|</span> python
+</pre></div>
 
-<h4 id="_2">反安装</h4>
+
+<h4 id="_2">反安装<a class="headerlink" href="#_2" title="Permanent link">#</a></h4>
 <p>在windows上如果用exe或者是msi安装的,用安装包添加/删除项来进行反安装
 其他情况先删除所有在<code>site-packages</code>目录和<code>sys.pyath</code>目录下的所有带<code>setuptools*</code> 和 <code>distribute*</code> 文件,然后移除在<code>scripts</code> 目录的<code>easy_install</code>和   <code>easy_install-x.x</code>可执行文件</p>
-<h4 id="easy_install">用easy_install管理包</h4>
+<h4 id="easy_install">用easy_install管理包<a class="headerlink" href="#easy_install" title="Permanent link">#</a></h4>
 <p><a href="https://pythonhosted.org/setuptools/easy_install.html#installing-easy-install">installing-easy-install</a></p>
-<pre><code class="shell">#版本
+<div class="code"><pre><span></span><span class="c1">#版本</span>
 easy_install --version
-#根据包名安装
+<span class="c1">#根据包名安装</span>
 easy_install SQLObject
-#安装解压的目录
+<span class="c1">#安装解压的目录</span>
 easy_install .
-#安装egg,网址或者本地路径
+<span class="c1">#安装egg,网址或者本地路径</span>
 easy_install http://example.com/downloads/ExamplePackage-2.0-py2.4.egg
 
-#升级
+<span class="c1">#升级</span>
 easy_install --upgrade PyProtocols
-easy_install &quot;SomePackage==2.0&quot;
+easy_install <span class="s2">&quot;SomePackage==2.0&quot;</span>
 
-#移除
+<span class="c1">#移除</span>
 easy_install -m PackageName
-</code></pre>
+</pre></div>
 
-<h3 id="pip">pip</h3>
-<h4 id="pip_1">安装pip</h4>
-<pre><code class="shell">##安装pip
+
+<h3 id="pip">pip<a class="headerlink" href="#pip" title="Permanent link">#</a></h3>
+<h4 id="pip_1">安装pip<a class="headerlink" href="#pip_1" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="c1">##安装pip</span>
 easy_install pip
-## 安装pip2
-curl https://bootstrap.pypa.io/get-pip.py | python
-</code></pre>
+<span class="c1">## 安装pip2</span>
+curl https://bootstrap.pypa.io/get-pip.py <span class="p">|</span> python
+</pre></div>
 
-<h4 id="pip_2">pip包管理</h4>
-<pre><code class="shell">#安装:
+
+<h4 id="pip_2">pip包管理<a class="headerlink" href="#pip_2" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="c1">#安装:</span>
 pip install SomePackage
-#安装指定版本号
-pip install SomePackage==1.0.4
-#指定源安装
+<span class="c1">#安装指定版本号</span>
+pip install <span class="nv">SomePackage</span><span class="o">==</span>1.0.4
+<span class="c1">#指定源安装</span>
 pip install SomePackage -i https://pypi.doubanio.com/
-#升级
+<span class="c1">#升级</span>
 pip install --upgrade SomePackage
-#卸载:
+<span class="c1">#卸载:</span>
 pip uninstall SomePackage
-#查看已安装
+<span class="c1">#查看已安装</span>
 pip list
-#查看可升级
+<span class="c1">#查看可升级</span>
 pip list --outdated
-#查看安装的路径及文件信息
+<span class="c1">#查看安装的路径及文件信息</span>
 pip show --files SomePackage
 
 
-# 使用pip导出依赖文件列表
+<span class="c1"># 使用pip导出依赖文件列表</span>
 pip freeze &gt; requirements.txt
-# 根据依赖文件列表，自动安装对应的软件包
+<span class="c1"># 根据依赖文件列表，自动安装对应的软件包</span>
 pip install -r requirements.txt
-</code></pre>
+</pre></div>
 
-<h4 id="python_2">显示python安装的模块</h4>
-<pre><code class="shell">#在pyhton环境中输入
-help('modules')
-#列出某一模块版本
-import yaml; print(yaml.__version__)
-</code></pre>
 
-<h4 id="python_3">显示python库路径</h4>
-<pre><code class="shell">python -c &quot;import sys;print(sys.path)&quot;
-</code></pre>
+<h4 id="python_2">显示python安装的模块<a class="headerlink" href="#python_2" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="c1">#在pyhton环境中输入</span>
+help<span class="o">(</span><span class="s1">&#39;modules&#39;</span><span class="o">)</span>
+<span class="c1">#列出某一模块版本</span>
+import yaml<span class="p">;</span> print<span class="o">(</span>yaml.__version__<span class="o">)</span>
+</pre></div>
 
-<h4 id="pip_3">不同环境pip安装</h4>
-<pre><code class="shell">python3 -m pip install xxx
-</code></pre>
 
-<h3 id="wheeleggs">wheel,eggs</h3>
+<h4 id="python_3">显示python库路径<a class="headerlink" href="#python_3" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span>python -c <span class="s2">&quot;import sys;print(sys.path)&quot;</span>
+</pre></div>
+
+
+<h4 id="pip_3">不同环境pip安装<a class="headerlink" href="#pip_3" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span>python3 -m pip install xxx
+</pre></div>
+
+
+<h3 id="wheeleggs">wheel,eggs<a class="headerlink" href="#wheeleggs" title="Permanent link">#</a></h3>
 <p><a href="http://wheel.readthedocs.io/en/latest/#">wheel doc</a>
 wheel 本质上是一个 zip 包格式，它使用 .whl 扩展名，用于 python 模块的安装，它的出现是为了替代 Eggs。</p>
 <ul>
@@ -662,8 +696,8 @@ wheel 本质上是一个 zip 包格式，它使用 .whl 扩展名，用于 pytho
 <li>创建pyc文件有来匹配编译器</li>
 <li>更好的跨平台安装能力</li>
 </ul>
-<h4 id="_3">使用</h4>
-<pre><code># Make sure you have the latest pip that supports wheel
+<h4 id="_3">使用<a class="headerlink" href="#_3" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span># Make sure you have the latest pip that supports wheel
 pip install --upgrade pip
 
 # Install wheel
@@ -677,92 +711,105 @@ pip install --use-wheel --no-index --find-links=/tmp/wheelhouse pyramid
 
 # Install from cached wheels remotely
 pip install --use-wheel --no-index --find-links=https://wheelhouse.example.com/ pyramid
-</code></pre>
+</pre></div>
 
-<h2 id="python_4">Python 虚拟环境</h2>
-<h3 id="virtualenv">virtualenv</h3>
+
+<h2 id="python_4">Python 虚拟环境<a class="headerlink" href="#python_4" title="Permanent link">#</a></h2>
+<h3 id="virtualenv">virtualenv<a class="headerlink" href="#virtualenv" title="Permanent link">#</a></h3>
 <p>virtualenv用于创建独立的Python环境，多个Python相互独立，互不影响.
 实测默认情况下虚拟环境不会依赖系统环境的global site-packages。比如系统环境里安装了MySQLdb模块，在虚拟环境里import MySQLdb会提示ImportError。如果想依赖系统环境的第三方软件包，可以使用参数<code>--system-site-packages</code></p>
 <p>安装</p>
-<pre><code class="shell">sudo apt-get install python-virtualenv
-#or
+<div class="code"><pre><span></span>sudo apt-get install python-virtualenv
+<span class="c1">#or</span>
 pip install virtualenv
-</code></pre>
+</pre></div>
+
 
 <p>使用</p>
-<pre><code class="shell">#创建
-virtualenv  test
-#启动虚拟环境
-cd test
-source ./bin/activate
-#退出虚拟环境
+<div class="code"><pre><span></span><span class="c1">#创建</span>
+virtualenv  <span class="nb">test</span>
+<span class="c1">#启动虚拟环境</span>
+<span class="nb">cd</span> <span class="nb">test</span>
+<span class="nb">source</span> ./bin/activate
+<span class="c1">#退出虚拟环境</span>
 deactivate
-</code></pre>
+</pre></div>
 
-<h3 id="virtualenvwrapper">Virtualenvwrapper</h3>
+
+<h3 id="virtualenvwrapper">Virtualenvwrapper<a class="headerlink" href="#virtualenvwrapper" title="Permanent link">#</a></h3>
 <p>Virtaulenvwrapper是virtualenv的扩展包，可以方便的创建、删除、复制、切换不同的虚拟环境。</p>
 <p>安装</p>
-<pre><code class="shell">sudo easy_install virtualenvwrapper
-mkdir $HOME/.virtualenvs
-#在~/.bashrc中添加行：
-export WORKON_HOME=$HOME/.virtualenvs
-#在~/.bashrc中添加行：
-source /usr/local/bin/virtualenvwrapper.sh
-#运行：
- source ~/.bashrc
-</code></pre>
+<div class="code"><pre><span></span>sudo easy_install virtualenvwrapper
+mkdir <span class="nv">$HOME</span>/.virtualenvs
+<span class="c1">#在~/.bashrc中添加行：</span>
+<span class="nb">export</span> <span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
+<span class="c1">#在~/.bashrc中添加行：</span>
+<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+<span class="c1">#运行：</span>
+ <span class="nb">source</span> ~/.bashrc
+</pre></div>
+
 
 <p>使用</p>
-<pre><code class="shell">#列出虚拟环境列表
+<div class="code"><pre><span></span><span class="c1">#列出虚拟环境列表</span>
 workon
-#也可以使用
+<span class="c1">#也可以使用</span>
 lsvirtualenv
-#新建虚拟环境
-mkvirtualenv [虚拟环境名称]
-#启动/切换虚拟环境
-workon [虚拟环境名称]
-#删除虚拟环境
-rmvirtualenv [虚拟环境名称]
-#离开虚拟环境
+<span class="c1">#新建虚拟环境</span>
+mkvirtualenv <span class="o">[</span>虚拟环境名称<span class="o">]</span>
+<span class="c1">#启动/切换虚拟环境</span>
+workon <span class="o">[</span>虚拟环境名称<span class="o">]</span>
+<span class="c1">#删除虚拟环境</span>
+rmvirtualenv <span class="o">[</span>虚拟环境名称<span class="o">]</span>
+<span class="c1">#离开虚拟环境</span>
 deactivate
-</code></pre>
+</pre></div>
 
-<h2 id="python_5">python技巧</h2>
-<h3 id="consider-a-more-secure-location-set-with-set_extraction_path-or-the-python_egg_cache-environment-variable">Consider a more secure location (set with .set_extraction_path or the PYTHON_EGG_CACHE environment variable)</h3>
-<pre><code>chmod g-wx,o-wx . /home/far/.python-eggs/
-</code></pre>
 
-<h3 id="insecureplatformwarning-a-true-sslcontext-object-is-not-available">InsecurePlatformWarning: A true SSLContext object is not available.</h3>
-<pre><code> pip install pyopenssl ndg-httpsclient pyasn1
-</code></pre>
+<h2 id="python_5">python技巧<a class="headerlink" href="#python_5" title="Permanent link">#</a></h2>
+<h3 id="consider-a-more-secure-location-set-with-set_extraction_path-or-the-python_egg_cache-environment-variable">Consider a more secure location (set with .set_extraction_path or the PYTHON_EGG_CACHE environment variable)<a class="headerlink" href="#consider-a-more-secure-location-set-with-set_extraction_path-or-the-python_egg_cache-environment-variable" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>chmod g-wx,o-wx . /home/far/.python-eggs/
+</pre></div>
 
-<h3 id="pip-cache-location">pip cache location</h3>
-<pre><code>%USERPROFILE%\AppData\Local\pip\cache
-</code></pre>
 
-<h3 id="pythoneasy_install">python安装easy_install失败的解决办法</h3>
+<h3 id="insecureplatformwarning-a-true-sslcontext-object-is-not-available">InsecurePlatformWarning: A true SSLContext object is not available.<a class="headerlink" href="#insecureplatformwarning-a-true-sslcontext-object-is-not-available" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span> pip install pyopenssl ndg-httpsclient pyasn1
+</pre></div>
+
+
+<h3 id="pip-cache-location">pip cache location<a class="headerlink" href="#pip-cache-location" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="c">%USERPROFILE%\AppData\Local\pip\cache</span>
+</pre></div>
+
+
+<h3 id="pythoneasy_install">python安装easy_install失败的解决办法<a class="headerlink" href="#pythoneasy_install" title="Permanent link">#</a></h3>
 <p>错误详情:</p>
-<pre><code>File &quot;C:\Python27\lib\mimetypes.py&quot;, line 249, in enum_types
+<div class="code"><pre><span></span>File &quot;C:\Python27\lib\mimetypes.py&quot;, line 249, in enum_types
 ctype = ctype.encode(default_encoding) # omit in 3.x!
-UnicodeDecodeError: 'ascii' codec can't decode byte 0xd7 in position 9: ordinal not in range(128)
-</code></pre>
+UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xd7 in position 9: ordinal not in range(128)
+</pre></div>
+
 
 <p>解决:
 在python安装目录Lib的<code>mimetypes.py</code>中，
 <code>default_encoding = sys.getdefaultencoding()</code>
 这句之前加上设置默认编码，添加如下语句：</p>
-<pre><code class="py">reload(sys)
-sys.setdefaultencoding(&quot;cp936&quot;)
-</code></pre>
+<div class="code"><pre><span></span><span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s2">&quot;cp936&quot;</span><span class="p">)</span>
+</pre></div>
 
-<h3 id="python2python3">兼容python2和python3</h3>
-<h4 id="2to3">2to3</h4>
-<pre><code>python C:\Python33\Tools\Scripts\2to3.py -w 2to3Test.py
-</code></pre>
+
+<h3 id="python2python3">兼容python2和python3<a class="headerlink" href="#python2python3" title="Permanent link">#</a></h3>
+<h4 id="2to3">2to3<a class="headerlink" href="#2to3" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span>python C:\Python33\Tools\Scripts\2to3.py -w 2to3Test.py
+</pre></div>
+
 
 <p>https://github.com/mitsuhiko/python-modernize
 http://haoluobo.com/2013/01/python2and3/</p>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

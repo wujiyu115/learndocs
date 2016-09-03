@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_enum/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_enum/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_enum//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -523,6 +534,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -531,57 +556,61 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python">python 枚举,元类</h1>
-<h2 id="_1">枚举</h2>
+          <h1 id="python">python 枚举,元类<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
+<h2 id="_1">枚举<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>将我们要定义常量组时常规的做法是定义一系列的变量,虽然简单但这样不利于管理,如:
 <code>blue,red,green=1,2,3</code>,更好的做法是定义一个枚举:Python提供了<code>Enum</code>类来实现这个功能.</p>
-<pre><code class="py">from enum import Enum
-#Enum(&quot;枚举名字&quot;,(&quot;枚举字段标识''))
-Color = Enum(&quot;Color&quot;,(&quot;blue&quot;,&quot;red&quot;,&quot;green&quot;))
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="c1">#Enum(&quot;枚举名字&quot;,(&quot;枚举字段标识&#39;&#39;))</span>
+<span class="n">Color</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">(</span><span class="s2">&quot;Color&quot;</span><span class="p">,(</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span><span class="s2">&quot;red&quot;</span><span class="p">,</span><span class="s2">&quot;green&quot;</span><span class="p">))</span>
 
-print(Color.blue.value)
-for name, member in Color.__members__.items():
-    print(name, '=&gt;', member, ',', member.value)
-'''
-1
-('blue', '=&gt;', &lt;Color.blue: 1&gt;, ',', 1)
-('red', '=&gt;', &lt;Color.red: 2&gt;, ',', 2)
-('green', '=&gt;', &lt;Color.green: 3&gt;, ',', 3)
-'''
-</code></pre>
+<span class="k">print</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">Color</span><span class="o">.</span><span class="n">__members__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;=&gt;&#39;</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">member</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">1</span>
+<span class="sd">(&#39;blue&#39;, &#39;=&gt;&#39;, &lt;Color.blue: 1&gt;, &#39;,&#39;, 1)</span>
+<span class="sd">(&#39;red&#39;, &#39;=&gt;&#39;, &lt;Color.red: 2&gt;, &#39;,&#39;, 2)</span>
+<span class="sd">(&#39;green&#39;, &#39;=&gt;&#39;, &lt;Color.green: 3&gt;, &#39;,&#39;, 3)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <p><code>value</code>值是自动附加的属性默认从<code>1</code>开始计数,如果要更加精确地控制我们可以继承自<code>Enum</code>自定义类:</p>
-<pre><code class="py">from enum import Enum, unique
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">unique</span>
 
-@unique
-class Color(Enum):
-    blue = 0 # blue的value为0
-    red = 1
-    green = 2
+<span class="nd">@unique</span>
+<span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">blue</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># blue的value为0</span>
+    <span class="n">red</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">green</span> <span class="o">=</span> <span class="mi">2</span>
 
-print(Color.blue.value)
-</code></pre>
+<span class="k">print</span><span class="p">(</span><span class="n">Color</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+
 
 <p><code>unique</code>装饰器限定没有重复值</p>
-<h2 id="metaclass">metaclass</h2>
+<h2 id="metaclass">metaclass<a class="headerlink" href="#metaclass" title="Permanent link">#</a></h2>
 <p><code>metaclass</code>元类用于动态改变类的的创建行为</p>
-<pre><code class="py">class ListMetaclass(type):
-    def __new__(cls,name,base,attrs):
-        attrs[&quot;add&quot;] = lambda self,value: self.append(value)
-        return type.__new__(cls,name,base,attrs)
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">ListMetaclass</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">base</span><span class="p">,</span><span class="n">attrs</span><span class="p">):</span>
+        <span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;add&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span><span class="n">value</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">type</span><span class="o">.</span><span class="n">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">base</span><span class="p">,</span><span class="n">attrs</span><span class="p">)</span>
 
-class MyList(list, metaclass=ListMetaclass):
-    #python2
-    # __metaclass__ = ListMetaclass
-    &quot;&quot;&quot;docstring for MyList&quot;&quot;&quot;
-    def __init__(self):
-        super(MyList, self).__init__()
+<span class="k">class</span> <span class="nc">MyList</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">ListMetaclass</span><span class="p">):</span>
+    <span class="c1">#python2</span>
+    <span class="c1"># __metaclass__ = ListMetaclass</span>
+    <span class="sd">&quot;&quot;&quot;docstring for MyList&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MyList</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
 
-mylist = MyList()
-mylist.add(1)
-print(mylist)
-</code></pre>
+<span class="n">mylist</span> <span class="o">=</span> <span class="n">MyList</span><span class="p">()</span>
+<span class="n">mylist</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

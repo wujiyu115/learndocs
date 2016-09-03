@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/cplus/cplus1_grammer/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/cplus/cplus1_grammer/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/cplus/cplus1_grammer//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -529,6 +540,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -537,57 +562,62 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="c">c++　第一章 基础语法,控制流程,数据类型</h1>
-<h3 id="_1">一 定义变量:</h3>
-<pre><code class="c++">double a=2.0
-</code></pre>
+          <h1 id="c">c++　第一章 基础语法,控制流程,数据类型<a class="headerlink" href="#c" title="Permanent link">#</a></h1>
+<h3 id="_1">一 定义变量:<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="kt">double</span> <span class="n">a</span><span class="o">=</span><span class="mf">2.0</span>
+</pre></div>
 
-<h3 id="_2">二 控制流程:</h3>
+
+<h3 id="_2">二 控制流程:<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <ol>
 <li><strong>if ...else </strong></li>
 </ol>
-<pre><code class="c++">  void control() {
-      int a = 10;
-      if (a &gt; 5) {
-          cout &lt;&lt; &quot;ok&quot; &lt;&lt; endl;
-      } else {
-          cout &lt;&lt; &quot;not ok&quot; &lt;&lt; endl;
-      }
-  }
-</code></pre>
+<div class="code"><pre><span></span>  <span class="kt">void</span> <span class="nf">control</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;ok&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;not ok&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
 
 <ol>
 <li><strong>switch:表达式只能是整型，字符型，枚举型</strong></li>
 </ol>
-<pre><code class="c++">  void control() {
-      int a = 10;
-      if (a &gt; 5) {
-          cout &lt;&lt; &quot;ok&quot; &lt;&lt; endl;
-      } else {
-          cout &lt;&lt; &quot;not ok&quot; &lt;&lt; endl;
-      }
-  }
-</code></pre>
+<div class="code"><pre><span></span>  <span class="kt">void</span> <span class="nf">control</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;ok&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;not ok&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
 
 <ol>
 <li><strong>for..i</strong></li>
 </ol>
-<pre><code class="c++">  for (int i = 0;  i &lt; 10; ++ i) {
-          cout &lt;&lt;&quot;hello&quot;;
-  }
-</code></pre>
+<div class="code"><pre><span></span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span><span class="s">&quot;hello&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></div>
+
 
 <ol>
 <li><strong>while</strong></li>
 </ol>
-<pre><code class="c++">    int test=0;
-    while (test &lt; 100) {
-      test++;
-      cout &lt;&lt; test&lt;&lt;&quot;\t&quot;;
-    }
-</code></pre>
+<div class="code"><pre><span></span>    <span class="kt">int</span> <span class="n">test</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">test</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">test</span><span class="o">++</span><span class="p">;</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">test</span><span class="o">&lt;&lt;</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+</pre></div>
 
-<h3 id="_3">三 数据类型</h3>
+
+<h3 id="_3">三 数据类型<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p><code>int ,char,bool,float,double,int[],double&amp;amp;,char*,enum</code>
 + <strong>整数类型:int</strong>
 <a href="http://farwmarth.com/wp-content/uploads/2013/03/image18.png"><img alt="image" src="http://farwmarth.com/wp-content/uploads/2013/03/image_thumb18.png" title="image" /></a>
@@ -595,20 +625,22 @@
 <ul>
 <li><strong>字符型:char</strong></li>
 </ul>
-<pre><code class="c++">  char ch = 'A';
-  cout &lt;&lt; ch &lt;&lt; endl;
-</code></pre>
+<div class="code"><pre><span></span>  <span class="kt">char</span> <span class="n">ch</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ch</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</pre></div>
+
 
 <p>值得注意的是ASCII码并不是最终标准，所以为了代码的可移植性，不要用数字对字符变量进行赋值。</p>
 <ul>
 <li><strong>枚举型:enum</strong></li>
 </ul>
-<pre><code class="c++">  enum Week {
-          Mon, Tue, Wed, Thu, Fri, Sta, Sun
-      };
-  Week mon = Tue;
-  cout&lt;&lt;mon&lt;&lt;endl;
-</code></pre>
+<div class="code"><pre><span></span>  <span class="k">enum</span> <span class="n">Week</span> <span class="p">{</span>
+          <span class="n">Mon</span><span class="p">,</span> <span class="n">Tue</span><span class="p">,</span> <span class="n">Wed</span><span class="p">,</span> <span class="n">Thu</span><span class="p">,</span> <span class="n">Fri</span><span class="p">,</span> <span class="n">Sta</span><span class="p">,</span> <span class="n">Sun</span>
+      <span class="p">};</span>
+  <span class="n">Week</span> <span class="n">mon</span> <span class="o">=</span> <span class="n">Tue</span><span class="p">;</span>
+  <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">mon</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+
 
 <p>枚举一量定义不能改变，所以常用来代替整数常量，作用更优的是常量需要初始化，而枚举是一种类型，无须定义其实体。</p>
 <ul>
@@ -621,19 +653,20 @@
 c-串 :从c语言中延续的字符数组，以0结尾。字符长度要加1.</p>
 </li>
 </ul>
-<pre><code class="c++">const char str=&quot;Hello&quot;;
-char str=&quot;Hello&quot;; //字符串常量赋予char指针错误deprecated conversion from string constant to ‘char’
-char str=&quot;Hello&quot;; //指针地址赋予char类型错误invalid conversion from ‘const char’ to ‘char’
-cout&lt;&lt;*str&lt;&lt;endl;  //Hello
-cout&lt;&lt;str&lt;&lt;endl;  //Hello
-cout&lt;&lt;str&lt;&lt;endl; //Hello
-const char chars= &quot;s&quot;,chars1= &quot;s&quot;;
-cout&lt;&lt;(chars==chars1)&lt;&lt;endl;   //true
-char is_char[]=&quot;s&quot;,is_char1[] = &quot;s&quot;;
-cout&lt;&lt;(is_char==is_char1)&lt;&lt;endl;  //false
-string s = &quot;hello&quot;, s1 = &quot;hello&quot;;
-cout&lt;&lt;(s==s1)&lt;&lt;endl;    //true
-</code></pre>
+<div class="code"><pre><span></span><span class="k">const</span> <span class="kt">char</span> <span class="n">str</span><span class="o">=</span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">str</span><span class="o">=</span><span class="s">&quot;Hello&quot;</span><span class="p">;</span> <span class="c1">//字符串常量赋予char指针错误deprecated conversion from string constant to ‘char’</span>
+<span class="kt">char</span> <span class="n">str</span><span class="o">=</span><span class="s">&quot;Hello&quot;</span><span class="p">;</span> <span class="c1">//指针地址赋予char类型错误invalid conversion from ‘const char’ to ‘char’</span>
+<span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="n">str</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>  <span class="c1">//Hello</span>
+<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">str</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>  <span class="c1">//Hello</span>
+<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">str</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//Hello</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">chars</span><span class="o">=</span> <span class="s">&quot;s&quot;</span><span class="p">,</span><span class="n">chars1</span><span class="o">=</span> <span class="s">&quot;s&quot;</span><span class="p">;</span>
+<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">chars</span><span class="o">==</span><span class="n">chars1</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>   <span class="c1">//true</span>
+<span class="kt">char</span> <span class="n">is_char</span><span class="p">[]</span><span class="o">=</span><span class="s">&quot;s&quot;</span><span class="p">,</span><span class="n">is_char1</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;s&quot;</span><span class="p">;</span>
+<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">is_char</span><span class="o">==</span><span class="n">is_char1</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>  <span class="c1">//false</span>
+<span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;hello&quot;</span><span class="p">,</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;hello&quot;</span><span class="p">;</span>
+<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">s</span><span class="o">==</span><span class="n">s1</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>    <span class="c1">//true</span>
+</pre></div>
+
 
 <p><a href="http://farwmarth.com/wp-content/uploads/2013/03/image19.png"><img alt="image" src="http://farwmarth.com/wp-content/uploads/2013/03/image_thumb19.png" title="image" /></a>
 在比较同个字符相同的c-串是用==会不相等，因为是指向两个不同位置的指针。而应该用strcmp</p>
@@ -641,72 +674,75 @@ cout&lt;&lt;(s==s1)&lt;&lt;endl;    //true
 <li><strong>string:</strong>
 string是一种自定义类型，可以方便地操作。不像字符指针一样蛋疼。</li>
 </ul>
-<pre><code class="c++">  string a, s1 = &quot;hello&quot;;
-  string s2 = &quot;123&quot;;
-  //比较
-  cout &lt;&lt; (a == s1) &lt;&lt; endl; //false
-  a = s1;
-  cout &lt;&lt; (a == s1) &lt;&lt; endl; //true
-  //连接
-  cout &lt;&lt; (a + s2) &lt;&lt; endl;
-  //查找
-  cout &lt;&lt; (a.find(&quot;e&quot;)) &lt;&lt; endl
-</code></pre>
+<div class="code"><pre><span></span>  <span class="n">string</span> <span class="n">a</span><span class="p">,</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;hello&quot;</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">&quot;123&quot;</span><span class="p">;</span>
+  <span class="c1">//比较</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">s1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">//false</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="n">s1</span><span class="p">;</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">s1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">//true</span>
+  <span class="c1">//连接</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">s2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="c1">//查找</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;e&quot;</span><span class="p">))</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span>
+</pre></div>
+
 
 <ul>
 <li><strong>数组:</strong>
 定义格式:<code>类型名 数组名[常量表达式]</code></li>
 </ul>
-<pre><code class="c++">  int arr1[3] = { 1 };
-  int arr2[3];
-  void arrays() {
-      int arr3[3] = { 1 };
-      int arr4[3];
-     static int arr5[3];
+<div class="code"><pre><span></span>  <span class="kt">int</span> <span class="n">arr1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span> <span class="p">};</span>
+  <span class="kt">int</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+  <span class="kt">void</span> <span class="nf">arrays</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">arr3</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span> <span class="p">};</span>
+      <span class="kt">int</span> <span class="n">arr4</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+     <span class="k">static</span> <span class="kt">int</span> <span class="n">arr5</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
 
-      int i = 0;
-      for (i = 0; i &lt; 3; ++i) {
-          cout &lt;&lt; arr1[i] &lt;&lt; &quot;\t&quot;;
-      }
-      cout &lt;&lt; endl;
-      for (i = 0; i &lt; 3; ++i) {
-          cout &lt;&lt; arr2[i] &lt;&lt; &quot;\t&quot;;
-      }
-      cout &lt;&lt; endl;
-      for (i = 0; i &lt; 3; ++i) {
-          cout &lt;&lt; arr3[i] &lt;&lt; &quot;\t&quot;;
-      }
-      cout &lt;&lt; endl;
-      for (i = 0; i &lt; 3; ++i) {
-          cout &lt;&lt; arr4[i] &lt;&lt; &quot;\t&quot;;
-      }
-      cout &lt;&lt; endl;
-      for (i = 0; i &lt; 3; ++i) {
-          cout &lt;&lt; arr5[i] &lt;&lt; &quot;\t&quot;;
-      }
+      <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr3</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr4</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">arr5</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+</pre></div>
 
-</code></pre>
 
 <p><a href="http://farwmarth.com/wp-content/uploads/2013/03/image20.png"><img alt="image" src="http://farwmarth.com/wp-content/uploads/2013/03/image_thumb20.png" title="image" /></a></p>
 <p>全局数组和静态数组未初始化，系统会默认为清零，局部数组未初始化会出现随机数。</p>
 <ul>
 <li><strong>vector容器</strong></li>
 </ul>
-<pre><code class="c++">  void vectors() {
+<div class="code"><pre><span></span>  <span class="kt">void</span> <span class="nf">vectors</span><span class="p">()</span> <span class="p">{</span>
 
-      vector&lt;int&gt; ve;
-      for (int i = 0; i &lt; 10; ++i) {
-          ve.push_back(i);
-      }
+      <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ve</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">ve</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+      <span class="p">}</span>
 
-      vector&lt;int&gt;::iterator p = ve.begin();
-      for (; p&lt;ve.end(); p++) {
-        cout&lt;&lt;*p;
-      }
+      <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">p</span> <span class="o">=</span> <span class="n">ve</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+      <span class="k">for</span> <span class="p">(;</span> <span class="n">p</span><span class="o">&lt;</span><span class="n">ve</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">p</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="n">p</span><span class="p">;</span>
+      <span class="p">}</span>
 
-  }
-</code></pre>
+  <span class="p">}</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

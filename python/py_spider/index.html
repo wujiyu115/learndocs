@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_spider/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_spider/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_spider//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -523,6 +534,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -531,115 +556,123 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python">python爬虫初探</h1>
-<h2 id="pyspider">pyspider</h2>
+          <h1 id="python">python爬虫初探<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
+<h2 id="pyspider">pyspider<a class="headerlink" href="#pyspider" title="Permanent link">#</a></h2>
 <p><code>github</code> : <a href="https://github.com/binux/pyspider">https://github.com/binux/pyspider</a></p>
 <p>其他文档
 + <a href="http://docs.pyspider.org/en/latest/">http://docs.pyspider.org/en/latest/</a>
 + <a href="http://blog.binux.me/2015/01/pyspider-tutorial-level-1-html-and-css-selector/">http://blog.binux.me/2015/01/pyspider-tutorial-level-1-html-and-css-selector/</a></p>
-<h3 id="_1">安装</h3>
-<h3 id="python_1">安装依赖环境和python</h3>
-<pre><code class="shell">sudo apt-get install python python-dev python-distribute python-pip libcurl4-openssl-dev libxml2-dev libxslt1-dev python-lxml
+<h3 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<h3 id="python_1">安装依赖环境和python<a class="headerlink" href="#python_1" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>sudo apt-get install python python-dev python-distribute python-pip libcurl4-openssl-dev libxml2-dev libxslt1-dev python-lxml
 sudo apt-get install python-pip
-</code></pre>
+</pre></div>
 
-<h4 id="phantomjs">安装PhantomJS</h4>
+
+<h4 id="phantomjs">安装PhantomJS<a class="headerlink" href="#phantomjs" title="Permanent link">#</a></h4>
 <p>官网:<a href="http://phantomjs.org/">http://phantomjs.org/</a>
 PhantomJS是一个基于 WebKit 的非界面渲染html的引擎,用于 页面自动化 ， 网络监测 ， 网页截屏 ，以及 无界面测试 等</p>
-<pre><code class="shell">sudo apt-get install phantomjs
-</code></pre>
+<div class="code"><pre><span></span>sudo apt-get install phantomjs
+</pre></div>
 
-<h4 id="pyspider_1">安装pyspider</h4>
-<pre><code class="shell">pip install pyspider
-</code></pre>
 
-<h4 id="_2">错误</h4>
+<h4 id="pyspider_1">安装pyspider<a class="headerlink" href="#pyspider_1" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span>pip install pyspider
+</pre></div>
+
+
+<h4 id="_2">错误<a class="headerlink" href="#_2" title="Permanent link">#</a></h4>
 <ul>
 <li>connect to scheduler rpc error: error(111, 'Connection refused')</li>
 </ul>
-<pre><code class="shell">pip install -U supernova
-</code></pre>
+<div class="code"><pre><span></span>pip install -U supernova
+</pre></div>
 
-<h3 id="_3">启动</h3>
-<pre><code class="shell">pyspider
-</code></pre>
 
-<h3 id="_4">创建项目</h3>
+<h3 id="_3">启动<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>pyspider
+</pre></div>
+
+
+<h3 id="_4">创建项目<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <p>打开<code>localhost:5000</code>打开<code>dashboard</code>,<code>create new project</code>
 <img alt="spider" src="../../_static/spider.png" /></p>
 <p>创建脚本:我这里以抓取一下云风的所有博文链接为例:</p>
-<pre><code class="python"># -*- coding: utf-8 -*-
-from pyspider.libs.base_handler import *
-import re
-class Handler(BaseHandler):
-    crawl_config = {
-        &quot;message_queue&quot;: &quot;redis://localhost:6379/db&quot;
-    }
-    #开启启动任务入口,一般为主页
-    @every(minutes=24 * 60)
-    def on_start(self):
-        self.crawl('http://blog.codingnow.com/', callback=self.index_page)
+<div class="code"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">pyspider.libs.base_handler</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="k">class</span> <span class="nc">Handler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
+    <span class="n">crawl_config</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;message_queue&quot;</span><span class="p">:</span> <span class="s2">&quot;redis://localhost:6379/db&quot;</span>
+    <span class="p">}</span>
+    <span class="c1">#开启启动任务入口,一般为主页</span>
+    <span class="nd">@every</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">on_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="s1">&#39;http://blog.codingnow.com/&#39;</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">index_page</span><span class="p">)</span>
 
-    #根据标签过滤,页面上有个[enable css selector helper]可以快速定位
-    @config(age=10 * 24 * 60 * 60)
-    def index_page(self, response):
-        for each in response.doc('.module-archives li &gt; a[href^=&quot;http&quot;]').items():
-            if re.match(&quot;^http://blog.codingnow.com.*/$&quot;, each.attr.href):
-                self.crawl(each.attr.href, callback=self.second_index_page)
+    <span class="c1">#根据标签过滤,页面上有个[enable css selector helper]可以快速定位</span>
+    <span class="nd">@config</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">10</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">index_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">doc</span><span class="p">(</span><span class="s1">&#39;.module-archives li &gt; a[href^=&quot;http&quot;]&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^http://blog.codingnow.com.*/$&quot;</span><span class="p">,</span> <span class="n">each</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">each</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">second_index_page</span><span class="p">)</span>
 
-    #我这里做了一个二级抓取,第一级为日期分类
-    @config(age=10 * 24 * 60 * 60)
-    def second_index_page(self, response):
-        for each in response.doc('.permalink[href^=&quot;http&quot;]').items():
-            if re.match(&quot;^http://blog.codingnow.com&quot;, each.attr.href):
-                self.crawl(each.attr.href, callback=self.detail_page)
+    <span class="c1">#我这里做了一个二级抓取,第一级为日期分类</span>
+    <span class="nd">@config</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">10</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">second_index_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">doc</span><span class="p">(</span><span class="s1">&#39;.permalink[href^=&quot;http&quot;]&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^http://blog.codingnow.com&quot;</span><span class="p">,</span> <span class="n">each</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">each</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">detail_page</span><span class="p">)</span>
 
-     #详情页我只抓了title和url.这里也可以分析正文
-    @config(priority=2)
-    def detail_page(self, response):
-        return {
-            &quot;url&quot;: response.url,
-            &quot;title&quot;: response.doc('title').text(),
-        }
+     <span class="c1">#详情页我只抓了title和url.这里也可以分析正文</span>
+    <span class="nd">@config</span><span class="p">(</span><span class="n">priority</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">detail_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+            <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">doc</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(),</span>
+        <span class="p">}</span>
+</pre></div>
 
-</code></pre>
 
 <p><img alt="spider_result.png" src="../../_static/spider_result.png" /></p>
 <p><a href="http://demo.pyspider.org/">http://demo.pyspider.org/</a></p>
-<h2 id="scrapy">scrapy</h2>
+<h2 id="scrapy">scrapy<a class="headerlink" href="#scrapy" title="Permanent link">#</a></h2>
 <p><code>doc</code> : <a href="http://doc.scrapy.org/en/0.24/">http://doc.scrapy.org/en/0.24/</a></p>
-<h3 id="scrapy_1">安装scrapy</h3>
-<pre><code class="shell">pip install scrapy
-</code></pre>
+<h3 id="scrapy_1">安装scrapy<a class="headerlink" href="#scrapy_1" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>pip install scrapy
+</pre></div>
 
-<h3 id="_5">创建工程</h3>
+
+<h3 id="_5">创建工程<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
 <p><code>scrapy startproject codeingnow</code></p>
 <p>结构如下:</p>
-<pre><code class="shell">codeingnow
-│  scrapy.cfg  # 项目配置文件
+<div class="code"><pre><span></span>codeingnow
+│  scrapy.cfg  <span class="c1"># 项目配置文件</span>
 └─codeingnow
-    │  items.py #项目items文件
-    │  pipelines.py #项目管道文件
-    │  settings.py #项目配置文件
+    │  items.py <span class="c1">#项目items文件</span>
+    │  pipelines.py <span class="c1">#项目管道文件</span>
+    │  settings.py <span class="c1">#项目配置文件</span>
     └─spiders
-</code></pre>
+</pre></div>
+
 
 <p>在<code>spiders</code>创建爬虫程序 <code>codeingnow_scrapy.py</code> </p>
-<pre><code class="py"># -*- coding: utf-8 -*-
-import scrapy
-class CodeingNowSpider(scrapy.Spider):
-    name = 'codeingnow'
-    start_urls = ['http://blog.codingnow.com/']
+<div class="code"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="k">class</span> <span class="nc">CodeingNowSpider</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;codeingnow&#39;</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://blog.codingnow.com/&#39;</span><span class="p">]</span>
 
-    def parse(self, response):
-        for url in response.css('div[class*=module-archives]  a::attr(href)').re('^http://blog.codingnow.com.*/$'):
-            yield scrapy.Request(url, self.parse_content_url)
-            # break
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;div[class*=module-archives]  a::attr(href)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">re</span><span class="p">(</span><span class="s1">&#39;^http://blog.codingnow.com.*/$&#39;</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_content_url</span><span class="p">)</span>
+            <span class="c1"># break</span>
 
-    def parse_content_url(self, response):
-        for content_url in response.css('a[class*=permalink]::attr(href)').extract():
-            yield {'content_url': content_url}
-</code></pre>
+    <span class="k">def</span> <span class="nf">parse_content_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">content_url</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;a[class*=permalink]::attr(href)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract</span><span class="p">():</span>
+            <span class="k">yield</span> <span class="p">{</span><span class="s1">&#39;content_url&#39;</span><span class="p">:</span> <span class="n">content_url</span><span class="p">}</span>
+</pre></div>
+
 
 <ul>
 <li>
@@ -654,6 +687,8 @@ class CodeingNowSpider(scrapy.Spider):
 </li>
 </ul>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

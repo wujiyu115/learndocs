@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py4_func/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py4_func/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py4_func//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -553,6 +564,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -561,130 +586,140 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="_1">函数</h1>
-<h2 id="_2">函数简介</h2>
+          <h1 id="_1">函数<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h2 id="_2">函数简介<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>函数其实就是功能的抽象,用于封装代码.python的<a href="https://docs.python.org/3/library/functions.html">内置函数列表</a>:</p>
-<h2 id="_3">定义函数</h2>
-<pre><code class="py">#定义基本函数
-def mymax(a,b):
-    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
-        raise TypeError('bad operand type')
-    return a&gt;b and a or b
-    pass
-print(mymax(2,1))
-</code></pre>
+<h2 id="_3">定义函数<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="c1">#定义基本函数</span>
+<span class="k">def</span> <span class="nf">mymax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;bad operand type&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">&gt;</span><span class="n">b</span> <span class="ow">and</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span>
+    <span class="k">pass</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mymax</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
 
-<h2 id="_4">返回多个值</h2>
-<pre><code class="py">#返回多个值,其实只是多个值打包在一起返回,就是一个tuple
-def returnmulti(a,b):
-    return a,b
 
-c,d=returnmulti(1,2)
-print(c,d)
-</code></pre>
+<h2 id="_4">返回多个值<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="c1">#返回多个值,其实只是多个值打包在一起返回,就是一个tuple</span>
+<span class="k">def</span> <span class="nf">returnmulti</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span>
 
-<h2 id="_5">函数参数</h2>
-<h3 id="_6">默认参数</h3>
-<h4 id="_7">默认参数在使用是无需传入,减少调用的复杂性.</h4>
-<pre><code class="py">def power(x, n=2):
-    s = 1
-    while n &gt; 0:
-        n = n - 1
-        s = s * x
-    return s
-#power(5),相当于调用了power(5,2)
-power(5)
-</code></pre>
+<span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="n">returnmulti</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
 
-<h4 id="_8">保持默认参数为不变对象,或者是在内部作判断</h4>
+
+<h2 id="_5">函数参数<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<h3 id="_6">默认参数<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
+<h4 id="_7">默认参数在使用是无需传入,减少调用的复杂性.<a class="headerlink" href="#_7" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">*</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">s</span>
+<span class="c1">#power(5),相当于调用了power(5,2)</span>
+<span class="n">power</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+
+<h4 id="_8">保持默认参数为不变对象,或者是在内部作判断<a class="headerlink" href="#_8" title="Permanent link">#</a></h4>
 <p>默认参数在内存中也是一个对象,所以如果是设置为可变对象的话,会出现参数一直累加的情况</p>
-<pre><code class="py">def de_func(a=[]):
-    a.append(&quot;test&quot;)
-    return a
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">de_func</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span>
 
-print(de_func())
-print(de_func())
+<span class="k">print</span><span class="p">(</span><span class="n">de_func</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">de_func</span><span class="p">())</span>
+</pre></div>
 
-</code></pre>
 
-<h3 id="_9">可变参数</h3>
+<h3 id="_9">可变参数<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
 <p>可变参数是在参数个数不确定个数下使用,用<code>*</code>号代表可变参数,接收的是一个<code>tuple</code></p>
-<pre><code class="py">def calc(*numbers):
-    sum = 0
-    for n in numbers:
-        sum = sum + n * n
-    return sum
-print(calc(1,2))
-print(calc(1,2,3))
-</code></pre>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="nb">sum</span>
+<span class="k">print</span><span class="p">(</span><span class="n">calc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">calc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
 
-<h3 id="_10">关键字参数</h3>
+
+<h3 id="_10">关键字参数<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
 <p>自动将参数封装成<code>dict</code></p>
-<pre><code class="py">def dict_params(**kw):
-    print(kw)
-dict_params(a=1)
-#output: {'a': 1}
-</code></pre>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">dict_params</span><span class="p">(</span><span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">kw</span><span class="p">)</span>
+<span class="n">dict_params</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#output: {&#39;a&#39;: 1}</span>
+</pre></div>
 
-<h4 id="_11">命名关键字参数</h4>
-<pre><code class="py">#限定参数用*号分割
-def person( *, city, job):
-    print( city, job)
-#只能传city,job两个参数
-person(city=&quot;guangzhou&quot;,job=&quot;gamedevelop&quot;)
 
-#如果有可变参数,*号可省略
-def person1( *info, city, job):
-    print(info,city, job)
+<h4 id="_11">命名关键字参数<a class="headerlink" href="#_11" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="c1">#限定参数用*号分割</span>
+<span class="k">def</span> <span class="nf">person</span><span class="p">(</span> <span class="o">*</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+<span class="c1">#只能传city,job两个参数</span>
+<span class="n">person</span><span class="p">(</span><span class="n">city</span><span class="o">=</span><span class="s2">&quot;guangzhou&quot;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s2">&quot;gamedevelop&quot;</span><span class="p">)</span>
 
-person1(1,2,city=&quot;guangzhou&quot;,job=&quot;gamedevelop&quot;)
-</code></pre>
+<span class="c1">#如果有可变参数,*号可省略</span>
+<span class="k">def</span> <span class="nf">person1</span><span class="p">(</span> <span class="o">*</span><span class="n">info</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">info</span><span class="p">,</span><span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
 
-<h2 id="_12">参数顺序</h2>
+<span class="n">person1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">city</span><span class="o">=</span><span class="s2">&quot;guangzhou&quot;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s2">&quot;gamedevelop&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="_12">参数顺序<a class="headerlink" href="#_12" title="Permanent link">#</a></h2>
 <p>多种参数类型可以混用,但是参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数</p>
-<pre><code class="py">def f1(a, b, c=0, *args, **kw):
-    print('a =', a, 'b =', b, 'c =', c, 'args =', args, 'kw =', kw)
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="s1">&#39;args =&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="s1">&#39;kw =&#39;</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span>
 
-def f2(a, b, c=0, *, d, **kw):
-    print('a =', a, 'b =', b, 'c =', c, 'd =', d, 'kw =', kw)
-</code></pre>
+<span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="s1">&#39;d =&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="s1">&#39;kw =&#39;</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span>
+</pre></div>
 
-<h2 id="_13">递归函数</h2>
+
+<h2 id="_13">递归函数<a class="headerlink" href="#_13" title="Permanent link">#</a></h2>
 <p>函数调用其本身就是递归</p>
-<pre><code class="py">#计算阶乘
-def fact(n):
-    if n==1:
-        return 1
-    return n * fact(n - 1)
+<div class="code"><pre><span></span><span class="c1">#计算阶乘</span>
+<span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
-print(fact(5))
+<span class="k">print</span><span class="p">(</span><span class="n">fact</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 
-#计算过程
-'''
-===&gt; fact(5)
-===&gt; 5 * fact(4)
-===&gt; 5 * (4 * fact(3))
-===&gt; 5 * (4 * (3 * fact(2)))
-===&gt; 5 * (4 * (3 * (2 * fact(1))))
-===&gt; 5 * (4 * (3 * (2 * 1)))
-===&gt; 5 * (4 * (3 * 2))
-===&gt; 5 * (4 * 6)
-===&gt; 5 * 24
-===&gt; 120
-'''
-</code></pre>
+<span class="c1">#计算过程</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">===&gt; fact(5)</span>
+<span class="sd">===&gt; 5 * fact(4)</span>
+<span class="sd">===&gt; 5 * (4 * fact(3))</span>
+<span class="sd">===&gt; 5 * (4 * (3 * fact(2)))</span>
+<span class="sd">===&gt; 5 * (4 * (3 * (2 * fact(1))))</span>
+<span class="sd">===&gt; 5 * (4 * (3 * (2 * 1)))</span>
+<span class="sd">===&gt; 5 * (4 * (3 * 2))</span>
+<span class="sd">===&gt; 5 * (4 * 6)</span>
+<span class="sd">===&gt; 5 * 24</span>
+<span class="sd">===&gt; 120</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h2 id="lambda">匿名函数<code>lambda</code></h2>
+
+<h2 id="lambda">匿名函数<code>lambda</code><a class="headerlink" href="#lambda" title="Permanent link">#</a></h2>
 <p>语法:冒号前是参数，可以有多个，用逗号隔开，冒号右边的返回值</p>
-<pre><code class="py">#普通函数
-def f(x):
-    return x*2
-f(2)
-#lambda
-f=lambda x:x*2
-f(2)
-</code></pre>
+<div class="code"><pre><span></span><span class="c1">#普通函数</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#lambda</span>
+<span class="n">f</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

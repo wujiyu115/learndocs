@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_tornado/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_tornado/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_tornado//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -517,6 +528,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -525,10 +550,10 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python-web-tornado">python web框架 tornado 初探</h1>
-<h2 id="tornado">Tornado</h2>
+          <h1 id="python-web-tornado">python web框架 tornado 初探<a class="headerlink" href="#python-web-tornado" title="Permanent link">#</a></h1>
+<h2 id="tornado">Tornado<a class="headerlink" href="#tornado" title="Permanent link">#</a></h2>
 <p>tornado 是一个基于python的非阻塞式 web 服务器</p>
-<h3 id="module-map">Module Map</h3>
+<h3 id="module-map">Module Map<a class="headerlink" href="#module-map" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p>Web framework</p>
@@ -591,49 +616,51 @@
 </ul>
 </li>
 </ul>
-<h3 id="hello-world">hello world</h3>
-<pre><code class="py">import tornado.ioloop
-import tornado.web
-class MainHandler(tornado.web.RequestHandler):
-  def get(self):
-    self.write(&quot;Hello, world,&quot;+subdomain)
+<h3 id="hello-world">hello world<a class="headerlink" href="#hello-world" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">tornado.ioloop</span>
+<span class="kn">import</span> <span class="nn">tornado.web</span>
+<span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, world,&quot;</span><span class="o">+</span><span class="n">subdomain</span><span class="p">)</span>
 
-def make_app():
-  return tornado.web.Application([
-    (r&quot;/&quot;, MainHandler),
-  ])
+<span class="k">def</span> <span class="nf">make_app</span><span class="p">():</span>
+  <span class="k">return</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">r&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
+  <span class="p">])</span>
 
-if __name__ == &quot;__main__&quot;:
-  app = make_app()
-  app.listen(8888)
-  tornado.ioloop.IOLoop.current().start()
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+  <span class="n">app</span> <span class="o">=</span> <span class="n">make_app</span><span class="p">()</span>
+  <span class="n">app</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">8888</span><span class="p">)</span>
+  <span class="n">tornado</span><span class="o">.</span><span class="n">ioloop</span><span class="o">.</span><span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-  #在浏览器中输入`http://localhost:8888/` 可以看到`Hello,world`的输出
-</code></pre>
+  <span class="c1">#在浏览器中输入`http://localhost:8888/` 可以看到`Hello,world`的输出</span>
+</pre></div>
 
-<h3 id="handler">handler</h3>
-<h4 id="staticfilehandler">StaticFileHandler</h4>
-<pre><code class="py">def make_app():
-  return tornado.web.Application([
-    (r&quot;/static/(.*)&quot;, tornado.web.StaticFileHandler, {&quot;path&quot;: &quot;C:\\Users\\Administrator.PC-20150720QKHJ\\Desktop\\static&quot;}),
-  ])
 
-  # 输入: http://localhost:8888/static/a.txt 可访问static目录下的文件内容
-</code></pre>
+<h3 id="handler">handler<a class="headerlink" href="#handler" title="Permanent link">#</a></h3>
+<h4 id="staticfilehandler">StaticFileHandler<a class="headerlink" href="#staticfilehandler" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">make_app</span><span class="p">():</span>
+  <span class="k">return</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">r&quot;/static/(.*)&quot;</span><span class="p">,</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">StaticFileHandler</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">Administrator.PC-20150720QKHJ</span><span class="se">\\</span><span class="s2">Desktop</span><span class="se">\\</span><span class="s2">static&quot;</span><span class="p">}),</span>
+  <span class="p">])</span>
 
-<h4 id="get_argument">get_argument 获取参数</h4>
-<pre><code class="py">class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write('&lt;html&gt;&lt;body&gt;&lt;form action=&quot;/&quot; method=&quot;post&quot;&gt;'
-                   '&lt;input type=&quot;text&quot; name=&quot;message&quot;&gt;'
-                   '&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;'
-                   '&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;')
+  <span class="c1"># 输入: http://localhost:8888/static/a.txt 可访问static目录下的文件内容</span>
+</pre></div>
 
-    def post(self):
-        self.set_header(&quot;Content-Type&quot;, &quot;text/plain&quot;)
-        self.write(&quot;You wrote &quot; + self.get_argument(&quot;message&quot;))
 
-</code></pre>
+<h4 id="get_argument">get_argument 获取参数<a class="headerlink" href="#get_argument" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&lt;html&gt;&lt;body&gt;&lt;form action=&quot;/&quot; method=&quot;post&quot;&gt;&#39;</span>
+                   <span class="s1">&#39;&lt;input type=&quot;text&quot; name=&quot;message&quot;&gt;&#39;</span>
+                   <span class="s1">&#39;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&#39;</span>
+                   <span class="s1">&#39;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_header</span><span class="p">(</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;You wrote &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_argument</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+</pre></div>
+
 
 <ul>
 <li>arguments - 所有的 GET 或 POST 的参数</li>
@@ -641,114 +668,119 @@ if __name__ == &quot;__main__&quot;:
 <li>path - 请求的路径（ ? 之前的所有内容）</li>
 <li>headers - 请求的开头信息</li>
 </ul>
-<h3 id="coroutine">coroutine</h3>
-<pre><code class="py">import tornado.ioloop
-import tornado.web
-from tornado import gen
-from tornado.httpclient import AsyncHTTPClient
+<h3 id="coroutine">coroutine<a class="headerlink" href="#coroutine" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">tornado.ioloop</span>
+<span class="kn">import</span> <span class="nn">tornado.web</span>
+<span class="kn">from</span> <span class="nn">tornado</span> <span class="kn">import</span> <span class="n">gen</span>
+<span class="kn">from</span> <span class="nn">tornado.httpclient</span> <span class="kn">import</span> <span class="n">AsyncHTTPClient</span>
 
-class MainHandler(tornado.web.RequestHandler):
-    @gen.coroutine
-    def get(self):
-        response = yield self.fetch_json(&quot;http://www.baidu.com&quot;)
-        self.write(response)
+<span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="nd">@gen.coroutine</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">fetch_json</span><span class="p">(</span><span class="s2">&quot;http://www.baidu.com&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 
-    @gen.coroutine
-    def fetch_json(self, url):
-        response = yield AsyncHTTPClient().fetch(url)
-        raise gen.Return(response.body)
+    <span class="nd">@gen.coroutine</span>
+    <span class="k">def</span> <span class="nf">fetch_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">AsyncHTTPClient</span><span class="p">()</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">gen</span><span class="o">.</span><span class="n">Return</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">body</span><span class="p">)</span>
 
-application = tornado.web.Application([
-    (r&quot;/&quot;, MainHandler),
-])
+<span class="n">application</span> <span class="o">=</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">r&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
+<span class="p">])</span>
 
-if __name__ == &quot;__main__&quot;:
-    application.listen(8888)
-    tornado.ioloop.IOLoop.current().start()
-</code></pre>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">application</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">8888</span><span class="p">)</span>
+    <span class="n">tornado</span><span class="o">.</span><span class="n">ioloop</span><span class="o">.</span><span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
 
-<h3 id="tornado_1">tornado   泛域名</h3>
-<pre><code class="py">import tornado.ioloop
-import tornado.web
-class MainHandler(tornado.web.RequestHandler):
-  def get(self):
-    subdomain = self.request.host.split(&quot;.&quot;)[0]
-    self.write(&quot;Hello, world,&quot;+subdomain)
 
-class DomainHandler(tornado.web.RequestHandler):
-  def get(self):
-    self.write(&quot;Hello, a.com&quot;)
+<h3 id="tornado_1">tornado   泛域名<a class="headerlink" href="#tornado_1" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">tornado.ioloop</span>
+<span class="kn">import</span> <span class="nn">tornado.web</span>
+<span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">subdomain</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, world,&quot;</span><span class="o">+</span><span class="n">subdomain</span><span class="p">)</span>
 
-def make_app():
-  return tornado.web.Application([
-    (r&quot;/&quot;, MainHandler),
-  ])
+<span class="k">class</span> <span class="nc">DomainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, a.com&quot;</span><span class="p">)</span>
 
-if __name__ == &quot;__main__&quot;:
-  app = make_app()
-  app.add_handlers(r&quot;^(www\.)?a\.com$&quot;, [
-    (r&quot;/&quot;, DomainHandler),
-  ])
-  app.listen(8888)
-  tornado.ioloop.IOLoop.current().start()
+<span class="k">def</span> <span class="nf">make_app</span><span class="p">():</span>
+  <span class="k">return</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">r&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
+  <span class="p">])</span>
 
-  # 在Host中加入这行 127.0.0.1 a.com
-  #浏览器中输入:http://a.com:8888  则输出:Hello, a.com
-</code></pre>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+  <span class="n">app</span> <span class="o">=</span> <span class="n">make_app</span><span class="p">()</span>
+  <span class="n">app</span><span class="o">.</span><span class="n">add_handlers</span><span class="p">(</span><span class="s2">r&quot;^(www\.)?a\.com$&quot;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">r&quot;/&quot;</span><span class="p">,</span> <span class="n">DomainHandler</span><span class="p">),</span>
+  <span class="p">])</span>
+  <span class="n">app</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">8888</span><span class="p">)</span>
+  <span class="n">tornado</span><span class="o">.</span><span class="n">ioloop</span><span class="o">.</span><span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-<h3 id="tornado-ngnix">tornado ngnix 反向代理配置</h3>
+  <span class="c1"># 在Host中加入这行 127.0.0.1 a.com</span>
+  <span class="c1">#浏览器中输入:http://a.com:8888  则输出:Hello, a.com</span>
+</pre></div>
+
+
+<h3 id="tornado-ngnix">tornado ngnix 反向代理配置<a class="headerlink" href="#tornado-ngnix" title="Permanent link">#</a></h3>
 <p>如果在tornado层不想做泛域名解析,可以通过ngnix的反向代理指向tornado的端口,ngnix配置如下:</p>
-<pre><code>upstream tornado {
-    server 127.0.0.1:8888;
-}
-server {
-      listen 80;
-      server_name test.com www.test.com;
-      location = /favicon.ico {
-          rewrite (.*) /static/favicon.ico;
-      }
-      location = /robots.txt {
-          rewrite (.*) /static/robots.txt;
-      }
-      location / {
-          proxy_pass_header Server;
-          proxy_set_header Host $http_host;
-          proxy_redirect off;
-          proxy_set_header X-Real-IP $remote_addr;
-          proxy_set_header X-Scheme $scheme;
-          proxy_pass http://tornado;
-      }
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="nt">upstream</span> <span class="nt">tornado</span> <span class="p">{</span>
+    <span class="n">server</span> <span class="m">127</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">1</span><span class="o">:</span><span class="m">8888</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">server</span> <span class="p">{</span>
+      <span class="n">listen</span> <span class="m">80</span><span class="p">;</span>
+      <span class="n">server_name</span> <span class="n">test</span><span class="o">.</span><span class="n">com</span> <span class="n">www</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">com</span><span class="p">;</span>
+      <span class="n">location</span> <span class="o">=</span> <span class="o">/</span><span class="n">favicon</span><span class="o">.</span><span class="n">ico</span> <span class="err">{</span>
+          <span class="n">rewrite</span> <span class="p">(</span><span class="o">.*</span><span class="p">)</span> <span class="o">/</span><span class="nb">static</span><span class="o">/</span><span class="n">favicon</span><span class="o">.</span><span class="n">ico</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nt">location</span> <span class="o">=</span> <span class="o">/</span><span class="nt">robots</span><span class="nc">.txt</span> <span class="p">{</span>
+          <span class="n">rewrite</span> <span class="p">(</span><span class="o">.*</span><span class="p">)</span> <span class="o">/</span><span class="nb">static</span><span class="o">/</span><span class="n">robots</span><span class="o">.</span><span class="n">txt</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nt">location</span> <span class="o">/</span> <span class="p">{</span>
+          <span class="n">proxy_pass_header</span> <span class="n">Server</span><span class="p">;</span>
+          <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">http_host</span><span class="p">;</span>
+          <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
+          <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Real</span><span class="o">-</span><span class="n">IP</span> <span class="err">$</span><span class="n">remote_addr</span><span class="p">;</span>
+          <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Scheme</span> <span class="err">$</span><span class="n">scheme</span><span class="p">;</span>
+          <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">tornado</span><span class="p">;</span>
+      <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
 
-<h3 id="nginx">nginx反向代理长链接</h3>
-<pre><code>upstream chat_cluster{
-     ##多server负载,根据ip_hash作分流也可以用weight权重分流
-    server 127.0.0.1:10000;
-    server 127.0.0.1:10001;
-    ip_hash;
-    keepalive 1024;
-}
 
-server
-{
-    listen 80;
-    server_name chat.rootk.com;
+<h3 id="nginx">nginx反向代理长链接<a class="headerlink" href="#nginx" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="nt">upstream</span> <span class="nt">chat_cluster</span><span class="p">{</span>
+     <span class="err">##多</span><span class="n">server</span><span class="err">负载</span><span class="o">,</span><span class="err">根据</span><span class="n">ip_hash</span><span class="err">作分流也可以用</span><span class="n">weight</span><span class="err">权重分流</span>
+    <span class="n">server</span> <span class="m">127</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">1</span><span class="o">:</span><span class="m">10000</span><span class="p">;</span>
+    <span class="n">server</span> <span class="m">127</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">1</span><span class="o">:</span><span class="m">10001</span><span class="p">;</span>
+    <span class="n">ip_hash</span><span class="p">;</span>
+    <span class="n">keepalive</span> <span class="m">1024</span><span class="p">;</span>
+<span class="p">}</span>
 
-    location / {
-        proxy_pass http://chat_cluster;
-        proxy_http_version 1.1;
-        # very important, nginx will waitting for the response from tornado
-        # if the time have passed more than 7200, nginx send http 504 to client
-        proxy_read_timeout 7200;
-        proxy_set_header Connection &quot;&quot;;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-Ip $remote_addr;
-        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
-    }
-}
-</code></pre>
+<span class="nt">server</span>
+<span class="p">{</span>
+    <span class="n">listen</span> <span class="m">80</span><span class="p">;</span>
+    <span class="n">server_name</span> <span class="n">chat</span><span class="o">.</span><span class="n">rootk</span><span class="o">.</span><span class="n">com</span><span class="p">;</span>
+
+    <span class="n">location</span> <span class="o">/</span> <span class="err">{</span>
+        <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">chat_cluster</span><span class="p">;</span>
+        <span class="n">proxy_http_version</span> <span class="m">1</span><span class="o">.</span><span class="m">1</span><span class="p">;</span>
+        <span class="err">#</span> <span class="n">very</span> <span class="n">important</span><span class="o">,</span> <span class="n">nginx</span> <span class="n">will</span> <span class="n">waitting</span> <span class="n">for</span> <span class="n">the</span> <span class="n">response</span> <span class="n">from</span> <span class="n">tornado</span>
+        <span class="err">#</span> <span class="n">if</span> <span class="n">the</span> <span class="n">time</span> <span class="n">have</span> <span class="n">passed</span> <span class="n">more</span> <span class="n">than</span> <span class="m">7200</span><span class="o">,</span> <span class="n">nginx</span> <span class="n">send</span> <span class="n">http</span> <span class="m">504</span> <span class="n">to</span> <span class="n">client</span>
+        <span class="n">proxy_read_timeout</span> <span class="m">7200</span><span class="p">;</span>
+        <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+        <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">host</span><span class="p">;</span>
+        <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Real</span><span class="o">-</span><span class="n">Ip</span> <span class="err">$</span><span class="n">remote_addr</span><span class="p">;</span>
+        <span class="n">proxy_set_header</span>   <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span>  <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py5_step/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py5_step/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py5_step//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -565,6 +576,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -573,78 +598,82 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="_1">其他特性</h1>
-<h2 id="slice">切片(Slice)</h2>
+          <h1 id="_1">其他特性<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h2 id="slice">切片(Slice)<a class="headerlink" href="#slice" title="Permanent link">#</a></h2>
 <p>切片大大简化了取元素的操作</p>
-<pre><code class="py">#记住切片包含头不包含尾
-L = [1,2,3,4]
-#第1,2个
-print(L[0:2])
-#复制原来的list
-print(L[:])
-</code></pre>
+<div class="code"><pre><span></span><span class="c1">#记住切片包含头不包含尾</span>
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="c1">#第1,2个</span>
+<span class="k">print</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1">#复制原来的list</span>
+<span class="k">print</span><span class="p">(</span><span class="n">L</span><span class="p">[:])</span>
+</pre></div>
 
-<h2 id="_2">列表生成式</h2>
-<pre><code class="py">#列表生成器--&gt;[1, 2, 3, 4]
-print(list(range(1,5)))
-# 生成1*1,2*2... --&gt;[1, 4, 9, 16]
-print([x*x for x in range(1,5)])
-#组合生成--&gt;['ac', 'ad', 'bc', 'bd']
-print([m+n for m in 'ab' for n in &quot;cd&quot;])
-#调用函数
-print([a.upper() for a in [&quot;a&quot;,&quot;b&quot;]])
-</code></pre>
 
-<h2 id="generator">生成器(generator)</h2>
+<h2 id="_2">列表生成式<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="c1">#列表生成器--&gt;[1, 2, 3, 4]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)))</span>
+<span class="c1"># 生成1*1,2*2... --&gt;[1, 4, 9, 16]</span>
+<span class="k">print</span><span class="p">([</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)])</span>
+<span class="c1">#组合生成--&gt;[&#39;ac&#39;, &#39;ad&#39;, &#39;bc&#39;, &#39;bd&#39;]</span>
+<span class="k">print</span><span class="p">([</span><span class="n">m</span><span class="o">+</span><span class="n">n</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="s1">&#39;ab&#39;</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="s2">&quot;cd&quot;</span><span class="p">])</span>
+<span class="c1">#调用函数</span>
+<span class="k">print</span><span class="p">([</span><span class="n">a</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">]])</span>
+</pre></div>
+
+
+<h2 id="generator">生成器(generator)<a class="headerlink" href="#generator" title="Permanent link">#</a></h2>
 <p>列表生成式是直接生成列表,所以在生成大列表会消耗大量的内存.</p>
-<h3 id="rang"><code>rang</code>生成</h3>
+<h3 id="rang"><code>rang</code>生成<a class="headerlink" href="#rang" title="Permanent link">#</a></h3>
 <p>解决办法只是在生成生成器时把<code>[]</code>改成了<code>()</code>
 pyton2的关键字是用<code>xrang</code>
 python3的关键字还是用<code>rang</code></p>
-<pre><code class="py">#python2
-g = (x * x for x in xrange(10))
-#python3
-g = (x * x for x in range(10))
-&lt;generator object &lt;genexpr&gt; at 0x00557620&gt;
-print(g)
-for x in g:
-    print(x)
-    pass
+<div class="code"><pre><span></span><span class="c1">#python2</span>
+<span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="c1">#python3</span>
+<span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="n">generator</span> <span class="nb">object</span> <span class="o">&lt;</span><span class="n">genexpr</span><span class="o">&gt;</span> <span class="n">at</span> <span class="mh">0x00557620</span><span class="o">&gt;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">pass</span>
+</pre></div>
 
-</code></pre>
 
-<h3 id="yield"><code>yield</code>生成器</h3>
-<h3 id="_3">基本用法</h3>
-<pre><code class="py">def ye():
-    yield 1
-    yield 2
+<h3 id="yield"><code>yield</code>生成器<a class="headerlink" href="#yield" title="Permanent link">#</a></h3>
+<h3 id="_3">基本用法<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">ye</span><span class="p">():</span>
+    <span class="k">yield</span> <span class="mi">1</span>
+    <span class="k">yield</span> <span class="mi">2</span>
 
-g= ye()
-print(g)
-for x in g:
-    print(x)
-'''
-output is :
-&lt;generator object ye at 0x00473E18&gt;
-1
-2
-'''
-</code></pre>
+<span class="n">g</span><span class="o">=</span> <span class="n">ye</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">output is :</span>
+<span class="sd">&lt;generator object ye at 0x00473E18&gt;</span>
+<span class="sd">1</span>
+<span class="sd">2</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h4 id="yieldreturn">yield中return的作用</h4>
+
+<h4 id="yieldreturn">yield中return的作用<a class="headerlink" href="#yieldreturn" title="Permanent link">#</a></h4>
 <p><code>yield</code> 中无法<code>return</code>具体值连<code>None</code>值都不行,<code>yield</code>中<code>reutrn</code>是用来中止生成的</p>
-<pre><code class="py">def ye2():
-    yield 1
-    return None
-    yield 2
-g2 = ye2()
-for x in g2:
-        print(x)
-'''
-output is :
-1
-'''
-</code></pre>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">ye2</span><span class="p">():</span>
+    <span class="k">yield</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">yield</span> <span class="mi">2</span>
+<span class="n">g2</span> <span class="o">=</span> <span class="n">ye2</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">g2</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">output is :</span>
+<span class="sd">1</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <ul>
 <li><code>generator</code> 是用来产生一系列值的</li>
@@ -654,22 +683,23 @@ output is :
 <li>和迭代器相似，我们可以通过使用<code>next()</code>来从<code>generator</code>中获取下一个值</li>
 <li>通过隐式地调用<code>next()</code>来忽略一些值</li>
 </ul>
-<h3 id="_4">迭代器</h3>
+<h3 id="_4">迭代器<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <p>判断一个对象是否是<code>Iterable</code>对象</p>
-<pre><code class="py">from collections import Iterable,Iterator
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span><span class="n">Iterator</span>
 
-print(isinstance([],Iterable))
-print(isinstance([],Iterator))
-print(isinstance((x for x in range(10)), Iterable))
-print(isinstance((x for x in range(10)), Iterator))
-'''
-output is :
-True
-False
-True
-True
-'''
-</code></pre>
+<span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">([],</span><span class="n">Iterable</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">([],</span><span class="n">Iterator</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">((</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span> <span class="n">Iterable</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">((</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span> <span class="n">Iterator</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">output is :</span>
+<span class="sd">True</span>
+<span class="sd">False</span>
+<span class="sd">True</span>
+<span class="sd">True</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <ul>
 <li>凡是可作用于<code>for</code>循环的对象都是<code>Iterable</code>类型；</li>
@@ -677,148 +707,159 @@ True
 <li>集合数据类型如<code>list</code>、<code>dict</code>、<code>str</code>等是<code>Iterable</code>但不是<code>Iterator</code>，不过可以通过<code>iter()</code>函数获得一个<code>Iterator</code>对象</li>
 </ul>
 <p>其实<code>for</code>也是通过<code>Iterator</code>来完成的</p>
-<pre><code class="py">for x in [1, 2, 3, 4, 5]:
-    print(x)
-    pass
-#等价于
-it = iter([1, 2, 3, 4, 5])
-while True:
-    try:
-        x = next(it)
-        print(x)
-    except StopIteration:
-        break
-</code></pre>
+<div class="code"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">pass</span>
+<span class="c1">#等价于</span>
+<span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
 
-<h2 id="map">map</h2>
+
+<h2 id="map">map<a class="headerlink" href="#map" title="Permanent link">#</a></h2>
 <p><code>map()</code>函数接收两个参数，一个是函数，一个是<code>Iterable</code>，<code>map</code>将传入的函数依次作用到序列的每个元素，并把结果作为新的<code>Iterator</code>返回</p>
-<pre><code class="py">def f(x):
-    return x*x
-#r是一个Iterator
-r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
-print(list(r))
-</code></pre>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<span class="c1">#r是一个Iterator</span>
+<span class="n">r</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
+</pre></div>
 
-<h2 id="reduce">reduce</h2>
+
+<h2 id="reduce">reduce<a class="headerlink" href="#reduce" title="Permanent link">#</a></h2>
 <p><code>reduce</code>把一个函数作用在一个序列<code>[x1, x2, x3, ...]</code>上，这个函数必须接收两个参数，<code>reduce</code>把结果继续和序列的下一个元素做累积计算，其效果就是：</p>
-<pre><code class="py">reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
-</code></pre>
+<div class="code"><pre><span></span><span class="nb">reduce</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">x3</span><span class="p">,</span> <span class="n">x4</span><span class="p">])</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">),</span> <span class="n">x3</span><span class="p">),</span> <span class="n">x4</span><span class="p">)</span>
+</pre></div>
 
-<pre><code class="py">from functools import reduce
-def add(x, y):
-    return x + y
-print(reduce(add, [1, 3, 5, 7, 9]))
-</code></pre>
 
-<h2 id="filter">filter</h2>
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]))</span>
+</pre></div>
+
+
+<h2 id="filter">filter<a class="headerlink" href="#filter" title="Permanent link">#</a></h2>
 <p><code>filter()</code>函数可以用来筛选一个队列</p>
 <p><code>filter()</code>也接收一个函数和一个序列.和<code>map()</code>不同的是，<code>filter()</code>把传入的函数依次作用于每个元素,然后根据返回值是<code>True</code>还是<code>False</code>决定保留还是丢弃该元素.
 选择奇数:</p>
-<pre><code class="py">def odd(n):
-    return n%2==1
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">odd</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">1</span>
 
-odd_arr = filter(odd,[1,2,3,4,5])
-print(odd_arr)
-'''
-[1,3,5]
-'''
-</code></pre>
+<span class="n">odd_arr</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">odd</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">odd_arr</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">[1,3,5]</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h2 id="sorted">sorted</h2>
+
+<h2 id="sorted">sorted<a class="headerlink" href="#sorted" title="Permanent link">#</a></h2>
 <p><code>sorted()</code>函数用于排序,原型:<code>sort([cmp[, key[, reverse]]])</code></p>
-<h3 id="_5">数字</h3>
-<pre><code class="py">#数字
-#普通小到大
-print(sorted([1,5,4]))
-#普通大到小
-print(sorted([1,5,4],reverse = True))
-#按自定义规则,绝对值
-print(sorted([1,-5,4],key=abs))
-'''
-[1, 4, 5]
-[5, 4, 1]
-[1, 4, -5]
-'''
-</code></pre>
+<h3 id="_5">数字<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="c1">#数字</span>
+<span class="c1">#普通小到大</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">]))</span>
+<span class="c1">#普通大到小</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="n">reverse</span> <span class="o">=</span> <span class="bp">True</span><span class="p">))</span>
+<span class="c1">#按自定义规则,绝对值</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="n">key</span><span class="o">=</span><span class="nb">abs</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">[1, 4, 5]</span>
+<span class="sd">[5, 4, 1]</span>
+<span class="sd">[1, 4, -5]</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h3 id="_6">字符串</h3>
+
+<h3 id="_6">字符串<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
 <p>默认情况下，对字符串排序，是按照ASCII的大小比较的 根据ASCII排:0-9(对应数值48-59),A-Z(对应数值65-90),a-z(对应数值97-122)</p>
-<pre><code class="py">#字符串
-#默认ascii序
-print(sorted(['a','C','b']))
-print(sorted(['boat','cat','boot','too','to','To']))
-#忽略大小写
-print(sorted(['a','C','b'],key=str.lower))
-#从短到长
-print(sorted(['boat','cat','boot','too','to','To'],key=len))
-'''
-['C', 'a', 'b']
-['To', 'boat', 'boot', 'cat', 'to', 'too']
-['a', 'b', 'C']
-['to', 'To', 'cat', 'too', 'boat', 'boot']
-'''
-</code></pre>
+<div class="code"><pre><span></span><span class="c1">#字符串</span>
+<span class="c1">#默认ascii序</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;boat&#39;</span><span class="p">,</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span><span class="s1">&#39;boot&#39;</span><span class="p">,</span><span class="s1">&#39;too&#39;</span><span class="p">,</span><span class="s1">&#39;to&#39;</span><span class="p">,</span><span class="s1">&#39;To&#39;</span><span class="p">]))</span>
+<span class="c1">#忽略大小写</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],</span><span class="n">key</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">))</span>
+<span class="c1">#从短到长</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;boat&#39;</span><span class="p">,</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span><span class="s1">&#39;boot&#39;</span><span class="p">,</span><span class="s1">&#39;too&#39;</span><span class="p">,</span><span class="s1">&#39;to&#39;</span><span class="p">,</span><span class="s1">&#39;To&#39;</span><span class="p">],</span><span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">[&#39;C&#39;, &#39;a&#39;, &#39;b&#39;]</span>
+<span class="sd">[&#39;To&#39;, &#39;boat&#39;, &#39;boot&#39;, &#39;cat&#39;, &#39;to&#39;, &#39;too&#39;]</span>
+<span class="sd">[&#39;a&#39;, &#39;b&#39;, &#39;C&#39;]</span>
+<span class="sd">[&#39;to&#39;, &#39;To&#39;, &#39;cat&#39;, &#39;too&#39;, &#39;boat&#39;, &#39;boot&#39;]</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h2 id="_7">装饰器</h2>
+
+<h2 id="_7">装饰器<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
 <p><code>decorator</code>就是一个返回函数的高阶函数,在不改变原有函数的结构下运行时添加功能,类似于java中的代理类.</p>
-<pre><code class="py">import time
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 
-def log(func):
-    def wrapper(*args,**kw):
-        print(&quot;call%s()&quot;% func.__name__)
-        return func(*args,**kw)
-    return wrapper
+<span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;call</span><span class="si">%s</span><span class="s2">()&quot;</span><span class="o">%</span> <span class="n">func</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
 
-@log
-def now():
-    print(time.time())
+<span class="nd">@log</span>
+<span class="k">def</span> <span class="nf">now</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
 
-now()
-'''
-call,now()
-1464665858.0853982
-'''
-</code></pre>
+<span class="n">now</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">call,now()</span>
+<span class="sd">1464665858.0853982</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h3 id="_8">带函数的装饰器:</h3>
+
+<h3 id="_8">带函数的装饰器:<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
 <p><code>functools.wraps</code>:<code>__name__</code>等属性复制到<code>wrapper()</code></p>
-<pre><code class="py">import functools
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">functools</span>
 
-def log(text):
-    def decorator(func):
-        @functools.wraps(func)
-        def wrapper(*args, **kw):
-            print('%s %s():' % (text, func.__name__))
-            return func(*args, **kw)
-        return wrapper
-    return decorator
+<span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="nd">@functools.wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">():&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">__name__</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">wrapper</span>
+    <span class="k">return</span> <span class="n">decorator</span>
 
-@log('execute')
-def now():
-    print(time.time())
+<span class="nd">@log</span><span class="p">(</span><span class="s1">&#39;execute&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">now</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
 
-now()
-'''
-execute now():
-1464666390.31384
-'''
-</code></pre>
+<span class="n">now</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">execute now():</span>
+<span class="sd">1464666390.31384</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h2 id="partial-function">Partial function</h2>
-<pre><code class="py">#16进制转换成10进制
-print(int('100', base=16))
-print(int('100',16))
-#使用functools.partial构造
-import functools
-int2 = functools.partial(int, base=16)
-print(int2('100'))
-'''
-256
-256
-256
-'''
-</code></pre>
+
+<h2 id="partial-function">Partial function<a class="headerlink" href="#partial-function" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="c1">#16进制转换成10进制</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;100&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">16</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;100&#39;</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span>
+<span class="c1">#使用functools.partial构造</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="n">int2</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">int2</span><span class="p">(</span><span class="s1">&#39;100&#39;</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">256</span>
+<span class="sd">256</span>
+<span class="sd">256</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

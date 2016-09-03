@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_diff2/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_diff2/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_diff2//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -589,6 +600,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -597,215 +622,233 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python-27x-python-3x">Python 2.7.x 和 Python 3.x 的主要区别</h1>
+          <h1 id="python-27x-python-3x">Python 2.7.x 和 Python 3.x 的主要区别<a class="headerlink" href="#python-27x-python-3x" title="Permanent link">#</a></h1>
 <p>许多 Python 初学者想知道他们应该从 Python 的哪个版本开始学习。对于这个问题我的答案是 “你学习你喜欢的教程的版本，然后检查他们之间的不同。"</p>
 <p>但是如果你开始一个新项目，并且有选择权？我想说的是目前没有对错，只要你计划使用的库 Python 2.7.x 和 Python 3.x 双方都支持的话。尽管如此，当在编写它们中的任何一个的代码，或者是你计划移植你的项目的时候，是非常值得看看这两个主要流行的 Python 版本之间的差别的，以便避免常见的陷阱。</p>
-<h2 id="future">使用 <strong>future</strong> 模块</h2>
+<h2 id="future">使用 <strong>future</strong> 模块<a class="headerlink" href="#future" title="Permanent link">#</a></h2>
 <p>用途:在 Python 2 里导入那些在 Python 3 里才生效的模块和函数:</p>
-<pre><code class="py">from __future__ import division
-</code></pre>
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+</pre></div>
 
-<h2 id="print">print 函数</h2>
+
+<h2 id="print">print 函数<a class="headerlink" href="#print" title="Permanent link">#</a></h2>
 <p>很琐碎，而 print 语法的变化可能是最广为人知的了，但是仍值得一提的是： Python 2 的 print 声明已经被 print() 函数取代了，这意味着我们必须包装我们想打印在小括号中的对象。
 Python 2 不具有额外的小括号问题。但对比一下，如果我们按照 Python 2 的方式不使用小括号调用 print 函数，Python 3 将抛出一个语法异常（SyntaxError）。</p>
-<h3 id="python-2">Python 2</h3>
-<pre><code class="py">print 'Python', python_version()
-print 'Hello, World!'
-print('Hello, World!')
-print &quot;text&quot;, ; print 'print more text on the same line'
-</code></pre>
+<h3 id="python-2">Python 2<a class="headerlink" href="#python-2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">()</span>
+<span class="k">print</span> <span class="s1">&#39;Hello, World!&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="p">;</span> <span class="k">print</span> <span class="s1">&#39;print more text on the same line&#39;</span>
+</pre></div>
 
-<h3 id="python-3">Python 3</h3>
-<pre><code class="py">print('Python', python_version())
-print('Hello, World!')
 
-print(&quot;some text,&quot;, end=&quot;&quot;) 
-print(' print more text on the same line')
-</code></pre>
+<h3 id="python-3">Python 3<a class="headerlink" href="#python-3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
 
-<h2 id="integer-division">整除 Integer division</h2>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;some text,&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39; print more text on the same line&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="integer-division">整除 Integer division<a class="headerlink" href="#integer-division" title="Permanent link">#</a></h2>
 <p>如果你正在移植代码，这个变化是特别危险的。或者你在 Python 2 上执行 Python 3 的代码。因为这个整除的变化表现在它会被忽视（即它不会抛出语法异常）。</p>
 <p>因此，我还是倾向于使用一个 float(3)/2 或 3/2.0 代替在我的 Python 3 脚本保存在 Python 2 中的 3/2 的一些麻烦（并且反而过来也一样，我建议在你的 Python 2 脚本中使用 from <strong>future</strong> import division）</p>
-<h3 id="python-2_1">Python 2</h3>
-<pre><code class="py">print 'Python', python_version()
-print '3 / 2 =', 3 / 2
-print '3 // 2 =', 3 // 2
-print '3 / 2.0 =', 3 / 2.0
-print '3 // 2.0 =', 3 // 2.0
+<h3 id="python-2_1">Python 2<a class="headerlink" href="#python-2_1" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">()</span>
+<span class="k">print</span> <span class="s1">&#39;3 / 2 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="k">print</span> <span class="s1">&#39;3 // 2 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="k">print</span> <span class="s1">&#39;3 / 2.0 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mf">2.0</span>
+<span class="k">print</span> <span class="s1">&#39;3 // 2.0 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">//</span> <span class="mf">2.0</span>
 
-'''
-Python 2.7.6
-3 / 2 = 1
-3 // 2 = 1
-3 / 2.0 = 1.5
-3 // 2.0 = 1.0
-'''
-</code></pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Python 2.7.6</span>
+<span class="sd">3 / 2 = 1</span>
+<span class="sd">3 // 2 = 1</span>
+<span class="sd">3 / 2.0 = 1.5</span>
+<span class="sd">3 // 2.0 = 1.0</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h3 id="python-3_1">Python 3</h3>
-<pre><code class="py">print('Python', python_version())
-print('3 / 2 =', 3 / 2)
-print('3 // 2 =', 3 // 2)
-print('3 / 2.0 =', 3 / 2.0)
-print('3 // 2.0 =', 3 // 2.0)
-'''
-Python 3.4.1
-3 / 2 = 1.5
-3 // 2 = 1
-3 / 2.0 = 1.5
-3 // 2.0 = 1.0
-'''
-</code></pre>
 
-<h2 id="unicode">Unicode</h2>
+<h3 id="python-3_1">Python 3<a class="headerlink" href="#python-3_1" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;3 / 2 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;3 // 2 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;3 / 2.0 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;3 // 2.0 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">//</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Python 3.4.1</span>
+<span class="sd">3 / 2 = 1.5</span>
+<span class="sd">3 // 2 = 1</span>
+<span class="sd">3 / 2.0 = 1.5</span>
+<span class="sd">3 // 2.0 = 1.0</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
+
+<h2 id="unicode">Unicode<a class="headerlink" href="#unicode" title="Permanent link">#</a></h2>
 <p>Python 2 有 <code>ASCII str()</code> 类型，<code>unicode()</code> 是单独的，不是<code>byte</code> 类型。
 现在， 在 Python 3，我们最终有了<code>Unicode (utf-8)</code> 字符串，以及一个字节类：<code>byte</code> 和<code>bytearrays</code>。</p>
-<h3 id="python-2_2">Python 2</h3>
-<pre><code class="py">print type(unicode('this is like a python3 str type'))
-'''output is :&lt;type 'unicode'&gt;'''
+<h3 id="python-2_2">Python 2<a class="headerlink" href="#python-2_2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="nb">unicode</span><span class="p">(</span><span class="s1">&#39;this is like a python3 str type&#39;</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;output is :&lt;type &#39;unicode&#39;&gt;&#39;&#39;&#39;</span>
 
-print type(b'byte type does not exist')
-'''output is : &lt;type 'str'&gt;'''
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;byte type does not exist&#39;</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;output is : &lt;type &#39;str&#39;&gt;&#39;&#39;&#39;</span>
 
-print 'they are really' + b' the same'
-'''output is :they are really the same'''
+<span class="k">print</span> <span class="s1">&#39;they are really&#39;</span> <span class="o">+</span> <span class="n">b</span><span class="s1">&#39; the same&#39;</span>
+<span class="sd">&#39;&#39;&#39;output is :they are really the same&#39;&#39;&#39;</span>
 
-print type(bytearray(b'bytearray oddly does exist though'))
-'''output is :&lt;type 'bytearray'&gt;'''
-</code></pre>
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;bytearray oddly does exist though&#39;</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;output is :&lt;type &#39;bytearray&#39;&gt;&#39;&#39;&#39;</span>
+</pre></div>
 
-<h3 id="python-3_2">Python 3</h3>
-<pre><code class="py">print('Python', python_version(), end=&quot;&quot;)
-print(' has', type(b' bytes for storing data'))
-'''Python 3.4.1 has &lt;class 'bytes'&gt;'''
 
-print('and Python', python_version(), end=&quot;&quot;)
-print(' also has', type(bytearray(b'bytearrays')))
-'''and Python 3.4.1 also has &lt;class 'bytearray'&gt;'''
+<h3 id="python-3_2">Python 3<a class="headerlink" href="#python-3_2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39; has&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39; bytes for storing data&#39;</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;Python 3.4.1 has &lt;class &#39;bytes&#39;&gt;&#39;&#39;&#39;</span>
 
-</code></pre>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;and Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39; also has&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;bytearrays&#39;</span><span class="p">)))</span>
+<span class="sd">&#39;&#39;&#39;and Python 3.4.1 also has &lt;class &#39;bytearray&#39;&gt;&#39;&#39;&#39;</span>
+</pre></div>
 
-<h2 id="xrange">xrange</h2>
+
+<h2 id="xrange">xrange<a class="headerlink" href="#xrange" title="Permanent link">#</a></h2>
 <p>Python 2 里的range() 和 xrange() 还是有点区别的. xrange() 更像一个生成器.range()生成的是list.
 Python 3 里取消了xrange() 代之以range() 实际上 Python 3 把很多返回为List的改成了itrable.</p>
-<h2 id="raising-exceptions">Raising exceptions</h2>
-<h3 id="python2">python2</h3>
-<pre><code class="py">raise IOError, &quot;file error&quot;
-</code></pre>
+<h2 id="raising-exceptions">Raising exceptions<a class="headerlink" href="#raising-exceptions" title="Permanent link">#</a></h2>
+<h3 id="python2">python2<a class="headerlink" href="#python2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">raise</span> <span class="ne">IOError</span><span class="p">,</span> <span class="s2">&quot;file error&quot;</span>
+</pre></div>
 
-<h3 id="python3">python3</h3>
-<pre><code class="py">raise (IOError, &quot;file error&quot;)
-</code></pre>
 
-<h2 id="handling-exceptions">Handling exceptions</h2>
-<h3 id="python2_1">python2</h3>
-<pre><code class="py">try:
-    let_us_cause_a_NameError
-except NameError, err:
-    print err, '--&gt; our error message'
-</code></pre>
+<h3 id="python3">python3<a class="headerlink" href="#python3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">raise</span> <span class="p">(</span><span class="ne">IOError</span><span class="p">,</span> <span class="s2">&quot;file error&quot;</span><span class="p">)</span>
+</pre></div>
 
-<h3 id="python3_1">python3</h3>
-<pre><code class="py">try:
-    let_us_cause_a_NameError
-except NameError as err:
-    print(err, '--&gt; our error message')
-</code></pre>
 
-<h2 id="next-next">next() 函数 和 .next() 方法</h2>
+<h2 id="handling-exceptions">Handling exceptions<a class="headerlink" href="#handling-exceptions" title="Permanent link">#</a></h2>
+<h3 id="python2_1">python2<a class="headerlink" href="#python2_1" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">let_us_cause_a_NameError</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">,</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">err</span><span class="p">,</span> <span class="s1">&#39;--&gt; our error message&#39;</span>
+</pre></div>
+
+
+<h3 id="python3_1">python3<a class="headerlink" href="#python3_1" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">let_us_cause_a_NameError</span>
+<span class="k">except</span> <span class="ne">NameError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="s1">&#39;--&gt; our error message&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="next-next">next() 函数 和 .next() 方法<a class="headerlink" href="#next-next" title="Permanent link">#</a></h2>
 <p><code>.next()</code>在python中被移除,两个版本都可以用<code>next()</code></p>
-<h3 id="python2_2">python2</h3>
-<pre><code class="py">my_generator = (letter for letter in 'abcdefg')
+<h3 id="python2_2">python2<a class="headerlink" href="#python2_2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="n">my_generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">letter</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;abcdefg&#39;</span><span class="p">)</span>
 
-next(my_generator)
-my_generator.next()
-</code></pre>
+<span class="nb">next</span><span class="p">(</span><span class="n">my_generator</span><span class="p">)</span>
+<span class="n">my_generator</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+</pre></div>
 
-<h3 id="python3_2">python3</h3>
-<pre><code class="py">my_generator = (letter for letter in 'abcdefg')
 
-next(my_generator)
-</code></pre>
+<h3 id="python3_2">python3<a class="headerlink" href="#python3_2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="n">my_generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">letter</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;abcdefg&#39;</span><span class="p">)</span>
 
-<h2 id="for">For 循环变量和全局命名空间泄漏</h2>
+<span class="nb">next</span><span class="p">(</span><span class="n">my_generator</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="for">For 循环变量和全局命名空间泄漏<a class="headerlink" href="#for" title="Permanent link">#</a></h2>
 <p>在 Python 3.x 中 for 循环变量不会再导致命名空间泄漏</p>
-<h3 id="python2_3">python2</h3>
-<pre><code class="py">i = 1
-print 'before: i =', i
+<h3 id="python2_3">python2<a class="headerlink" href="#python2_3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">print</span> <span class="s1">&#39;before: i =&#39;</span><span class="p">,</span> <span class="n">i</span>
 
-print 'comprehension: ', [i for i in range(5)]
+<span class="k">print</span> <span class="s1">&#39;comprehension: &#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
 
-print 'after: i =', i
+<span class="k">print</span> <span class="s1">&#39;after: i =&#39;</span><span class="p">,</span> <span class="n">i</span>
 
-'''
-before: i = 1
-comprehension:  [0, 1, 2, 3, 4]
-after: i = 4
-'''
-</code></pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">before: i = 1</span>
+<span class="sd">comprehension:  [0, 1, 2, 3, 4]</span>
+<span class="sd">after: i = 4</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h3 id="python3_3">python3</h3>
-<pre><code class="py">i = 1
-print('before: i =', i)
 
-print('comprehension:', [i for i in range(5)])
+<h3 id="python3_3">python3<a class="headerlink" href="#python3_3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;before: i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 
-print('after: i =', i)
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;comprehension:&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)])</span>
 
-'''
-before: i = 1
-comprehension: [0, 1, 2, 3, 4]
-after: i = 1
-'''
-</code></pre>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;after: i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 
-<h2 id="_1">比较不可排序类型</h2>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">before: i = 1</span>
+<span class="sd">comprehension: [0, 1, 2, 3, 4]</span>
+<span class="sd">after: i = 1</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
+
+<h2 id="_1">比较不可排序类型<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>在 Python 3 中的另外一个变化就是当对不可排序类型做比较的时候，会抛出一个类型错误。</p>
-<h3 id="python2_4">python2</h3>
-<pre><code class="py">print &quot;(1, 2) &gt; 'foo' = &quot;, (1, 2) &gt; 'foo'
-'''
-(1, 2) &gt; 'foo' =  True
-'''
-</code></pre>
+<h3 id="python2_4">python2<a class="headerlink" href="#python2_4" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span> <span class="s2">&quot;(1, 2) &gt; &#39;foo&#39; = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="s1">&#39;foo&#39;</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">(1, 2) &gt; &#39;foo&#39; =  True</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h3 id="python3_4">python3</h3>
-<pre><code class="py">print(&quot;[1, 2] &gt; 'foo' = &quot;, [1, 2] &gt; 'foo')
-'''
-TypeError
-'''
-</code></pre>
 
-<h2 id="input">通过 <code>input()</code>解析用户的输入</h2>
+<h3 id="python3_4">python3<a class="headerlink" href="#python3_4" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;[1, 2] &gt; &#39;foo&#39; = &quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">TypeError</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
+
+<h2 id="input">通过 <code>input()</code>解析用户的输入<a class="headerlink" href="#input" title="Permanent link">#</a></h2>
 <p>python 2里 我们有<code>input()</code>和<code>raw_input()</code>,区别是<code>raw_input()</code>会讲输入返回str.而i<code>nput()</code>会试图执行输入.
 Python 3 里的<code>input()</code>返回字符串,不再有<code>raw_input()</code>,如果想执行输入,可以<code>eval(input())</code></p>
-<h2 id="_2">返回可迭代对象，而不是列表</h2>
-<h3 id="python-2_3">Python 2</h3>
-<pre><code class="py">print 'Python', python_version() 
+<h2 id="_2">返回可迭代对象，而不是列表<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h3 id="python-2_3">Python 2<a class="headerlink" href="#python-2_3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">()</span> 
 
-print range(3) 
-print type(range(3))
+<span class="k">print</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> 
+<span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 
-'''
-Python 2.7.6
-[0, 1, 2]
-&lt;type 'list'&gt;
-'''
-</code></pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Python 2.7.6</span>
+<span class="sd">[0, 1, 2]</span>
+<span class="sd">&lt;type &#39;list&#39;&gt;</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h3 id="python-3_3">Python 3</h3>
-<pre><code class="py">print('Python', python_version())
 
-print(range(3))
-print(type(range(3)))
-print(list(range(3)))
+<h3 id="python-3_3">Python 3<a class="headerlink" href="#python-3_3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">())</span>
 
-'''
-Python 3.4.1
-range(0, 3)
-&lt;class 'range'&gt;
-[0, 1, 2]
-'''
-</code></pre>
+<span class="k">print</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Python 3.4.1</span>
+<span class="sd">range(0, 3)</span>
+<span class="sd">&lt;class &#39;range&#39;&gt;</span>
+<span class="sd">[0, 1, 2]</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <p>在 Python 3 中一些经常使用到的不再返回列表的函数和方法：
 + zip()
@@ -814,11 +857,13 @@ range(0, 3)
 + dictionary's .keys() method
 + dictionary's .values() method
 + dictionary's .items() method</p>
-<h2 id="link">Link</h2>
+<h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://docs.python.org/3/whatsnew/3.0.html">What’s New In Python 3.0?</a></li>
 </ul>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_class/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_class/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_class//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -523,6 +534,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -531,358 +556,375 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python">python 类,继承</h1>
-<h2 id="_1">类</h2>
+          <h1 id="python">python 类,继承<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
+<h2 id="_1">类<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>python 是完全面向对象的语言，你可以定义自己的类，也可以继承.所有数据类型都为对象，以引用赋值</p>
-<h3 id="_2">类的定义 :</h3>
-<pre><code class="py">  class DataType:
-      pass
-</code></pre>
+<h3 id="_2">类的定义 :<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>  <span class="k">class</span> <span class="nc">DataType</span><span class="p">:</span>
+      <span class="k">pass</span>
+</pre></div>
+
 
 <p>class作为类声明，pass表示缩进，没有其他含义</p>
-<h3 id="__init__"><code>__init__</code>方法:</h3>
+<h3 id="__init__"><code>__init__</code>方法:<a class="headerlink" href="#__init__" title="Permanent link">#</a></h3>
 <p>从形式上来看相当于java中的构造器，在类实例后调用,但是在执行INIT方法时，对象已经实例化好了</p>
-<pre><code class="py">  class DataType:
-      def __init__(self):
-          print(self)
+<div class="code"><pre><span></span>  <span class="k">class</span> <span class="nc">DataType</span><span class="p">:</span>
+      <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-  flib = DataType()
-</code></pre>
+  <span class="n">flib</span> <span class="o">=</span> <span class="n">DataType</span><span class="p">()</span>
+</pre></div>
+
 
 <p><code>self</code> 相当于java中的this,指向该实例,实例化类flib =DataType() 并不像java中一样使用显式的new关键字</p>
-<h3 id="_3">实例变量</h3>
+<h3 id="_3">实例变量<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>用<code>self.</code>变量名来声明实例变量.</p>
-<pre><code class="py">  class Flib:
-      def __init__(self, max):
-          self.max = max
-      def iter(self):
-          self.a = 0
-          self.b = 1
-          return self
-      def next(self):
-          fib = self.a
-          if fib &gt; self.max:
-              raise StopIteration
-          self.a, self.b = self.b, self.a + self.b
-          return fib
+<div class="code"><pre><span></span>  <span class="k">class</span> <span class="nc">Flib</span><span class="p">:</span>
+      <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">max</span><span class="p">):</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">max</span> <span class="o">=</span> <span class="nb">max</span>
+      <span class="k">def</span> <span class="nf">iter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+          <span class="k">return</span> <span class="bp">self</span>
+      <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="n">fib</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span>
+          <span class="k">if</span> <span class="n">fib</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max</span><span class="p">:</span>
+              <span class="k">raise</span> <span class="ne">StopIteration</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
+          <span class="k">return</span> <span class="n">fib</span>
+</pre></div>
 
-</code></pre>
 
-<h3 id="_4">动态属性与限定</h3>
+<h3 id="_4">动态属性与限定<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <p><code>动态属性</code>:实例可以动态添加属性,不影响其他实例
 <code>__slots__</code>:限制实例的属性,子类实例允许定义的属性就是自身的<code>__slots__</code>加上父类的<code>__slots__</code></p>
-<pre><code class="py">class Student(object):
-  __slots__ = ('name',)
-  &quot;&quot;&quot;docstring for Student&quot;&quot;&quot;
-  def __init__(self):
-    super(Student, self).__init__()
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="n">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,)</span>
+  <span class="sd">&quot;&quot;&quot;docstring for Student&quot;&quot;&quot;</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">(</span><span class="n">Student</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
 
-st = Student()
-st.name = &quot;far&quot;
-st.age =10 #error
-print(st.name)
+<span class="n">st</span> <span class="o">=</span> <span class="n">Student</span><span class="p">()</span>
+<span class="n">st</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;far&quot;</span>
+<span class="n">st</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span><span class="mi">10</span> <span class="c1">#error</span>
+<span class="k">print</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
-class StudentA(Student):
-  __slots__ = ('name','age')
-  pass
+<span class="k">class</span> <span class="nc">StudentA</span><span class="p">(</span><span class="n">Student</span><span class="p">):</span>
+  <span class="n">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="p">)</span>
+  <span class="k">pass</span>
 
-sta= StudentA()
-st.name = &quot;far1&quot;
-sta.age = 1
-sta.sex = 1 #error
-print(sta.age)
+<span class="n">sta</span><span class="o">=</span> <span class="n">StudentA</span><span class="p">()</span>
+<span class="n">st</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;far1&quot;</span>
+<span class="n">sta</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sta</span><span class="o">.</span><span class="n">sex</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#error</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sta</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
 
 
-'''
-AttributeError: 'Student' object has no attribute 'age''''
-</code></pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">AttributeError: &#39;Student&#39; object has no attribute &#39;age&#39;&#39;&#39;</span><span class="s1">&#39;</span>
+</pre></div>
 
-<h3 id="property">@property</h3>
-<pre><code class="py">class Student(object):
 
-    #读
-  @property
-  def score(self):
-    return self._score
+<h3 id="property">@property<a class="headerlink" href="#property" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-  #写
-  @score.setter
-  def score(self, value):
-    if not isinstance(value, int):
-      raise ValueError('score must be an integer!')
-    if value &lt; 0 or value &gt; 100:
-      raise ValueError('score must between 0 ~ 100!')
-    self._score = value
+    <span class="c1">#读</span>
+  <span class="nd">@property</span>
+  <span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_score</span>
 
-st = Student()
-st.score = -1
+  <span class="c1">#写</span>
+  <span class="nd">@score.setter</span>
+  <span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+      <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;score must be an integer!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+      <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;score must between 0 ~ 100!&#39;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_score</span> <span class="o">=</span> <span class="n">value</span>
 
-'''
-ValueError: score must between 0 ~ 100!
-'''
-</code></pre>
+<span class="n">st</span> <span class="o">=</span> <span class="n">Student</span><span class="p">()</span>
+<span class="n">st</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
-<h3 id="_5">访问限制</h3>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">ValueError: score must between 0 ~ 100!</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
+
+<h3 id="_5">访问限制<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
 <p>私有属性:属性的名称前加上两个下划线<code>__</code></p>
-<pre><code class="py">class Student(object):
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    def __init__(self, name, score):
-        self.__name = name
-        self.__score = score
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">score</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__score</span> <span class="o">=</span> <span class="n">score</span>
 
-    def print_score(self):
-        print('%s: %s' % (self.__name, self.__score))
+    <span class="k">def</span> <span class="nf">print_score</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__score</span><span class="p">))</span>
 
- bart = Student('Bart Simpson', 98)
- bart.__name
- '''
- AttributeError: 'Student' object has no attribute '__name'
- '''
-</code></pre>
+ <span class="n">bart</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;Bart Simpson&#39;</span><span class="p">,</span> <span class="mi">98</span><span class="p">)</span>
+ <span class="n">bart</span><span class="o">.</span><span class="n">__name</span>
+ <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd"> AttributeError: &#39;Student&#39; object has no attribute &#39;__name&#39;</span>
+<span class="sd"> &#39;&#39;&#39;</span>
+</pre></div>
 
-<h3 id="_6">基础方法</h3>
+
+<h3 id="_6">基础方法<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
 <ul>
 <li><code>isinstance</code>:判断对象类型</li>
 </ul>
-<pre><code class="py">print(isinstance(bart,Student))
-print(isinstance(bart,object))
-'''
-True
-True
-'''
-</code></pre>
+<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">bart</span><span class="p">,</span><span class="n">Student</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">bart</span><span class="p">,</span><span class="nb">object</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">True</span>
+<span class="sd">True</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <ul>
 <li><code>type</code>:获取对象类型,创建新的类型</li>
 </ul>
-<pre><code class="py">def de_fun (self,name=&quot;far&quot;):
-  print(&quot;Hi,%s&quot;%name)
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">de_fun</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;far&quot;</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hi,</span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">name</span><span class="p">)</span>
 
-#type(&quot;类名&quot;,(&quot;继承类&quot;,),dict(属性名=属性值))
-Hi = type(&quot;Hi&quot;,(object,),dict(sayhi=de_fun))
-hi = Hi()
-hi.sayhi()
-'''
-Hi,far
-&lt;type 'type'&gt;
-&lt;class '__main__.Hi'&gt;
-'''
-</code></pre>
+<span class="c1">#type(&quot;类名&quot;,(&quot;继承类&quot;,),dict(属性名=属性值))</span>
+<span class="n">Hi</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s2">&quot;Hi&quot;</span><span class="p">,(</span><span class="nb">object</span><span class="p">,),</span><span class="nb">dict</span><span class="p">(</span><span class="n">sayhi</span><span class="o">=</span><span class="n">de_fun</span><span class="p">))</span>
+<span class="n">hi</span> <span class="o">=</span> <span class="n">Hi</span><span class="p">()</span>
+<span class="n">hi</span><span class="o">.</span><span class="n">sayhi</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Hi,far</span>
+<span class="sd">&lt;type &#39;type&#39;&gt;</span>
+<span class="sd">&lt;class &#39;__main__.Hi&#39;&gt;</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <ul>
 <li><code>dir</code>:获得一个对象的所有属性和方法</li>
 <li><code>hasattr</code>,<code>getattr</code>:动态获取对象方法</li>
 </ul>
-<pre><code class="py">hasattr(obj, 'power') # 有属性'power'吗？
-getattr(obj, 'power') # 获取属性'power'
-</code></pre>
+<div class="code"><pre><span></span><span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s1">&#39;power&#39;</span><span class="p">)</span> <span class="c1"># 有属性&#39;power&#39;吗？</span>
+<span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s1">&#39;power&#39;</span><span class="p">)</span> <span class="c1"># 获取属性&#39;power&#39;</span>
+</pre></div>
 
-<h3 id="_7">经典类</h3>
+
+<h3 id="_7">经典类<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
 <p>定义:没有继承的类,注意：如果经典类被作为父类，子类调用父类的构造函数时会出错。<code>TypeError: must be type, not classobj</code></p>
-<pre><code class="py">#基类（经典类）
-class Person:
-    def __init__(self):
-        print &quot;Hi, I am a person. &quot;
+<div class="code"><pre><span></span><span class="c1">#基类（经典类）</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;Hi, I am a person. &quot;</span>
 
-#子类
-class Student(Person):
-    def __init__(self):
-        super(self.__class__, self).__init__()
+<span class="c1">#子类</span>
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
 
-if __name__ == &quot;__main__&quot;:
-    student = Student()
-    #出错啦！TypeError: must be type, not classobj
-</code></pre>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">student</span> <span class="o">=</span> <span class="n">Student</span><span class="p">()</span>
+    <span class="c1">#出错啦！TypeError: must be type, not classobj</span>
+</pre></div>
 
-<h3 id="_8">新式类</h3>
+
+<h3 id="_8">新式类<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
 <p>定义:每个类都继承于一个基类，可以是自定义类或者其它类，如果什么都不想继承，那就继承于object
 如果想用super调用父类的构造函数，请使用新式类！</p>
-<pre><code class="py">#基类（新式类）
-class Person(object):
-    def __init__(self):
-        print &quot;Hi, I am a person.&quot;
+<div class="code"><pre><span></span><span class="c1">#基类（新式类）</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;Hi, I am a person.&quot;</span>
 
-#子类
-class Student(Person):
-    def __init__(self):
-        super(self.__class__, self).__init__()
+<span class="c1">#子类</span>
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
 
-if __name__ == &quot;__main__&quot;:
-    student = Student()
-</code></pre>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">student</span> <span class="o">=</span> <span class="n">Student</span><span class="p">()</span>
+</pre></div>
 
-<h3 id="_9">定制类</h3>
+
+<h3 id="_9">定制类<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
 <ul>
 <li><code>__str__</code>:格式化输出</li>
 </ul>
-<pre><code class="py">class Student(object):
-  def __init__(self, name):
-    self.name = name
-  def __str__(self):
-    return 'Student object (name: %s)' % self.name
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;Student object (name: </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
-st = Student(&quot;name&quot;)
-print(st)
-</code></pre>
+<span class="n">st</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">st</span><span class="p">)</span>
+</pre></div>
+
 
 <ul>
 <li><code>__iter__</code>:格式化输出
 如果一个类想被用于<code>for ... in</code>循环，类似list或tuple那样，就必须实现一个<code>__iter__()</code>方法，该方法返回一个迭代对象，然后，Python的for循环就会不断调用该迭代对象的<code>__next__()</code>方法拿到循环的下一个值，直到遇到<code>StopIteration</code>错误时退出循环</li>
 </ul>
-<pre><code class="py">class Fib(object):
-    def __init__(self):
-        self.a, self.b = 0, 1 # 初始化两个计数器a，b
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Fib</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="c1"># 初始化两个计数器a，b</span>
 
-    def __iter__(self):
-        return self # 实例本身就是迭代对象，故返回自己
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="c1"># 实例本身就是迭代对象，故返回自己</span>
 
-    def __next__(self):
-        self.a, self.b = self.b, self.a + self.b # 计算下一个值
-        if self.a &gt; 100: # 退出循环的条件
-            raise StopIteration();
-        return self.a # 返回下一个值
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="c1"># 计算下一个值</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span> <span class="c1"># 退出循环的条件</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">();</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="c1"># 返回下一个值</span>
 
-for n in Fib():
-  print(n)
-</code></pre>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">Fib</span><span class="p">():</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
 
 <ul>
 <li><code>__getitem__</code>:下标方式访问对象</li>
 </ul>
-<pre><code class="py">
-class GetItem(object):
-  &quot;&quot;&quot;docstring for GetItem&quot;&quot;&quot;
-  def __init__(self):
-    super(GetItem, self).__init__()
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">GetItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;docstring for GetItem&quot;&quot;&quot;</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">(</span><span class="n">GetItem</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
 
-  def __getitem__(self,n):
-    if isinstance(n, int): # n是索引
-      return n
-    if isinstance(n, slice): # n是切片
-      start = n.start
-      stop = n.stop
-      if start is None:
-        start = 0
-      L = []
-      for x in range(stop):
-        if x &gt;= start:
-          L.append(x)
-      return L
+  <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span> <span class="c1"># n是索引</span>
+      <span class="k">return</span> <span class="n">n</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">slice</span><span class="p">):</span> <span class="c1"># n是切片</span>
+      <span class="n">start</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">start</span>
+      <span class="n">stop</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">stop</span>
+      <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">stop</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">start</span><span class="p">:</span>
+          <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">L</span>
 
-getitem = GetItem()
-print(getitem[2])
-print(getitem[0:2])
-'''
-2
-[0, 1]
-'''
-</code></pre>
+<span class="n">getitem</span> <span class="o">=</span> <span class="n">GetItem</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">getitem</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">getitem</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">2</span>
+<span class="sd">[0, 1]</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <ul>
 <li><code>__getattr__</code>:获取属性的操作</li>
 </ul>
-<pre><code class="py">class Student(object):
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-  def __init__(self):
-    self.name = 'Michael'
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Michael&#39;</span>
 
-  def __getattr__(self, attr):
-    if attr=='score':
-      return 99
-s = Student()
-print(s.score)
-'''
-99
-'''
-</code></pre>
+  <span class="k">def</span> <span class="nf">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">attr</span><span class="o">==</span><span class="s1">&#39;score&#39;</span><span class="p">:</span>
+      <span class="k">return</span> <span class="mi">99</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">Student</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">score</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">99</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <ul>
 <li><code>__call__</code>:用于实例自身的调用</li>
 </ul>
-<pre><code class="py">class Student(object):
-    def __init__(self, name):
-        self.name = name
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
-    def __call__(self):
-        print('My name is %s.' % self.name)
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;My name is </span><span class="si">%s</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
-st = Student('Michael')
-st()
-print(callable(st))
-print(callable(max))
-print(callable(1))
-'''
-My name is Michael.
-True
-True
-False
-相当于重载了括号运算符,可以用callable来判断是否是一个可调用的类型
-'''
-</code></pre>
+<span class="n">st</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;Michael&#39;</span><span class="p">)</span>
+<span class="n">st</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">callable</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">callable</span><span class="p">(</span><span class="nb">max</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">callable</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">My name is Michael.</span>
+<span class="sd">True</span>
+<span class="sd">True</span>
+<span class="sd">False</span>
+<span class="sd">相当于重载了括号运算符,可以用callable来判断是否是一个可调用的类型</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h2 id="_10">继承</h2>
+
+<h2 id="_10">继承<a class="headerlink" href="#_10" title="Permanent link">#</a></h2>
 <p>继承语法: 类(父类) Python不会自动调用基本类的constructor，你得亲自专门调用它
 可以多重继承</p>
-<pre><code class="py">  class SchoolMember:
-      '''Represents any school member.'''
-      def __init__(self, name, age):
-          self.name = name
-          self.age = age
-          print'(Initialized SchoolMember: %s)'% self.name
-       def tell(self):
-          '''Tell my details.'''
-          print'Name:&quot;%s&quot; Age:&quot;%s&quot;'% (self.name, self.age),
+<div class="code"><pre><span></span>  <span class="k">class</span> <span class="nc">SchoolMember</span><span class="p">:</span>
+      <span class="sd">&#39;&#39;&#39;Represents any school member.&#39;&#39;&#39;</span>
+      <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+          <span class="k">print</span><span class="s1">&#39;(Initialized SchoolMember: </span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+       <span class="k">def</span> <span class="nf">tell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="sd">&#39;&#39;&#39;Tell my details.&#39;&#39;&#39;</span>
+          <span class="k">print</span><span class="s1">&#39;Name:&quot;</span><span class="si">%s</span><span class="s1">&quot; Age:&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span><span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">),</span>
 
-  class Teacher(SchoolMember):
-      '''Represents a teacher.'''
-      def __init__(self, name, age, salary):
-          SchoolMember.__init__(self, name, age)
-          self.salary = salary
-          print'(Initialized Teacher: %s)'% self.name
+  <span class="k">class</span> <span class="nc">Teacher</span><span class="p">(</span><span class="n">SchoolMember</span><span class="p">):</span>
+      <span class="sd">&#39;&#39;&#39;Represents a teacher.&#39;&#39;&#39;</span>
+      <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">salary</span><span class="p">):</span>
+          <span class="n">SchoolMember</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="o">=</span> <span class="n">salary</span>
+          <span class="k">print</span><span class="s1">&#39;(Initialized Teacher: </span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
-      def tell(self):
-          SchoolMember.tell(self)
-          print'Salary: &quot;%d&quot;'% self.salary
+      <span class="k">def</span> <span class="nf">tell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="n">SchoolMember</span><span class="o">.</span><span class="n">tell</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+          <span class="k">print</span><span class="s1">&#39;Salary: &quot;</span><span class="si">%d</span><span class="s1">&quot;&#39;</span><span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">salary</span>
 
-  class Student(SchoolMember):
-      '''Represents a student.'''
-      def __init__(self, name, age, marks):
-          SchoolMember.__init__(self, name, age)
-          self.marks = marks
-          print'(Initialized Student: %s)'% self.name
+  <span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">SchoolMember</span><span class="p">):</span>
+      <span class="sd">&#39;&#39;&#39;Represents a student.&#39;&#39;&#39;</span>
+      <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">marks</span><span class="p">):</span>
+          <span class="n">SchoolMember</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+          <span class="bp">self</span><span class="o">.</span><span class="n">marks</span> <span class="o">=</span> <span class="n">marks</span>
+          <span class="k">print</span><span class="s1">&#39;(Initialized Student: </span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
-      def tell(self):
-          SchoolMember.tell(self)
-          print'Marks: &quot;%d&quot;'% self.marks
+      <span class="k">def</span> <span class="nf">tell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+          <span class="n">SchoolMember</span><span class="o">.</span><span class="n">tell</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+          <span class="k">print</span><span class="s1">&#39;Marks: &quot;</span><span class="si">%d</span><span class="s1">&quot;&#39;</span><span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">marks</span>
 
-  t = Teacher('Mrs. Shrividya',40,30000)
-  s = Student('Swaroop',22,75)
-  members = [t, s]
-  for member in members:
-      member.tell()# works for both Teachers and Students
-</code></pre>
+  <span class="n">t</span> <span class="o">=</span> <span class="n">Teacher</span><span class="p">(</span><span class="s1">&#39;Mrs. Shrividya&#39;</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">30000</span><span class="p">)</span>
+  <span class="n">s</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;Swaroop&#39;</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">75</span><span class="p">)</span>
+  <span class="n">members</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="n">s</span><span class="p">]</span>
+  <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">members</span><span class="p">:</span>
+      <span class="n">member</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span><span class="c1"># works for both Teachers and Students</span>
+</pre></div>
 
-<h3 id="_11">多重继承</h3>
-<pre><code class="py">class Mammal(object):
-  def viviparity(self):
-    print(&quot;viviparity!!&quot;)
 
-class CarnivorousMixIn(object):
-  def eatmeat(self):
-    print(&quot;eat meating!!&quot;)
+<h3 id="_11">多重继承<a class="headerlink" href="#_11" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Mammal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">viviparity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;viviparity!!&quot;</span><span class="p">)</span>
 
-class Dog(Mammal, CarnivorousMixIn):
-  pass
+<span class="k">class</span> <span class="nc">CarnivorousMixIn</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">eatmeat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;eat meating!!&quot;</span><span class="p">)</span>
 
-dog = Dog()
-dog.viviparity()
-dog.eatmeat()
-'''
-viviparity!!
-eat meating!!
-'''
-</code></pre>
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Mammal</span><span class="p">,</span> <span class="n">CarnivorousMixIn</span><span class="p">):</span>
+  <span class="k">pass</span>
+
+<span class="n">dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
+<span class="n">dog</span><span class="o">.</span><span class="n">viviparity</span><span class="p">()</span>
+<span class="n">dog</span><span class="o">.</span><span class="n">eatmeat</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">viviparity!!</span>
+<span class="sd">eat meating!!</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

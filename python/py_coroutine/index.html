@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_coroutine/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_coroutine/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_coroutine//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -535,6 +546,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -543,59 +568,61 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="_1">协程</h1>
-<h2 id="io">异步IO</h2>
+          <h1 id="_1">协程<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h2 id="io">异步IO<a class="headerlink" href="#io" title="Permanent link">#</a></h2>
 <p>由于我们要解决的问题是CPU高速执行能力和IO设备的龟速严重不匹配，多线程和多进程只是解决这一问题的一种方法。
 另一种解决IO问题的方法是异步IO,当代码需要执行一个耗时的IO操作时，它只发出IO指令，并不等待IO结果，然后就去执行其他代码了。一段时间后，当IO返回结果时，再通知CPU进行处理
 异步IO模型需要一个消息循环，在消息循环中，主线程不断地重复“读取消息-处理消息”这一过程</p>
-<pre><code class="py">loop = get_event_loop()
-while True:
-    event = loop.get_event()
-    process_event(event)
-</code></pre>
+<div class="code"><pre><span></span><span class="n">loop</span> <span class="o">=</span> <span class="n">get_event_loop</span><span class="p">()</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">event</span> <span class="o">=</span> <span class="n">loop</span><span class="o">.</span><span class="n">get_event</span><span class="p">()</span>
+    <span class="n">process_event</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+</pre></div>
 
-<h2 id="coroutine">coroutine 协程</h2>
+
+<h2 id="coroutine">coroutine 协程<a class="headerlink" href="#coroutine" title="Permanent link">#</a></h2>
 <p>使用yield的函数,若用send来控制,就算coroutine了,若用for循环来控制,就算generator或者iterator,使用方法大多见于
 decorator, 如tornado中的gen.coroutine。</p>
-<pre><code class="py">def consumer():
-    r = ''
-    while True:
-        n = yield r
-        if not n:
-            return
-        print('[CONSUMER] Consuming %s...' % n)
-        r = '200 OK'
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">consumer</span><span class="p">():</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">r</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;[CONSUMER] Consuming </span><span class="si">%s</span><span class="s1">...&#39;</span> <span class="o">%</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="s1">&#39;200 OK&#39;</span>
 
-def produce(c):
-    c.send(None)
-    n = 0
-    while n &lt; 5:
-        n = n + 1
-        print('[PRODUCER] Producing %s...' % n)
-        r = c.send(n)
-        print('[PRODUCER] Consumer return: %s' % r)
-    c.close()
+<span class="k">def</span> <span class="nf">produce</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;[PRODUCER] Producing </span><span class="si">%s</span><span class="s1">...&#39;</span> <span class="o">%</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;[PRODUCER] Consumer return: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">r</span><span class="p">)</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-c = consumer()
-produce(c)
-'''
-[PRODUCER] Producing 1...
-[CONSUMER] Consuming 1...
-[PRODUCER] Consumer return: 200 OK
-[PRODUCER] Producing 2...
-[CONSUMER] Consuming 2...
-[PRODUCER] Consumer return: 200 OK
-[PRODUCER] Producing 3...
-[CONSUMER] Consuming 3...
-[PRODUCER] Consumer return: 200 OK
-[PRODUCER] Producing 4...
-[CONSUMER] Consuming 4...
-[PRODUCER] Consumer return: 200 OK
-[PRODUCER] Producing 5...
-[CONSUMER] Consuming 5...
-[PRODUCER] Consumer return: 200 OK
-'''
-</code></pre>
+<span class="n">c</span> <span class="o">=</span> <span class="n">consumer</span><span class="p">()</span>
+<span class="n">produce</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">[PRODUCER] Producing 1...</span>
+<span class="sd">[CONSUMER] Consuming 1...</span>
+<span class="sd">[PRODUCER] Consumer return: 200 OK</span>
+<span class="sd">[PRODUCER] Producing 2...</span>
+<span class="sd">[CONSUMER] Consuming 2...</span>
+<span class="sd">[PRODUCER] Consumer return: 200 OK</span>
+<span class="sd">[PRODUCER] Producing 3...</span>
+<span class="sd">[CONSUMER] Consuming 3...</span>
+<span class="sd">[PRODUCER] Consumer return: 200 OK</span>
+<span class="sd">[PRODUCER] Producing 4...</span>
+<span class="sd">[CONSUMER] Consuming 4...</span>
+<span class="sd">[PRODUCER] Consumer return: 200 OK</span>
+<span class="sd">[PRODUCER] Producing 5...</span>
+<span class="sd">[CONSUMER] Consuming 5...</span>
+<span class="sd">[PRODUCER] Consumer return: 200 OK</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <p>注意到consumer函数是一个generator，把一个consumer传入produce后：</p>
 <p>首先调用c.send(None)启动生成器；</p>
@@ -607,97 +634,100 @@ produce(c)
 <p>https://docs.python.org/3/library/asyncio-task.html
 http://blog.ez2learn.com/2010/07/17/talk-about-coroutine-and-gevent/
 http://www.oschina.net/translate/improve-your-python-yield-and-generators-explained</p>
-<h2 id="asyncio">asyncio</h2>
+<h2 id="asyncio">asyncio<a class="headerlink" href="#asyncio" title="Permanent link">#</a></h2>
 <p>asyncio是Python 3.4版本引入的标准库，直接内置了对异步IO的支持。</p>
 <p>asyncio的编程模型就是一个消息循环。我们从asyncio模块中直接获取一个EventLoop的引用，然后把需要执行的协程扔到EventLoop中执行，就实现了异步IO。</p>
 <p>用asyncio实现Hello world代码如下：</p>
-<pre><code class="py">import asyncio
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
-@asyncio.coroutine
-def hello():
-    print(&quot;Hello world!&quot;)
-    # 异步调用asyncio.sleep(1):
-    r = yield from asyncio.sleep(1)
-    print(&quot;Hello again!&quot;)
+<span class="nd">@asyncio.coroutine</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+    <span class="c1"># 异步调用asyncio.sleep(1):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="k">yield from</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello again!&quot;</span><span class="p">)</span>
 
-# 获取EventLoop:
-loop = asyncio.get_event_loop()
-# 执行coroutine
-loop.run_until_complete(hello())
-loop.close()
-</code></pre>
+<span class="c1"># 获取EventLoop:</span>
+<span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+<span class="c1"># 执行coroutine</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">hello</span><span class="p">())</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
 
 <p>@asyncio.coroutine把一个generator标记为coroutine类型，然后，我们就把这个coroutine扔到EventLoop中执行。</p>
 <p>hello()会首先打印出Hello world!，然后，yield from语法可以让我们方便地调用另一个generator。由于asyncio.sleep()也是一个coroutine，所以线程不会等待asyncio.sleep()，而是直接中断并执行下一个消息循环。当asyncio.sleep()返回时，线程就可以从yield from拿到返回值（此处是None），然后接着执行下一行语句。</p>
 <p>把asyncio.sleep(1)看成是一个耗时1秒的IO操作，在此期间，主线程并未等待，而是去执行EventLoop中其他可以执行的coroutine了，因此可以实现并发执行。</p>
 <p>我们用Task封装两个coroutine试试：</p>
-<pre><code class="py">import threading
-import asyncio
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
 
-@asyncio.coroutine
-def hello():
-    print('Hello world! (%s)' % threading.currentThread())
-    yield from asyncio.sleep(1)
-    print('Hello again! (%s)' % threading.currentThread())
+<span class="nd">@asyncio.coroutine</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello world! (</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">threading</span><span class="o">.</span><span class="n">currentThread</span><span class="p">())</span>
+    <span class="k">yield from</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello again! (</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">threading</span><span class="o">.</span><span class="n">currentThread</span><span class="p">())</span>
 
-loop = asyncio.get_event_loop()
-tasks = [hello(), hello()]
-loop.run_until_complete(asyncio.wait(tasks))
-loop.close()
-'''
-Hello world! (&lt;_MainThread(MainThread, started 140735195337472)&gt;)
-Hello world! (&lt;_MainThread(MainThread, started 140735195337472)&gt;)
-(暂停约1秒)
-Hello again! (&lt;_MainThread(MainThread, started 140735195337472)&gt;)
-Hello again! (&lt;_MainThread(MainThread, started 140735195337472)&gt;)
-'''
-</code></pre>
+<span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+<span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">hello</span><span class="p">(),</span> <span class="n">hello</span><span class="p">()]</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">tasks</span><span class="p">))</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Hello world! (&lt;_MainThread(MainThread, started 140735195337472)&gt;)</span>
+<span class="sd">Hello world! (&lt;_MainThread(MainThread, started 140735195337472)&gt;)</span>
+<span class="sd">(暂停约1秒)</span>
+<span class="sd">Hello again! (&lt;_MainThread(MainThread, started 140735195337472)&gt;)</span>
+<span class="sd">Hello again! (&lt;_MainThread(MainThread, started 140735195337472)&gt;)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
 
 <p>由打印的当前线程名称可以看出，两个coroutine是由同一个线程并发执行的。</p>
 <p>如果把asyncio.sleep()换成真正的IO操作，则多个coroutine就可以由一个线程并发执行。</p>
 <p>我们用asyncio的异步网络连接来获取sina、sohu和163的网站首页：</p>
-<pre><code class="py">import asyncio
+<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
-@asyncio.coroutine
-def wget(host):
-    print('wget %s...' % host)
-    connect = asyncio.open_connection(host, 80)
-    reader, writer = yield from connect
-    header = 'GET / HTTP/1.0\r\nHost: %s\r\n\r\n' % host
-    writer.write(header.encode('utf-8'))
-    yield from writer.drain()
-    while True:
-        line = yield from reader.readline()
-        if line == b'\r\n':
-            break
-        print('%s header &gt; %s' % (host, line.decode('utf-8').rstrip()))
-    # Ignore the body, close the socket
-    writer.close()
+<span class="nd">@asyncio.coroutine</span>
+<span class="k">def</span> <span class="nf">wget</span><span class="p">(</span><span class="n">host</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;wget </span><span class="si">%s</span><span class="s1">...&#39;</span> <span class="o">%</span> <span class="n">host</span><span class="p">)</span>
+    <span class="n">connect</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">open_connection</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+    <span class="n">reader</span><span class="p">,</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">yield from</span> <span class="n">connect</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="s1">&#39;GET / HTTP/1.0</span><span class="se">\r\n</span><span class="s1">Host: </span><span class="si">%s</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">host</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">header</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+    <span class="k">yield from</span> <span class="n">writer</span><span class="o">.</span><span class="n">drain</span><span class="p">()</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="k">yield from</span> <span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="n">b</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> header &gt; </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()))</span>
+    <span class="c1"># Ignore the body, close the socket</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-loop = asyncio.get_event_loop()
-tasks = [wget(host) for host in ['www.sina.com.cn', 'www.sohu.com', 'www.163.com']]
-loop.run_until_complete(asyncio.wait(tasks))
-loop.close()
-'''
-wget www.sohu.com...
-wget www.sina.com.cn...
-wget www.163.com...
-(等待一段时间)
-(打印出sohu的header)
-www.sohu.com header &gt; HTTP/1.1 200 OK
-www.sohu.com header &gt; Content-Type: text/html
-...
-(打印出sina的header)
-www.sina.com.cn header &gt; HTTP/1.1 200 OK
-www.sina.com.cn header &gt; Date: Wed, 20 May 2015 04:56:33 GMT
-...
-(打印出163的header)
-www.163.com header &gt; HTTP/1.0 302 Moved Temporarily
-www.163.com header &gt; Server: Cdn Cache Server V2.0
-'''
-</code></pre>
+<span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+<span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">wget</span><span class="p">(</span><span class="n">host</span><span class="p">)</span> <span class="k">for</span> <span class="n">host</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;www.sina.com.cn&#39;</span><span class="p">,</span> <span class="s1">&#39;www.sohu.com&#39;</span><span class="p">,</span> <span class="s1">&#39;www.163.com&#39;</span><span class="p">]]</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">tasks</span><span class="p">))</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">wget www.sohu.com...</span>
+<span class="sd">wget www.sina.com.cn...</span>
+<span class="sd">wget www.163.com...</span>
+<span class="sd">(等待一段时间)</span>
+<span class="sd">(打印出sohu的header)</span>
+<span class="sd">www.sohu.com header &gt; HTTP/1.1 200 OK</span>
+<span class="sd">www.sohu.com header &gt; Content-Type: text/html</span>
+<span class="sd">...</span>
+<span class="sd">(打印出sina的header)</span>
+<span class="sd">www.sina.com.cn header &gt; HTTP/1.1 200 OK</span>
+<span class="sd">www.sina.com.cn header &gt; Date: Wed, 20 May 2015 04:56:33 GMT</span>
+<span class="sd">...</span>
+<span class="sd">(打印出163的header)</span>
+<span class="sd">www.163.com header &gt; HTTP/1.0 302 Moved Temporarily</span>
+<span class="sd">www.163.com header &gt; Server: Cdn Cache Server V2.0</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
 
-<h2 id="asyncawait">async/await</h2>
+
+<h2 id="asyncawait">async/await<a class="headerlink" href="#asyncawait" title="Permanent link">#</a></h2>
 <p>用asyncio提供的@asyncio.coroutine可以把一个generator标记为coroutine类型，然后在coroutine内部用yield from调用另一个coroutine实现异步操作。</p>
 <p>为了简化并更好地标识异步IO，从Python 3.5开始引入了新的语法async和await，可以让coroutine的代码更简洁易读。</p>
 <p>请注意，async和await是针对coroutine的新语法，要使用新的语法，只需要做两步简单的替换：</p>
@@ -706,20 +736,23 @@ www.163.com header &gt; Server: Cdn Cache Server V2.0
 <li>把yield from替换为await。
 让我们对比一下上一节的代码：</li>
 </ul>
-<pre><code class="py">@asyncio.coroutine
-def hello():
-    print(&quot;Hello world!&quot;)
-    r = yield from asyncio.sleep(1)
-    print(&quot;Hello again!&quot;)
-</code></pre>
+<div class="code"><pre><span></span><span class="nd">@asyncio.coroutine</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="k">yield from</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello again!&quot;</span><span class="p">)</span>
+</pre></div>
+
 
 <p>用新语法重新编写如下：</p>
-<pre><code class="py">async def hello():
-    print(&quot;Hello world!&quot;)
-    r = await asyncio.sleep(1)
-    print(&quot;Hello again!&quot;)
-</code></pre>
+<div class="code"><pre><span></span><span class="n">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello again!&quot;</span><span class="p">)</span>
+</pre></div>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

@@ -13,11 +13,15 @@
       
       
       
+        <link rel="canonical" href="http://learndocs.farwmarth.com/cplus/cplus5_const/">
+      
+      
+        <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="None">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/cplus/cplus5_const/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="None/../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/cplus/cplus5_const//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,6 +47,8 @@
     </style>
     <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
     
       
       
@@ -64,7 +70,7 @@
   
   
   
-  <body class=" ">
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
     
     <div class="backdrop">
       <div class="backdrop-paper"></div>
@@ -95,6 +101,11 @@
       </div>
     </div>
     
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -547,6 +558,20 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -555,20 +580,21 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="c-const">c++ 第五章 const</h1>
-<h2 id="1">1 修饰普通变量和指针</h2>
-<pre><code class="c++">double d1 = 2;
-double d2 = 4;
-const double cptr=&amp;d1;
-cptr =&amp;d2; //不能修改指针指向的对象值，而可以更改指针指向的对象地址
-double const cptr1 = &amp;d1;
-cptr1 = d2;//可以修改指针指向的对象值，不可以更改指针指向的对象地址
-const double const cptr2 = &amp;d1; //两个都不能修改
-</code></pre>
+          <h1 id="c-const">c++ 第五章 const<a class="headerlink" href="#c-const" title="Permanent link">#</a></h1>
+<h2 id="1">1 修饰普通变量和指针<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">double</span> <span class="n">cptr</span><span class="o">=&amp;</span><span class="n">d1</span><span class="p">;</span>
+<span class="n">cptr</span> <span class="o">=&amp;</span><span class="n">d2</span><span class="p">;</span> <span class="c1">//不能修改指针指向的对象值，而可以更改指针指向的对象地址</span>
+<span class="kt">double</span> <span class="k">const</span> <span class="n">cptr1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">d1</span><span class="p">;</span>
+<span class="n">cptr1</span> <span class="o">=</span> <span class="n">d2</span><span class="p">;</span><span class="c1">//可以修改指针指向的对象值，不可以更改指针指向的对象地址</span>
+<span class="k">const</span> <span class="kt">double</span> <span class="k">const</span> <span class="n">cptr2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">d1</span><span class="p">;</span> <span class="c1">//两个都不能修改</span>
+</pre></div>
+
 
 <p>如果const位于<em>的左侧，则const就是用来修饰指针所指向的变量，即指针指向为常量； <br />
 如果const位于</em>的右侧，const就是修饰指针本身，即指针本身是常量。</p>
-<h2 id="2-const">2 const修饰函数参数</h2>
+<h2 id="2-const">2 const修饰函数参数<a class="headerlink" href="#2-const" title="Permanent link">#</a></h2>
 <p>const修饰函数参数是它最广泛的一种用途，它表示函数体中不能修改参数的值(包括参数本身的值或者参数其中包含的值)</p>
 <ul>
 <li><code>void function(const int Var);</code> //传递过来的参数在函数内不可以改变(无意义，因为Var本身就是形参，我们的目的是函数内不改变传递过来的内容就好了，这个没有达到目的，会临时复制一个_Var变量，原始变量根本不会改变的)   </li>
@@ -576,47 +602,52 @@ const double const cptr2 = &amp;d1; //两个都不能修改
 <li><code>void function(char* const Var);</code> //参数指针本身为常量不可变(也无意义,因为char* Var也是形参，我们的目的是函数内不改变传递过来的内容就好了，这个没有达到目的，还是可以改变指针所指向的内容)</li>
 </ul>
 <p>对于非内部数据类型的参数而言，象<code>void function(A a)</code>这样声明的函数注定效率比较底。因为函数体内将产生A 类型的临时对象用于复制参数a，而临时对象的构造、复制、析构过程都将消耗时间。<strong>为了提高效率，可以将函数声明改为void function(A a)，因为“引用传递”仅借用一下参数的别名而已，不需要产生临时对象。但是函数void function(A a) 存在一个缺点：</strong>“引用传递”有可能改变参数a，这是我们不期望的。解决这个问题很容易，加const修饰即可 void function(const A a);</p>
-<h2 id="3-const">3 const修饰类对象/对象指针/对象引用</h2>
+<h2 id="3-const">3 const修饰类对象/对象指针/对象引用<a class="headerlink" href="#3-const" title="Permanent link">#</a></h2>
 <p>const修饰类对象表示该对象为常量对象，其中的任何成员都不能被修改。对于对象指针和对象引用也是一样。const修饰的对象，该对象的任何非const成员函数都不能被调用，因为任何非const成员函数会有修改成员变量的企图。例如：</p>
-<pre><code class="c++">class AAA
-{
-   void func1();
-   void func2()  const;
-};
-constAAA aObj;
-aObj.func1(); ×
-aObj.func2(); 正确
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">AAA</span>
+<span class="p">{</span>
+   <span class="kt">void</span> <span class="n">func1</span><span class="p">();</span>
+   <span class="kt">void</span> <span class="nf">func2</span><span class="p">()</span>  <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">constAAA</span> <span class="n">aObj</span><span class="p">;</span>
+<span class="n">aObj</span><span class="p">.</span><span class="n">func1</span><span class="p">();</span> <span class="err">×</span>
+<span class="n">aObj</span><span class="p">.</span><span class="n">func2</span><span class="p">();</span> <span class="err">正确</span>
 
-const AAA aObj = new AAA();
-aObj-&gt;func1(); ×
-aObj-&gt;func2(); 正确
-</code></pre>
+<span class="k">const</span> <span class="n">AAA</span> <span class="n">aObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AAA</span><span class="p">();</span>
+<span class="n">aObj</span><span class="o">-&gt;</span><span class="n">func1</span><span class="p">();</span> <span class="err">×</span>
+<span class="n">aObj</span><span class="o">-&gt;</span><span class="n">func2</span><span class="p">();</span> <span class="err">正确</span>
+</pre></div>
 
-<h2 id="4-const">4 const修饰成员变量</h2>
+
+<h2 id="4-const">4 const修饰成员变量<a class="headerlink" href="#4-const" title="Permanent link">#</a></h2>
 <p>const修饰类的成员函数，表示成员常量，不能被修改，同时它只能在初始化列表中赋值。</p>
-<pre><code class="c++">class A
-{
-   const int nValue;       //成员常量不能被修改
-   A(int x):nValue(x) {}; //只能在初始化列表中赋值  ，这个需要注意
-};
-</code></pre>
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">A</span>
+<span class="p">{</span>
+   <span class="k">const</span> <span class="kt">int</span> <span class="n">nValue</span><span class="p">;</span>       <span class="c1">//成员常量不能被修改</span>
+   <span class="n">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span><span class="o">:</span><span class="n">nValue</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{};</span> <span class="c1">//只能在初始化列表中赋值  ，这个需要注意</span>
+<span class="p">};</span>
+</pre></div>
 
-<h2 id="5-const">5 const修饰成员函数</h2>
+
+<h2 id="5-const">5 const修饰成员函数<a class="headerlink" href="#5-const" title="Permanent link">#</a></h2>
 <p>const修饰类的成员函数，则该成员函数不能修改类中任何非const成员函数。一般写在函数的最后来修饰。</p>
-<pre><code class="c++">class A
-{
-    void function() const;
-};
-</code></pre>
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">A</span>
+<span class="p">{</span>
+    <span class="kt">void</span> <span class="n">function</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+
 
 <p>对于const类对象/指针/引用，只能调用类的const成员函数，因此，const修饰成员函数的最重要作用就是限制对于const对象的使用。</p>
-<h2 id="6-constdefine">6 const常量与define宏定义的区别</h2>
+<h2 id="6-constdefine">6 const常量与define宏定义的区别<a class="headerlink" href="#6-constdefine" title="Permanent link">#</a></h2>
 <ul>
 <li>编译器处理方式不同define宏是在预处理阶段展开。const常量是编译运行阶段使用。</li>
 <li>类型和安全检查不同define宏没有类型，不做任何类型检查，仅仅是展开。const常量有具体的类型，在编译阶段会执行类型检查。</li>
 <li>存储方式不同define宏仅仅是展开，有多少地方使用，就展开多少次，不会分配内存。const常量会在内存中分配(可以是堆中也可以是栈中)。</li>
 </ul>
           <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
