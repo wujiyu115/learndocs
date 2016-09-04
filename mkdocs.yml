@@ -1,6 +1,34 @@
+# Project information
 site_name: farwmarth’s note
+site_author: 'farwmarth'
+site_url: 'http://learndocs.farwmarth.com'
+
+# Repository
+# repo_name: 'GitHub'
+# repo_url: 'https://github.com/wujiyu115/learndocs'
+
+# Copyright
+copyright: 'Copyright (c) 2016 farwmarth'
+
+# Documentation and theme
+docs_dir: 'docs'
 theme: 'material'
 # theme: 'cinder'
+
+extra:
+  palette:
+    primary: 'blue grey'
+    accent: 'blue grey'
+  author:
+    github: 'wujiyu115'
+
+# Extensions
+markdown_extensions:
+  - codehilite(css_class=code)
+  - admonition
+  - toc:
+      permalink: '#'
+
 pages:
 - Home: 'index.md'
 - 数据结构与算法:
