@@ -48,6 +48,7 @@ pages:
     - '步骤': 'python/py5_step.md'
     - '组织': 'python/py6_organize.md'
     - '类': 'python/py_class.md'
+    - '变量作用域': 'python/py_scope.md'
     - '枚举': 'python/py_enum.md'
     - '异常捕捉': 'python/py_error.md'
     - '调试': 'python/py_test.md'
