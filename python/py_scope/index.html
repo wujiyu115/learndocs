@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>变量作用域 - farwmarth’s note</title>
+      
+      
+      
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_scope/">
+      
+      
+        <meta name="author" content="farwmarth">
+      
+    
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_scope/">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_scope//../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                python <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        变量作用域
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="变量作用域" href="./">
+      变量作用域
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="作用域" href="#_1">
+                作用域
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="(变量提升)hoisting" href="#hoisting">
+                (变量提升)hoisting
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Python 中的变量作用域" href="#python_1">
+                Python 中的变量作用域
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="闭包" href="#_4">
+                闭包
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="python">python 变量作用域<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
+<h2 id="_1">作用域<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<blockquote>
+<p>作用域（scope，或译作有效范围）是名字（name）与实体（entity）的绑定（binding）保持有效的那部分计算机程序。不同的编程语言可能有不同的作用域和名字解析</p>
+</blockquote>
+<ul>
+<li>静态语言（<code>C</code>、<code>Java</code>、<code>C#</code>等），动态语言(<font color="red">lua</font>) 具有块级别（block level，包含if、while、for、switch、函数等）的变量作用域；</li>
+<li>动态语言(<code>Javascript</code>、<code>Python</code>、<code>Ruby</code>)只具有函数级别（function level）的变量作用域</li>
+</ul>
+<p><code>lua</code>块级作用域演示:</p>
+<div class="code"><pre><span></span><span class="kd">local</span> <span class="k">function</span> <span class="nf">t1</span><span class="p">(</span>  <span class="p">)</span>
+  <span class="k">if</span> <span class="kc">true</span> <span class="k">then</span>
+    <span class="kd">local</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">block value&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">has value:&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="n">t1</span><span class="p">()</span>
+<span class="cm">--[[</span>
+<span class="cm">block value 1</span>
+<span class="cm">has value:  nil</span>
+<span class="cm">]]</span>
+</pre></div>
+
+
+<p>在执行 if 代码块时，会新创建一个环境（称为E1，其外围环境为全局环境E0。见下图），然后在 E1 中定义变量i，在 if 代码块结束后，E1 这个环境就会被删除，这时 main 函数后面的程序就无法访问 if 代码块的变量了。</p>
+<p><img alt="eblock" src="../../_static/eblock.png" /></p>
+<p>而<code>python</code>中没有块级作用域,<code>if</code>代码块和全局环境共用</p>
+<div class="code"><pre><span></span><span class="k">def</span>  <span class="nf">t1</span><span class="p">():</span>
+  <span class="k">if</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;block value&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;has value:&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+<span class="n">t1</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">(&#39;block value&#39;, 1)</span>
+<span class="sd">(&#39;has value:&#39;, 1)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
+
+<p><img alt="eblock" src="../../_static/enoblock.png" /></p>
+<h3 id="dynamic-scopestatic-scope">变量的动态作用域(dynamic scope)和静态作用域(static scope)<a class="headerlink" href="#dynamic-scopestatic-scope" title="Permanent link">#</a></h3>
+<p>这里的动态作用域和静态作用域是指的变量作用域，要和静态动态语言区另分来</p>
+<p>引用<a href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E7%94%A8%E5%9F%9F">wiki</a>:</p>
+<blockquote>
+<p>静态作用域又叫做词法作用域(lexical scoping)，采用词法作用域的变量叫词法变量。词法变量有一个在编译时静态确定的作用域。词法变量的作用域可以是一个函数或一段代码，该变量在这段代码区域内可见（visibility）；在这段区域以外该变量不可见（或无法访问）。词法作用域里，取变量的值时，会检查函数定义时的文本环境，捕捉函数定义时对该变量的绑定。</p>
+<p>相反，采用动态作用域的变量叫做动态变量。只要程序正在执行定义了动态变量的代码段，那么在这段时间内，该变量一直存在；代码段执行结束，该变量便消失。这意味着如果有个函数f，里面调用了函数g，那么在执行g的时候，f里的所有局部变量都会被g访问到。而在静态作用域的情况下，g不能访问f的变量。动态作用域里，取变量的值时，会由内向外逐层检查函数的调用链，并打印第一次遇到的那个绑定的值。显然，最外层的绑定即是全局状态下的那个值。</p>
+</blockquote>
+<ul>
+<li>大多数现在程序设计语言都是采用静态作用域规则，如C/C++、C#、Python、Java、JavaScript、Lua</li>
+<li>采用动态作用域的语言有Pascal、Emacs Lisp、Common</li>
+</ul>
+<blockquote>
+<p>Lisp（兼有静态作用域）、Perl（兼有静态作用域）。C/C++是静态作用域语言，但在宏中用到的名字，也是动态作用域。</p>
+</blockquote>
+<div class="code"><pre><span></span><span class="c1">// start pseudo-code</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="s2">&quot;global&quot;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">print_y</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">test_scope</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="s2">&quot;local&quot;</span><span class="p">;</span>
+    <span class="nx">print_y</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">test_scope</span><span class="p">();</span> <span class="c1">// statically scoped languages print &quot;global&quot;</span>
+                   <span class="c1">// dynamically languages print &quot;local&quot;</span>
+<span class="nx">print_y</span><span class="p">();</span> <span class="c1">// all languages should print &quot;global&quot;</span>
+<span class="c1">// end pseudo-code</span>
+</pre></div>
+
+
+<p>上面的<code>js</code>代码是<code>statically scoped</code>所以<code>print_y</code>中的<code>y</code>在运行前已经确定了值为全局变量<code>global</code>,在<code>test_scope</code>中重新定义<code>var y = "local"</code>并不能改变<code>print_y</code>作用域的<code>y</code>值。所以输出是两个<code>global</code>.</p>
+<p>如果换作是<code>Lip</code>这样的<code>dynamic scope</code>情况会发生变化:<code>test_scope</code>中的重新定义会在运行时才确定<code>print_y</code>中的<code>y</code>值,最终会输出<code>local</code>,<code>global</code></p>
+<p><code>python</code> 静态作用域:</p>
+<div class="code"><pre><span></span><span class="n">y</span>  <span class="o">=</span> <span class="s2">&quot;global&quot;</span>
+
+<span class="k">def</span> <span class="nf">print_y</span><span class="p">():</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">redefine_y</span><span class="p">():</span>
+  <span class="n">y</span><span class="o">=</span><span class="s2">&quot;local&quot;</span>
+  <span class="n">print_y</span><span class="p">()</span>
+
+<span class="n">redefine_y</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">global</span>
+<span class="sd">global</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
+
+<p><code>lua</code> 静态作用域:</p>
+<div class="code"><pre><span></span><span class="kd">local</span> <span class="n">y</span> <span class="o">=</span><span class="s2">&quot;</span><span class="s">gloal&quot;</span>
+<span class="kd">local</span> <span class="k">function</span> <span class="nf">print_y</span><span class="p">(</span>  <span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="kd">local</span> <span class="k">function</span> <span class="nf">redefine_y</span><span class="p">(</span>  <span class="p">)</span>
+  <span class="kd">local</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">local&quot;</span>
+  <span class="n">print_y</span><span class="p">()</span>
+<span class="k">end</span>
+<span class="n">redefine_y</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="cm">--[[</span>
+<span class="cm">global</span>
+<span class="cm">global</span>
+<span class="cm">]]</span>
+</pre></div>
+
+
+<h2 id="hoisting">(变量提升)hoisting<a class="headerlink" href="#hoisting" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+  <span class="k">print</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+
+
+<p>上面的python代码按我们的正常思维会输出<code>2</code>，实际上会报错<code>UnboundLocalError: local variable 'x' referenced before assignment</code></p>
+<p>这种行为和javascript的<code>Hoisting(变量提升)</code>有点类似.
+我们可以来看一段js代码:</p>
+<div class="code"><pre><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>按正常的逻辑来说这段代码会输出<code>2</code>才对,然而并没有,输出是<code>undefined</code>
+上面的代码发生了什么:</p>
+<div class="code"><pre><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span>
+  <span class="kd">var</span> <span class="nx">x</span> <span class="c1">// 变量提升</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>其实是因为没有块级作用域时变量声明会提前到函数第一行,而按变量域搜索路径局部变量的<code>x</code>优先级高了<code>var x=2</code>所以会出现这种情况。<code>python</code>的行为也是同理</p>
+<p>hositing设计的初衷:</p>
+<blockquote>
+<p>这要追溯到 Javascript 语言设计者的初衷了，Brendan Eich 在创造这门世界级语言时，一开始打算用 Scheme 的思想来实现，而且当时 Brendan 也是在看 SICP 这本书，SICP 4.1.6 在介绍内部定义时，给出了解决变量同一时刻定义的一种解决方式：将所有的变量名提前。这样同一环境中的其他地方就能够使用所有的定义了。需要注意的是，这里只是将变量名提前，赋值的动作不变，显然，Javascript 采用了这一思想（这其实是forward_declaration 技术的一种实现手段）</p>
+</blockquote>
+<h2 id="python_1">Python 中的变量作用域<a class="headerlink" href="#python_1" title="Permanent link">#</a></h2>
+<p>准确来说，Python 里面有四种作用域：<code>function</code>, <code>module</code>, <code>global</code>和 <code>class</code> 作用域。由于 Python 不区分变量的声明，所以在第一次初始化变量时（必须为赋值操作）将变量加入当前环境中。如果在没对变量进行初始化的情况下使用该变量就会报运行时异常，但如果仅仅是访问（并不赋值）的情况下，查找变量的顺序会按照 LEGB 规则 (Local, Enclosing, Global, Built-in)</p>
+<p>python能够改变变量作用域的代码段是def、class、lamda</p>
+<div class="code"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;world&quot;</span>
+    <span class="k">return</span> <span class="n">s</span>
+<span class="n">foo</span><span class="p">()</span>  <span class="c1"># UnboundLocalError: local variable &#39;s&#39; referenced before assignment</span>
+</pre></div>
+
+
+<p>由于在函数 foo 中在没有对 s 初始化的情况下使用了该值，所以这里会报异常，解决的办法就是使用 global 关键字：</p>
+<div class="code"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">s</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot; world&quot;</span>
+    <span class="k">return</span> <span class="n">s</span>
+<span class="n">foo</span><span class="p">()</span>  <span class="c1"># return &quot;hello world&quot;</span>
+</pre></div>
+
+
+<p>但由于 global 关键字只能限定在global作用域内查找变量，在有嵌套定义的时候就有问题了，比如：</p>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+    <span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
+        <span class="k">global</span> <span class="n">s</span>     <span class="c1"># NameError: global name &#39;s&#39; is not defined</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot; world&quot;</span>
+        <span class="k">return</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="n">bar</span>
+<span class="n">foo</span><span class="p">()()</span>
+</pre></div>
+
+
+<p>Python 3 中引入了 nonlocal 关键字来解决这个问题，：</p>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+    <span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
+        <span class="n">nonlocal</span> <span class="n">s</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot; world&quot;</span>
+        <span class="k">return</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="n">bar</span>
+<span class="n">foo</span><span class="p">()()</span>   <span class="c1"># return &quot;hello world&quot;</span>
+</pre></div>
+
+
+<p>在 Python 2 中，我们可以通过引入一可变容器解决（其实就是绕过直接修改 s 的值）</p>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hello&quot;</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
+        <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="s2">&quot; world&quot;</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">bar</span>
+<span class="n">foo</span><span class="p">()()</span>   <span class="c1"># return &quot;hello world&quot;</span>
+</pre></div>
+
+
+<h3 id="_2">类级别作用域<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;Foo&quot;</span>
+    <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;Hello </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">username</span>
+<span class="n">foo</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span>  <span class="c1"># NameError: global name &#39;username&#39; is not defined</span>
+</pre></div>
+
+
+<p>username是定义在Foo类级别的，内部的say_hello方法在查找自由变量username的作用域会按照上面说的LEGB 规则 (Local, Enclosing, Global, Built-in)，并不会去查找类级别作用域的变量，所有这里会报错。修改的方法也很简单：</p>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s2">&quot;Hello </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">Foo</span><span class="o">.</span><span class="n">username</span>
+</pre></div>
+
+
+<p>可以看到，Python 在试图省略掉变量声明的同时，反而造成了更复杂的情况，相关讨论在 Python mail-list 里面讨论也很火热，有兴趣的读者可以参考：</p>
+<ul>
+<li>PEP 3104 — Access to Names in Outer Scopes</li>
+</ul>
+<h3 id="_3">作用域演示<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;global name&quot;</span>
+
+<span class="k">class</span> <span class="nc">Man</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;class name&quot;</span>
+  <span class="sd">&quot;&quot;&quot;docstring for Man&quot;&quot;&quot;</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">(</span><span class="n">Man</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;self name&quot;</span>
+
+  <span class="k">def</span> <span class="nf">sayName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">Man</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="c1"># print(name)</span>
+    <span class="n">name</span><span class="o">=</span> <span class="s2">&quot;local name&quot;</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">doaction</span><span class="p">():</span>
+  <span class="n">man</span> <span class="o">=</span> <span class="n">Man</span><span class="p">()</span>
+  <span class="n">man</span><span class="o">.</span><span class="n">sayName</span><span class="p">()</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">doaction</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">class name</span>
+<span class="sd">self name</span>
+<span class="sd">local name</span>
+<span class="sd">global name</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
+
+<h2 id="_4">闭包<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="n">function</span> <span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">function</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">var</span> <span class="n">add3</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">alert</span><span class="p">(</span><span class="n">add3</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>  <span class="o">//</span> <span class="k">return</span> <span class="mi">7</span>
+</pre></div>
+
+
+<p>这里的add3就是一闭包对象，它包括两部分，一个函数与声明函数时的环境。这就是闭包的核心，没有任何神奇的地方，闭包就是解决自由变量变量作用域的问题。</p>
+<p><strong>参考</strong>:<br />
+https://en.wikipedia.org/wiki/Scope_(computer_science)
+https://segmentfault.com/a/1190000003114255<br />
+http://liujiacai.net/blog/2016/05/28/scope-closure/<br />
+http://www.cnblogs.com/isaboy/p/javascript_function.html<br />
+http://magicalboy.com/python-scope-legb/<br />
+https://blog.mozilla.org/webdev/2011/01/31/python-scoping-understanding-legb/</p>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../py_class/" title="类">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                类
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../py_enum/" title="枚举">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                枚举
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
