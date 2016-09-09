@@ -31,6 +31,9 @@ markdown_extensions:
 
 pages:
 - Home: 'index.md'
+- IDE:
+    - 'atom': 'ide/atom.md'
+    - 'sublimetext': 'ide/sublimetext.md'
 - 数据结构与算法:
     - '排序算法介绍': 'data_algorithms/algorithms1_intro.md'
 - c++基础:
