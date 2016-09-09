@@ -31,8 +31,9 @@ markdown_extensions:
 
 pages:
 - Home: 'index.md'
-- IDE:
+- Atom编辑器:
     - 'atom': 'ide/atom.md'
+- Sublime Text编辑器:
     - 'sublimetext': 'ide/sublimetext.md'
 - 数据结构与算法:
     - '排序算法介绍': 'data_algorithms/algorithms1_intro.md'

@@ -1,5 +1,9 @@
 sublimeText 3 配置
 ============================
+## 文档
+https://www.sublimetext.com/docs/3/
+http://docs.sublimetext.info/en/latest/index.html
+https://sublime-undocs-zh.readthedocs.io/en/latest/index.html
 
 ## Package Control使用
 

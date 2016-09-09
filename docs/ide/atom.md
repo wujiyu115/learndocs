@@ -171,5 +171,8 @@ tags: atom
 https://segmentfault.com/a/1190000003043309
 http://simplyy.space/article/56ecd7303aae9e5a65c46d64
 https://www.zhihu.com/question/39938370/answer/91424130?from=profile_answer_card
+
+
 http://flight-manual.atom.io/using-atom/sections/editing-and-deleting-text/
-http://wiki.jikexueyuan.com/project/atom/gulp.html
+https://wizardforcel.gitbooks.io/atom-flight-manual-zh-cn/content/
+https://github.com/wizardforcel/atom-flight-manual-zh-cn
