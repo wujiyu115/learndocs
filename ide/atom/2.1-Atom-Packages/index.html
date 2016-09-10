@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Atom中的包 - farwmarth’s note</title>
+      
+      
+      
+        <link rel="canonical" href="http://learndocs.farwmarth.com/ide/atom/2.1-Atom-Packages/">
+      
+      
+        <meta name="author" content="farwmarth">
+      
+    
+    <meta property="og:url" content="http://learndocs.farwmarth.com/ide/atom/2.1-Atom-Packages/">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/ide/atom/2.1-Atom-Packages//../../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../../assets/fonts/icon.eot?52m981');
+      	src: url('../../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Atom编辑器 <i class="icon icon-link"></i>
+              
+            
+              
+                使用Atom <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Atom中的包
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../../../python/py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../../python/py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../../../python/py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../../../python/py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../../../python/py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../../../python/py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../../python/py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="变量作用域" href="../../../python/py_scope/">
+      变量作用域
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../../../python/py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../../../python/py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../../../python/py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../../../python/py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../../../python/py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../../../python/py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../../../python/py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../../../python/py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../../../python/py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../../../python/py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../../../python/py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../../../python/py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../../../python/py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../../../python/py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../../../python/py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../../../python/py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Atom编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="atom" href="../">
+      atom
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <span class="section">新手入门</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="为什么选择Atom？" href="../1.1-Why-Atom/">
+      为什么选择Atom？
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="安装Atom" href="../1.2-Installing-Atom/">
+      安装Atom
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Atom基础" href="../1.3-Atom-Basics/">
+      Atom基础
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="小结" href="../1.4-Summary/">
+      小结
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <span class="section">使用Atom</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="Atom中的包" href="./">
+      Atom中的包
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="包的设置" href="#_1">
+                包的设置
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Atom的主题" href="#atom_1">
+                Atom的主题
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="命令行" href="#_2">
+                命令行
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="在Atom中移动" href="../2.2-Moving-in-Atom/">
+      在Atom中移动
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文本选择" href="../2.3-Atom-Selections/">
+      文本选择
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编辑和删除文本" href="../2.4-Editing-and-Deleting-Text/">
+      编辑和删除文本
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="查找和替换" href="../2.5-Find-and-Replace/">
+      查找和替换
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="代码段" href="../2.6-Snippets/">
+      代码段
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="自动补全" href="../2.7-Autocomplete/">
+      自动补全
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="折叠" href="../2.8-Folding/">
+      折叠
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="面板" href="../2.9-Panes/">
+      面板
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="语法" href="../2.10-Grammar/">
+      语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Atom中的版本控制" href="../2.11-Version-Control-in-Atom/">
+      Atom中的版本控制
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="在Atom中写作" href="../2.12-Writing-in-Atom/">
+      在Atom中写作
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基本的自定义" href="../2.13-Basic-Customization/">
+      基本的自定义
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="小结" href="../2.14-Summary/">
+      小结
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <span class="section">Hacking Atom</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="所需工具" href="../3.1-Tools-of-the-Trade/">
+      所需工具
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="初始文件" href="../3.2-The-Init-File/">
+      初始文件
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="字数统计包" href="../3.3-Package-Word-Count/">
+      字数统计包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文本处理包" href="../3.4-Package-Modifying-Text/">
+      文本处理包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="创建主题" href="../3.5-Creating-a-Theme/">
+      创建主题
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图标" href="../3.6-Iconography/">
+      图标
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../3.7-Debugging/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编写 spec" href="../3.8-Writing-specs/">
+      编写 spec
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="从Textmate中转换" href="../3.9-Converting-from-TextMate/">
+      从Textmate中转换
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <span class="section">在Atom背后</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="配置API" href="../4.1-Configuration-API/">
+      配置API
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="深入键表（keymap）" href="../4.2-Keymaps-In-Depth/">
+      深入键表（keymap）
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="作用域设置、作用域和作用域描述符" href="../4.3-Scoped-Settings-Scopes-and-Scope-Descriptors/">
+      作用域设置、作用域和作用域描述符
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Atom中的序列化" href="../4.4-Serialization-in-Atom/">
+      Atom中的序列化
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="开发Node模块" href="../4.5-Developing-Node-Modules/">
+      开发Node模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="通过服务和其它包交互" href="../4.6-Interacting-With-Other-Packages-Via-Services/">
+      通过服务和其它包交互
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="维护你的包" href="../4.7-Maintaining-Your-Packages/">
+      维护你的包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="小结" href="../4.8-Summary/">
+      小结
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Sublime Text编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="sublimetext" href="../../sublimetext/">
+      sublimetext
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <!-- 译者：Github@wizardforcel -->
+
+<p>在我们介绍完Atom最基础的部分之后，我们要了解如何真正尽可能使用它了。在这一章中我们会介绍如何为了添加新功能而寻找并安全新的包，如何寻找并安装新的主题，如何以一种更高级的方法处理文本，如何以任何你想要的方式自定义编辑器，如何使用git做版本控制，以及其它。</p>
+<h1 id="atom">Atom中的包<a class="headerlink" href="#atom" title="Permanent link">#</a></h1>
+<p>首先，让我们从Atom的包系统开始讲起。像我们前面提到过的那样，Atom自己只是一个非常基础的功能核心，它上面加载了许多有用的包，这些包添加新的功能，像树视图（Tree View）和设置视图（Settings View）。</p>
+<p>实际上，默认情况中，Atom中所有的功能由超过70种包组成。例如，你在首次启动Atom时看到的欢迎对话框，拼写检查工具，主题和模糊查找工具都是独立的包，它们使用了你所访问的相同API。我们在第三章将会看到更多细节。</p>
+<p>这意味着所有包都可以变得越来越强大，并且它们可以改变任何东西，从整体接口的外观和感觉，到核心功能的基本操作。</p>
+<p>要想安装一个新的包，你可以使用设置视图中的install选项卡，现在你已经非常熟悉了。简单地打开设置视图（<code>cmd-,</code>），点击“install”选项卡，并且在“Install Packages”下面输入你要查找的东西，那个地方提示“Search Packages”。</p>
+<p>列在底下的是发布到atom.io的包，它是Atom包的官方注册处（registry）。设置面板中的搜索操作，会进入atom.io中的包注册处寻找，之后拉回任何匹配你搜索的东西。</p>
+<p><img alt="" src="../img/packages-install.png" /></p>
+<p>所有的包都会在点击“install”按钮后安装。点击之后会下载并安装相应的包，你的编辑器会拥有那个包提供的功能。</p>
+<h2 id="_1">包的设置<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>在Atom安装了一个包之后，那个包会出现在“Package”选项卡下面的侧面板中，同时带着Atom预先安装的所有包。你可以在"Filter packages by name"文本框中输入内容，来过滤这个列表并找到你想要找的包。</p>
+<p><img alt="" src="../img/package-specific-settings.png" /></p>
+<p>点击一个包的“Settings”按钮会弹出这个包特定的设置窗口。你可以查看它所有的快捷键，暂时禁用这个包，查看它的源码，查看当前版本，报告问题以及卸载这个包。</p>
+<p>如果你安装的任何包有新的版本发布，Atom会自动检测它。你可以从当前窗口，或者“Update”选项卡来升级这个包。这有助于你对所有安装的包保持更新。</p>
+<h2 id="atom_1">Atom的主题<a class="headerlink" href="#atom_1" title="Permanent link">#</a></h2>
+<p>你也可以从设置视图中，为Atom寻找并安装新的主题。这些主题可以是UI主题，或者语法高亮主题。你可以在“install”选项卡中寻找他们，就像寻找新的包那样。要确保你点击了搜索框旁边的“Themes”切换按钮。</p>
+<p><img alt="" src="../img/themes.png" /></p>
+<p>点击主题的标题会弹出它在atom.io上的简介页面，通常会显示它的快照。你可以在安装前看看它是什么样子。</p>
+<p>点击“install”按钮会安装该主题，并且在“Theme”下拉框中可供使用。就像我们在“更改主题颜色”一节看到的那样。</p>
+<p><img alt="" src="../img/unity-theme.png" /></p>
+<h2 id="_2">命令行<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>你也可以在命令行中通过<code>npm</code>安装主题包。</p>
+<p>通过在控制台运行一下命令，检查你是否安装了<code>apm</code>：</p>
+<div class="code"><pre><span></span>$ apm <span class="nb">help</span> install
+</pre></div>
+
+
+<p>你会看到一条有关<code>apm install</code>命令的详细信息打印出来。</p>
+<p>如果没有的话，打开Atom，运行<code>Atom &gt; Install Shell Commands</code>菜单<code>apm</code>和<code>atom</code>命令。</p>
+<p>你也可以使用<code>apm install</code>命令安装包：</p>
+<ul>
+<li><code>apm install &lt;package_name&gt;</code>会安装最新版本。</li>
+<li><code>apm install &lt;package_name&gt;@&lt;package_version&gt;</code>会安装指定版本。</li>
+</ul>
+<p>比如，<code>apm install emmet@0.1.5</code>会安装Emmet包的0.1.5发行版。</p>
+<p>你也可以使用<code>apm</code>寻找新的包来安装。如果你运行<code>apm search</code>命令，你可以在包注册处搜索想要找的东西。</p>
+<div class="code"><pre><span></span>$ apm search coffee
+Search Results For <span class="s1">&#39;coffee&#39;</span> <span class="o">(</span>5<span class="o">)</span>
+├── coffee-trace Add smart trace statements to coffee files with one keypress each. <span class="o">(</span><span class="m">77</span> downloads, <span class="m">3</span> stars<span class="o">)</span>
+├── coffee-navigator Code navigation panel <span class="k">for</span> Coffee Script <span class="o">(</span><span class="m">557</span> downloads, <span class="m">8</span> stars<span class="o">)</span>
+├── atom-compile-coffee This Atom.io Package compiles .coffee Files on save to .js files. <span class="o">(</span>myJavascript.coffee -&gt; myJavascript.js<span class="o">)</span> <span class="o">(</span><span class="m">349</span> downloads, <span class="m">4</span> stars<span class="o">)</span>
+├── coffee-lint CoffeeScript linter <span class="o">(</span><span class="m">3336</span> downloads, <span class="m">18</span> stars<span class="o">)</span>
+└── git-grep <span class="sb">`</span>git grep<span class="sb">`</span> in atom editor <span class="o">(</span><span class="m">1224</span> downloads, <span class="m">9</span> stars<span class="o">)</span>
+</pre></div>
+
+
+<p>你也可以使用<code>apm view</code>查看指定包的详细信息。</p>
+<div class="code"><pre><span></span>$ apm view git-grep
+git-grep
+├── 0.7.0
+├── git://github.com/mizchi/atom-git-grep
+├── <span class="sb">`</span>git grep<span class="sb">`</span> in atom editor
+├── <span class="m">1224</span> downloads
+└── <span class="m">9</span> stars
+
+Run <span class="sb">`</span>apm install git-grep<span class="sb">`</span> to install this package.
+</pre></div>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../1.4-Summary/" title="小结">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                小结
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../2.2-Moving-in-Atom/" title="在Atom中移动">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                在Atom中移动
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

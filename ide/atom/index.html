@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>atom - farwmarth’s note</title>
+      
+      
+      
+        <link rel="canonical" href="http://learndocs.farwmarth.com/ide/atom/">
+      
+      
+        <meta name="author" content="farwmarth">
+      
+    
+    <meta property="og:url" content="http://learndocs.farwmarth.com/ide/atom/">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/ide/atom//../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Atom编辑器 <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        atom
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../../python/py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../python/py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../../python/py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../../python/py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../../python/py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../../python/py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../python/py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="变量作用域" href="../../python/py_scope/">
+      变量作用域
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../../python/py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../../python/py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../../python/py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../../python/py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../../python/py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../../python/py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../../python/py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../../python/py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../../python/py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../../python/py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../../python/py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../../python/py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../../python/py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../../python/py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../../python/py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../../python/py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Atom编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="atom" href="./">
+      atom
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="atom 介绍" href="#atom">
+                atom 介绍
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="基本操作" href="#_1">
+                基本操作
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="设置" href="#_2">
+                设置
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="快捷键" href="#_3">
+                快捷键
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="安装插件" href="#_4">
+                安装插件
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="主题" href="#_5">
+                主题
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="snippets" href="#snippets">
+                snippets
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="git" href="#git">
+                git
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="命令行" href="#_6">
+                命令行
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <span class="section">新手入门</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="为什么选择Atom？" href="1.1-Why-Atom/">
+      为什么选择Atom？
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="安装Atom" href="1.2-Installing-Atom/">
+      安装Atom
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Atom基础" href="1.3-Atom-Basics/">
+      Atom基础
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="小结" href="1.4-Summary/">
+      小结
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <span class="section">使用Atom</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Atom中的包" href="2.1-Atom-Packages/">
+      Atom中的包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="在Atom中移动" href="2.2-Moving-in-Atom/">
+      在Atom中移动
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文本选择" href="2.3-Atom-Selections/">
+      文本选择
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编辑和删除文本" href="2.4-Editing-and-Deleting-Text/">
+      编辑和删除文本
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="查找和替换" href="2.5-Find-and-Replace/">
+      查找和替换
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="代码段" href="2.6-Snippets/">
+      代码段
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="自动补全" href="2.7-Autocomplete/">
+      自动补全
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="折叠" href="2.8-Folding/">
+      折叠
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="面板" href="2.9-Panes/">
+      面板
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="语法" href="2.10-Grammar/">
+      语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Atom中的版本控制" href="2.11-Version-Control-in-Atom/">
+      Atom中的版本控制
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="在Atom中写作" href="2.12-Writing-in-Atom/">
+      在Atom中写作
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基本的自定义" href="2.13-Basic-Customization/">
+      基本的自定义
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="小结" href="2.14-Summary/">
+      小结
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <span class="section">Hacking Atom</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="所需工具" href="3.1-Tools-of-the-Trade/">
+      所需工具
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="初始文件" href="3.2-The-Init-File/">
+      初始文件
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="字数统计包" href="3.3-Package-Word-Count/">
+      字数统计包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文本处理包" href="3.4-Package-Modifying-Text/">
+      文本处理包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="创建主题" href="3.5-Creating-a-Theme/">
+      创建主题
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图标" href="3.6-Iconography/">
+      图标
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="3.7-Debugging/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编写 spec" href="3.8-Writing-specs/">
+      编写 spec
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="从Textmate中转换" href="3.9-Converting-from-TextMate/">
+      从Textmate中转换
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <span class="section">在Atom背后</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="配置API" href="4.1-Configuration-API/">
+      配置API
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="深入键表（keymap）" href="4.2-Keymaps-In-Depth/">
+      深入键表（keymap）
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="作用域设置、作用域和作用域描述符" href="4.3-Scoped-Settings-Scopes-and-Scope-Descriptors/">
+      作用域设置、作用域和作用域描述符
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Atom中的序列化" href="4.4-Serialization-in-Atom/">
+      Atom中的序列化
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="开发Node模块" href="4.5-Developing-Node-Modules/">
+      开发Node模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="通过服务和其它包交互" href="4.6-Interacting-With-Other-Packages-Via-Services/">
+      通过服务和其它包交互
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="维护你的包" href="4.7-Maintaining-Your-Packages/">
+      维护你的包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="小结" href="4.8-Summary/">
+      小结
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Sublime Text编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="sublimetext" href="../sublimetext/">
+      sublimetext
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>atom</h1>
+          
+          <h2 id="atom">atom 介绍<a class="headerlink" href="#atom" title="Permanent link">#</a></h2>
+<blockquote>
+<p>Atom是Github专为hacker推出的开源的文本编辑器，支持linux、window等多平台</p>
+</blockquote>
+<h2 id="_1">基本操作<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>多光标编辑</strong>:<code>cmd/ctrl + 鼠标左键</code>点击多个地方</li>
+<li><strong>拼写检查</strong>:<code>spell check</code></li>
+<li><strong>显示tabs或空格</strong>:<code>Settings -&gt; Settings -&gt; Show Invisibles</code></li>
+</ul>
+<h2 id="_2">设置<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<ul>
+<li>Settings：全局设置</li>
+<li>Keybindings：快捷键配置</li>
+<li>Packages： 插件管理中心, 例如设置/禁用/删除插件</li>
+<li>Themes：主题管理中心</li>
+<li>Updates：查询社区包/插件的状态</li>
+<li>Install：搜索插件和主题</li>
+<li>Open Config Folder：配置文件集合目录，非常具有程序员风格直接修改config</li>
+</ul>
+<h2 id="_3">快捷键<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>英文</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + ，</td>
+<td>Setting</td>
+<td>打开设置</td>
+</tr>
+<tr>
+<td>Ctrl + N</td>
+<td>New File</td>
+<td>新建文件</td>
+</tr>
+<tr>
+<td>Ctrl + W</td>
+<td>Close Tab</td>
+<td>关闭Tab</td>
+</tr>
+<tr>
+<td>Ctrl + Tab</td>
+<td>Next Item</td>
+<td>切换tab</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + T</td>
+<td>Reopen last Item</td>
+<td>重新打开刚关闭tab</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + P</td>
+<td>Command</td>
+<td>命令模式</td>
+</tr>
+<tr>
+<td>Ctrl +  P</td>
+<td>Nav File</td>
+<td>文件导航</td>
+</tr>
+<tr>
+<td>Ctrl +  R</td>
+<td>Nav Symbols</td>
+<td>方法导航</td>
+</tr>
+<tr>
+<td>Ctrl + `</td>
+<td>Toggle Tree View</td>
+<td>切换目录树</td>
+</tr>
+<tr>
+<td>Ctrl + Z</td>
+<td>Undo</td>
+<td>撤销</td>
+</tr>
+<tr>
+<td>Ctrl + Y</td>
+<td>Redo</td>
+<td>取消撤销</td>
+</tr>
+<tr>
+<td>Ctrl + G   行:列</td>
+<td>Go to Line</td>
+<td>跳转某行</td>
+</tr>
+<tr>
+<td>Ctrl + L</td>
+<td>select line</td>
+<td>选定某行</td>
+</tr>
+<tr>
+<td>Ctrl + /</td>
+<td>Toggle Comments</td>
+<td>切换注释</td>
+</tr>
+<tr>
+<td>Ctrl + Shift +U</td>
+<td>Encoding selector</td>
+<td>切换编码格式</td>
+</tr>
+<tr>
+<td>F11</td>
+<td>Full Screen</td>
+<td>全屏</td>
+</tr>
+<tr>
+<td>Ctrl + F</td>
+<td>Find in Buffer</td>
+<td>从缓存查找</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + F</td>
+<td>Find in project</td>
+<td>从工程查找</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>Find next</td>
+<td>查看下一个</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + K</td>
+<td>delete line</td>
+<td>删除一行</td>
+</tr>
+<tr>
+<td>Ctrl + Enter</td>
+<td>Newline below</td>
+<td>下方新增行</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Enter</td>
+<td>Newline above</td>
+<td>上方新增行</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>折叠操作</th>
+<th>英文</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + Alt + [</td>
+<td>Fold</td>
+<td>折叠</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + ]</td>
+<td>Unfold</td>
+<td>展开</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + Shift + [</td>
+<td>Fold all</td>
+<td>折叠全部</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + Shift + ]</td>
+<td>Unfold all</td>
+<td>展开全部</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>分屏操作</th>
+<th>英文</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cmd/ctrl+w+c关闭</td>
+<td>Close Split Screen</td>
+<td>关闭分屏</td>
+</tr>
+<tr>
+<td>cmd/ctrl + w,方向键</td>
+<td>Split Screen</td>
+<td>创建分屏</td>
+</tr>
+<tr>
+<td>cmd/ctrl + k,方向键</td>
+<td>Move Split Screen</td>
+<td>移动分屏</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>选择操作</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shift+Up or Ctrl+Shift+P</td>
+<td>Select up</td>
+</tr>
+<tr>
+<td>Shift+Down or Ctrl+Shift+N</td>
+<td>Select down</td>
+</tr>
+<tr>
+<td>Shift+Left or Ctrl+Shift+B</td>
+<td>Select previous character</td>
+</tr>
+<tr>
+<td>Shift+Right or Ctrl+Shift+F</td>
+<td>Select next character</td>
+</tr>
+<tr>
+<td>Alt+Shift+Left or Alt+Shift+B</td>
+<td>Select to beginning of word</td>
+</tr>
+<tr>
+<td>Alt+Shift+Right or Alt+Shift+F</td>
+<td>Select to end of word</td>
+</tr>
+<tr>
+<td>Cmd+Shift+Right or Ctrl+Shift+E</td>
+<td>Select to end of line</td>
+</tr>
+<tr>
+<td>Cmd+Shift+Left or Ctrl+Shift+A</td>
+<td>Select to first character of line</td>
+</tr>
+<tr>
+<td>Cmd+Shift+Up</td>
+<td>Select to top of file</td>
+</tr>
+<tr>
+<td>Cmd+Shift+Down</td>
+<td>Select to bottom of file</td>
+</tr>
+<tr>
+<td>Cmd+A</td>
+<td>Select the entire contents of the file</td>
+</tr>
+<tr>
+<td>Cmd+L</td>
+<td>Select the entire line</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+W</td>
+<td>Select the current word</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>光标操作</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alt+Left or Alt+B</td>
+<td>上一个单词首</td>
+</tr>
+<tr>
+<td>Alt+Right or Alt+F</td>
+<td>下一个单词尾</td>
+</tr>
+<tr>
+<td>Cmd+Left or Ctrl+A</td>
+<td>行首</td>
+</tr>
+<tr>
+<td>Cmd+Right or Ctrl+E</td>
+<td>行尾</td>
+</tr>
+<tr>
+<td>Cmd+Up</td>
+<td>文件头</td>
+</tr>
+<tr>
+<td>Cmd+Down</td>
+<td>文件尾</td>
+</tr>
+<tr>
+<td>Ctrl+P</td>
+<td>上一个词</td>
+</tr>
+<tr>
+<td>Ctrl+N</td>
+<td>下一个词</td>
+</tr>
+<tr>
+<td>Ctrl+B</td>
+<td>左一个词</td>
+</tr>
+<tr>
+<td>Ctrl+F</td>
+<td>右一个词</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">安装插件<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<h3 id="markdown">markdown<a class="headerlink" href="#markdown" title="Permanent link">#</a></h3>
+<ul>
+<li>markdown-preview-plus@2.2.2</li>
+<li>markdown-assistant@0.1.0(Upload images from the clipboard automatically, win10 下失败，osx 完美成功，粘贴图片直接转成 md 文本，不要太棒，优雅的没朋友)</li>
+<li>qiniu-uploader@0.0.3</li>
+<li>markdown-writer@2.3.2(在设置里面设置一下，就拥有了正常 md 编辑器的编辑 md 的各种快捷键 例如 cmd + b, cmd + shift + k 插入链接，而且更棒非常值得一试)</li>
+<li>markdown-toc@0.4.1</li>
+<li>markdown-scroll-sync：markdown同步滚动预览功能</li>
+</ul>
+<h3 id="autocomplete">autocomplete<a class="headerlink" href="#autocomplete" title="Permanent link">#</a></h3>
+<ul>
+<li>atom-ternjs@0.13.2(js 最佳补全插件)</li>
+<li>css-snippets@0.9.0</li>
+<li>autocomplete-html-entities@0.1.0</li>
+<li>tag@0.3.0</li>
+<li>autocomplete-modules@1.4.1</li>
+</ul>
+<h3 id="indent">indent<a class="headerlink" href="#indent" title="Permanent link">#</a></h3>
+<ul>
+<li>guess-indent@0.1.0</li>
+<li>resize-indent@0.2.1</li>
+</ul>
+<h3 id="code-hint-and-linter">code hint and linter<a class="headerlink" href="#code-hint-and-linter" title="Permanent link">#</a></h3>
+<ul>
+<li>linter@1.11.3</li>
+<li>jshint@1.8.3</li>
+<li>jsonlint@1.1.2</li>
+<li>csslint@1.1.4</li>
+<li>htmlhint@1.1.3</li>
+</ul>
+<h3 id="ui">ui<a class="headerlink" href="#ui" title="Permanent link">#</a></h3>
+<ul>
+<li>activate-power-mode@0.4.1(虽然很炫酷，但是我不用)</li>
+<li>file-icons@1.6.18(让你拥有高颜值的文件图标)</li>
+<li>pigments 代码颜色可视化</li>
+<li>foldername-tabs@0.1.11</li>
+<li>highlight-column@0.5.1</li>
+<li>highlight-selected@0.11.2</li>
+<li>indent-guide-improved@1.4.5</li>
+<li>minimap@4.21.0</li>
+<li>fold-comments@0.6.0</li>
+<li>fold-functions@0.4.3</li>
+</ul>
+<h3 id="git-project">git project<a class="headerlink" href="#git-project" title="Permanent link">#</a></h3>
+<ul>
+<li>merge-conflicts@1.3.7(amazing ，再也不怕 git 的合并冲突了，分分钟解决 conflicts)</li>
+<li>git-projects@1.17.0</li>
+</ul>
+<h3 id="other-tools">other tools<a class="headerlink" href="#other-tools" title="Permanent link">#</a></h3>
+<ul>
+<li>atom-beautify@0.28.26（格式化代码）</li>
+<li>line-count@0.5.0</li>
+<li>change-case@0.6.0（将代码文本更改风格，比如 testCode =&gt; TEST_CODE）</li>
+<li>todo-show@1.4.0</li>
+<li>open-html-in-browser@0.1.0</li>
+<li>pretty-json@0.4.1</li>
+</ul>
+<h3 id="tree-view">Tree-view<a class="headerlink" href="#tree-view" title="Permanent link">#</a></h3>
+<ul>
+<li>tree-view-copy-relative-path@1.0.0</li>
+<li>copy-filename@1.0.1</li>
+<li>tree-view-git-status@0.2.3</li>
+<li>chary-tree-view@0.2.3(Tree-view responds to only double-click to avoid opening a large file accidentally.)</li>
+</ul>
+<h2 id="_5">主题<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<h2 id="snippets">snippets<a class="headerlink" href="#snippets" title="Permanent link">#</a></h2>
+<h2 id="git">git<a class="headerlink" href="#git" title="Permanent link">#</a></h2>
+<h2 id="_6">命令行<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>atom打开</strong>:atom filename</li>
+<li><strong>同时打开多个</strong>:atom dir1 dir2</li>
+</ul>
+<p>https://segmentfault.com/a/1190000003043309
+http://simplyy.space/article/56ecd7303aae9e5a65c46d64
+https://www.zhihu.com/question/39938370/answer/91424130?from=profile_answer_card</p>
+<p>http://flight-manual.atom.io/using-atom/sections/editing-and-deleting-text/
+https://wizardforcel.gitbooks.io/atom-flight-manual-zh-cn/content/
+https://github.com/wizardforcel/atom-flight-manual-zh-cn</p>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../../php/php1_intro/" title="基础介绍">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                基础介绍
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="1.1-Why-Atom/" title="为什么选择Atom？">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                为什么选择Atom？
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

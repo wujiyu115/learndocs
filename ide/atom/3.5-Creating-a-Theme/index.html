@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>创建主题 - farwmarth’s note</title>
+      
+      
+      
+        <link rel="canonical" href="http://learndocs.farwmarth.com/ide/atom/3.5-Creating-a-Theme/">
+      
+      
+        <meta name="author" content="farwmarth">
+      
+    
+    <meta property="og:url" content="http://learndocs.farwmarth.com/ide/atom/3.5-Creating-a-Theme/">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/ide/atom/3.5-Creating-a-Theme//../../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../../assets/fonts/icon.eot?52m981');
+      	src: url('../../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Atom编辑器 <i class="icon icon-link"></i>
+              
+            
+              
+                Hacking Atom <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        创建主题
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../../../python/py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../../python/py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../../../python/py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../../../python/py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../../../python/py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../../../python/py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../../python/py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="变量作用域" href="../../../python/py_scope/">
+      变量作用域
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../../../python/py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../../../python/py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../../../python/py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../../../python/py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../../../python/py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../../../python/py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../../../python/py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../../../python/py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../../../python/py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../../../python/py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../../../python/py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../../../python/py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../../../python/py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../../../python/py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../../../python/py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../../../python/py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Atom编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="atom" href="../">
+      atom
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <span class="section">新手入门</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="为什么选择Atom？" href="../1.1-Why-Atom/">
+      为什么选择Atom？
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="安装Atom" href="../1.2-Installing-Atom/">
+      安装Atom
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Atom基础" href="../1.3-Atom-Basics/">
+      Atom基础
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="小结" href="../1.4-Summary/">
+      小结
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <span class="section">使用Atom</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Atom中的包" href="../2.1-Atom-Packages/">
+      Atom中的包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="在Atom中移动" href="../2.2-Moving-in-Atom/">
+      在Atom中移动
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文本选择" href="../2.3-Atom-Selections/">
+      文本选择
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编辑和删除文本" href="../2.4-Editing-and-Deleting-Text/">
+      编辑和删除文本
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="查找和替换" href="../2.5-Find-and-Replace/">
+      查找和替换
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="代码段" href="../2.6-Snippets/">
+      代码段
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="自动补全" href="../2.7-Autocomplete/">
+      自动补全
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="折叠" href="../2.8-Folding/">
+      折叠
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="面板" href="../2.9-Panes/">
+      面板
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="语法" href="../2.10-Grammar/">
+      语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Atom中的版本控制" href="../2.11-Version-Control-in-Atom/">
+      Atom中的版本控制
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="在Atom中写作" href="../2.12-Writing-in-Atom/">
+      在Atom中写作
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基本的自定义" href="../2.13-Basic-Customization/">
+      基本的自定义
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="小结" href="../2.14-Summary/">
+      小结
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <span class="section">Hacking Atom</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="所需工具" href="../3.1-Tools-of-the-Trade/">
+      所需工具
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="初始文件" href="../3.2-The-Init-File/">
+      初始文件
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="字数统计包" href="../3.3-Package-Word-Count/">
+      字数统计包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文本处理包" href="../3.4-Package-Modifying-Text/">
+      文本处理包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="创建主题" href="./">
+      创建主题
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="开始" href="#_2">
+                开始
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="创建语法主题" href="#_3">
+                创建语法主题
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="创建界面主题" href="#_4">
+                创建界面主题
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="开发的工作流" href="#_5">
+                开发的工作流
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="主题变量" href="#_8">
+                主题变量
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图标" href="../3.6-Iconography/">
+      图标
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../3.7-Debugging/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编写 spec" href="../3.8-Writing-specs/">
+      编写 spec
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="从Textmate中转换" href="../3.9-Converting-from-TextMate/">
+      从Textmate中转换
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <span class="section">在Atom背后</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="配置API" href="../4.1-Configuration-API/">
+      配置API
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="深入键表（keymap）" href="../4.2-Keymaps-In-Depth/">
+      深入键表（keymap）
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="作用域设置、作用域和作用域描述符" href="../4.3-Scoped-Settings-Scopes-and-Scope-Descriptors/">
+      作用域设置、作用域和作用域描述符
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Atom中的序列化" href="../4.4-Serialization-in-Atom/">
+      Atom中的序列化
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="开发Node模块" href="../4.5-Developing-Node-Modules/">
+      开发Node模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="通过服务和其它包交互" href="../4.6-Interacting-With-Other-Packages-Via-Services/">
+      通过服务和其它包交互
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="维护你的包" href="../4.7-Maintaining-Your-Packages/">
+      维护你的包
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="小结" href="../4.8-Summary/">
+      小结
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Sublime Text编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="sublimetext" href="../../sublimetext/">
+      sublimetext
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <!-- 译者：Github@wizardforcel -->
+
+<h1 id="_1">创建主题<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<p>Atom的界面使用HTML渲染，并且通过Less来定义样式，它是CSS的超集。不要担心之前从未听说过Less，它类似于CSS，但是带有一些便捷的扩展。</p>
+<p>Atom支持两种主题：UI和语法。UI主题为树视图、选择夹、下拉列表和状态栏之类的元素定义样式。语法主题为编辑器中的代码定义样式。</p>
+<p>主题可以从设置视图安装和修改，你可以选择<code>Atom &gt; Preferences…</code>菜单，然后在左侧的侧栏中选择“Install”和“Theme”部分来打开它。</p>
+<h2 id="_2">开始<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>主题是十分直截了当的，但是如果你在开始之前熟悉一些事情，会很有用处：</p>
+<ul>
+<li>Less是CSS的超集，但是它拥有一些像变量这样便利的特性。如果你并不熟悉它的语法，花几分钟在<a href="https://speakerdeck.com/danmatthews/less-css">这里</a>熟悉它。</li>
+<li>你也可能想要复习一遍<a href="https://atom.io/docs/v1.0.4/ch00/_atom_package_json">package.json</a>的概念。这个文件帮助你把主题分布给其它用户。</li>
+<li>你的主题中的“package.json”包必须含有一个<code>theme</code>键，值为<code>ui</code>或者<code>syntax</code>，为了让Atom识别为主题。</li>
+<li>你可以在atom.io上面找到现有的主题，或者建立它们的分支（fork）。</li>
+</ul>
+<h2 id="_3">创建语法主题<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>让我们来创建你的第一个主题。</p>
+<p>按下<code>cmd-shift-P</code>来开始，并且输入“Generate Syntax Theme”就会一个新的主题包。选择“Generate Syntax Theme”之后，Atom会询问你要把主题新建在哪个目录下。我们把要创建的主题叫做“motif-syntax”。提示：语法主题应该以“-syntax”结尾。</p>
+<p>然后Atom会弹出一个窗口展示motif-syntax主题，带有一些预先创建的文件和文件夹。如果你打开设置视图（<code>cmd-,</code>），并且访问左边的Themes部分，你会看到Syntax Theme下拉列表中列出了Motif。从菜单中选择它来加载。现在打开新的编辑器之后，你应该看到motif-syntax主题被激活了。</p>
+<p>打开styles/colors.less来修改预先定义的各个颜色变量。例如，把<code>@red</code>变成<code>#f4c2c1</code>。</p>
+<p>接着打开styles/base.less来修改预先定义的选择器。选择器为编辑器中不同部分定义样式，例如注释、字符串和侧栏中的行号。</p>
+<p>例如，可以把<code>.gutter``background-color</code>设置为<code>@red</code>。</p>
+<p>通过按下<code>cmd-alt-ctrl-l</code>重启Atom，来在Atom窗口中查看你的修改。这真是极好的。</p>
+<p>提示：你可以通过在dev模式中打开新窗口，来避免查看你所做的修改时重启Atom。来命令行中运行<code>atom --dev .</code>来打开dev模式的Atom窗口。也可以按下<code>cmd-shift-o</code>或者打开<code>View &gt; Developer &gt; Open in Dev Mode</code>菜单来执行。当你编辑你的主题时，修改会立即表现出来。</p>
+<p>建议不要在你的语法主题中指定<code>font-family</code>，因为会覆盖Atom设置中的<code>Font Family</code>字段。如果你仍旧想要推荐一款适合你主题的字体，我们推荐你在README文件中这么做。</p>
+<h2 id="_4">创建界面主题<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>界面主题必须提供<code>ui-variables.less</code>文件，它包含了核心主题提供的所有变量。这些在<a href="https://atom.io/docs/v1.0.4/ch00/_atom_theme_vars">“主题变量”</a>一节会提到。</p>
+<p>执行以下步骤来创建UI主题：</p>
+<ol>
+<li>创建以下仓库之一的分支：</li>
+<li><a href="https://github.com/atom/atom-dark-ui">atom-dark-ui</a></li>
+<li><a href="https://github.com/atom/atom-light-ui">atom-light-ui</a></li>
+<li>克隆分支到本地文件系统</li>
+<li>在主题的目录中打开命令行</li>
+<li>在命令行中通过运行<code>atom --dev .</code>，或者点击<code>View &gt; Developer &gt; Open in Dev Mode</code>菜单，以dev模式打开你的新主题</li>
+<li>在主题的<code>package.json</code>文件中修改主题的名字</li>
+<li>以<code>-ui</code>结尾的名字命名你的主题，例如<code>super-white-ui</code></li>
+<li>运行<code>apm link</code>来把你的主题符号链接到<code>~/.atom/packages</code></li>
+<li>使用<code>cmd-alt-ctrl-L</code>重启Atom</li>
+<li>通过设置视图的Themes部分中的UI Theme下拉列表来开启主题</li>
+<li>做一些修改。由于你在dev模式窗口下打开主题，修改会立即在编辑器中反映，并不需要重启。</li>
+</ol>
+<h2 id="_5">开发的工作流<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<p>下面是一些使主题开发更快速更简单的工具。</p>
+<h3 id="_6">即时重启<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
+<p>在你修改你的主题之后，按下<code>cmd-alt-ctrl-L</code>来重启不是十分理想。在dev模式的Atom窗口下，Atom支持样式的即时更新。</p>
+<p>要想开启dev模式的窗口：</p>
+<ol>
+<li>通过选择<code>View &gt; Developer &gt; Open in Dev Mode</code>菜单，或者按下<code>cmd-shift-o</code>快捷键来直接在dev模式窗口中打开你的主题。</li>
+<li>修改你的主题并保存它。你的修改应该会马上应用。</li>
+</ol>
+<p>如果你想要在任何时候都重新加载全部的样式，你可以使用<code>cmd-ctrl-shift-r</code>快捷键。</p>
+<h3 id="_7">开发者工具<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<p>Atom基于Chrome浏览器，并且支持Chrome开发者工具。你可以选择<code>View &gt; Toggle Developer Tools</code>菜单，或者使用<code>cmd-alt-i</code>快捷键来打开它。</p>
+<p>开发者工具允许你查看各个元素，以及他们的CSS属性。</p>
+<p><img alt="" src="../img/dev-tools.png" /></p>
+<p>简单介绍请查看Google的<a href="../img/dev-tools.png">扩展教程</a>。</p>
+<h3 id="atom">Atom 样式指南<a class="headerlink" href="#atom" title="Permanent link">#</a></h3>
+<p>如果你在创建一个界面主题，你可能想要一种方式来查看你的主题如何影响系统中的组件。<a href="https://github.com/atom/styleguide">样式指南</a>是一个页面，里面渲染了所有Atom支持的组件。</p>
+<p>打开命令面板（<code>cmd-shift-P</code>）寻找“styleguide”，或者使用<code>cmd-ctrl-shift-g</code>快捷键来打开样式指南。</p>
+<p><img alt="" src="../img/styleguide.png" /></p>
+<h2 id="_8">主题变量<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<p>Atom的UI提供了一些变量，你可以在你自己的主题或者包中使用它们。</p>
+<h3 id="_9">在主题中使用<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
+<p>每个自定义的主题都要指定<code>ui-variables.less</code>文件，其中定义了所有下面的变量。主题列表中最上面的主题会被加载，以及可供导入。</p>
+<h3 id="_10">在包中使用<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
+<p>在任何你的包的<code>.less</code>文件中，你可以通过从Atom导入<code>ui-variables</code>文件来访问主题变量。</p>
+<p>你的包应该只指定结构化的样式，并且它们应该全部来自样式指南。你的包不应该指定颜色、内边距（padding）、或者使用绝对像素的任何东西。你应该使用主题变量来代替它。如果你遵循了这一点，你的包将会在任何主题下都表现得很好。</p>
+<p>这里是一个<code>.less</code>文件的例子，一个包可以使用以下主题变量来定义：</p>
+<div class="code"><pre><span></span><span class="cp">@import</span> <span class="s2">&quot;ui-variables&quot;</span><span class="p">;</span>
+
+<span class="p">.</span><span class="n">my</span><span class="o">-</span><span class="n">selector</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="o">:</span> <span class="err">@</span><span class="n">base</span><span class="o">-</span><span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">;</span>
+  <span class="n">padding</span><span class="o">:</span> <span class="err">@</span><span class="n">component</span><span class="o">-</span><span class="n">padding</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_11">变量<a class="headerlink" href="#_11" title="Permanent link">#</a></h3>
+<p><strong>文本颜色</strong></p>
+<ul>
+<li><code>@text-color</code></li>
+<li><code>@text-color-subtle</code></li>
+<li><code>@text-color-highlight</code></li>
+<li><code>@text-color-selected</code></li>
+<li><code>@text-color-info</code> - 蓝色</li>
+<li><code>@text-color-success</code>- 绿色</li>
+<li><code>@text-color-warning</code> - 橙色或者黄色</li>
+<li><code>@text-color-error</code> - 红色</li>
+</ul>
+<p><strong>背景颜色</strong></p>
+<ul>
+<li><code>@background-color-info</code> - 蓝色</li>
+<li><code>@background-color-success</code> - 绿色</li>
+<li><code>@background-color-warning</code> - 橙色或者黄色</li>
+<li><code>@background-color-error</code> - 红色</li>
+<li><code>@background-color-highlight</code></li>
+<li><code>@background-color-selected</code></li>
+<li><code>@app-background-color</code> - 所有编辑器组件下面的应用背景</li>
+</ul>
+<p><strong>组件颜色</strong></p>
+<ul>
+<li><code>@base-background-color</code> -</li>
+<li><code>@base-border-color</code> -</li>
+<li><code>@pane-item-background-color</code> -</li>
+<li><code>@pane-item-border-color</code> -</li>
+<li><code>@input-background-color</code> -</li>
+<li><code>@input-border-color</code> -</li>
+<li><code>@tool-panel-background-color</code> -</li>
+<li><code>@tool-panel-border-color</code> -</li>
+<li><code>@inset-panel-background-color</code> -</li>
+<li><code>@inset-panel-border-color</code> -</li>
+<li><code>@panel-heading-background-color</code> -</li>
+<li><code>@panel-heading-border-color</code> -</li>
+<li><code>@overlay-background-color</code> -</li>
+<li><code>@overlay-border-color</code> -</li>
+<li><code>@button-background-color</code> -</li>
+<li><code>@button-background-color-hover</code> -</li>
+<li><code>@button-background-color-selected</code> -</li>
+<li><code>@button-border-color</code> -</li>
+<li><code>@tab-bar-background-color</code> -</li>
+<li><code>@tab-bar-border-color</code> -</li>
+<li><code>@tab-background-color</code> -</li>
+<li><code>@tab-background-color-active</code> -</li>
+<li><code>@tab-border-color</code> -</li>
+<li><code>@tree-view-background-color</code> -</li>
+<li><code>@tree-view-border-color</code> -</li>
+<li><code>@ui-site-color-1</code> -</li>
+<li><code>@ui-site-color-2</code> -</li>
+<li><code>@ui-site-color-3</code> -</li>
+<li><code>@ui-site-color-4</code> -</li>
+<li><code>@ui-site-color-5</code> -</li>
+</ul>
+<p><strong>组件尺寸</strong></p>
+<ul>
+<li><code>@disclosure-arrow-size</code> -</li>
+<li><code>@component-padding</code> -</li>
+<li><code>@component-icon-padding</code> -</li>
+<li><code>@component-icon-size</code> -</li>
+<li><code>@component-line-height</code> -</li>
+<li><code>@component-border-radius</code> -</li>
+<li><code>@tab-height</code> -</li>
+</ul>
+<p><strong>字体</strong></p>
+<ul>
+<li><code>@font-size</code> -</li>
+<li><code>@font-family</code> -</li>
+</ul>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../3.4-Package-Modifying-Text/" title="文本处理包">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                文本处理包
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../3.6-Iconography/" title="图标">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                图标
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
