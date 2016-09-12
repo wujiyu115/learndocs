@@ -4,6 +4,7 @@ sublimeText 3 配置
 https://www.sublimetext.com/docs/3/
 http://docs.sublimetext.info/en/latest/index.html
 https://sublime-undocs-zh.readthedocs.io/en/latest/index.html
+http://sweetme.at/2013/08/08/sublime-text-keyboard-shortcuts/
 
 ## Package Control使用
 
@@ -98,6 +99,13 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 ```json
 { "keys": ["ctrl+k", "ctrl+h"], "command": "move_to", "args": {"to": "bol", "extend": false} },
 { "keys": ["ctrl+k", "ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} }
+```
+
+####光标移动
+```shell
+ctrl+enter  #另起一行
+ctrl+箭头上 #锁定当前行向上移动
+ctrl+ ->   #光标移单词
 ```
 
 ### Mac
