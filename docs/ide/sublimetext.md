@@ -53,6 +53,14 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 在Anaconda设置里找到pep8把true改为false
 
 
+### jump-to-previous-cursor-position-shortcut
+```shell
+to jump back: Alt + -
+to jump forward: Alt + Shift + -
+or through Goto menu.
+(SublimeText 3, build 3114)
+```
+
 
 ##  快捷键
 
