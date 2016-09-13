@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>异常捕捉 - farwmarth’s note</title>
+        <title>with关键字 - farwmarth’s note</title>
       
       
       
-        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_error/">
+        <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_with/">
       
       
         <meta name="author" content="farwmarth">
       
     
-    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_error/">
+    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_with/">
     <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_error//../../">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_with//../../">
     <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -97,7 +97,7 @@
             
           </span>
         
-        异常捕捉
+        with关键字
       </div>
     </div>
     
@@ -311,9 +311,54 @@
       
         
   <li>
-    <a class="" title="with关键字" href="../py_with/">
+    <a class="current" title="with关键字" href="./">
       with关键字
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="with 的一般执行过程" href="#with">
+                with 的一般执行过程
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="实现上下文管理器类" href="#_1">
+                实现上下文管理器类
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="使用生成器装饰器" href="#_2">
+                使用生成器装饰器
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="总结" href="#_3">
+                总结
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="一些其他的例子" href="#_4">
+                一些其他的例子
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="引用" href="#_5">
+                引用
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -338,36 +383,9 @@
       
         
   <li>
-    <a class="current" title="异常捕捉" href="./">
+    <a class="" title="异常捕捉" href="../py_error/">
       异常捕捉
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="异常捕捉" href="#_1">
-                异常捕捉
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="记录错误" href="#_2">
-                记录错误
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="抛出错误" href="#_3">
-                抛出错误
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -985,68 +1003,194 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="python">python 异常处理<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
-<h2 id="_1">异常捕捉<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<p>异常捕捉可以使我们的程序更加健壮
-当我们认为某些代码可能会出错时，就可以用<code>try</code>来运行这段代码，如果执行出错，则后续代码不会继续执行，而是直接跳转至错误处理代码，即<code>except</code>语句块，执行完<code>except</code>后，如果有<code>finally</code>语句块，则执行<code>finally</code>语句块，至此，执行完毕</p>
-<div class="code"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;try...&#39;</span><span class="p">)</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;result:&#39;</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;ValueError:&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;ZeroDivisionError:&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;no error!&#39;</span><span class="p">)</span>
+          <h1 id="python-with">Python 中的关键字with详解<a class="headerlink" href="#python-with" title="Permanent link">#</a></h1>
+<p>转载自:https://github.com/zgs225/yuezlog/blob/master/source/_posts/2016-09-10-python-zhong-de-guan-jian-zi-with-xiang-jie.markdown</p>
+<p>在 Python 2.5 中，<code>with</code>关键字被加入。它将常用的 <code>try ... except ... finally ...</code>模式很方便的被复用。看一个最经典的例子：</p>
+<div class="code"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+
+<p>在这段代码中，无论<code>with</code>中的代码块在执行的过程中发生任何情况，文件最终都会被关闭。如果代码块在执行的过程中发生了一个异常，那么在这个异常被抛出前，程序会先将被打开的文件关闭。</p>
+<p>再看另外一个例子。</p>
+<p>在发起一个数据库事务请求的时候，经常会用类似这样的代码：</p>
+<div class="code"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># do some actions</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+    <span class="k">raise</span>
 <span class="k">finally</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;finally...&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">try...</span>
-<span class="sd">ValueError: invalid literal for int() with base 10: &#39;a&#39;</span>
-<span class="sd">finally...</span>
-<span class="sd">END</span>
-<span class="sd">&#39;&#39;&#39;</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </pre></div>
 
 
-<h2 id="_2">记录错误<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<p><code>traceback</code>:堆栈信息
-<code>logging</code>:日志记录</p>
-<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span><span class="o">,</span><span class="nn">traceback</span>
+<p>如果将发起事务请求的操作变成可以支持<code>with</code>关键字的，那么用像这样的代码就可以了：</p>
+<div class="code"><pre><span></span><span class="k">with</span> <span class="n">transaction</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
+    <span class="c1"># do some actions</span>
+</pre></div>
 
-<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">10</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">foo</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+<p>下面，详细的说明一下<code>with</code>的执行过程，并用两种常用的方式实现上面的代码。</p>
+<h2 id="with">with 的一般执行过程<a class="headerlink" href="#with" title="Permanent link">#</a></h2>
+<p>一段基本的<code>with</code>表达式，其结构是这样的：</p>
+<div class="code"><pre><span></span><span class="k">with</span> <span class="n">EXPR</span> <span class="k">as</span> <span class="n">VAR</span><span class="p">:</span>
+    <span class="n">BLOCK</span>
+</pre></div>
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+<p>其中：<code>EXPR</code>可以是任意表达式；<code>as VAR</code>是可选的。其一般的执行过程是这样的：</p>
+<ol>
+<li>计算<code>EXPR</code>，并获取一个上下文管理器。</li>
+<li>上下文管理器的<code>__exit()__</code>方法被保存起来用于之后的调用。</li>
+<li>调用上下文管理器的<code>__enter()__</code>方法。</li>
+<li>如果<code>with</code>表达式包含<code>as VAR</code>，那么<code>EXPR</code>的返回值被赋值给<code>VAR</code>。</li>
+<li>执行<code>BLOCK</code>中的表达式。</li>
+<li>调用上下文管理器的<code>__exit()__</code>方法。如果<code>BLOCK</code>的执行过程中发生了一个异常导致程序退出，那么异常的<code>type</code>、<code>value</code>和<code>traceback</code>(即<code>sys.exc_info()</code>的返回值)将作为参数传递给<code>__exit()__</code>方法。否则，将传递三个<code>None</code>。</li>
+</ol>
+<p>将这个过程用代码表示，是这样的：</p>
+<div class="code"><pre><span></span><span class="n">mgr</span> <span class="o">=</span> <span class="p">(</span><span class="n">EXPR</span><span class="p">)</span>
+<span class="nb">exit</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">mgr</span><span class="p">)</span><span class="o">.</span><span class="n">__exit__</span> <span class="c1"># 这里没有执行</span>
+<span class="n">value</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">mgr</span><span class="p">)</span><span class="o">.</span><span class="n">__enter__</span><span class="p">(</span><span class="n">mgr</span><span class="p">)</span>
+<span class="n">exc</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="k">try</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">bar</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span> <span class="p">)</span>
-        <span class="c1"># logging.exception(e)</span>
-
-<span class="n">main</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;END&#39;</span><span class="p">)</span>
+        <span class="n">VAR</span> <span class="o">=</span> <span class="n">value</span> <span class="c1"># 如果有 as VAR</span>
+        <span class="n">BLOCK</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">exc</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">exit</span><span class="p">(</span><span class="n">mgr</span><span class="p">,</span> <span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()):</span>
+            <span class="k">raise</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="nb">exit</span><span class="p">(</span><span class="n">mgr</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 </pre></div>
 
 
-<h2 id="_3">抛出错误<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
-<p>自定义<code>error</code>类继承Python已有的内置的错误类型（比如ValueError，TypeError）,<code>raise</code>语句抛出一个错误的实例</p>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">SelfError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
-    <span class="k">pass</span>
+<p>这个过程有几个细节：</p>
+<ul>
+<li>如果上下文管理器中没有<code>__enter()__</code>或者<code>__exit()__</code>中的任意一个方法，那么解释器会抛出一个<code>AttributeError</code>。</li>
+<li>在<code>BLOCK</code>中发生异常后，如果<code>__exit()__</code>方法返回一个可被看成是<code>True</code>的值，那么这个异常就不会被抛出，后面的代码会继续执行。</li>
+</ul>
+<p>接下来，用两种方法来实现上面来实现上面的过程的吧。</p>
+<h2 id="_1">实现上下文管理器类<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>第一种方法是实现一个类，其含有一个实例属性<code>db</code>和上下文管理器所需要的方法<code>__enter()__</code>和<code>__exit()__</code>。</p>
+<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">transaction</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">db</span>
 
-<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">SelfError</span><span class="p">(</span><span class="s1">&#39;invalid value: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">s</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">n</span>
+    <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
 
-<span class="n">foo</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
 </pre></div>
+
+
+<p>了解<code>with</code>的执行过程后，这个实现方式是很容易理解的。下面介绍的实现方式，其原理理解起来要复杂很多。</p>
+<h2 id="_2">使用生成器装饰器<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>在Python的标准库中，有一个装饰器可以通过生成器获取上下文管理器。使用生成器装饰器的实现过程如下：</p>
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">transaction</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">db</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+        <span class="k">raise</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+
+
+<p>第一眼上看去，这种实现方式更为简单，但是其机制更为复杂。看一下其执行过程吧：</p>
+<ol>
+<li>Python解释器识别到<code>yield</code>关键字后，<code>def</code>会创建一个生成器函数替代常规的函数（在类定义之外我喜欢用函数代替方法）。</li>
+<li>装饰器<code>contextmanager</code>被调用并返回一个帮助函数，这个帮助函数在被调用后会生成一个<code>GeneratorContextManager</code>实例。最终<code>with</code>表达式中的<code>EXPR</code>调用的是由<code>contentmanager</code>装饰器返回的帮助函数。</li>
+<li><code>with</code>表达式调用<code>transaction(db)</code>，实际上是调用帮助函数。帮助函数调用生成器函数，生成器函数创建一个生成器。</li>
+<li>帮助函数将这个生成器传递给<code>GeneratorContextManager</code>，并创建一个<code>GeneratorContextManager</code>的实例对象作为上下文管理器。</li>
+<li><code>with</code>表达式调用实例对象的上下文管理器的<code>__enter()__</code>方法。</li>
+<li><code>__enter()__</code>方法中会调用这个生成器的<code>next()</code>方法。这时候，生成器方法会执行到<code>yield db</code>处停止，并将<code>db</code>作为<code>next()</code>的返回值。如果有<code>as VAR</code>，那么它将会被赋值给<code>VAR</code>。</li>
+<li><code>with</code>中的<code>BLOCK</code>被执行。</li>
+<li><code>BLOCK</code>执行结束后，调用上下文管理器的<code>__exit()__</code>方法。<code>__exit()__</code>方法会再次调用生成器的<code>next()</code>方法。如果发生<code>StopIteration</code>异常，则<code>pass</code>。</li>
+<li>如果没有发生异常生成器方法将会执行<code>db.commit()</code>，否则会执行<code>db.rollback()</code>。</li>
+</ol>
+<p>再次看看上述过程的代码大致实现：</p>
+<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">contextmanager</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">helper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">GeneratorContextManager</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">helper</span>
+
+<span class="k">class</span> <span class="nc">GeneratorContextManager</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gen</span> <span class="o">=</span> <span class="n">gen</span>
+
+    <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t stop&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">throw</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t stop after throw()&quot;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+                    <span class="k">raise</span>
+</pre></div>
+
+
+<h2 id="_3">总结<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>Python的<code>with</code>表达式包含了很多Python特性，花点时间吃透<code>with</code>是一件非常值得的事情。</p>
+<h2 id="_4">一些其他的例子<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>``` python 锁机制
+@contextmanager
+def locked(lock):
+    lock.acquired()
+    try:
+        yield
+    finally:
+        lock.release()</p>
+<div class="code"><pre><span></span>``` python 标准输出重定向
+@contextmanager
+def stdout_redirect(new_stdout):
+    old_stdout = sys.stdout
+    sys.stdout = new_stdout
+    try:
+        yield
+    finally:
+        sys.stdout = old_stdout
+
+with open(&quot;file.txt&quot;, &quot;w&quot;) as f:
+    with stdout_redirect(f):
+        print &quot;hello world&quot;
+</pre></div>
+
+
+<h2 id="_5">引用<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="http://preshing.com/20110920/the-python-with-statement-by-example/">The Python "with" Statement by Example</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0343/">PEP 343</a></li>
+</ul>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 farwmarth &ndash;
@@ -1065,7 +1209,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../py_enum/" title="枚举">
+        <a href="../py_class/" title="类">
           <span class="direction">
             Previous
           </span>
@@ -1075,7 +1219,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                枚举
+                类
               </div>
             </div>
           </div>
@@ -1084,14 +1228,14 @@
     </div>
     <div class="next">
       
-        <a href="../py_test/" title="调试">
+        <a href="../py_scope/" title="变量作用域">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                调试
+                变量作用域
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
