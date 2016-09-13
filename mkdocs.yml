@@ -48,6 +48,7 @@ pages:
     - '步骤': 'python/py5_step.md'
     - '组织': 'python/py6_organize.md'
     - '类': 'python/py_class.md'
+    - 'with关键字': 'python/py_with.md'
     - '变量作用域': 'python/py_scope.md'
     - '枚举': 'python/py_enum.md'
     - '异常捕捉': 'python/py_error.md'
@@ -71,6 +72,8 @@ pages:
     - 'swift基础入门': 'swift/swift1_intro.md'
 - php:
     - '基础介绍': 'php/php1_intro.md'
+- Vim编辑器:
+    - 'vim': 'ide/vim.md'
 - Atom编辑器:
     - 'atom': 'ide/atom.md'
     - '新手入门':
