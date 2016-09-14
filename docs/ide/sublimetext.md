@@ -61,6 +61,14 @@ or through Goto menu.
 (SublimeText 3, build 3114)
 ```
 
+### Open the console and type
+```shell
+sublime.log_commands(True)
+sublime.log_input(True)
+```
+
+### 缩进设置
+http://feliving.github.io/Sublime-Text-3-Documentation/indentation.html
 
 ##  快捷键
 
@@ -109,11 +117,17 @@ or through Goto menu.
 { "keys": ["ctrl+k", "ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} }
 ```
 
-####光标移动
+#### 光标移动
 ```shell
 ctrl+enter  #另起一行
 ctrl+箭头上 #锁定当前行向上移动
 ctrl+ ->   #光标移单词
+```
+
+
+####  cacel build
+```json
+{ "keys": ["ctrl+shift+c"], "command": "exec", "args": {"kill": true} }
 ```
 
 ### Mac
@@ -150,7 +164,6 @@ ctrl+ ->   #光标移单词
 }
 ```
 
-### BracketHighlighter
 
 ### Chinese​Translator
 翻译插件,选中中文翻译成英文,英文翻译成中文
@@ -166,7 +179,7 @@ ctrl+ ->   #光标移单词
 ```
 
 ### BracketHighlighter
-
+标签匹配
 ![标签匹配](/_static/2c23129492d6d74b8f9139711578e9ad0d1115a0.png)
 
 ### Colorsublime
