@@ -72,6 +72,9 @@ pages:
     - 'swift基础入门': 'swift/swift1_intro.md'
 - php:
     - '基础介绍': 'php/php1_intro.md'
+- git:
+    - 'git备忘录': 'versions/git_remark.md'
+    - 'git简介': 'versions/git_intro.md'
 - Vim编辑器:
     - 'vim': 'ide/vim.md'
 - Atom编辑器:
