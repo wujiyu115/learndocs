@@ -110,6 +110,8 @@ http://feliving.github.io/Sublime-Text-3-Documentation/indentation.html
 + `Ctrl+Shift Enter `插入行前
 + `F9` 行排序（按a-z）
 + `ALT+SHIFT+2` 分屏
++ Ctrl + Home -> to the beginning of the file
++ Ctrl + End -> to the end of the fil
 
 #### 光标移动到首尾设置
 ```json
@@ -344,7 +346,7 @@ svn管理
 注释生成工具
 
 ## 授权
-###  破解版: 
+###  破解版:
 + <https://sublimecrack.wordpress.com/2015/06/07/sublime_text3_crack/>
 + <http://haojian138.blog.163.com/blog/static/212643110201393010438357//>
 
