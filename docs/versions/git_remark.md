@@ -6,9 +6,26 @@ https://bingohuang.gitbooks.io/progit2/content/
 
 https://leohxj.gitbooks.io/learning-git/content/appendix/learning-assets.html
 
+https://jwiegley.github.io/git-from-the-bottom-up/
+
+https://www.zhihu.com/question/22932048
+
+
+### 下面是一张常用命令的图解
+
+![](http://farwmarth.com/wp-content/2010072023345292.png)
+
+[![image](http://farwmarth.com/wp-content/uploads/2013/08/image_thumb9.png "image")](http://farwmarth.com/wp-content/uploads/2013/08/image9.png) 上面的部份: 以 左上方红色的remote repository(从远端 clone 一份到 local端) 或 黄色区块的local repository 为起点, 来看此区块.
+下面的部份: 由 Local repository 开始看, 主要是说明 做 local branch 的流程.
+### github图解
+https://help.github.com/articles/set-up-git/
+
+![github.png](/_static/github.jpg)
+
+
 ## Git 常用操作:
-### 操作
-+ git删除未跟踪文件
+
+### git删除未跟踪文件
 ```shell
 # 删除 untracked files
 git clean -f
@@ -22,31 +39,60 @@ git clean -nf
 git clean -nfd
 ```
 
-
-+ git回滚远程版本
+### 撤消
 ```shell
-    git log
-    git reset --soft ${commit-id}
-    git stash
-    git push -f
+#撤消megre
+git checkout 【行merge操作时所在的分支】
+git reset --hard 【merge前的版本号】
+https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C
+
+#回退到远程版本
+git reset --hard origin/master
+#合并时遇到冲突想取消操作，恢复index，用git merge --abort
+git reset HEAD #从暂存区移除(add之后)
+git reset --hard #可以回退到某个提交(commit之后)
+git revert #可以撤销某个提交，撤销会产生一个新的提交
+git rebase #合并时记录更简洁
+```
+
+### git回退到远程版本
+```shell
+#回退到与远程版本一致
+git clean -df #清除新加的未在版本控制中的文件
+git reset --hard origin/master
 ```
 
 
-+ git 丢弃更改
+###  合并提交
 ```shell
-git reset --hard
+git rebase -i  51c5b4850060ff675f4541b8b7cd479f94b743e8
+#要合并的前面全部改成s
+
 ```
 
-### 下面是一张常用命令的图解
 
-![](http://farwmarth.com/wp-content/2010072023345292.png)
+### 比较差异
+```shell
+#比较本地master分支和远程master分支的差异
+git diff master origin/master
+#比较远程分支与本地文件差异
+git diff  origin/master a.txt
+```
 
-[![image](http://farwmarth.com/wp-content/uploads/2013/08/image_thumb9.png "image")](http://farwmarth.com/wp-content/uploads/2013/08/image9.png) 上面的部份: 以 左上方红色的remote repository(从远端 clone 一份到 local端) 或 黄色区块的local repository 为起点, 来看此区块.
-下面的部份: 由 Local repository 开始看, 主要是说明 做 local branch 的流程.
-### github图解
-https://help.github.com/articles/set-up-git/
+### 不commit情况下pull
+```shell
+git stash
+git pull
+git stash pop
+git stash drop stash{1}
+git stash clear
+```
 
-![github.png](/_static/github.jpg)
+### git log
+```shell
+#显示差异
+git log -p
+```
 
 
 ## 概念
@@ -86,6 +132,7 @@ git的全局配置文件.
 [credential]
     helper = store
 ```
+
 ####  .git-credentials
 这个也是git的push时不用多次输入密码的配置.
 官方说明:<https://git-scm.com/docs/git-credential-store>
@@ -95,6 +142,7 @@ git的全局配置文件.
 ```
 https://username@gmail.com:pwd@git.coding.net
 ```
+
 ####  _netrc
 _netrc这个配置是用来自动化ftp上传下载的. 说明:<http://www.mavetju.org/unix/netrc.php> .需要600权限`chmod 600 .netrc.` 一般只要用machine段就可以了.常用仓库如下配置在push时不用再输入密码.
 ```
@@ -117,36 +165,48 @@ github.com,192.30.252.128 ssh-rsa xxx(key)
 git.coding.net,61.179.108.67 ssh-rsa  xxx(key)
 ```
 
-### gitflow
+### git工作流
+
+#### gitflow
 http://nvie.com/posts/a-successful-git-branching-model/
 
-### 另一种工作流
-https://segmentfault.com/q/1010000000181403
-
+#### 工作流一
 ```shell
 #git支持很多种工作流程，我们采用的一般是这样，远程创建一个主分支，本地每人创建功能分支，日常工作流程如下：
 #去自己的工作分支
-git checkout work
-#工作....
+$ git checkout work
+#工作
+....
 #提交工作分支的修改
-git commit -a
+$ git commit -a
 #回到主分支
-git checkout master
+$ git checkout master
 #获取远程最新的修改，此时不会产生冲突
-git pull
+$ git pull
 #回到工作分支
-git checkout work
+$ git checkout work
 #用rebase合并主干的修改，如果有冲突在此时解决
-git rebase master
-git add .
-git rebase --continue
+$ git rebase master
+$ git add .
+$ git rebase --continue
+$ git rebase --abort
+$ git rebase --skip忽略冲突
 #回到主分支
-git checkout master
-#合并工作分支的修改，此时不会产生冲突。
-git merge work
+$ git checkout master
+#合并工作分支的修改，把分支提交合并成一个
+$ git merge --squash work
 #提交到远程主干
-git push
+$ git push
 #这样做的好处是，远程主干上的历史永远是线性的。每个人在本地分支解决冲突，不会在主干上产生冲突
+```
+
+
+#### 工作流二
+```shell
+git stash
+git pull origin master
+git stash pop
+git stash clear
 ```
 
 ### 同一台电脑有2个github账号
@@ -196,6 +256,10 @@ git config  user.name "suzie"
 [http://blog.csdn.net/luckarecs/article/details/7427605](http://blog.csdn.net/luckarecs/article/details/7427605)
 
 ![](/_static/egit.jpg)
+
+### gitg
+linux图形工具
+
 
 ##  问题
 
