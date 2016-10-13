@@ -75,6 +75,7 @@ pages:
 - git:
     - 'git备忘录': 'versions/git_remark.md'
     - 'git简介': 'versions/git_intro.md'
+    - 'git操作': 'versions/git_oper.md'
 - Vim编辑器:
     - 'vim': 'ide/vim.md'
 - Atom编辑器:
