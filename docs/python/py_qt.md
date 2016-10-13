@@ -35,7 +35,7 @@ make install
 	![qtdesigner](http://ww1.sinaimg.cn/large/4b5a1116gw1ezy5cutpbdj20ss0eoad8.jpg)
 	- 配置pyuic工具,将`.ui`文件转换成`.py`文件
 	![pyuic](http://ww2.sinaimg.cn/large/4b5a1116gw1ezy5d804cvj20ss0eoadb.jpg)
-	- 然后就可以使用配置的外置工具来编辑`.ui`文件了
+	- 然后就可以使用配置的外置工具来编辑`.ui`文件了  
 	![tools](http://ww1.sinaimg.cn/large/4b5a1116gw1ezy5ddu7xej20dx0ha0wv.jpg)
 	![qtdesigner_open](http://ww4.sinaimg.cn/large/4b5a1116gw1ezy5dilzpqj20hs0avwhk.jpg)
 

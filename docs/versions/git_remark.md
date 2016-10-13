@@ -4,6 +4,10 @@ Git 备忘录
 
 https://bingohuang.gitbooks.io/progit2/content/
 
+https://git-scm.com/book/zh/v2
+
+https://marklodato.github.io/visual-git-guide/index-zh-cn.html
+
 https://leohxj.gitbooks.io/learning-git/content/appendix/learning-assets.html
 
 https://jwiegley.github.io/git-from-the-bottom-up/
@@ -92,6 +96,14 @@ git stash clear
 ```shell
 #显示差异
 git log -p
+```
+
+
+### 拉取远程分支并新建本地分支
+```shell
+git checkout -t origin/2.0.0
+#或者
+git checkout origin/remoteName -b localName
 ```
 
 
