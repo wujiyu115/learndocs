@@ -2,17 +2,6 @@ Git 备忘录
 =================
 
 
-https://bingohuang.gitbooks.io/progit2/content/
-
-https://git-scm.com/book/zh/v2
-
-https://marklodato.github.io/visual-git-guide/index-zh-cn.html
-
-https://leohxj.gitbooks.io/learning-git/content/appendix/learning-assets.html
-
-https://jwiegley.github.io/git-from-the-bottom-up/
-
-https://www.zhihu.com/question/22932048
 
 
 ### 下面是一张常用命令的图解
