@@ -1,5 +1,9 @@
 git 操作
 ==============
+## 仓库、缓冲区、工作副本
+
+![](img/repository.png)
+
 
 ## Git配置
 Git 自带一个 `git config` 的工具来帮助设置控制 Git 外观和行为的配置变量。 这些变量存储在三个不同的位置：
@@ -31,13 +35,57 @@ git config --list
 git config user.name
 ```
 
-git init
+
+## Git init
+初始化仓库，该命令将创建一个名为 .git 的子目录，这个子目录含有你初始化的 Git 仓库中所有的必须文件，这些文件是 Git 仓库的骨干
+
+## Git status
+```shell
+#显示状态
 git status
-git remove
+#短格式显示
+git status -s
+```
 
-##  本地仓库操作
+状态标识:
++ ' ' = unmodified
++ M = modified
++ A = added
++ D = deleted
++ R = renamed
++ C = copied
++ U = updated but unmerged
 
-### git commit
+```shell
+X          Y     Meaning
+-------------------------------------------------
+          [MD]   not updated
+M        [ MD]   updated in index
+A        [ MD]   added to index
+D         [ M]   deleted from index
+R        [ MD]   renamed in index
+C        [ MD]   copied in index
+[MARC]           index and work tree matches
+[ MARC]     M    work tree changed since index
+[ MARC]     D    deleted in work tree
+-------------------------------------------------
+D           D    unmerged, both deleted
+A           U    unmerged, added by us
+U           D    unmerged, deleted by them
+U           A    unmerged, added by them
+D           U    unmerged, deleted by us
+A           A    unmerged, both added
+U           U    unmerged, both modified
+-------------------------------------------------
+?           ?    untracked
+!           !    ignored
+```
+
+## Git remove
+用于移除仓库中的文件,如`git rm *.txt`移除所的的txt文件
+
+
+## Git commit
 提交时，git用暂存区域的文件创建一个新的提交，并把此时的节点设为父节点。然后把当前分支指向新的提交节点。下图中，当前分支是master。 在运行命令之前，master指向ed489，提交后，master指向新的节点f0cec并以ed489作为父节点
 ![](img/commit-master.svg)
 
@@ -62,8 +110,12 @@ git remove
 
 ![](img/checkout-b-detached.svg)
 
-### git checkout
+## Git checkout
 checkout命令用于从历史提交（或者暂存区域）中拷贝文件到工作目录，也可用于切换分支。
+
++ `git checkout HEAD a.txt`:从`提交快照`中提取文件到`暂存区`和`工作空间`中
++ `git checkout  a.txt`:从`暂存区`中提取文件到`工作空间`中
++ `git checkout  master`:切换分支
 
 当给定某个文件名（或者打开-p选项，或者文件名和-p选项同时打开）时，git会从指定的提交中拷贝文件到暂存区域和工作目录。比如，git checkout HEAD~ foo.c会将提交节点HEAD~(即当前提交节点的父节点)中的foo.c复制到工作目录并且加到暂存区域中。（如果命令中没有指定提交节点，则会从暂存区域中拷贝内容。）注意当前分支不会发生变化
 
@@ -77,8 +129,12 @@ checkout命令用于从历史提交（或者暂存区域）中拷贝文件到工
 
 ![](img/checkout-detached.svg)
 
-### git reset
+
+
+## Git reset
 reset命令把当前分支指向另一个位置，并且有选择的变动工作目录和索引。也用来在从历史仓库中复制文件到索引，而不动工作目录。
+
+![](img/reset_area.svg)
 
 如果不给选项，那么当前分支指向到那个提交。如果用--hard选项，那么工作目录也更新，如果用--soft选项，那么都不变
 
@@ -92,6 +148,15 @@ reset命令把当前分支指向另一个位置，并且有选择的变动工作
 
 ![](img/reset-files.svg)
 
+### Git reset 还原
+`git reset HEAD~`
+
+`git reset 'HEAD@{1}'`或者 `git reset ORIG_HEAD`
+
+## Git revert
+
+
+## 总结
 
 + git add files 把当前文件放入暂存区域。
 + git commit 给暂存区域生成快照并提交。
@@ -100,9 +165,30 @@ reset命令把当前分支指向另一个位置，并且有选择的变动工作
 
 ![](img/basic-usage.svg)
 
-git clone
+## Git clone
+如果你想获得一份已经存在了的 Git 仓库的拷贝，比如说，你想为某个开源项目贡献自己的一份力，这时就要用到 git clone 命令。 如果你对其它的 VCS 系统（比如说Subversion）很熟悉，请留心一下你所使用的命令是"clone"而不是"checkout"
+
+```shell
+git clone https://github.com/libgit2/libgit2
+```
+
+## Git remote
+远程仓库管理
+```shell
+#查看远程仓库别名
 git remote
-git revert
+#查看远程仓库地址
+git remote -v
+#添加远程仓库
+git remote add up https://git.coding.net/farwmarth/test_git.git
+#查看远程仓库详细的分析信息
+git remote show origin
+#把 pb 改成 paul
+git remote rename  pb paul
+#移除远程仓库链接
+git remote rm up
+```
+
 git branch
 
 ##  Git megre
@@ -119,9 +205,10 @@ git tag
 ```shell
 #查看最后一条提交
 git log -1
+#查看以往提交历史（包括 撤销回退 记录）
+git reflog
 ```
 
-git log
 git pull
 git push
 git fetch
@@ -129,12 +216,13 @@ git fetch
 gitk
 
 ## Git查看提交变动
-git diff
++ `git diff` :比较`工作区`和`暂存区`的变化
++ `git diff --cached` 与 `git diff --staged`  相同 :比较`暂存区`与`提交快照`的变化
++ `git diff HEAD` :比较`工作区`与`提交快照`的变化
+
 ![](img/diff.svg)
 
-git diff --staged
-git diff --cached
-git diff HEAD
+
 
 git mv
 git show
