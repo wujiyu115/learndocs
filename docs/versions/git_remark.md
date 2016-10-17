@@ -8,8 +8,6 @@ Git 备忘录
 
 ![](http://farwmarth.com/wp-content/2010072023345292.png)
 
-[![image](http://farwmarth.com/wp-content/uploads/2013/08/image_thumb9.png "image")](http://farwmarth.com/wp-content/uploads/2013/08/image9.png) 上面的部份: 以 左上方红色的remote repository(从远端 clone 一份到 local端) 或 黄色区块的local repository 为起点, 来看此区块.
-下面的部份: 由 Local repository 开始看, 主要是说明 做 local branch 的流程.
 ### github图解
 https://help.github.com/articles/set-up-git/
 
@@ -18,73 +16,27 @@ https://help.github.com/articles/set-up-git/
 
 ## Git 常用操作:
 
-### git删除未跟踪文件
-```shell
-# 删除 untracked files
-git clean -f
-# 连 untracked 的目录也一起删掉
-git clean -fd
-# 连 gitignore 的untrack 文件/目录也一起删掉 （慎用，一般这个是用来删掉编译出来的 .o之类的文件用的）
-git clean -xfd
-# 在用上述 git clean 前，墙裂建议加上 -n 参数来先看看会删掉哪些文件，防止重要文件被误删
-git clean -nxfd
-git clean -nf
-git clean -nfd
-```
+
 
 ### 撤消
 ```shell
-#撤消megre
-git checkout 【行merge操作时所在的分支】
-git reset --hard 【merge前的版本号】
-https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C
-
 #回退到远程版本
 git reset --hard origin/master
 #合并时遇到冲突想取消操作，恢复index，用git merge --abort
 git reset HEAD #从暂存区移除(add之后)
 git reset --hard #可以回退到某个提交(commit之后)
 git revert #可以撤销某个提交，撤销会产生一个新的提交
-git rebase #合并时记录更简洁
 ```
 
-### git回退到远程版本
-```shell
-#回退到与远程版本一致
-git clean -df #清除新加的未在版本控制中的文件
-git reset --hard origin/master
-```
 
 
 ###  合并提交
 ```shell
+git rebase #合并时记录更简洁
+
 git rebase -i  51c5b4850060ff675f4541b8b7cd479f94b743e8
 #要合并的前面全部改成s
 
-```
-
-
-### 比较差异
-```shell
-#比较本地master分支和远程master分支的差异
-git diff master origin/master
-#比较远程分支与本地文件差异
-git diff  origin/master a.txt
-```
-
-### 不commit情况下pull
-```shell
-git stash
-git pull
-git stash pop
-git stash drop stash{1}
-git stash clear
-```
-
-### git log
-```shell
-#显示差异
-git log -p
 ```
 
 
@@ -107,11 +59,6 @@ git checkout origin/remoteName -b localName
 git submodule foreach git submodule update
 ```
 
-#### 删除submodule
-```shell
-git rm --cached WeChat-Cloud-Robot
-#对于显性定义的子模组，还要删除 .gitmodules 文件和 .git/config 文件中的相关条目。
-```
 
 ### 只checkout部分git文件
 ```shell

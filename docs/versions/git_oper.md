@@ -33,6 +33,8 @@ git config --global core.editor emacs
 git config --list
 #查看某项
 git config user.name
+#移除设置
+git config --unset user.name
 ```
 
 
@@ -48,13 +50,14 @@ git status -s
 ```
 
 状态标识:
+
 + ' ' = unmodified
-+ M = modified
-+ A = added
-+ D = deleted
-+ R = renamed
-+ C = copied
-+ U = updated but unmerged
++ M = modified(已修改)
++ A = added(已添加)
++ D = deleted(已删除)
++ R = renamed(已重命名)
++ C = copied(已复制)
++ U = updated but unmerged(已更新但未合并)
 
 ```shell
 X          Y     Meaning
@@ -81,9 +84,34 @@ U           U    unmerged, both modified
 !           !    ignored
 ```
 
-## Git remove
+## Git rm
 用于移除仓库中的文件,如`git rm *.txt`移除所的的txt文件
 
+## Git mv
+`git`系统中移动一个文件或者目录相当于`shell`命令
+```shell
+mv oldname newname
+git add newname
+git rm oldname
+```
+
+## Git show
+显示对象的更多信息
+
++ 对于commit,展示log和差异
++ 对于tag,显示tag相关信息
++ 对于tree对象,列出树结构名字
++ 对于blob对象,显示文件内容
+
+```shell
+#显示提交信息
+git show 716cae27bc24b0f56b0dff5039e6a2cf8ac3edac
+#显示分支的信息
+git show v1.0.0
+```
+
+## Git add
+把当前文件放入暂存区域
 
 ## Git commit
 提交时，git用暂存区域的文件创建一个新的提交，并把此时的节点设为父节点。然后把当前分支指向新的提交节点。下图中，当前分支是master。 在运行命令之前，master指向ed489，提交后，master指向新的节点f0cec并以ed489作为父节点
@@ -153,10 +181,19 @@ reset命令把当前分支指向另一个位置，并且有选择的变动工作
 
 `git reset 'HEAD@{1}'`或者 `git reset ORIG_HEAD`
 
+```shell
+#git 1.7以来可以撤消合并
+git reset --merge
+```
+
 ## Git revert
+```shell
+#恢复到上一个版本HEAD提交并创建一个新的提交覆盖原有的变更
+git revert HEAD~
+git revert -n master~5..master~2
+```
 
-
-## 总结
+### 总结
 
 + git add files 把当前文件放入暂存区域。
 + git commit 给暂存区域生成快照并提交。
@@ -165,12 +202,35 @@ reset命令把当前分支指向另一个位置，并且有选择的变动工作
 
 ![](img/basic-usage.svg)
 
+
 ## Git clone
 如果你想获得一份已经存在了的 Git 仓库的拷贝，比如说，你想为某个开源项目贡献自己的一份力，这时就要用到 git clone 命令。 如果你对其它的 VCS 系统（比如说Subversion）很熟悉，请留心一下你所使用的命令是"clone"而不是"checkout"
 
 ```shell
 git clone https://github.com/libgit2/libgit2
 ```
+
+## Git fetch
+```shell
+#只拉取远程仓库信息不合并
+git fetch origin
+```
+
+## Git pull
+把远程仓库更改拉取并且合并到本地当前分支,`git pull`相当于 `git fetch`和`git merge FETCH_HEAD`两步操作
+```shell
+#拉取并合并
+git pull
+#拉取远程origin合并到master
+git pull origin master
+```
+
+## Git push
+```shell
+#将本地master分支提交推送到远程origin
+git push orign master
+```
+
 
 ## Git remote
 远程仓库管理
@@ -189,31 +249,87 @@ git remote rename  pb paul
 git remote rm up
 ```
 
-git branch
 
-##  Git megre
-merge 命令把不同分支合并起来。合并前，索引必须和当前提交相同。如果另一个分支是当前提交的祖父节点，那么合并命令将什么也不做。 另一种情况是如果当前提交是另一个分支的祖父节点，就导致fast-forward合并。指向只是简单的移动，并生成一个新的提交。
-![](img/merge-ff.svg)
 
-否则就是一次真正的合并。默认把当前提交(ed489 如下所示)和另一个提交(33104)以及他们的共同祖父节点(b325c)进行一次三方合并。结果是先保存当前目录和索引，然后和父节点33104一起做一次新提交。
 
-![](img/merge.svg)
+## Git tag
 
-git tag
+## Git 查看日志
 
-## Git查看日志
+### git log
+默认不用任何参数的话，git log 会按提交时间列出所有的更新，最近的更新排在最上面。 正如你所看到的，这个命令会列出每个提交的 SHA-1 校验和、作者的名字和电子邮件地址、提交时间以及提交说明
+
 ```shell
 #查看最后一条提交
 git log -1
+git log -n 1
+#查看内容差异
+git log  -p
+#显示所有操作,包括reset
+git log  -g
+
+## 仅在提交信息后显示已修改的文件清单。
+git log --name-only
+## 显示修改文件及状态
+git log --name-status
+
+
+#查看统计信息
+git log --stat
+
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon <schacon@gee-mail.com>
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the version number
+
+ Rakefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+#格工化log为一行显示
+git log --pretty=oneline
+#格工化log 提交对象的简短哈希字串-作者名字,提交时间:提交说明
+git log --pretty=format:"%h-%an,%ar:%s"
+
+716cae2-wujiyu,4 weeks ago:branch 8
+7c64b0b-wujiyu,4 weeks ago:stash work 1
+
+#显示ASCII 图形表示的分支合并历史
+git log --pretty=format:"%h %s" --graph
+
+```
+
+#### 筛选日志
+```shell
+#时间点以来的提交
+git log --since="2016-10-16"
+#作者相关提交
+git log --author=wujiyu
+```
+
+### git reflog
+当你 (在一个仓库下) 工作时，Git 会在你每次修改了 HEAD 时悄悄地将改动记录下来。当你提交或修改分支时，reflog 就会更新.
+`git reflog`有时候可以帮助你找到丢失掉的commit，比如你在某个detached HEAD（即不在任何分支只是在某个历史的commit的节点上）的时候进行了一次commit，然后你切换到另一个分支想把刚才的东西合并进来，这个时候突然意识到刚才的那次提交找不到了，这时你就可以通过HEAD@{1}引用到刚才的提交了，或者通过git reflog找到对应commit的sha1值，然后进行merge
+
+```shell
 #查看以往提交历史（包括 撤销回退 记录）
 git reflog
 ```
 
-git pull
-git push
-git fetch
+### gitk
+图形化界面显示log
 
-gitk
+
+##  Git fsck
+此命令会检查仓库的数据完整性,所有未引用到的悬空对象都会显示出来
+```shell
+git fsck
+
+dangling blob d670460b4b4aece5915caf5c68d12f560a9fe3e4
+dangling commit ab1afef80fac8e34258ff41fc1b867c702daa24b
+```
+
+
 
 ## Git查看提交变动
 + `git diff` :比较`工作区`和`暂存区`的变化
@@ -223,11 +339,36 @@ gitk
 ![](img/diff.svg)
 
 
+```shell
+#比较本地master分支和远程master分支的差异
+git diff master origin/master
+#比较远程分支与本地文件差异
+git diff  origin/master a.txt
+```
 
-git mv
-git show
+
 ## Git Stash
+保存工作状态
 
+```shell
+#保存当前修改的工作空间
+git stash
+#弹出一个保存的工作空间
+git stash pop
+#丢弃一个保存的空间
+git stash drop stash{1}
+#清除全部保存
+git stash clear
+```
+
+### 不commit情况下pull
+```shell
+git stash
+git pull
+git stash pop
+git stash drop stash{1}
+git stash clear
+```
 ### git stash clear 后恢复
 ```shell
 git fsck --lost-found
@@ -235,25 +376,33 @@ git show 8dd73fa8d14880182f11e24dc10bca570b6127d7
 git merge 8dd73fa8d14880182f11e24dc10bca570b6127d7
 ```
 
-git stash
 
-## Git rebase
-衍合是合并命令的另一种选择。合并把两个父分支合并进行一次提交，提交历史不是线性的。衍合在当前分支上重演另一个分支的历史，提交历史是线性的。 本质上，这是线性化的自动的 cherry-pick
-![](img/rebase.svg)
+## Git submodule
 
-上面的命令都在topic分支中进行，而不是master分支，在master分支上重演，并且把分支指向新的节点。注意旧提交没有被引用，将被回收。
+## Git clean
+```shell
+# 删除 untracked files
+git clean -f
+# 连 untracked 的目录也一起删掉
+git clean -fd
+# 连 gitignore 的untrack 文件/目录也一起删掉 （慎用，一般这个是用来删掉编译出来的 .o之类的文件用的）
+git clean -xfd
+# 在用上述 git clean 前，墙裂建议加上 -n 参数来先看看会删掉哪些文件，防止重要文件被误删
+git clean -nxfd
+git clean -nf
+git clean -nfds
+```
 
-要限制回滚范围，使用--onto选项。下面的命令在master分支上重演当前分支从169a6以来的最近几个提交，即2c33a。
+## 操作序列附加指令
+### --continue
+Continue the operation in progress using the information in .git/sequencer. Can be used to continue after resolving conflicts in a failed cherry-pick or revert.
 
-![](img/rebase-onto.svg)
-同样有git rebase --interactive让你更方便的完成一些复杂操作，比如丢弃、重排、修改、合并提交。没有图片体现这些
+### --quit
+Forget about the current operation in progress. Can be used to clear the sequencer state after a failed cherry-pick or revert.
 
+### --abort
+Cancel the operation and return to the pre-sequence state.
 
-
-## Git cherry
-cherry-pick命令"复制"一个提交节点并在当前分支做一次完全一样的新提交。
-
-![](img/cherry-pick.svg)
-
-git submodule
+## 操作总结
+![](img/git-cheatsheet.png)
 
