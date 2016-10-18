@@ -73,11 +73,13 @@ pages:
 - php:
     - '基础介绍': 'php/php1_intro.md'
 - git:
-    - 'git备忘录': 'versions/git_remark.md'
     - 'git简介': 'versions/git_intro.md'
     - 'git操作': 'versions/git_oper.md'
     - 'git分支管理': 'versions/git_branch.md'
     - 'git工具': 'versions/git_tools.md'
+    - 'git问题记录': 'versions/git_error.md'
+    - 'git应用场景': 'versions/git_remark.md'
+    - 'github': 'versions/github.md'
 - Vim编辑器:
     - 'vim': 'ide/vim.md'
 # - Atom编辑器:

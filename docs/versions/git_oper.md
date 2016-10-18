@@ -2,7 +2,7 @@ git 操作
 ==============
 ## 仓库、缓冲区、工作副本
 
-![](img/repository.png)
+![](img/repository.jpg)
 
 
 ## Git配置
@@ -157,7 +157,12 @@ checkout命令用于从历史提交（或者暂存区域）中拷贝文件到工
 
 ![](img/checkout-detached.svg)
 
-
+### 拉取远程分支并新建本地分支
+```shell
+git checkout -t origin/2.0.0
+#或者
+git checkout origin/remoteName -b localName
+```
 
 ## Git reset
 reset命令把当前分支指向另一个位置，并且有选择的变动工作目录和索引。也用来在从历史仓库中复制文件到索引，而不动工作目录。
@@ -176,27 +181,38 @@ reset命令把当前分支指向另一个位置，并且有选择的变动工作
 
 ![](img/reset-files.svg)
 
-### Git reset 还原
-`git reset HEAD~`
 
-`git reset 'HEAD@{1}'`或者 `git reset ORIG_HEAD`
 
+### Git reset 总结
 ```shell
+#回退到远程版本
+git reset --hard origin/master
+#从暂存区移除(add之后)
+git reset HEAD
+#可以回退到某个提交(commit之后)
+git reset --hard
+#合并时遇到冲突想取消操作，恢复index，用git merge --abort
 #git 1.7以来可以撤消合并
 git reset --merge
 ```
 
+
+### Git reset  反操作
+```shell
+git reset HEAD~
+git reset 'HEAD@{1}'或者 git reset ORIG_HEAD
+```
+
+
 ## Git revert
+以一个新的提交来覆盖之前的修改
 ```shell
 #恢复到上一个版本HEAD提交并创建一个新的提交覆盖原有的变更
 git revert HEAD~
-git revert -n master~5..master~2
 ```
 
 ### 总结
 
-+ git add files 把当前文件放入暂存区域。
-+ git commit 给暂存区域生成快照并提交。
 + git reset -- files 用来撤销最后一次git add files，你也可以用git reset 撤销所有暂存区域文件。
 + git checkout -- files 把文件从暂存区域复制到工作目录，用来丢弃本地修改。
 
@@ -379,6 +395,18 @@ git merge 8dd73fa8d14880182f11e24dc10bca570b6127d7
 
 ## Git submodule
 
+### Git submodule update
+`git submodule update`并不会将submodule切到任何 branch
+有些时候你需要对submodule做一些修改，很常见的做法就是切到submodule的目录，然后做修改，然后commit和push。
+这里的坑在于，默认git submodule update并不会将submodule切到任何branch，所以，默认下submodule的HEAD是处于游离状态的(‘detached HEAD’ state)。所以在修改前，记得一定要用git checkout master将当前的submodule分支切换到master，然后才能做修改和提交。
+
+
+### git submodule下还有submodule
+```shell
+git submodule foreach git submodule update
+```
+
+
 ## Git clean
 ```shell
 # 删除 untracked files
@@ -403,6 +431,4 @@ Forget about the current operation in progress. Can be used to clear the sequenc
 ### --abort
 Cancel the operation and return to the pre-sequence state.
 
-## 操作总结
-![](img/git-cheatsheet.png)
 

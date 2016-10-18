@@ -8,57 +8,6 @@ Git 备忘录
 
 ![](http://farwmarth.com/wp-content/2010072023345292.png)
 
-### github图解
-https://help.github.com/articles/set-up-git/
-
-![github.png](/_static/github.jpg)
-
-
-## Git 常用操作:
-
-
-
-### 撤消
-```shell
-#回退到远程版本
-git reset --hard origin/master
-#合并时遇到冲突想取消操作，恢复index，用git merge --abort
-git reset HEAD #从暂存区移除(add之后)
-git reset --hard #可以回退到某个提交(commit之后)
-git revert #可以撤销某个提交，撤销会产生一个新的提交
-```
-
-
-
-###  合并提交
-```shell
-git rebase #合并时记录更简洁
-
-git rebase -i  51c5b4850060ff675f4541b8b7cd479f94b743e8
-#要合并的前面全部改成s
-
-```
-
-
-### 拉取远程分支并新建本地分支
-```shell
-git checkout -t origin/2.0.0
-#或者
-git checkout origin/remoteName -b localName
-```
-
-
-## 概念
-### submodule
-#### git submodule update并不会将submodule切到任何 branch
-有些时候你需要对submodule做一些修改，很常见的做法就是切到submodule的目录，然后做修改，然后commit和push。
-这里的坑在于，默认git submodule update并不会将submodule切到任何branch，所以，默认下submodule的HEAD是处于游离状态的(‘detached HEAD’ state)。所以在修改前，记得一定要用git checkout master将当前的submodule分支切换到master，然后才能做修改和提交。
-
-#### git submodule下还有submodule
-```shell
-git submodule foreach git submodule update
-```
-
 
 ### 只checkout部分git文件
 ```shell
@@ -113,49 +62,6 @@ github.com,192.30.252.128 ssh-rsa xxx(key)
 git.coding.net,61.179.108.67 ssh-rsa  xxx(key)
 ```
 
-### git工作流
-
-#### gitflow
-http://nvie.com/posts/a-successful-git-branching-model/
-
-#### 工作流一
-```shell
-#git支持很多种工作流程，我们采用的一般是这样，远程创建一个主分支，本地每人创建功能分支，日常工作流程如下：
-#去自己的工作分支
-$ git checkout work
-#工作
-....
-#提交工作分支的修改
-$ git commit -a
-#回到主分支
-$ git checkout master
-#获取远程最新的修改，此时不会产生冲突
-$ git pull
-#回到工作分支
-$ git checkout work
-#用rebase合并主干的修改，如果有冲突在此时解决
-$ git rebase master
-$ git add .
-$ git rebase --continue
-$ git rebase --abort
-$ git rebase --skip忽略冲突
-#回到主分支
-$ git checkout master
-#合并工作分支的修改，把分支提交合并成一个
-$ git merge --squash work
-#提交到远程主干
-$ git push
-#这样做的好处是，远程主干上的历史永远是线性的。每个人在本地分支解决冲突，不会在主干上产生冲突
-```
-
-
-#### 工作流二
-```shell
-git stash
-git pull origin master
-git stash pop
-git stash clear
-```
 
 ### 同一台电脑有2个github账号
 
@@ -198,56 +104,16 @@ git config  user.name "suzie"
 之后push pull就木有问题了
 
 
-## 工具
-### Eclipse EGit
 
-[http://blog.csdn.net/luckarecs/article/details/7427605](http://blog.csdn.net/luckarecs/article/details/7427605)
+### git工作流
 
-![](/_static/egit.jpg)
-
-### gitg
-linux图形工具
-
-
-##  问题
-
-+ 错误提示：fatal: remote origin already exists.
-```
-git remote rm origin
-git remote add origin git@github.comxxx.git
+#### 工作流
+```shell
+git stash
+git pull origin master
+git stash pop
+git stash clear
 ```
 
-+ git push origin master 错误提示：error: failed to push som refs to
-```
-git pull origin master //先pull 下来 再push 上去
-```
 
-+ Cannot list the available branches. Reason: git+ssh://git@[host]:[...]/[...].git: Auth fail
-```
-解决方法就是把$HOME/.ssh在原路径下复制一个，改名为ssh就好了。Windows里也是一样,这样就直接可以图形上push了
-```
 
-+ fatal:remote error:You can't push to git://github.com/user_name/user_repo.git
-+ fatal: could not read Username for 'https://github.com': Invalid argument
-```
-git remote rm origin
-git remote add origin git@github.com:user_name/user_repo.git
-git push origin
-如果在git clone的时候用的是git://github.com:xx/xxx.git 的形式,那么就会出现这个问题，因为这个protocol是不支持push的
-```
-
-+ Permission denied (publickey)
-```
-ssh-keygen -t rsa -C "wujiyu@163.com"  -f "github_rsa" 生成的配置文件名与默认的不符
-更改ssh_config文件指定密钥文件名
-Host github.com
-StrictHostKeyChecking no
-UserKnownHostsFile=/dev/null
-IdentityFile=~/.ssh/github_rsa
-```
-
-+ cannot do a partial commit during a merge
-原因是merge有冲突,手动解决后如下提交即可
-```
-git commit -a
-```
