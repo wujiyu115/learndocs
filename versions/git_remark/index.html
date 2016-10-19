@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>git应用场景 - farwmarth’s note</title>
+      
+      
+      
+        <link rel="canonical" href="http://learndocs.farwmarth.com/versions/git_remark/">
+      
+      
+        <meta name="author" content="farwmarth">
+      
+    
+    <meta property="og:url" content="http://learndocs.farwmarth.com/versions/git_remark/">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/versions/git_remark//../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                git <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        git应用场景
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../../python/py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../python/py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../../python/py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../../python/py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../../python/py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../../python/py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../python/py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="with关键字" href="../../python/py_with/">
+      with关键字
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="变量作用域" href="../../python/py_scope/">
+      变量作用域
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../../python/py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../../python/py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../../python/py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../../python/py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../../python/py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../../python/py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../../python/py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../../python/py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../../python/py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../../python/py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../../python/py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../../python/py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../../python/py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../../python/py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../../python/py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../../python/py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">git</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="git简介" href="../git_intro/">
+      git简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git操作" href="../git_oper/">
+      git操作
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git分支管理" href="../git_branch/">
+      git分支管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git工具" href="../git_tools/">
+      git工具
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git问题记录" href="../git_error/">
+      git问题记录
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="git应用场景" href="./">
+      git应用场景
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="下面是一张常用命令的图解" href="#_1">
+                下面是一张常用命令的图解
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="只checkout部分git文件" href="#checkoutgit">
+                只checkout部分git文件
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="捋捋这些配置" href="#_2">
+                捋捋这些配置
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="同一台电脑有2个github账号" href="#2github">
+                同一台电脑有2个github账号
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="git工作流" href="#git_1">
+                git工作流
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="github" href="../github/">
+      github
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Vim编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="vim" href="../../ide/vim/">
+      vim
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Sublime Text编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="sublimetext" href="../../ide/sublimetext/">
+      sublimetext
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="git">Git 备忘录<a class="headerlink" href="#git" title="Permanent link">#</a></h1>
+<h3 id="_1">下面是一张常用命令的图解<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<p><img alt="" src="http://farwmarth.com/wp-content/2010072023345292.png" /></p>
+<h3 id="checkoutgit">只checkout部分git文件<a class="headerlink" href="#checkoutgit" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>git remote add -f origin &lt;url&gt;
+git config core.sparsecheckout <span class="nb">true</span>
+<span class="nb">echo</span> <span class="s2">&quot;sublime_windows&quot;</span> &gt;&gt; .git/info/sparse-checkout
+<span class="nb">echo</span> <span class="s2">&quot;sublime_linux&quot;</span> &gt;&gt; .git/info/sparse-checkout
+</pre></div>
+
+
+<h3 id="_2">捋捋这些配置<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<h4 id="gitconfig">.gitconfig<a class="headerlink" href="#gitconfig" title="Permanent link">#</a></h4>
+<p>git的全局配置文件.</p>
+<div class="code"><pre><span></span><span class="p p-Indicator">[</span><span class="nv">user</span><span class="p p-Indicator">]</span>
+    <span class="l l-Scalar l-Scalar-Plain">email = xxx@gmail.com</span>
+    <span class="l l-Scalar l-Scalar-Plain">name = xxx</span>
+<span class="l l-Scalar l-Scalar-Plain">[push]</span>
+    <span class="l l-Scalar l-Scalar-Plain">default = simple</span>
+<span class="l l-Scalar l-Scalar-Plain">[credential]</span>
+    <span class="l l-Scalar l-Scalar-Plain">helper = store</span>
+</pre></div>
+
+
+<h4 id="git-credentials">.git-credentials<a class="headerlink" href="#git-credentials" title="Permanent link">#</a></h4>
+<p>这个也是git的push时不用多次输入密码的配置.
+官方说明:<a href="https://git-scm.com/docs/git-credential-store">https://git-scm.com/docs/git-credential-store</a>
+先将credential配置到git全局配置
+<code>git config --global credential.helper store</code>
+在<code>%HOME%</code> 目录下创建一个<code>.git-credentials</code>输入</p>
+<div class="code"><pre><span></span>https://username@gmail.com:pwd@git.coding.net
+</pre></div>
+
+
+<h4 id="_netrc">_netrc<a class="headerlink" href="#_netrc" title="Permanent link">#</a></h4>
+<p>_netrc这个配置是用来自动化ftp上传下载的. 说明:<a href="http://www.mavetju.org/unix/netrc.php">http://www.mavetju.org/unix/netrc.php</a> .需要600权限<code>chmod 600 .netrc.</code> 一般只要用machine段就可以了.常用仓库如下配置在push时不用再输入密码.</p>
+<div class="code"><pre><span></span>machine github.com
+login username
+password password
+
+machine bitbucket.org
+login username
+password password
+
+machine gitcafe.com
+login username
+password password
+</pre></div>
+
+
+<h4 id="known_hosts">known_hosts<a class="headerlink" href="#known_hosts" title="Permanent link">#</a></h4>
+<p>ssh会把你每个你访问过计算机的公钥(public key)都记录在~/.ssh/known_hosts.当下次访问相同计算机时,openssh会核对公钥.</p>
+<div class="code"><pre><span></span>github.com,192.30.252.128 ssh-rsa xxx(key)
+git.coding.net,61.179.108.67 ssh-rsa  xxx(key)
+</pre></div>
+
+
+<h3 id="2github">同一台电脑有2个github账号<a class="headerlink" href="#2github" title="Permanent link">#</a></h3>
+<p>比如我服务器上模拟的2个用户</p>
+<div class="code"><pre><span></span><span class="c1">#monkeysuzie@gmail.com   我在gitlab的第一个账号suzie</span>
+host gitlab.zjut.com
+    hostname gitlab.zjut.com
+    Port 65095
+    User suzie
+    IdentityFile /home/suzie/.ssh/id_rsa
+<span class="c1">#  我在gitlab的第2个账号test</span>
+host gitlab-test.zjut.com
+    hostname gitlab.zjut.com
+    Port 65095
+    User <span class="nb">test</span>
+    IdentityFile /home/suzie/.ssh/id_rsa_second
+<span class="c1">#837368104@qq.com 我在github的账号</span>
+host github-osteach.com
+    hostname github.com
+    Port 22
+    User osteach
+    IdentityFile /home/suzie/.ssh/id_rsa_second
+</pre></div>
+
+
+<p>这种情况下，需要几点注意</p>
+<p>1.remote pull push的时候有问题，因为要设置邮箱问题了 pull的时候识别的是邮箱，2个github账号，2个邮箱，我们自然不能使用global的user.email了</p>
+<p>取消global</p>
+<div class="code"><pre><span></span>git config --global --unset user.name
+git config --global --unset user.email
+</pre></div>
+
+
+<p>2.设置每个项目repo的自己的user.email</p>
+<div class="code"><pre><span></span>git config  user.email <span class="s2">&quot;xxxx@xx.com&quot;</span>
+git config  user.name <span class="s2">&quot;suzie&quot;</span>
+</pre></div>
+
+
+<p>之后push pull就木有问题了</p>
+<h3 id="git_1">git工作流<a class="headerlink" href="#git_1" title="Permanent link">#</a></h3>
+<h4 id="_3">工作流<a class="headerlink" href="#_3" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span>git stash
+git pull origin master
+git stash pop
+git stash clear
+</pre></div>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../git_error/" title="git问题记录">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                git问题记录
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../github/" title="github">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                github
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

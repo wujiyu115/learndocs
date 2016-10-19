@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>git工具 - farwmarth’s note</title>
+      
+      
+      
+        <link rel="canonical" href="http://learndocs.farwmarth.com/versions/git_tools/">
+      
+      
+        <meta name="author" content="farwmarth">
+      
+    
+    <meta property="og:url" content="http://learndocs.farwmarth.com/versions/git_tools/">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/versions/git_tools//../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                git <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        git工具
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../../python/py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../python/py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../../python/py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../../python/py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../../python/py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../../python/py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../python/py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="with关键字" href="../../python/py_with/">
+      with关键字
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="变量作用域" href="../../python/py_scope/">
+      变量作用域
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../../python/py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../../python/py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../../python/py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../../python/py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../../python/py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../../python/py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../../python/py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../../python/py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../../python/py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../../python/py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../../python/py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../../python/py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../../python/py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../../python/py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../../python/py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../../python/py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">git</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="git简介" href="../git_intro/">
+      git简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git操作" href="../git_oper/">
+      git操作
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git分支管理" href="../git_branch/">
+      git分支管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="git工具" href="./">
+      git工具
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="工具" href="#_1">
+                工具
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Windows" href="#windows">
+                Windows
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Mac" href="#mac">
+                Mac
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Linux" href="#linux">
+                Linux
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="插件" href="#_2">
+                插件
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git问题记录" href="../git_error/">
+      git问题记录
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git应用场景" href="../git_remark/">
+      git应用场景
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="github" href="../github/">
+      github
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Vim编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="vim" href="../../ide/vim/">
+      vim
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Sublime Text编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="sublimetext" href="../../ide/sublimetext/">
+      sublimetext
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="git">git 工具<a class="headerlink" href="#git" title="Permanent link">#</a></h1>
+<h2 id="_1">工具<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="github-desktop"><a href="https://desktop.github.com/">GitHub Desktop</a><a class="headerlink" href="#github-desktop" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/github-desktop@2x.png" /></p>
+<p><strong>Platforms:</strong> Windows, Mac<br />
+<strong>Price:</strong> Free</p>
+<h3 id="tower"><a href="https://www.git-tower.com/">Tower</a><a class="headerlink" href="#tower" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/tower@2x.png" /></p>
+<p><strong>Platforms</strong>: Windows, Mac<br />
+<strong>Price</strong>: $79/user (Free 30 day trial)</p>
+<h3 id="gitx-dev"><a href="https://rowanj.github.io/gitx/">GitX-dev</a><a class="headerlink" href="#gitx-dev" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/gitx@2x.png" /></p>
+<p><strong>Platforms:</strong> Mac<br />
+<strong>Price:</strong> Free</p>
+<h3 id="gitbox"><a href="http://www.gitboxapp.com/">Gitbox</a><a class="headerlink" href="#gitbox" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/gitbox@2x.png" /></p>
+<p><strong>Platforms:</strong> Windows, Mac<br />
+<strong>Price:</strong> $14.99</p>
+<h3 id="sourcetree"><a href="https://www.sourcetreeapp.com/">SourceTree</a><a class="headerlink" href="#sourcetree" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/sourcetree@2x.png" /></p>
+<p><strong>Platforms:</strong> Windows<br />
+<strong>Price:</strong> Free</p>
+<h3 id="git-extensions"><a href="https://gitextensions.github.io/">Git Extensions </a><a class="headerlink" href="#git-extensions" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/git-extensions@2x.png" /></p>
+<p><strong>Platforms:</strong> Windows, Mac<br />
+<strong>Price:</strong> Free</p>
+<h3 id="smartgit"><a href="https://desktop.github.com/">SmartGit</a><a class="headerlink" href="#smartgit" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/smartgit@2x.png" /></p>
+<p><strong>Platforms:</strong> Windows, Mac, Linux<br />
+<strong>Price:</strong>  $79/user / Free for non-commercial use</p>
+<h3 id="git-cola"><a href="https://git-cola.github.io/">git-cola</a><a class="headerlink" href="#git-cola" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/git-cola@2x.png" /></p>
+<p><strong>Platforms:</strong> Windows, Mac, Linux<br />
+<strong>Price:</strong> Free</p>
+<h3 id="gitup"><a href="http://gitup.co/">GitUp</a><a class="headerlink" href="#gitup" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/gitup@2x.png" /></p>
+<p><strong>Platforms:</strong> Mac<br />
+<strong>Price:</strong> Free</p>
+<h3 id="giteye"><a href="http://www.giteyeapp.com/">GitEye</a><a class="headerlink" href="#giteye" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/giteye@2x.png" /></p>
+<p><strong>Platforms:</strong> Windows, Mac, Linux<br />
+<strong>Price:</strong> Free</p>
+<h3 id="giggle"><a href="https://wiki.gnome.org/Apps/giggle/">giggle</a><a class="headerlink" href="#giggle" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/giggle@2x.png" /></p>
+<p><strong>Platforms:</strong> linux<br />
+<strong>Price:</strong> Free</p>
+<h3 id="gitg"><a href="https://wiki.gnome.org/Apps/Gitg/">gitg</a><a class="headerlink" href="#gitg" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/gitg@2x.png" /></p>
+<p><strong>Platforms:</strong> Linux<br />
+<strong>Price:</strong> Free</p>
+<h3 id="gitkraken"><a href="https://www.gitkraken.com/">GitKraken</a><a class="headerlink" href="#gitkraken" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/git-kraken@2x.png" /></p>
+<p><strong>Platforms:</strong> Windows, Mac, Linux<br />
+<strong>Price:</strong> Free</p>
+<h3 id="aurees"><a href="https://aurees.com/">Aurees</a><a class="headerlink" href="#aurees" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/aurees@2x.png" /></p>
+<p><strong>Platforms:</strong> Windows<br />
+<strong>Price:</strong> $69.99/user / Free for non-commercial use</p>
+<h3 id="fork"><a href="https://git-fork.com/">Fork</a><a class="headerlink" href="#fork" title="Permanent link">#</a></h3>
+<p><img alt="" src="../img/gui/fork@2x.png" /></p>
+<p><strong>Platforms:</strong> Mac<br />
+<strong>Price:</strong> Free</p>
+<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">#</a></h2>
+<h2 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">#</a></h2>
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">#</a></h2>
+<h3 id="gitk">gitk<a class="headerlink" href="#gitk" title="Permanent link">#</a></h3>
+<p><code>gitk</code> 是一个历史记录的图形化查看器。 你可以把它当作是基于 <code>git log</code> 和 <code>git grep</code> 命令的一个强大的图形操作界面。 当你需要查找过去发生的某次记录，或是可视化查看项目历史的时候，你将会用到这个工具。</p>
+<h3 id="ubuntu">ubuntu合并对比工具<a class="headerlink" href="#ubuntu" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="c1">#安装meld</span>
+sudo apt-get install meld
+</pre></div>
+
+
+<p>编辑<code>~/.gitconfig</code></p>
+<div class="code"><pre><span></span><span class="o">[</span>difftool<span class="o">]</span>
+    <span class="nv">prompt</span> <span class="o">=</span> <span class="nb">false</span>
+<span class="o">[</span>mergetool<span class="o">]</span>
+    <span class="nv">prompt</span> <span class="o">=</span> <span class="nb">false</span>
+<span class="o">[</span>diff<span class="o">]</span>
+    <span class="nv">tool</span> <span class="o">=</span> meld
+<span class="o">[</span>merge<span class="o">]</span>
+    <span class="nv">tool</span> <span class="o">=</span> meld
+</pre></div>
+
+
+<p>使用</p>
+<div class="code"><pre><span></span>git difftool 文件名
+git megretool
+</pre></div>
+
+
+<h2 id="_2">插件<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h3 id="eclipse-egit">Eclipse EGit<a class="headerlink" href="#eclipse-egit" title="Permanent link">#</a></h3>
+<p><a href="http://blog.csdn.net/luckarecs/article/details/7427605">http://blog.csdn.net/luckarecs/article/details/7427605</a></p>
+<p><img alt="" src="../../_static/egit.jpg" /></p>
+<p><a href="https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools#Graphical_Interfaces">https://git.wiki.kernel.org/index.php/Interfaces,_frontends,_and_tools#Graphical_Interfaces</a></p>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../git_branch/" title="git分支管理">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                git分支管理
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../git_error/" title="git问题记录">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                git问题记录
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>git操作 - farwmarth’s note</title>
+      
+      
+      
+        <link rel="canonical" href="http://learndocs.farwmarth.com/versions/git_oper/">
+      
+      
+        <meta name="author" content="farwmarth">
+      
+    
+    <meta property="og:url" content="http://learndocs.farwmarth.com/versions/git_oper/">
+    <meta property="og:title" content="farwmarth’s note">
+    <meta property="og:image" content="http://learndocs.farwmarth.com/versions/git_oper//../../">
+    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                git <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        git操作
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          farwmarth’s note
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">数据结构与算法</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
+      排序算法介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">c++基础</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
+      c++环境搭建(Win)
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
+      基础语法
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../cplus/cplus2_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
+      内存分配
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
+      编译过程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
+      常量修饰符
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">python</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="语言简介" href="../../python/py1_intro/">
+      语言简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../python/py2_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="控制流程" href="../../python/py3_controller/">
+      控制流程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="函数" href="../../python/py4_func/">
+      函数
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="步骤" href="../../python/py5_step/">
+      步骤
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="组织" href="../../python/py6_organize/">
+      组织
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="类" href="../../python/py_class/">
+      类
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="with关键字" href="../../python/py_with/">
+      with关键字
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="变量作用域" href="../../python/py_scope/">
+      变量作用域
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="枚举" href="../../python/py_enum/">
+      枚举
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="异常捕捉" href="../../python/py_error/">
+      异常捕捉
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="调试" href="../../python/py_test/">
+      调试
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="文件io" href="../../python/py_fileio/">
+      文件io
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块" href="../../python/py_inmodule/">
+      模块
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="网络库" href="../../python/py_urllib/">
+      网络库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="模块管理" href="../../python/py_module_manager/">
+      模块管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="线程" href="../../python/py_thread/">
+      线程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="协程" href="../../python/py_coroutine/">
+      协程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="图形界面编程" href="../../python/py_gui/">
+      图形界面编程
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="python2/3对比" href="../../python/py_diff2/">
+      python2/3对比
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="常用库" href="../../python/py_modules/">
+      常用库
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="pyqt使用" href="../../python/py_qt/">
+      pyqt使用
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="tornado" href="../../python/py_tornado/">
+      tornado
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="爬虫" href="../../python/py_spider/">
+      爬虫
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="消息队列" href="../../python/py_mq/">
+      消息队列
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">lua</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="数据类型" href="../../lua/lua1_data/">
+      数据类型
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">swift</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
+      swift基础入门
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">php</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="基础介绍" href="../../php/php1_intro/">
+      基础介绍
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">git</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="git简介" href="../git_intro/">
+      git简介
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="git操作" href="./">
+      git操作
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="仓库、缓冲区、工作副本" href="#_1">
+                仓库、缓冲区、工作副本
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git配置" href="#git_1">
+                Git配置
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git init" href="#git-init">
+                Git init
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git status" href="#git-status">
+                Git status
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git rm" href="#git-rm">
+                Git rm
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git mv" href="#git-mv">
+                Git mv
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git show" href="#git-show">
+                Git show
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git add" href="#git-add">
+                Git add
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git commit" href="#git-commit">
+                Git commit
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git checkout" href="#git-checkout">
+                Git checkout
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git reset" href="#git-reset">
+                Git reset
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git revert" href="#git-revert">
+                Git revert
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git clone" href="#git-clone">
+                Git clone
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git fetch" href="#git-fetch">
+                Git fetch
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git pull" href="#git-pull">
+                Git pull
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git push" href="#git-push">
+                Git push
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git remote" href="#git-remote">
+                Git remote
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git tag" href="#git-tag">
+                Git tag
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git 查看日志" href="#git_2">
+                Git 查看日志
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git fsck" href="#git-fsck">
+                Git fsck
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git查看提交变动" href="#git_3">
+                Git查看提交变动
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git Stash" href="#git-stash">
+                Git Stash
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git submodule" href="#git-submodule">
+                Git submodule
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Git clean" href="#git-clean">
+                Git clean
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="操作序列附加指令" href="#_7">
+                操作序列附加指令
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git分支管理" href="../git_branch/">
+      git分支管理
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git工具" href="../git_tools/">
+      git工具
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git问题记录" href="../git_error/">
+      git问题记录
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="git应用场景" href="../git_remark/">
+      git应用场景
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="github" href="../github/">
+      github
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Vim编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="vim" href="../../ide/vim/">
+      vim
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Sublime Text编辑器</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="sublimetext" href="../../ide/sublimetext/">
+      sublimetext
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
+                  @wujiyu115 on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="git">git 操作<a class="headerlink" href="#git" title="Permanent link">#</a></h1>
+<h2 id="_1">仓库、缓冲区、工作副本<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p><img alt="" src="../img/repository.jpg" /></p>
+<h2 id="git_1">Git配置<a class="headerlink" href="#git_1" title="Permanent link">#</a></h2>
+<p>Git 自带一个 <code>git config</code> 的工具来帮助设置控制 Git 外观和行为的配置变量。 这些变量存储在三个不同的位置：</p>
+<ol>
+<li>
+<p><code>--system</code> 修改 <code>/etc/gitconfig</code> 文件: 所有用户共用</p>
+</li>
+<li>
+<p><code>--global</code> 修改 <code>~/.gitconfig</code> 或 <code>~/.config/git/config</code> 文件：只针对当前用户</p>
+</li>
+<li>
+<p>当前仓库的 Git 目录中的 <code>config</code> 文件（就是 <code>.git/config</code>）：针对该仓库。</p>
+</li>
+</ol>
+<p>优先级:当前仓库<code>config</code> &gt; 当前用户 &gt;所有用户</p>
+<h3 id="_2">配置<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="c1">#作者</span>
+git config --global user.name <span class="s2">&quot;John Doe&quot;</span>
+git config --global user.email johndoe@example.com
+<span class="c1">#文本信息</span>
+git config --global core.editor emacs
+</pre></div>
+
+
+<h3 id="_3">检查配置信息<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="c1">#查看所有</span>
+git config --list
+<span class="c1">#查看某项</span>
+git config user.name
+<span class="c1">#移除设置</span>
+git config --unset user.name
+</pre></div>
+
+
+<h2 id="git-init">Git init<a class="headerlink" href="#git-init" title="Permanent link">#</a></h2>
+<p>初始化仓库，该命令将创建一个名为 .git 的子目录，这个子目录含有你初始化的 Git 仓库中所有的必须文件，这些文件是 Git 仓库的骨干</p>
+<h2 id="git-status">Git status<a class="headerlink" href="#git-status" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="c1">#显示状态</span>
+git status
+<span class="c1">#短格式显示</span>
+git status -s
+</pre></div>
+
+
+<p>状态标识:</p>
+<ul>
+<li>' ' = unmodified</li>
+<li>M = modified(已修改)</li>
+<li>A = added(已添加)</li>
+<li>D = deleted(已删除)</li>
+<li>R = renamed(已重命名)</li>
+<li>C = copied(已复制)</li>
+<li>U = updated but unmerged(已更新但未合并)</li>
+</ul>
+<div class="code"><pre><span></span>X          Y     Meaning
+-------------------------------------------------
+          <span class="o">[</span>MD<span class="o">]</span>   not updated
+M        <span class="o">[</span> MD<span class="o">]</span>   updated in index
+A        <span class="o">[</span> MD<span class="o">]</span>   added to index
+D         <span class="o">[</span> M<span class="o">]</span>   deleted from index
+R        <span class="o">[</span> MD<span class="o">]</span>   renamed in index
+C        <span class="o">[</span> MD<span class="o">]</span>   copied in index
+<span class="o">[</span>MARC<span class="o">]</span>           index and work tree matches
+<span class="o">[</span> MARC<span class="o">]</span>     M    work tree changed since index
+<span class="o">[</span> MARC<span class="o">]</span>     D    deleted in work tree
+-------------------------------------------------
+D           D    unmerged, both deleted
+A           U    unmerged, added by us
+U           D    unmerged, deleted by them
+U           A    unmerged, added by them
+D           U    unmerged, deleted by us
+A           A    unmerged, both added
+U           U    unmerged, both modified
+-------------------------------------------------
+?           ?    untracked
+!           !    ignored
+</pre></div>
+
+
+<h2 id="git-rm">Git rm<a class="headerlink" href="#git-rm" title="Permanent link">#</a></h2>
+<p>用于移除仓库中的文件,如<code>git rm *.txt</code>移除所的的txt文件</p>
+<h2 id="git-mv">Git mv<a class="headerlink" href="#git-mv" title="Permanent link">#</a></h2>
+<p><code>git</code>系统中移动一个文件或者目录相当于<code>shell</code>命令</p>
+<div class="code"><pre><span></span>mv oldname newname
+git add newname
+git rm oldname
+</pre></div>
+
+
+<h2 id="git-show">Git show<a class="headerlink" href="#git-show" title="Permanent link">#</a></h2>
+<p>显示对象的更多信息</p>
+<ul>
+<li>对于commit,展示log和差异</li>
+<li>对于tag,显示tag相关信息</li>
+<li>对于tree对象,列出树结构名字</li>
+<li>对于blob对象,显示文件内容</li>
+</ul>
+<div class="code"><pre><span></span><span class="c1">#显示提交信息</span>
+git show 716cae27bc24b0f56b0dff5039e6a2cf8ac3edac
+<span class="c1">#显示分支的信息</span>
+git show v1.0.0
+</pre></div>
+
+
+<h2 id="git-add">Git add<a class="headerlink" href="#git-add" title="Permanent link">#</a></h2>
+<p>把当前文件放入暂存区域</p>
+<h2 id="git-commit">Git commit<a class="headerlink" href="#git-commit" title="Permanent link">#</a></h2>
+<p>提交时，git用暂存区域的文件创建一个新的提交，并把此时的节点设为父节点。然后把当前分支指向新的提交节点。下图中，当前分支是master。 在运行命令之前，master指向ed489，提交后，master指向新的节点f0cec并以ed489作为父节点
+<img alt="" src="../img/commit-master.svg" /></p>
+<p>即便当前分支是某次提交的祖父节点，git会同样操作。下图中，在master分支的祖父节点maint分支进行一次提交，生成了1800b。 这样，maint分支就不再是master分支的祖父节点。此时，合并 (或者 衍合) 是必须的。</p>
+<p><img alt="" src="../img/commit-maint.svg" /></p>
+<p>如果想更改一次提交，使用 git commit --amend。git会使用与当前提交相同的父节点进行一次新提交，旧的提交会被取消。</p>
+<p><img alt="" src="../img/commit-amend.svg" /></p>
+<h4 id="head">HEAD标识处于分离状态时的提交操作<a class="headerlink" href="#head" title="Permanent link">#</a></h4>
+<p>当HEAD处于分离状态（不依附于任一分支）时，提交操作可以正常进行，但是不会更新任何已命名的分支。(你可以认为这是在更新一个匿名分支。)</p>
+<p><img alt="" src="../img/commit-detached.svg" /></p>
+<p>一旦此后你切换到别的分支，比如说master，那么这个提交节点（可能）再也不会被引用到，然后就会被丢弃掉了。注意这个命令之后就不会有东西引用2eecb。</p>
+<p><img alt="" src="../img/checkout-after-detached.svg" /></p>
+<p>但是，如果你想保存这个状态，可以用命令git checkout -b name来创建一个新的分支。</p>
+<p><img alt="" src="../img/checkout-b-detached.svg" /></p>
+<h2 id="git-checkout">Git checkout<a class="headerlink" href="#git-checkout" title="Permanent link">#</a></h2>
+<p>checkout命令用于从历史提交（或者暂存区域）中拷贝文件到工作目录，也可用于切换分支。</p>
+<ul>
+<li><code>git checkout HEAD a.txt</code>:从<code>提交快照</code>中提取文件到<code>暂存区</code>和<code>工作空间</code>中</li>
+<li><code>git checkout  a.txt</code>:从<code>暂存区</code>中提取文件到<code>工作空间</code>中</li>
+<li><code>git checkout  master</code>:切换分支</li>
+</ul>
+<p>当给定某个文件名（或者打开-p选项，或者文件名和-p选项同时打开）时，git会从指定的提交中拷贝文件到暂存区域和工作目录。比如，git checkout HEAD~ foo.c会将提交节点HEAD~(即当前提交节点的父节点)中的foo.c复制到工作目录并且加到暂存区域中。（如果命令中没有指定提交节点，则会从暂存区域中拷贝内容。）注意当前分支不会发生变化</p>
+<p><img alt="" src="../img/checkout-files.svg" /></p>
+<p>当不指定文件名，而是给出一个（本地）分支时，那么HEAD标识会移动到那个分支（也就是说，我们“切换”到那个分支了），然后暂存区域和工作目录中的内容会和HEAD对应的提交节点一致。新提交节点（下图中的a47c3）中的所有文件都会被复制（到暂存区域和工作目录中）；只存在于老的提交节点（ed489）中的文件会被删除；不属于上述两者的文件会被忽略，不受影响。</p>
+<p><img alt="" src="../img/checkout-branch.svg" /></p>
+<p>如果既没有指定文件名，也没有指定分支名，而是一个标签、远程分支、SHA-1值或者是像master~3类似的东西，就得到一个匿名分支，称作detached HEAD（被分离的HEAD标识）。这样可以很方便地在历史版本之间互相切换。比如说你想要编译1.6.6.1版本的git，你可以运行git checkout v1.6.6.1（这是一个标签，而非分支名），编译，安装，然后切换回另一个分支，比如说git checkout master。然而，当提交操作涉及到“分离的HEAD”时，其行为会略有不同，详情见在下面。</p>
+<p><img alt="" src="../img/checkout-detached.svg" /></p>
+<h3 id="_4">拉取远程分支并新建本地分支<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>git checkout -t origin/2.0.0
+<span class="c1">#或者</span>
+git checkout origin/remoteName -b localName
+</pre></div>
+
+
+<h2 id="git-reset">Git reset<a class="headerlink" href="#git-reset" title="Permanent link">#</a></h2>
+<p>reset命令把当前分支指向另一个位置，并且有选择的变动工作目录和索引。也用来在从历史仓库中复制文件到索引，而不动工作目录。</p>
+<p><img alt="" src="../img/reset_area.svg" /></p>
+<p>如果不给选项，那么当前分支指向到那个提交。如果用--hard选项，那么工作目录也更新，如果用--soft选项，那么都不变</p>
+<p><img alt="" src="../img/reset-commit.svg" /></p>
+<p>如果没有给出提交点的版本号，那么默认用HEAD。这样，分支指向不变，但是索引会回滚到最后一次提交，如果用--hard选项，工作目录也同样。</p>
+<p><img alt="" src="../img/reset.svg" /></p>
+<p>如果给了文件名(或者 -p选项), 那么工作效果和带文件名的checkout差不多，除了索引被更新。</p>
+<p><img alt="" src="../img/reset-files.svg" /></p>
+<h3 id="git-reset_1">Git reset 总结<a class="headerlink" href="#git-reset_1" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span><span class="c1">#回退到远程版本</span>
+git reset --hard origin/master
+<span class="c1">#从暂存区移除(add之后)</span>
+git reset HEAD
+<span class="c1">#可以回退到某个提交(commit之后)</span>
+git reset --hard
+<span class="c1">#合并时遇到冲突想取消操作，恢复index，用git merge --abort</span>
+<span class="c1">#git 1.7以来可以撤消合并</span>
+git reset --merge
+</pre></div>
+
+
+<h3 id="git-reset_2">Git reset  反操作<a class="headerlink" href="#git-reset_2" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>git reset HEAD~
+git reset <span class="s1">&#39;HEAD@{1}&#39;</span>或者 git reset ORIG_HEAD
+</pre></div>
+
+
+<h2 id="git-revert">Git revert<a class="headerlink" href="#git-revert" title="Permanent link">#</a></h2>
+<p>以一个新的提交来覆盖之前的修改</p>
+<div class="code"><pre><span></span><span class="c1">#恢复到上一个版本HEAD提交并创建一个新的提交覆盖原有的变更</span>
+git revert HEAD~
+</pre></div>
+
+
+<h3 id="_5">总结<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<ul>
+<li>git reset -- files 用来撤销最后一次git add files，你也可以用git reset 撤销所有暂存区域文件。</li>
+<li>git checkout -- files 把文件从暂存区域复制到工作目录，用来丢弃本地修改。</li>
+</ul>
+<p><img alt="" src="../img/basic-usage.svg" /></p>
+<h2 id="git-clone">Git clone<a class="headerlink" href="#git-clone" title="Permanent link">#</a></h2>
+<p>如果你想获得一份已经存在了的 Git 仓库的拷贝，比如说，你想为某个开源项目贡献自己的一份力，这时就要用到 git clone 命令。 如果你对其它的 VCS 系统（比如说Subversion）很熟悉，请留心一下你所使用的命令是"clone"而不是"checkout"</p>
+<div class="code"><pre><span></span>git clone https://github.com/libgit2/libgit2
+</pre></div>
+
+
+<h2 id="git-fetch">Git fetch<a class="headerlink" href="#git-fetch" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="c1">#只拉取远程仓库信息不合并</span>
+git fetch origin
+</pre></div>
+
+
+<h2 id="git-pull">Git pull<a class="headerlink" href="#git-pull" title="Permanent link">#</a></h2>
+<p>把远程仓库更改拉取并且合并到本地当前分支,<code>git pull</code>相当于 <code>git fetch</code>和<code>git merge FETCH_HEAD</code>两步操作</p>
+<div class="code"><pre><span></span><span class="c1">#拉取并合并</span>
+git pull
+<span class="c1">#拉取远程origin合并到master</span>
+git pull origin master
+</pre></div>
+
+
+<h2 id="git-push">Git push<a class="headerlink" href="#git-push" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="c1">#将本地master分支提交推送到远程origin</span>
+git push orign master
+</pre></div>
+
+
+<h2 id="git-remote">Git remote<a class="headerlink" href="#git-remote" title="Permanent link">#</a></h2>
+<p>远程仓库管理</p>
+<div class="code"><pre><span></span><span class="c1">#查看远程仓库别名</span>
+git remote
+<span class="c1">#查看远程仓库地址</span>
+git remote -v
+<span class="c1">#添加远程仓库</span>
+git remote add up https://git.coding.net/farwmarth/test_git.git
+<span class="c1">#查看远程仓库详细的分析信息</span>
+git remote show origin
+<span class="c1">#把 pb 改成 paul</span>
+git remote rename  pb paul
+<span class="c1">#移除远程仓库链接</span>
+git remote rm up
+</pre></div>
+
+
+<h2 id="git-tag">Git tag<a class="headerlink" href="#git-tag" title="Permanent link">#</a></h2>
+<h2 id="git_2">Git 查看日志<a class="headerlink" href="#git_2" title="Permanent link">#</a></h2>
+<h3 id="git-log">git log<a class="headerlink" href="#git-log" title="Permanent link">#</a></h3>
+<p>默认不用任何参数的话，git log 会按提交时间列出所有的更新，最近的更新排在最上面。 正如你所看到的，这个命令会列出每个提交的 SHA-1 校验和、作者的名字和电子邮件地址、提交时间以及提交说明</p>
+<div class="code"><pre><span></span><span class="c1">#查看最后一条提交</span>
+git log -1
+git log -n 1
+<span class="c1">#查看内容差异</span>
+git log  -p
+<span class="c1">#显示所有操作,包括reset</span>
+git log  -g
+
+<span class="c1">## 仅在提交信息后显示已修改的文件清单。</span>
+git log --name-only
+<span class="c1">## 显示修改文件及状态</span>
+git log --name-status
+
+
+<span class="c1">#查看统计信息</span>
+git log --stat
+
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar <span class="m">17</span> 21:52:11 <span class="m">2008</span> -0700
+
+    changed the version number
+
+ Rakefile <span class="p">|</span> <span class="m">2</span> +-
+ <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
+
+<span class="c1">#格工化log为一行显示</span>
+git log --pretty<span class="o">=</span>oneline
+<span class="c1">#格工化log 提交对象的简短哈希字串-作者名字,提交时间:提交说明</span>
+git log --pretty<span class="o">=</span>format:<span class="s2">&quot;%h-%an,%ar:%s&quot;</span>
+
+716cae2-wujiyu,4 weeks ago:branch 8
+7c64b0b-wujiyu,4 weeks ago:stash work 1
+
+<span class="c1">#显示ASCII 图形表示的分支合并历史</span>
+git log --pretty<span class="o">=</span>format:<span class="s2">&quot;%h %s&quot;</span> --graph
+</pre></div>
+
+
+<h4 id="_6">筛选日志<a class="headerlink" href="#_6" title="Permanent link">#</a></h4>
+<div class="code"><pre><span></span><span class="c1">#时间点以来的提交</span>
+git log --since<span class="o">=</span><span class="s2">&quot;2016-10-16&quot;</span>
+<span class="c1">#作者相关提交</span>
+git log --author<span class="o">=</span>wujiyu
+</pre></div>
+
+
+<h3 id="git-reflog">git reflog<a class="headerlink" href="#git-reflog" title="Permanent link">#</a></h3>
+<p>当你 (在一个仓库下) 工作时，Git 会在你每次修改了 HEAD 时悄悄地将改动记录下来。当你提交或修改分支时，reflog 就会更新.
+<code>git reflog</code>有时候可以帮助你找到丢失掉的commit，比如你在某个detached HEAD（即不在任何分支只是在某个历史的commit的节点上）的时候进行了一次commit，然后你切换到另一个分支想把刚才的东西合并进来，这个时候突然意识到刚才的那次提交找不到了，这时你就可以通过HEAD@{1}引用到刚才的提交了，或者通过git reflog找到对应commit的sha1值，然后进行merge</p>
+<div class="code"><pre><span></span><span class="c1">#查看以往提交历史（包括 撤销回退 记录）</span>
+git reflog
+</pre></div>
+
+
+<h3 id="gitk">gitk<a class="headerlink" href="#gitk" title="Permanent link">#</a></h3>
+<p>图形化界面显示log</p>
+<h2 id="git-fsck">Git fsck<a class="headerlink" href="#git-fsck" title="Permanent link">#</a></h2>
+<p>此命令会检查仓库的数据完整性,所有未引用到的悬空对象都会显示出来</p>
+<div class="code"><pre><span></span>git fsck
+
+dangling blob d670460b4b4aece5915caf5c68d12f560a9fe3e4
+dangling commit ab1afef80fac8e34258ff41fc1b867c702daa24b
+</pre></div>
+
+
+<h2 id="git_3">Git查看提交变动<a class="headerlink" href="#git_3" title="Permanent link">#</a></h2>
+<ul>
+<li><code>git diff</code> :比较<code>工作区</code>和<code>暂存区</code>的变化</li>
+<li><code>git diff --cached</code> 与 <code>git diff --staged</code>  相同 :比较<code>暂存区</code>与<code>提交快照</code>的变化</li>
+<li><code>git diff HEAD</code> :比较<code>工作区</code>与<code>提交快照</code>的变化</li>
+</ul>
+<p><img alt="" src="../img/diff.svg" /></p>
+<div class="code"><pre><span></span><span class="c1">#比较本地master分支和远程master分支的差异</span>
+git diff master origin/master
+<span class="c1">#比较远程分支与本地文件差异</span>
+git diff  origin/master a.txt
+</pre></div>
+
+
+<h2 id="git-stash">Git Stash<a class="headerlink" href="#git-stash" title="Permanent link">#</a></h2>
+<p>保存工作状态</p>
+<div class="code"><pre><span></span><span class="c1">#保存当前修改的工作空间</span>
+git stash
+<span class="c1">#弹出一个保存的工作空间</span>
+git stash pop
+<span class="c1">#丢弃一个保存的空间</span>
+git stash drop stash<span class="o">{</span>1<span class="o">}</span>
+<span class="c1">#清除全部保存</span>
+git stash clear
+</pre></div>
+
+
+<h3 id="commitpull">不commit情况下pull<a class="headerlink" href="#commitpull" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>git stash
+git pull
+git stash pop
+git stash drop stash<span class="o">{</span>1<span class="o">}</span>
+git stash clear
+</pre></div>
+
+
+<h3 id="git-stash-clear">git stash clear 后恢复<a class="headerlink" href="#git-stash-clear" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>git fsck --lost-found
+git show 8dd73fa8d14880182f11e24dc10bca570b6127d7
+git merge 8dd73fa8d14880182f11e24dc10bca570b6127d7
+</pre></div>
+
+
+<h2 id="git-submodule">Git submodule<a class="headerlink" href="#git-submodule" title="Permanent link">#</a></h2>
+<h3 id="git-submodule-update">Git submodule update<a class="headerlink" href="#git-submodule-update" title="Permanent link">#</a></h3>
+<p><code>git submodule update</code>并不会将submodule切到任何 branch
+有些时候你需要对submodule做一些修改，很常见的做法就是切到submodule的目录，然后做修改，然后commit和push。
+这里的坑在于，默认git submodule update并不会将submodule切到任何branch，所以，默认下submodule的HEAD是处于游离状态的(‘detached HEAD’ state)。所以在修改前，记得一定要用git checkout master将当前的submodule分支切换到master，然后才能做修改和提交。</p>
+<h3 id="git-submodulesubmodule">git submodule下还有submodule<a class="headerlink" href="#git-submodulesubmodule" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>git submodule foreach git submodule update
+</pre></div>
+
+
+<h2 id="git-clean">Git clean<a class="headerlink" href="#git-clean" title="Permanent link">#</a></h2>
+<div class="code"><pre><span></span><span class="c1"># 删除 untracked files</span>
+git clean -f
+<span class="c1"># 连 untracked 的目录也一起删掉</span>
+git clean -fd
+<span class="c1"># 连 gitignore 的untrack 文件/目录也一起删掉 （慎用，一般这个是用来删掉编译出来的 .o之类的文件用的）</span>
+git clean -xfd
+<span class="c1"># 在用上述 git clean 前，墙裂建议加上 -n 参数来先看看会删掉哪些文件，防止重要文件被误删</span>
+git clean -nxfd
+git clean -nf
+git clean -nfds
+</pre></div>
+
+
+<h2 id="_7">操作序列附加指令<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<h3 id="-continue">--continue<a class="headerlink" href="#-continue" title="Permanent link">#</a></h3>
+<p>Continue the operation in progress using the information in .git/sequencer. Can be used to continue after resolving conflicts in a failed cherry-pick or revert.</p>
+<h3 id="-quit">--quit<a class="headerlink" href="#-quit" title="Permanent link">#</a></h3>
+<p>Forget about the current operation in progress. Can be used to clear the sequencer state after a failed cherry-pick or revert.</p>
+<h3 id="-abort">--abort<a class="headerlink" href="#-abort" title="Permanent link">#</a></h3>
+<p>Cancel the operation and return to the pre-sequence state.</p>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 farwmarth &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../git_intro/" title="git简介">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                git简介
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../git_branch/" title="git分支管理">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                git分支管理
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
