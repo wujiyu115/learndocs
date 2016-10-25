@@ -91,6 +91,8 @@ pip install SomePackage
 pip install SomePackage==1.0.4
 #指定源安装
 pip install SomePackage -i https://pypi.doubanio.com/
+#权限
+sudo pip install pyspider  --user -U  -i https://pypi.doubanio.com/simple/
 #升级
 pip install --upgrade SomePackage
 #卸载:
