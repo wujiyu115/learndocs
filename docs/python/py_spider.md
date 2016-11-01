@@ -89,7 +89,16 @@ class Handler(BaseHandler):
 `doc` : <http://doc.scrapy.org/en/0.24/>
 
 ### 安装scrapy
+liux安装
 ```shell
+pip install scrapy
+```
+
+windows上安装
+[Twisted](https://pypi.python.org/packages/2.7/T/Twisted/Twisted-13.0.0.win32-py2.7.msi)
+[lxml](https://pypi.python.org/packages/cb/b6/848494ec3987338fada4c33644300f43f038490bc34700ce4494d9c7baa0/lxml-3.5.0.win32-py2.7.exe#md5=3fb7a9fb71b7d0f53881291614bd323c)
+```shell
+#Twisted， lxml先下载编译好的包安装再安装scrapy
 pip install scrapy
 ```
 

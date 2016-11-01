@@ -28,6 +28,13 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 + `Upgrade/Overwrite All Packages` : 升级并覆盖所有package，包括不是通过package control安装的
 + `Upgrade Package` : 列出可供升级的package
 
+### `Data`目录
+====================
+* **Windows**: :file:`%APPDATA%\\Sublime Text 3`
+* **OS X**: :file:`~/Library/Application Support/Sublime Text 3`
+* **Linux**: :file:`~/.config/sublime-text-3`
+
+
 ## 配置
 ### 字体
 

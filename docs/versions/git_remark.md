@@ -17,6 +17,19 @@ echo "sublime_windows" >> .git/info/sparse-checkout
 echo "sublime_linux" >> .git/info/sparse-checkout
 ```
 
+### 推送git项目到多个远程仓库
+```
+如果已经配置好了ssh验证方式，在开源中国的git托管也可以使用同一个的key，然后打开github项目中中的.git/config文件 在[remote "origin"]节点的原始url下面直接添加开源中国git中对应项目的ssh地址即可，例如：
+
+[remote "origin"]
+    url = git@github.com:codepiano/pull-all-git-project.git
+    url = git@git.oschina.net:codepiano/pull-all-git-project.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+当然，使用命令行也可以直接添加，命令格式如下：
+
+git remote set-url --add origin git@git.oschina.net:codepiano/pull-all-git-project.git
+```
+
 ###   捋捋这些配置
 ####  .gitconfig
 git的全局配置文件.

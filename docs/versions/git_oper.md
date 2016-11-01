@@ -245,6 +245,8 @@ git pull origin master
 ```shell
 #将本地master分支提交推送到远程origin
 git push orign master
+#设置默认推送
+git push --set-upstream origin master
 ```
 
 
@@ -263,6 +265,8 @@ git remote show origin
 git remote rename  pb paul
 #移除远程仓库链接
 git remote rm up
+# 设定remote分支
+git remote add -t common(分支名) origin(远程别名) https://git.coding.net/farwmarth/BnHServer.git
 ```
 
 
@@ -279,6 +283,8 @@ git remote rm up
 #查看最后一条提交
 git log -1
 git log -n 1
+#显示最开始的提交
+git log --reverse
 #查看内容差异
 git log  -p
 #显示所有操作,包括reset
