@@ -66,6 +66,7 @@ pages:
     - 'tornado': 'python/py_tornado.md'
     - '爬虫': 'python/py_spider.md'
     - '消息队列': 'python/py_mq.md'
+    - '自动化测试': 'python/py_selenium.md'
 - lua:
     - '数据类型': 'lua/lua1_data.md'
 - swift:
