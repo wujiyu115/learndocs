@@ -126,6 +126,13 @@ http://feliving.github.io/Sublime-Text-3-Documentation/indentation.html
 { "keys": ["ctrl+k", "ctrl+e"], "command": "move_to", "args": {"to": "eol", "extend": false} }
 ```
 
+
+#### 光标移动到文件头尾
+```json
+ctrl+home :文件头
+ctrl+ end :文件尾
+```
+
 #### 光标移动
 ```shell
 ctrl+enter  #另起一行
