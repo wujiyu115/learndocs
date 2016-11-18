@@ -122,11 +122,61 @@ git config  user.name "suzie"
 
 #### 工作流
 ```shell
+#提交流程
 git stash
-git pull origin master
+git pull  -r
 git stash pop
+#解决冲突
+git commit -m 'xxx'
+git push
+#如果commit之后push发现有人提交
+git reset --soft HEAD^
+git pull  -r
+```
+
+### 工作流二
+```shell
+git commit
+git pull -r
+解决冲突
+git pull -r
+git push
+```
+
+### 工作流三
+```shell
+1.git pull -r
+2.A本地修改冲突的话git stash，B已经commit的修改冲突git mergetool
+3.A再次.git pull -r
+4.A git stash pop stash{0}
+5.A 有冲突再合并git mergetool
+```
+
+### git 被push -r 丢失日志
+```shell
+git reflog
+git log -g
+git cherry-pick commit_id
+#https://www.borfast.com/blog/2014/10/19/how-to-undo-a-git-push---force-and-undelete-things/
+```
+
+### 配置禁止 git push -r
+```shell
+git config --global receive.denyNonFastForwards true
+```
+
+### 不commit情况下pull
+```shell
+git stash
+git pull
+git stash pop
+git stash drop stash{1}
 git stash clear
 ```
 
-
-
+### git stash clear 后恢复
+```shell
+git fsck --lost-found
+git show 8dd73fa8d14880182f11e24dc10bca570b6127d7
+git merge 8dd73fa8d14880182f11e24dc10bca570b6127d7
+```

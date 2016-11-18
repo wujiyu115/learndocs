@@ -383,20 +383,6 @@ git stash drop stash{1}
 git stash clear
 ```
 
-### 不commit情况下pull
-```shell
-git stash
-git pull
-git stash pop
-git stash drop stash{1}
-git stash clear
-```
-### git stash clear 后恢复
-```shell
-git fsck --lost-found
-git show 8dd73fa8d14880182f11e24dc10bca570b6127d7
-git merge 8dd73fa8d14880182f11e24dc10bca570b6127d7
-```
 
 
 ## Git submodule

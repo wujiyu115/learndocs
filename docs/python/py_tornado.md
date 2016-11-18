@@ -178,7 +178,7 @@ server {
           proxy_pass_header Server;
           proxy_set_header Host $http_host;
           proxy_redirect off;
-          proxy_set_header X-Real-IP $remote_addr;
+          proxy _set_header X-Real-IP $remote_addr;
           proxy_set_header X-Scheme $scheme;
           proxy_pass http://tornado;
       }
