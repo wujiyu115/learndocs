@@ -126,3 +126,14 @@ pages:
 #         - '小结': 'ide/atom/4.8-Summary.md'
 - Sublime Text编辑器:
     - 'sublimetext': 'ide/sublimetext.md'
+- MakeFile:
+    - '概述': 'makefile/overview.md'
+    - 'makefile介绍': 'makefile/introduction.md'
+    - '书写规则': 'makefile/rules.md'
+    - '书写命令': 'makefile/recipes.md'
+    - '使用变量': 'makefile/variables.md'
+    - '使用条件判断': 'makefile/conditionals.md'
+    - '使用函数': 'makefile/functions.md'
+    - 'make 的运行': 'makefile/invoke.md'
+    - '隐含规则': 'makefile/implicit_rules.md'
+    - '使用make更新函数库文件': 'makefile/archives.md'
