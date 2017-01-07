@@ -321,6 +321,23 @@ git log --pretty=format:"%h %s" --graph
 
 ```
 
+一个实用的log
+```
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+```
+
+查看当前目录下文件的最后提交者
+```shell
+git ls-tree -r --name-only HEAD | while read filename; do
+  echo "$(git log -1 --format="%an %ae" -- $filename) $filename"
+done
+```
+
+周报
+```shell
+git log --pretty=format:"%Cred%ad%x09 %Cgreen%s" --date=format:'%Y/%m/%d %a' --since="1 week ago" --until="now" --reverse --author=$(git config user.name)
+```
+
 #### 筛选日志
 ```shell
 #时间点以来的提交
