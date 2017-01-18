@@ -29,26 +29,26 @@ Manual <https://www.gnu.org/software/make/manual/>`__
 本地编译
 ========
 
-#. Clone项目到本地:
+- Clone项目到本地:
 
    ::
 
        $ git clone https://github.com/seisman/how-to-write-makefile.git
 
-#. 安装依赖:
+- 安装依赖:
 
    ::
 
        $ pip install -r requirements.txt
 
-#. 编译生成HTML:
+- 编译生成HTML:
 
    ::
 
        $ make html
        $ firefox build/html/index.html&
 
-#. 编译生成PDF（要求安装TeXLive 2015）:
+- 编译生成PDF（要求安装TeXLive 2015）:
 
    ::
 
