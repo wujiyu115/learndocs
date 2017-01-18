@@ -413,6 +413,8 @@ git stash clear
 ### git submodule下还有submodule
 ```shell
 git submodule foreach git submodule update
+#递归更新
+git submodule update --init --recursive
 ```
 
 
