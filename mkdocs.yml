@@ -13,7 +13,7 @@ copyright: 'Copyright (c) 2016 farwmarth'
 # Documentation and theme
 docs_dir: 'docs'
 theme: 'material'
-# theme: 'cinder'
+# theme_dir: '../mkdocs-material/material'
 
 extra:
   palette:
@@ -21,13 +21,15 @@ extra:
     accent: 'blue grey'
   author:
     github: 'wujiyu115'
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
 
 # Extensions
 markdown_extensions:
-  - codehilite(css_class=code)
+  - codehilite
   - admonition
-  - toc:
-      permalink: '#'
+  - toc(permalink=true)
 
 pages:
 - Home: 'index.md'
