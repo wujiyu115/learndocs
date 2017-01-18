@@ -1,16 +1,10 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
-      
-        <title>sublimetext - farwmarth’s note</title>
-      
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
         <link rel="canonical" href="http://learndocs.farwmarth.com/ide/sublimetext/">
@@ -18,720 +12,2030 @@
       
         <meta name="author" content="farwmarth">
       
-    
-    <meta property="og:url" content="http://learndocs.farwmarth.com/ide/sublimetext/">
-    <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="http://learndocs.farwmarth.com/ide/sublimetext//../../">
-    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
-    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('../../assets/fonts/icon.eot?52m981');
-      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('../../assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('../../assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('../../assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
     
     
       
+        <title>sublimetext - farwmarth’s note</title>
       
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
-      <style>
-        body, input {
-          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
-        }
-      </style>
     
     
-    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
     
   </head>
   
   
   
-  <body class="palette-primary-blue-grey palette-accent-blue-grey">
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
-            
-              
-                Sublime Text编辑器 <i class="icon icon-link"></i>
-              
-            
-          </span>
-        
-        sublimetext
-      </div>
-    </div>
-    
-    
-      
-      <div class="button button-github" role="button" aria-label="GitHub">
-        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
-      </div>
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
   
-  <a href="/" class="project">
-    <div class="banner">
-      
-      <div class="name">
-        <strong>
-          farwmarth’s note
-          <span class="version">
-            
-          </span>
-        </strong>
+    <body data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+  
+    <svg class="md-svg">
+      <defs>
         
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Sublime Text编辑器
+                </span>
+              
+            
+            sublimetext
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
       </div>
     </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-      <div class="toc">
-        <ul>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
           
             
-  <li>
-    <a class="" title="Home" href="../..">
-      Home
-    </a>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    farwmarth’s note
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
     
   </li>
 
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据结构与算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        数据结构与算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  <li>
-    <span class="section">数据结构与算法</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
-      排序算法介绍
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
           
-            
-  <li>
-    <span class="section">c++基础</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
-      c++环境搭建(Win)
-    </a>
+  <li class="md-nav__item">
+    
+      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+        排序算法介绍
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
-      基础语法
-    </a>
-    
+      </ul>
+    </nav>
   </li>
 
+    
       
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      c++基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        c++基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-  <li>
-    <a class="" title="类" href="../../cplus/cplus2_class/">
-      类
-    </a>
-    
-  </li>
-
-      
         
-  <li>
-    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
-      内存分配
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
-      编译过程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
-      常量修饰符
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
           
-            
-  <li>
-    <span class="section">python</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="语言简介" href="../../python/py1_intro/">
-      语言简介
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="数据类型" href="../../python/py2_data/">
-      数据类型
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="控制流程" href="../../python/py3_controller/">
-      控制流程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="函数" href="../../python/py4_func/">
-      函数
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="步骤" href="../../python/py5_step/">
-      步骤
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="组织" href="../../python/py6_organize/">
-      组织
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="类" href="../../python/py_class/">
-      类
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="with关键字" href="../../python/py_with/">
-      with关键字
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="变量作用域" href="../../python/py_scope/">
-      变量作用域
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="枚举" href="../../python/py_enum/">
-      枚举
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="异常捕捉" href="../../python/py_error/">
-      异常捕捉
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="调试" href="../../python/py_test/">
-      调试
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="文件io" href="../../python/py_fileio/">
-      文件io
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="模块" href="../../python/py_inmodule/">
-      模块
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="网络库" href="../../python/py_urllib/">
-      网络库
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="模块管理" href="../../python/py_module_manager/">
-      模块管理
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="线程" href="../../python/py_thread/">
-      线程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="协程" href="../../python/py_coroutine/">
-      协程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="图形界面编程" href="../../python/py_gui/">
-      图形界面编程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="python2/3对比" href="../../python/py_diff2/">
-      python2/3对比
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="常用库" href="../../python/py_modules/">
-      常用库
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="pyqt使用" href="../../python/py_qt/">
-      pyqt使用
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="tornado" href="../../python/py_tornado/">
-      tornado
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="爬虫" href="../../python/py_spider/">
-      爬虫
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="消息队列" href="../../python/py_mq/">
-      消息队列
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
           
-            
-  <li>
-    <span class="section">lua</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="数据类型" href="../../lua/lua1_data/">
-      数据类型
-    </a>
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+        c++环境搭建(Win)
+      </a>
     
   </li>
 
-      
-    </ul>
-  </li>
-
+        
           
-            
-  <li>
-    <span class="section">swift</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
-      swift基础入门
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
           
-            
-  <li>
-    <span class="section">php</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="基础介绍" href="../../php/php1_intro/">
-      基础介绍
-    </a>
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
+        基础语法
+      </a>
     
   </li>
 
-      
-    </ul>
-  </li>
-
+        
           
-            
-  <li>
-    <span class="section">git</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="git简介" href="../../versions/git_intro/">
-      git简介
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git操作" href="../../versions/git_oper/">
-      git操作
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git分支管理" href="../../versions/git_branch/">
-      git分支管理
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git工具" href="../../versions/git_tools/">
-      git工具
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git问题记录" href="../../versions/git_error/">
-      git问题记录
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git应用场景" href="../../versions/git_remark/">
-      git应用场景
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="github" href="../../versions/github/">
-      github
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
           
-            
-  <li>
-    <span class="section">Vim编辑器</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="vim" href="../vim/">
-      vim
-    </a>
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
+        类
+      </a>
     
   </li>
 
-      
-    </ul>
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
+        内存分配
+      </a>
+    
   </li>
 
-          
-            
-  <li>
-    <span class="section">Sublime Text编辑器</span>
-    <ul>
-      
         
-  <li>
-    <a class="current" title="sublimetext" href="./">
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
+        编译过程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
+        常量修饰符
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py1_intro/" title="语言简介" class="md-nav__link">
+        语言简介
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py2_data/" title="数据类型" class="md-nav__link">
+        数据类型
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py3_controller/" title="控制流程" class="md-nav__link">
+        控制流程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py4_func/" title="函数" class="md-nav__link">
+        函数
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py5_step/" title="步骤" class="md-nav__link">
+        步骤
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py6_organize/" title="组织" class="md-nav__link">
+        组织
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_class/" title="类" class="md-nav__link">
+        类
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_with/" title="with关键字" class="md-nav__link">
+        with关键字
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_scope/" title="变量作用域" class="md-nav__link">
+        变量作用域
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_enum/" title="枚举" class="md-nav__link">
+        枚举
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_error/" title="异常捕捉" class="md-nav__link">
+        异常捕捉
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_test/" title="调试" class="md-nav__link">
+        调试
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_fileio/" title="文件io" class="md-nav__link">
+        文件io
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_inmodule/" title="模块" class="md-nav__link">
+        模块
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_urllib/" title="网络库" class="md-nav__link">
+        网络库
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_module_manager/" title="模块管理" class="md-nav__link">
+        模块管理
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_thread/" title="线程" class="md-nav__link">
+        线程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_coroutine/" title="协程" class="md-nav__link">
+        协程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_gui/" title="图形界面编程" class="md-nav__link">
+        图形界面编程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_diff2/" title="python2/3对比" class="md-nav__link">
+        python2/3对比
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_modules/" title="常用库" class="md-nav__link">
+        常用库
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_qt/" title="pyqt使用" class="md-nav__link">
+        pyqt使用
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_tornado/" title="tornado" class="md-nav__link">
+        tornado
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_spider/" title="爬虫" class="md-nav__link">
+        爬虫
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_mq/" title="消息队列" class="md-nav__link">
+        消息队列
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_selenium/" title="自动化测试" class="md-nav__link">
+        自动化测试
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-5">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+        数据类型
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      swift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-6">
+        swift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+        swift基础入门
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      php
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-7">
+        php
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+        基础介绍
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-8">
+        git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+        git简介
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+        git操作
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+        git分支管理
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+        git工具
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+        git问题记录
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+        git应用场景
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/github/" title="github" class="md-nav__link">
+        github
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Vim编辑器
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-9">
+        Vim编辑器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../vim/" title="vim" class="md-nav__link">
+        vim
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
+    
+    <label class="md-nav__link" for="nav-10">
+      Sublime Text编辑器
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-10">
+        Sublime Text编辑器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        sublimetext
+      </label>
+    
+    <a href="./" title="sublimetext" class="md-nav__link md-nav__link--active">
       sublimetext
     </a>
     
       
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="文档" class="md-nav__link">
+    文档
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-control" title="Package Control使用" class="md-nav__link">
+    Package Control使用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#package-control_1" title="安装Package Control" class="md-nav__link">
+    安装Package Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-control_2" title="用Package Control安装插件的方法：" class="md-nav__link">
+    用Package Control安装插件的方法：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="其它功能" class="md-nav__link">
+    其它功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" title="Data目录" class="md-nav__link">
+    Data目录
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#_3" title="配置" class="md-nav__link">
+    配置
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="字体" class="md-nav__link">
+    字体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="配色:" class="md-nav__link">
+    配色:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
-        <ul>
-          
-            <li class="anchor">
-              <a title="文档" href="#_1">
-                文档
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Package Control使用" href="#package-control">
-                Package Control使用
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="配置" href="#_3">
-                配置
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="技巧" href="#_6">
-                技巧
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="快捷键" href="#_10">
-                快捷键
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="常用插件:" href="#_13">
-                常用插件:
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="授权" href="#_18">
-                授权
-              </a>
-            </li>
-          
-        </ul>
+        <li class="md-nav__item">
+  <a href="#_6" title="技巧" class="md-nav__link">
+    技巧
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="怎样把字符替换成换行" class="md-nav__link">
+    怎样把字符替换成换行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="每行的代码都被用框框住" class="md-nav__link">
+    每行的代码都被用框框住
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump-to-previous-cursor-position-shortcut" title="jump-to-previous-cursor-position-shortcut" class="md-nav__link">
+    jump-to-previous-cursor-position-shortcut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-the-console-and-type" title="Open the console and type" class="md-nav__link">
+    Open the console and type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="缩进设置" class="md-nav__link">
+    缩进设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#_10" title="快捷键" class="md-nav__link">
+    快捷键
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#win" title="Win" class="md-nav__link">
+    Win
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="光标移动到首尾设置" class="md-nav__link">
+    光标移动到首尾设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="光标移动到文件头尾" class="md-nav__link">
+    光标移动到文件头尾
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="光标移动" class="md-nav__link">
+    光标移动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cacel-build" title="cacel build" class="md-nav__link">
+    cacel build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" title="Mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="常用插件:" class="md-nav__link">
+    常用插件:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-save" title="auto-save" class="md-nav__link">
+    auto-save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chinesetranslator" title="Chinese​Translator" class="md-nav__link">
+    Chinese​Translator
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="快捷键" class="md-nav__link">
+    快捷键
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brackethighlighter" title="BracketHighlighter" class="md-nav__link">
+    BracketHighlighter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorsublime" title="Colorsublime" class="md-nav__link">
+    Colorsublime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converttoutf8" title="Convert​To​UTF8" class="md-nav__link">
+    Convert​To​UTF8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emmet" title="Emmet" class="md-nav__link">
+    Emmet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favoritefiles" title="FavoriteFiles" class="md-nav__link">
+    FavoriteFiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filediffs" title="File​Diffs" class="md-nav__link">
+    File​Diffs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fileheader" title="FileHeader" class="md-nav__link">
+    FileHeader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="自定义模板" class="md-nav__link">
+    自定义模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="快捷键" class="md-nav__link">
+    快捷键
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findkeyconflicts" title="FindKeyConflicts" class="md-nav__link">
+    FindKeyConflicts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="使用" class="md-nav__link">
+    使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gist" title="Gist" class="md-nav__link">
+    Gist
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hexviewer" title="HexViewer" class="md-nav__link">
+    HexViewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-css-js-prettify" title="HTML-CSS-JS Prettify" class="md-nav__link">
+    HTML-CSS-JS Prettify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imesupport" title="IMESupport" class="md-nav__link">
+    IMESupport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsformat" title="JsFormat" class="md-nav__link">
+    JsFormat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdownediting" title="MarkdownEditing" class="md-nav__link">
+    MarkdownEditing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#omnimarkuppreviewer" title="OmniMarkupPreviewer" class="md-nav__link">
+    OmniMarkupPreviewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-theme" title="Material Theme" class="md-nav__link">
+    Material Theme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#omnimarkuppreviewer_1" title="OmniMarkupPreviewer" class="md-nav__link">
+    OmniMarkupPreviewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-folder" title="Open Folder" class="md-nav__link">
+    Open Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-url" title="Open URL" class="md-nav__link">
+    Open URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-tools" title="Path Tools" class="md-nav__link">
+    Path Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-translator" title="Path Translator" class="md-nav__link">
+    Path Translator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sidebarfolders" title="Side​Bar​Folders" class="md-nav__link">
+    Side​Bar​Folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sidebargit" title="SideBarGit" class="md-nav__link">
+    SideBarGit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sublimegit" title="SublimeGit" class="md-nav__link">
+    SublimeGit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sublimeastyleformatter" title="SublimeAStyleFormatter" class="md-nav__link">
+    SublimeAStyleFormatter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal" title="Terminal" class="md-nav__link">
+    Terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tortoisesvn" title="TortoiseSVN" class="md-nav__link">
+    TortoiseSVN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailingspaces" title="TrailingSpaces" class="md-nav__link">
+    TrailingSpaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-in-browser" title="View In Browser" class="md-nav__link">
+    View In Browser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#doxydoxygen" title="DoxyDoxygen" class="md-nav__link">
+    DoxyDoxygen
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" title="授权" class="md-nav__link">
+    授权
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" title="破解版:" class="md-nav__link">
+    破解版:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" title="破解分析:" class="md-nav__link">
+    破解分析:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" title="注册码" class="md-nav__link">
+    注册码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
-      
-    </ul>
+        
+      </ul>
+    </nav>
   </li>
 
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      MakeFile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-11">
+        MakeFile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-        </ul>
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/overview/" title="概述" class="md-nav__link">
+        概述
+      </a>
+    
+  </li>
+
         
-          <hr>
-          <span class="section">The author</span>
-          <ul>
-            
-            
-              
-              <li>
-                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
-                  @wujiyu115 on GitHub
-                </a>
-              </li>
-            
-          </ul>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
+        makefile介绍
+      </a>
+    
+  </li>
+
         
-      </div>
-    </div>
-  </div>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
+        书写规则
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
+        书写命令
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
+        使用变量
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
+        使用条件判断
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
+        使用函数
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
+        make 的运行
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
+        隐含规则
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
+        使用make更新函数库文件
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
 </nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="文档" class="md-nav__link">
+    文档
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-control" title="Package Control使用" class="md-nav__link">
+    Package Control使用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-control_1" title="安装Package Control" class="md-nav__link">
+    安装Package Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-control_2" title="用Package Control安装插件的方法：" class="md-nav__link">
+    用Package Control安装插件的方法：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="其它功能" class="md-nav__link">
+    其它功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" title="Data目录" class="md-nav__link">
+    Data目录
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="配置" class="md-nav__link">
+    配置
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="字体" class="md-nav__link">
+    字体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="配色:" class="md-nav__link">
+    配色:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="技巧" class="md-nav__link">
+    技巧
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="怎样把字符替换成换行" class="md-nav__link">
+    怎样把字符替换成换行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="每行的代码都被用框框住" class="md-nav__link">
+    每行的代码都被用框框住
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump-to-previous-cursor-position-shortcut" title="jump-to-previous-cursor-position-shortcut" class="md-nav__link">
+    jump-to-previous-cursor-position-shortcut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-the-console-and-type" title="Open the console and type" class="md-nav__link">
+    Open the console and type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="缩进设置" class="md-nav__link">
+    缩进设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="快捷键" class="md-nav__link">
+    快捷键
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#win" title="Win" class="md-nav__link">
+    Win
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="光标移动到首尾设置" class="md-nav__link">
+    光标移动到首尾设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="光标移动到文件头尾" class="md-nav__link">
+    光标移动到文件头尾
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="光标移动" class="md-nav__link">
+    光标移动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cacel-build" title="cacel build" class="md-nav__link">
+    cacel build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" title="Mac" class="md-nav__link">
+    Mac
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="常用插件:" class="md-nav__link">
+    常用插件:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-save" title="auto-save" class="md-nav__link">
+    auto-save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chinesetranslator" title="Chinese​Translator" class="md-nav__link">
+    Chinese​Translator
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="快捷键" class="md-nav__link">
+    快捷键
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brackethighlighter" title="BracketHighlighter" class="md-nav__link">
+    BracketHighlighter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colorsublime" title="Colorsublime" class="md-nav__link">
+    Colorsublime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converttoutf8" title="Convert​To​UTF8" class="md-nav__link">
+    Convert​To​UTF8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emmet" title="Emmet" class="md-nav__link">
+    Emmet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favoritefiles" title="FavoriteFiles" class="md-nav__link">
+    FavoriteFiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filediffs" title="File​Diffs" class="md-nav__link">
+    File​Diffs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fileheader" title="FileHeader" class="md-nav__link">
+    FileHeader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="自定义模板" class="md-nav__link">
+    自定义模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="快捷键" class="md-nav__link">
+    快捷键
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findkeyconflicts" title="FindKeyConflicts" class="md-nav__link">
+    FindKeyConflicts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="使用" class="md-nav__link">
+    使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gist" title="Gist" class="md-nav__link">
+    Gist
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hexviewer" title="HexViewer" class="md-nav__link">
+    HexViewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-css-js-prettify" title="HTML-CSS-JS Prettify" class="md-nav__link">
+    HTML-CSS-JS Prettify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imesupport" title="IMESupport" class="md-nav__link">
+    IMESupport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsformat" title="JsFormat" class="md-nav__link">
+    JsFormat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdownediting" title="MarkdownEditing" class="md-nav__link">
+    MarkdownEditing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#omnimarkuppreviewer" title="OmniMarkupPreviewer" class="md-nav__link">
+    OmniMarkupPreviewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-theme" title="Material Theme" class="md-nav__link">
+    Material Theme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#omnimarkuppreviewer_1" title="OmniMarkupPreviewer" class="md-nav__link">
+    OmniMarkupPreviewer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-folder" title="Open Folder" class="md-nav__link">
+    Open Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-url" title="Open URL" class="md-nav__link">
+    Open URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-tools" title="Path Tools" class="md-nav__link">
+    Path Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-translator" title="Path Translator" class="md-nav__link">
+    Path Translator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sidebarfolders" title="Side​Bar​Folders" class="md-nav__link">
+    Side​Bar​Folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sidebargit" title="SideBarGit" class="md-nav__link">
+    SideBarGit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sublimegit" title="SublimeGit" class="md-nav__link">
+    SublimeGit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sublimeastyleformatter" title="SublimeAStyleFormatter" class="md-nav__link">
+    SublimeAStyleFormatter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal" title="Terminal" class="md-nav__link">
+    Terminal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tortoisesvn" title="TortoiseSVN" class="md-nav__link">
+    TortoiseSVN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailingspaces" title="TrailingSpaces" class="md-nav__link">
+    TrailingSpaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-in-browser" title="View In Browser" class="md-nav__link">
+    View In Browser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#doxydoxygen" title="DoxyDoxygen" class="md-nav__link">
+    DoxyDoxygen
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" title="授权" class="md-nav__link">
+    授权
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" title="破解版:" class="md-nav__link">
+    破解版:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" title="破解分析:" class="md-nav__link">
+    破解分析:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" title="注册码" class="md-nav__link">
+    注册码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
-          <h1 id="sublimetext-3">sublimeText 3 配置<a class="headerlink" href="#sublimetext-3" title="Permanent link">#</a></h1>
-<h2 id="_1">文档<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+              
+                
+                <h1 id="sublimetext-3">sublimeText 3 配置<a class="headerlink" href="#sublimetext-3" title="Permanent link">&para;</a></h1>
+<h2 id="_1">文档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>https://www.sublimetext.com/docs/3/
 http://docs.sublimetext.info/en/latest/index.html
 https://sublime-undocs-zh.readthedocs.io/en/latest/index.html
 http://sweetme.at/2013/08/08/sublime-text-keyboard-shortcuts/</p>
-<h2 id="package-control">Package Control使用<a class="headerlink" href="#package-control" title="Permanent link">#</a></h2>
-<h3 id="package-control_1">安装Package Control<a class="headerlink" href="#package-control_1" title="Permanent link">#</a></h3>
+<h2 id="package-control">Package Control使用<a class="headerlink" href="#package-control" title="Permanent link">&para;</a></h2>
+<h3 id="package-control_1">安装Package Control<a class="headerlink" href="#package-control_1" title="Permanent link">&para;</a></h3>
 <p><code>ctrl+~</code>打开导入框
 <code>sublimeText3</code>:</p>
-<div class="code"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span><span class="o">,</span><span class="nn">os</span><span class="p">;</span> <span class="n">pf</span> <span class="o">=</span> <span class="s1">&#39;Package Control.sublime-package&#39;</span><span class="p">;</span> <span class="n">ipp</span> <span class="o">=</span> <span class="n">sublime</span><span class="o">.</span><span class="n">installed_packages_path</span><span class="p">();</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">())</span> <span class="p">);</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ipp</span><span class="p">,</span> <span class="n">pf</span><span class="p">),</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span> <span class="s1">&#39;http://sublime.wbond.net/&#39;</span> <span class="o">+</span> <span class="n">pf</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;%20&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span><span class="o">,</span><span class="nn">os</span><span class="p">;</span> <span class="n">pf</span> <span class="o">=</span> <span class="s1">&#39;Package Control.sublime-package&#39;</span><span class="p">;</span> <span class="n">ipp</span> <span class="o">=</span> <span class="n">sublime</span><span class="o">.</span><span class="n">installed_packages_path</span><span class="p">();</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">())</span> <span class="p">);</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ipp</span><span class="p">,</span> <span class="n">pf</span><span class="p">),</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span> <span class="s1">&#39;http://sublime.wbond.net/&#39;</span> <span class="o">+</span> <span class="n">pf</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;%20&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
 
 
-<h3 id="package-control_2">用Package Control安装插件的方法：<a class="headerlink" href="#package-control_2" title="Permanent link">#</a></h3>
+<h3 id="package-control_2">用Package Control安装插件的方法：<a class="headerlink" href="#package-control_2" title="Permanent link">&para;</a></h3>
 <ol>
 <li>按下<code>Ctrl+Shift+P</code>调出命令面板,输入<code>install</code> 调出<code>Install Package</code> 选项并回车,然后在列表中选中要安装的插件。</li>
 <li>插件列表:<a href="https://packagecontrol.io">https://packagecontrol.io</a></li>
 </ol>
-<h3 id="_2">其它功能<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<h3 id="_2">其它功能<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>Add Repository</code> : 从指定git上安装插件，需给出一个git库目录,如<code>https://github.com/username/repo</code></li>
 <li><code>Remove Package</code> : 移除插件,安装的插件列表记录在:<code>Packages/User/Package Control.sublime-settings</code>,我的本地目录是:<code>Sublime Text Build 3114 x64\Data\Packages\User</code></li>
@@ -741,44 +2045,49 @@ http://sweetme.at/2013/08/08/sublime-text-keyboard-shortcuts/</p>
 <li><code>Upgrade/Overwrite All Packages</code> : 升级并覆盖所有package，包括不是通过package control安装的</li>
 <li><code>Upgrade Package</code> : 列出可供升级的package</li>
 </ul>
-<h2 id="_3">配置<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
-<h3 id="_4">字体<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<h3 id="data"><code>Data</code>目录<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
+<p>====================
+<em> <strong>Windows</strong>: :file:<code>%APPDATA%\\Sublime Text 3</code>
+</em> <strong>OS X</strong>: :file:<code>~/Library/Application Support/Sublime Text 3</code>
+* <strong>Linux</strong>: :file:<code>~/.config/sublime-text-3</code></p>
+<h2 id="_3">配置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">字体<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><code>Preferences-&gt;File Setting-User</code>，打开配置文件，看里面有没font_face配置项，有就直接改，没有就自己加上，可能的配置文件如下：</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;color_scheme&quot;</span><span class="p">:</span> <span class="s2">&quot;Packages/Color Scheme - Default/Black-Pearl2.tmTheme&quot;</span><span class="p">,</span>
      <span class="nt">&quot;font_face&quot;</span><span class="p">:</span> <span class="s2">&quot;微软雅黑&quot;</span><span class="p">,</span>   <span class="nt">&quot;font_size&quot;</span><span class="p">:</span> <span class="mf">10.0</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<h3 id="_5">配色:<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<h3 id="_5">配色:<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p><a href="http://colorsublime.com/">http://colorsublime.com/</a></p>
-<h2 id="_6">技巧<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
-<h3 id="_7">怎样把字符替换成换行<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span>打开正则匹配模式输入: \n
+<h2 id="_6">技巧<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">怎样把字符替换成换行<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>打开正则匹配模式输入: \n
 </pre></div>
 
 
-<h3 id="_8">每行的代码都被用框框住<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
+<h3 id="_8">每行的代码都被用框框住<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>在Anaconda设置里找到pep8把true改为false</p>
-<h3 id="jump-to-previous-cursor-position-shortcut">jump-to-previous-cursor-position-shortcut<a class="headerlink" href="#jump-to-previous-cursor-position-shortcut" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span>to jump back: Alt + -
+<h3 id="jump-to-previous-cursor-position-shortcut">jump-to-previous-cursor-position-shortcut<a class="headerlink" href="#jump-to-previous-cursor-position-shortcut" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>to jump back: Alt + -
 to jump forward: Alt + Shift + -
 or through Goto menu.
 <span class="o">(</span>SublimeText 3, build 3114<span class="o">)</span>
 </pre></div>
 
 
-<h3 id="open-the-console-and-type">Open the console and type<a class="headerlink" href="#open-the-console-and-type" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span>sublime.log_commands<span class="o">(</span>True<span class="o">)</span>
+<h3 id="open-the-console-and-type">Open the console and type<a class="headerlink" href="#open-the-console-and-type" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>sublime.log_commands<span class="o">(</span>True<span class="o">)</span>
 sublime.log_input<span class="o">(</span>True<span class="o">)</span>
 </pre></div>
 
 
-<h3 id="_9">缩进设置<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
+<h3 id="_9">缩进设置<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>http://feliving.github.io/Sublime-Text-3-Documentation/indentation.html</p>
-<h2 id="_10">快捷键<a class="headerlink" href="#_10" title="Permanent link">#</a></h2>
-<h3 id="win">Win<a class="headerlink" href="#win" title="Permanent link">#</a></h3>
+<h2 id="_10">快捷键<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="win">Win<a class="headerlink" href="#win" title="Permanent link">&para;</a></h3>
 <ul>
 <li>ctrl+` 命令导入</li>
 <li><code>ctrl+shift+p</code> 常用命令</li>
@@ -820,25 +2129,31 @@ sublime.log_input<span class="o">(</span>True<span class="o">)</span>
 <li>Ctrl + Home -&gt; to the beginning of the file</li>
 <li>Ctrl + End -&gt; to the end of the fil</li>
 </ul>
-<h4 id="_11">光标移动到首尾设置<a class="headerlink" href="#_11" title="Permanent link">#</a></h4>
-<div class="code"><pre><span></span><span class="p">{</span> <span class="nt">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+k&quot;</span><span class="p">,</span> <span class="s2">&quot;ctrl+h&quot;</span><span class="p">],</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;move_to&quot;</span><span class="p">,</span> <span class="nt">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;bol&quot;</span><span class="p">,</span> <span class="nt">&quot;extend&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">}</span> <span class="p">}</span><span class="err">,</span>
+<h4 id="_11">光标移动到首尾设置<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+k&quot;</span><span class="p">,</span> <span class="s2">&quot;ctrl+h&quot;</span><span class="p">],</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;move_to&quot;</span><span class="p">,</span> <span class="nt">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;bol&quot;</span><span class="p">,</span> <span class="nt">&quot;extend&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">}</span> <span class="p">}</span><span class="err">,</span>
 <span class="p">{</span> <span class="nt">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+k&quot;</span><span class="p">,</span> <span class="s2">&quot;ctrl+e&quot;</span><span class="p">],</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;move_to&quot;</span><span class="p">,</span> <span class="nt">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;eol&quot;</span><span class="p">,</span> <span class="nt">&quot;extend&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">}</span> <span class="p">}</span>
 </pre></div>
 
 
-<h4 id="_12">光标移动<a class="headerlink" href="#_12" title="Permanent link">#</a></h4>
-<div class="code"><pre><span></span>ctrl+enter  <span class="c1">#另起一行</span>
+<h4 id="_12">光标移动到文件头尾<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="err">ctrl+home</span> <span class="err">:文件头</span>
+<span class="err">ctrl+</span> <span class="err">end</span> <span class="err">:文件尾</span>
+</pre></div>
+
+
+<h4 id="_13">光标移动<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>ctrl+enter  <span class="c1">#另起一行</span>
 ctrl+箭头上 <span class="c1">#锁定当前行向上移动</span>
 ctrl+ -&gt;   <span class="c1">#光标移单词</span>
 </pre></div>
 
 
-<h4 id="cacel-build">cacel build<a class="headerlink" href="#cacel-build" title="Permanent link">#</a></h4>
-<div class="code"><pre><span></span><span class="p">{</span> <span class="nt">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+shift+c&quot;</span><span class="p">],</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="nt">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;kill&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">}</span> <span class="p">}</span>
+<h4 id="cacel-build">cacel build<a class="headerlink" href="#cacel-build" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+shift+c&quot;</span><span class="p">],</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="nt">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;kill&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">}</span> <span class="p">}</span>
 </pre></div>
 
 
-<h3 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">#</a></h3>
+<h3 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>⌘⇧P</code> 命令提示</li>
 <li><code>⌃G</code>  前往行</li>
@@ -860,24 +2175,24 @@ ctrl+ -&gt;   <span class="c1">#光标移单词</span>
 <li><code>⌃[1,2,3,4]</code> 焦点移动至相应组</li>
 <li><code>⌃⇧[1,2,3,4]</code> 将当前文件移动至相应组</li>
 </ul>
-<h2 id="_13">常用插件:<a class="headerlink" href="#_13" title="Permanent link">#</a></h2>
-<h3 id="auto-save">auto-save<a class="headerlink" href="#auto-save" title="Permanent link">#</a></h3>
+<h2 id="_14">常用插件:<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="auto-save">auto-save<a class="headerlink" href="#auto-save" title="Permanent link">&para;</a></h3>
 <p>可以自动保存输入内容的插件,我的配置如下,修改5秒后无操作则自动保存:</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
      <span class="s2">&quot;auto_save_on_modified&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="s2">&quot;auto_save_delay_in_seconds&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<h3 id="chinesetranslator">Chinese​Translator<a class="headerlink" href="#chinesetranslator" title="Permanent link">#</a></h3>
+<h3 id="chinesetranslator">Chinese​Translator<a class="headerlink" href="#chinesetranslator" title="Permanent link">&para;</a></h3>
 <p>翻译插件,选中中文翻译成英文,英文翻译成中文</p>
-<h4 id="_14">快捷键<a class="headerlink" href="#_14" title="Permanent link">#</a></h4>
+<h4 id="_15">快捷键<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <ul>
 <li>选中翻译: ctrl+shift+c</li>
 <li>重新绑定:</li>
 </ul>
-<div class="code"><pre><span></span> <span class="c1">//translate</span>
+<div class="codehilite"><pre><span></span> <span class="c1">//translate</span>
     <span class="p">{</span>
         <span class="s2">&quot;keys&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;ctrl+shift+t&quot;</span><span class="p">],</span>
         <span class="s2">&quot;command&quot;</span><span class="o">:</span> <span class="s2">&quot;translate&quot;</span>
@@ -885,33 +2200,33 @@ ctrl+ -&gt;   <span class="c1">#光标移单词</span>
 </pre></div>
 
 
-<h3 id="brackethighlighter">BracketHighlighter<a class="headerlink" href="#brackethighlighter" title="Permanent link">#</a></h3>
+<h3 id="brackethighlighter">BracketHighlighter<a class="headerlink" href="#brackethighlighter" title="Permanent link">&para;</a></h3>
 <p>标签匹配
 <img alt="标签匹配" src="../../_static/2c23129492d6d74b8f9139711578e9ad0d1115a0.png" /></p>
-<h3 id="colorsublime">Colorsublime<a class="headerlink" href="#colorsublime" title="Permanent link">#</a></h3>
+<h3 id="colorsublime">Colorsublime<a class="headerlink" href="#colorsublime" title="Permanent link">&para;</a></h3>
 <p>配置管理器
 + Colorsublime:Browser Theme :打开colorsublime网站浏览
 + Colorsublime:Install Theme : 安装配色方案</p>
-<h3 id="converttoutf8">Convert​To​UTF8<a class="headerlink" href="#converttoutf8" title="Permanent link">#</a></h3>
+<h3 id="converttoutf8">Convert​To​UTF8<a class="headerlink" href="#converttoutf8" title="Permanent link">&para;</a></h3>
 <p>不解释,转换编码:<code>“File &gt; Set File Encoding to</code></p>
-<h3 id="emmet">Emmet<a class="headerlink" href="#emmet" title="Permanent link">#</a></h3>
+<h3 id="emmet">Emmet<a class="headerlink" href="#emmet" title="Permanent link">&para;</a></h3>
 <p>前端码字神器</p>
-<h3 id="favoritefiles">FavoriteFiles<a class="headerlink" href="#favoritefiles" title="Permanent link">#</a></h3>
+<h3 id="favoritefiles">FavoriteFiles<a class="headerlink" href="#favoritefiles" title="Permanent link">&para;</a></h3>
 <p><code>sublime</code>书签增强版,原理就是把要关注的文件分组保存到一个json文件中
 + FavoriteFiles:add file(s) : 添加到组里
 + FavoriteFiles:open file: 打开书签中文件
 + FavoriteFiles:remove file(s) : 移除文件</p>
-<h3 id="filediffs">File​Diffs<a class="headerlink" href="#filediffs" title="Permanent link">#</a></h3>
+<h3 id="filediffs">File​Diffs<a class="headerlink" href="#filediffs" title="Permanent link">&para;</a></h3>
 <p>比较文件,平时单文件用这个,目录较多时用<code>beyond compare</code>
 <code>file_diff_menu</code>: 显示比较菜单项,默认快捷键:<code>ctrl+shift+d</code>.
 <code>file_diff_clipboard</code>:与剪贴板中的内容比较
 <code>file_diff_selections</code>: 与选中内容比较
 <code>file_diff_tab</code>: 与标签页中文件比较
 <code>file_diff_previous</code>: 当前文件与上次激活的文件比较</p>
-<h3 id="fileheader">FileHeader<a class="headerlink" href="#fileheader" title="Permanent link">#</a></h3>
+<h3 id="fileheader">FileHeader<a class="headerlink" href="#fileheader" title="Permanent link">&para;</a></h3>
 <p><code>github</code>:<a href="https://github.com/shiyanhui/FileHeader">https://github.com/shiyanhui/FileHeader</a></p>
 <p>FileHeader是一个为文件添加文件头和body的插件,fileHander采用了Jinja2的模板,理论上支持所有语言.默认的模板在<code>FileHeader--&gt;template</code>中,设计分为<code>header</code>和<code>body</code>两个文件夹,<code>header</code>和定义一般如下:</p>
-<div class="code"><pre><span></span><span class="x"># -*- coding: utf-8 -*-</span>
+<div class="codehilite"><pre><span></span><span class="x"># -*- coding: utf-8 -*-</span>
 <span class="x"># @Author: </span><span class="cp">{{</span><span class="nv">author</span><span class="cp">}}</span><span class="x"></span>
 <span class="x"># @Date:   </span><span class="cp">{{</span><span class="nv">create_time</span><span class="cp">}}</span><span class="x"></span>
 <span class="x"># @Last Modified by:   </span><span class="cp">{{</span><span class="nv">last_modified_by</span><span class="cp">}}</span><span class="x"></span>
@@ -919,18 +2234,18 @@ ctrl+ -&gt;   <span class="c1">#光标移单词</span>
 </pre></div>
 
 
-<h4 id="_15">自定义模板<a class="headerlink" href="#_15" title="Permanent link">#</a></h4>
+<h4 id="_16">自定义模板<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>要自定义模板可以在设置中设置 <code>custom_template_header_path</code>和<code>custom_template_body_path</code>路径,不要直接修改<code>FileHeader--&gt;template</code>中的模板.</p>
-<h4 id="_16">快捷键<a class="headerlink" href="#_16" title="Permanent link">#</a></h4>
+<h4 id="_17">快捷键<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <ul>
 <li>新文件: OS X:<code>super+alt+n</code> ,Windows , Linux :<code>ctrl+alt+n</code></li>
 <li>旧文件: OS X:<code>super+alt+a</code>,Windows , Linux :<code>ctrl+alt+a</code></li>
 </ul>
-<h3 id="findkeyconflicts">FindKeyConflicts<a class="headerlink" href="#findkeyconflicts" title="Permanent link">#</a></h3>
+<h3 id="findkeyconflicts">FindKeyConflicts<a class="headerlink" href="#findkeyconflicts" title="Permanent link">&para;</a></h3>
 <p>查找<code>sublime</code>快捷键冲突的插件:</p>
-<h4 id="_17">使用<a class="headerlink" href="#_17" title="Permanent link">#</a></h4>
+<h4 id="_18">使用<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p><code>ctrl+shift+p</code> 调出命令面板,选择<code>FindKeyConflicts: All Key Maps to Quick Panel</code> ,输入要查找的冲突键,比如:<code>ctrl+shift+c</code>回车,输出结果如下:</p>
-<div class="code"><pre><span></span>-------------
+<div class="codehilite"><pre><span></span>-------------
 Entry Details
 -------------
  [ctrl+shift+c]
@@ -943,7 +2258,7 @@ Entry Details
 </pre></div>
 
 
-<h3 id="gist">Gist<a class="headerlink" href="#gist" title="Permanent link">#</a></h3>
+<h3 id="gist">Gist<a class="headerlink" href="#gist" title="Permanent link">&para;</a></h3>
 <p>代码片段管理
 + <code>Create Public Gist</code> :创建公共片段
 + <code>Create Private Gist</code> :创建私有片段
@@ -951,7 +2266,7 @@ Entry Details
 + <code>Open Gist</code> :打开代码片段
 + <code>Insert Gist</code> :插入片段
 + <code>Add File</code> :添加文件</p>
-<h3 id="hexviewer">HexViewer<a class="headerlink" href="#hexviewer" title="Permanent link">#</a></h3>
+<h3 id="hexviewer">HexViewer<a class="headerlink" href="#hexviewer" title="Permanent link">&para;</a></h3>
 <p>hex查看编辑工具</p>
 <p><img alt="hex" src="../../_static/1e13eebef24c5ca69d0bf75ef57897778c380c2c.png" /></p>
 <ul>
@@ -964,28 +2279,28 @@ Entry Details
 <li>Hex Viewer: Get Checksum    校验算法,有md5等</li>
 <li>Hex Viewer: Generate Hash    算hash值</li>
 </ul>
-<h3 id="html-css-js-prettify">HTML-CSS-JS Prettify<a class="headerlink" href="#html-css-js-prettify" title="Permanent link">#</a></h3>
+<h3 id="html-css-js-prettify">HTML-CSS-JS Prettify<a class="headerlink" href="#html-css-js-prettify" title="Permanent link">&para;</a></h3>
 <p>代码格式化插件,需要<code>nodejs</code>支持
 快捷键:<code>Cmd+Shift+H</code></p>
-<h3 id="imesupport">IMESupport<a class="headerlink" href="#imesupport" title="Permanent link">#</a></h3>
+<h3 id="imesupport">IMESupport<a class="headerlink" href="#imesupport" title="Permanent link">&para;</a></h3>
 <p>校正输入法位置</p>
-<h3 id="jsformat">JsFormat<a class="headerlink" href="#jsformat" title="Permanent link">#</a></h3>
+<h3 id="jsformat">JsFormat<a class="headerlink" href="#jsformat" title="Permanent link">&para;</a></h3>
 <p>js代码格式化</p>
-<h3 id="markdownediting">MarkdownEditing<a class="headerlink" href="#markdownediting" title="Permanent link">#</a></h3>
+<h3 id="markdownediting">MarkdownEditing<a class="headerlink" href="#markdownediting" title="Permanent link">&para;</a></h3>
 <p><code>sublime</code>下<code>markdown</code>编辑</p>
-<h3 id="omnimarkuppreviewer">OmniMarkupPreviewer<a class="headerlink" href="#omnimarkuppreviewer" title="Permanent link">#</a></h3>
+<h3 id="omnimarkuppreviewer">OmniMarkupPreviewer<a class="headerlink" href="#omnimarkuppreviewer" title="Permanent link">&para;</a></h3>
 <p><code>sublime</code>下<code>markdown</code>预览工具
 https://github.com/timonwong/OmniMarkupPreviewer
 http://macplay.leanote.com/post/%E8%BF%91%E4%B9%8E%E5%AE%8C%E7%BE%8E%E7%9A%84-Markdown-%E5%86%99%E4%BD%9C%E4%BD%93%E9%AA%8C-Sublime-Text-3-OmniMarkupPreviewer</p>
-<h3 id="material-theme">Material Theme<a class="headerlink" href="#material-theme" title="Permanent link">#</a></h3>
+<h3 id="material-theme">Material Theme<a class="headerlink" href="#material-theme" title="Permanent link">&para;</a></h3>
 <p>一直在用的主题</p>
-<h3 id="omnimarkuppreviewer_1">OmniMarkupPreviewer<a class="headerlink" href="#omnimarkuppreviewer_1" title="Permanent link">#</a></h3>
+<h3 id="omnimarkuppreviewer_1">OmniMarkupPreviewer<a class="headerlink" href="#omnimarkuppreviewer_1" title="Permanent link">&para;</a></h3>
 <p><code>sublime</code>下<code>markdown</code>预览插件</p>
-<h3 id="open-folder">Open Folder<a class="headerlink" href="#open-folder" title="Permanent link">#</a></h3>
+<h3 id="open-folder">Open Folder<a class="headerlink" href="#open-folder" title="Permanent link">&para;</a></h3>
 <p>侧边栏打开文件夹</p>
-<h3 id="open-url">Open URL<a class="headerlink" href="#open-url" title="Permanent link">#</a></h3>
+<h3 id="open-url">Open URL<a class="headerlink" href="#open-url" title="Permanent link">&para;</a></h3>
 <p>选中网址在浏览器中打开</p>
-<h3 id="path-tools">Path Tools<a class="headerlink" href="#path-tools" title="Permanent link">#</a></h3>
+<h3 id="path-tools">Path Tools<a class="headerlink" href="#path-tools" title="Permanent link">&para;</a></h3>
 <p>路径拷贝插入工具
 + <code>Insert File Path</code> 插入路径 <code>E:\git\hexo\source\_posts\ sublimeText 2,3 配置.md</code>
 +<code>Insert File Directory</code> 插入目录<code>E:\git\hexo\source\_posts</code>
@@ -995,40 +2310,40 @@ http://macplay.leanote.com/post/%E8%BF%91%E4%B9%8E%E5%AE%8C%E7%BE%8E%E7%9A%84-Ma
 + <code>Copy File Path</code> 复制文件路径
 + <code>Copy File Directory</code> 复制文件目录
 + <code>Copy File Name</code>  复制文件名</p>
-<h3 id="path-translator">Path Translator<a class="headerlink" href="#path-translator" title="Permanent link">#</a></h3>
+<h3 id="path-translator">Path Translator<a class="headerlink" href="#path-translator" title="Permanent link">&para;</a></h3>
 <p>win,linux风格路径互转 <code>/</code>, <code>\</code></p>
-<h3 id="sidebarfolders">Side​Bar​Folders<a class="headerlink" href="#sidebarfolders" title="Permanent link">#</a></h3>
+<h3 id="sidebarfolders">Side​Bar​Folders<a class="headerlink" href="#sidebarfolders" title="Permanent link">&para;</a></h3>
 <p>文件夹快速切换</p>
-<h3 id="sidebargit">SideBarGit<a class="headerlink" href="#sidebargit" title="Permanent link">#</a></h3>
+<h3 id="sidebargit">SideBarGit<a class="headerlink" href="#sidebargit" title="Permanent link">&para;</a></h3>
 <p>sidebar git管理</p>
-<h3 id="sublimegit">SublimeGit<a class="headerlink" href="#sublimegit" title="Permanent link">#</a></h3>
+<h3 id="sublimegit">SublimeGit<a class="headerlink" href="#sublimegit" title="Permanent link">&para;</a></h3>
 <p>git管理</p>
-<h3 id="sublimeastyleformatter">SublimeAStyleFormatter<a class="headerlink" href="#sublimeastyleformatter" title="Permanent link">#</a></h3>
+<h3 id="sublimeastyleformatter">SublimeAStyleFormatter<a class="headerlink" href="#sublimeastyleformatter" title="Permanent link">&para;</a></h3>
 <p>c++/java代码格式化</p>
-<h3 id="terminal">Terminal<a class="headerlink" href="#terminal" title="Permanent link">#</a></h3>
+<h3 id="terminal">Terminal<a class="headerlink" href="#terminal" title="Permanent link">&para;</a></h3>
 <p>打开终端</p>
-<h3 id="tortoisesvn">TortoiseSVN<a class="headerlink" href="#tortoisesvn" title="Permanent link">#</a></h3>
+<h3 id="tortoisesvn">TortoiseSVN<a class="headerlink" href="#tortoisesvn" title="Permanent link">&para;</a></h3>
 <p>svn管理</p>
-<h3 id="trailingspaces">TrailingSpaces<a class="headerlink" href="#trailingspaces" title="Permanent link">#</a></h3>
+<h3 id="trailingspaces">TrailingSpaces<a class="headerlink" href="#trailingspaces" title="Permanent link">&para;</a></h3>
 <p>去除空格</p>
-<h3 id="view-in-browser">View In Browser<a class="headerlink" href="#view-in-browser" title="Permanent link">#</a></h3>
+<h3 id="view-in-browser">View In Browser<a class="headerlink" href="#view-in-browser" title="Permanent link">&para;</a></h3>
 <p>在浏览器中打开</p>
-<h3 id="doxydoxygen">DoxyDoxygen<a class="headerlink" href="#doxydoxygen" title="Permanent link">#</a></h3>
+<h3 id="doxydoxygen">DoxyDoxygen<a class="headerlink" href="#doxydoxygen" title="Permanent link">&para;</a></h3>
 <p>注释生成工具</p>
-<h2 id="_18">授权<a class="headerlink" href="#_18" title="Permanent link">#</a></h2>
-<h3 id="_19">破解版:<a class="headerlink" href="#_19" title="Permanent link">#</a></h3>
+<h2 id="_19">授权<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<h3 id="_20">破解版:<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://sublimecrack.wordpress.com/2015/06/07/sublime_text3_crack/">https://sublimecrack.wordpress.com/2015/06/07/sublime_text3_crack/</a></li>
 <li><a href="http://haojian138.blog.163.com/blog/static/212643110201393010438357//">http://haojian138.blog.163.com/blog/static/212643110201393010438357//</a></li>
 </ul>
-<h3 id="_20">破解分析:<a class="headerlink" href="#_20" title="Permanent link">#</a></h3>
+<h3 id="_21">破解分析:<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="http://www.cnblogs.com/cdh49/p/3653144.html">http://www.cnblogs.com/cdh49/p/3653144.html</a></li>
 </ul>
-<h3 id="_21">注册码<a class="headerlink" href="#_21" title="Permanent link">#</a></h3>
+<h3 id="_22">注册码<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <p><code>github</code>搜索<code>EA7E  Single User License</code>
 测试版本: <code>3117</code></p>
-<div class="code"><pre><span></span>—– BEGIN LICENSE —–
+<div class="codehilite"><pre><span></span>—– BEGIN LICENSE —–
 Michael Barnes
 Single User License
 EA7E-821385
@@ -1182,65 +2497,79 @@ FD032C30 AD5E7241 4EAA66ED 167D91FB
 55896B16 EA125C81 F550AF6B A6820916
 ------ END LICENSE ------
 </pre></div>
-          <aside class="copyright" role="note">
-            
-              Copyright (c) 2016 farwmarth &ndash;
-            
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
               
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
+            </article>
+          </div>
+        </div>
+      </main>
       
-        <a href="../vim/" title="vim">
-          <span class="direction">
-            Previous
-          </span>
-          <div class="page">
-            <div class="button button-previous" role="button" aria-label="Previous">
-              <i class="icon icon-back"></i>
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../vim/" title="vim" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
-            <div class="stretch">
-              <div class="title">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
                 vim
-              </div>
+              </span>
             </div>
-          </div>
-        </a>
-      
+          </a>
+        
+        
+          <a href="../../makefile/overview/" title="概述" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                概述
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
-    <div class="next">
-      
-    </div>
-  </nav>
-
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) 2016 farwmarth
           </div>
-        </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
       </div>
-    </main>
-    <script>
-      var base_url = '../..';
-      var repo_id  = '';
-    </script>
-    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
     
+      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
     
   </body>
 </html>

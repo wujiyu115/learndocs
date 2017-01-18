@@ -1,16 +1,10 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
-      
-        <title>类 - farwmarth’s note</title>
-      
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
         <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_class/">
@@ -18,683 +12,1227 @@
       
         <meta name="author" content="farwmarth">
       
-    
-    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_class/">
-    <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_class//../../">
-    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
-    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('../../assets/fonts/icon.eot?52m981');
-      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('../../assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('../../assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('../../assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
     
     
       
+        <title>类 - farwmarth’s note</title>
       
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
-      <style>
-        body, input {
-          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
-        }
-      </style>
     
     
-    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
     
   </head>
   
   
   
-  <body class="palette-primary-blue-grey palette-accent-blue-grey">
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
-            
-              
-                python <i class="icon icon-link"></i>
-              
-            
-          </span>
-        
-        类
-      </div>
-    </div>
-    
-    
-      
-      <div class="button button-github" role="button" aria-label="GitHub">
-        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
-      </div>
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
   
-  <a href="/" class="project">
-    <div class="banner">
-      
-      <div class="name">
-        <strong>
-          farwmarth’s note
-          <span class="version">
-            
-          </span>
-        </strong>
+    <body data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+  
+    <svg class="md-svg">
+      <defs>
         
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
       </div>
-    </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-      <div class="toc">
-        <ul>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
           
-            
-  <li>
-    <a class="" title="Home" href="../..">
-      Home
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <span class="section">数据结构与算法</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
-      排序算法介绍
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">c++基础</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
-      c++环境搭建(Win)
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
-      基础语法
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="类" href="../../cplus/cplus2_class/">
-      类
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
-      内存分配
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
-      编译过程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
-      常量修饰符
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">python</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="语言简介" href="../py1_intro/">
-      语言简介
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="数据类型" href="../py2_data/">
-      数据类型
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="控制流程" href="../py3_controller/">
-      控制流程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="函数" href="../py4_func/">
-      函数
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="步骤" href="../py5_step/">
-      步骤
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="组织" href="../py6_organize/">
-      组织
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="current" title="类" href="./">
-      类
-    </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="类" href="#_1">
-                类
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="继承" href="#_10">
-                继承
-              </a>
-            </li>
-          
-        </ul>
-      
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="with关键字" href="../py_with/">
-      with关键字
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="变量作用域" href="../py_scope/">
-      变量作用域
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="枚举" href="../py_enum/">
-      枚举
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="异常捕捉" href="../py_error/">
-      异常捕捉
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="调试" href="../py_test/">
-      调试
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="文件io" href="../py_fileio/">
-      文件io
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="模块" href="../py_inmodule/">
-      模块
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="网络库" href="../py_urllib/">
-      网络库
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="模块管理" href="../py_module_manager/">
-      模块管理
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="线程" href="../py_thread/">
-      线程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="协程" href="../py_coroutine/">
-      协程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="图形界面编程" href="../py_gui/">
-      图形界面编程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="python2/3对比" href="../py_diff2/">
-      python2/3对比
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="常用库" href="../py_modules/">
-      常用库
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="pyqt使用" href="../py_qt/">
-      pyqt使用
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="tornado" href="../py_tornado/">
-      tornado
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="爬虫" href="../py_spider/">
-      爬虫
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="消息队列" href="../py_mq/">
-      消息队列
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">lua</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="数据类型" href="../../lua/lua1_data/">
-      数据类型
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">swift</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
-      swift基础入门
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">php</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="基础介绍" href="../../php/php1_intro/">
-      基础介绍
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">git</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="git简介" href="../../versions/git_intro/">
-      git简介
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git操作" href="../../versions/git_oper/">
-      git操作
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git分支管理" href="../../versions/git_branch/">
-      git分支管理
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git工具" href="../../versions/git_tools/">
-      git工具
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git问题记录" href="../../versions/git_error/">
-      git问题记录
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git应用场景" href="../../versions/git_remark/">
-      git应用场景
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="github" href="../../versions/github/">
-      github
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">Vim编辑器</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="vim" href="../../ide/vim/">
-      vim
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">Sublime Text编辑器</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="sublimetext" href="../../ide/sublimetext/">
-      sublimetext
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-        </ul>
-        
-          <hr>
-          <span class="section">The author</span>
-          <ul>
-            
             
               
-              <li>
-                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
-                  @wujiyu115 on GitHub
-                </a>
-              </li>
+                <span class="md-header-nav__parent">
+                  python
+                </span>
+              
             
-          </ul>
+            类
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
       </div>
     </div>
   </div>
-</nav>
+</div>
+        
       </div>
-      <article class="article">
-        <div class="wrapper">
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
           
-          <h1 id="python">python 类,继承<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
-<h2 id="_1">类<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    farwmarth’s note
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据结构与算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        数据结构与算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+        排序算法介绍
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      c++基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        c++基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+        c++环境搭建(Win)
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
+        基础语法
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
+        类
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
+        内存分配
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
+        编译过程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
+        常量修饰符
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py1_intro/" title="语言简介" class="md-nav__link">
+        语言简介
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py2_data/" title="数据类型" class="md-nav__link">
+        数据类型
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py3_controller/" title="控制流程" class="md-nav__link">
+        控制流程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py4_func/" title="函数" class="md-nav__link">
+        函数
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py5_step/" title="步骤" class="md-nav__link">
+        步骤
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py6_organize/" title="组织" class="md-nav__link">
+        组织
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        类
+      </label>
+    
+    <a href="./" title="类" class="md-nav__link md-nav__link--active">
+      类
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="类" class="md-nav__link">
+    类
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="类的定义 :" class="md-nav__link">
+    类的定义 :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__init__" title="__init__方法:" class="md-nav__link">
+    __init__方法:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="实例变量" class="md-nav__link">
+    实例变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="动态属性与限定" class="md-nav__link">
+    动态属性与限定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property" title="@property" class="md-nav__link">
+    @property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="访问限制" class="md-nav__link">
+    访问限制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="基础方法" class="md-nav__link">
+    基础方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="经典类" class="md-nav__link">
+    经典类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="新式类" class="md-nav__link">
+    新式类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="定制类" class="md-nav__link">
+    定制类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="继承" class="md-nav__link">
+    继承
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="多重继承" class="md-nav__link">
+    多重继承
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_with/" title="with关键字" class="md-nav__link">
+        with关键字
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_scope/" title="变量作用域" class="md-nav__link">
+        变量作用域
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_enum/" title="枚举" class="md-nav__link">
+        枚举
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_error/" title="异常捕捉" class="md-nav__link">
+        异常捕捉
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_test/" title="调试" class="md-nav__link">
+        调试
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_fileio/" title="文件io" class="md-nav__link">
+        文件io
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_inmodule/" title="模块" class="md-nav__link">
+        模块
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_urllib/" title="网络库" class="md-nav__link">
+        网络库
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_module_manager/" title="模块管理" class="md-nav__link">
+        模块管理
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_thread/" title="线程" class="md-nav__link">
+        线程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_coroutine/" title="协程" class="md-nav__link">
+        协程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_gui/" title="图形界面编程" class="md-nav__link">
+        图形界面编程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_diff2/" title="python2/3对比" class="md-nav__link">
+        python2/3对比
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_modules/" title="常用库" class="md-nav__link">
+        常用库
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_qt/" title="pyqt使用" class="md-nav__link">
+        pyqt使用
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_tornado/" title="tornado" class="md-nav__link">
+        tornado
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_spider/" title="爬虫" class="md-nav__link">
+        爬虫
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_mq/" title="消息队列" class="md-nav__link">
+        消息队列
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_selenium/" title="自动化测试" class="md-nav__link">
+        自动化测试
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-5">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+        数据类型
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      swift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-6">
+        swift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+        swift基础入门
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      php
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-7">
+        php
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+        基础介绍
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-8">
+        git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+        git简介
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+        git操作
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+        git分支管理
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+        git工具
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+        git问题记录
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+        git应用场景
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/github/" title="github" class="md-nav__link">
+        github
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Vim编辑器
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-9">
+        Vim编辑器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../ide/vim/" title="vim" class="md-nav__link">
+        vim
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Sublime Text编辑器
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-10">
+        Sublime Text编辑器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
+        sublimetext
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      MakeFile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-11">
+        MakeFile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/overview/" title="概述" class="md-nav__link">
+        概述
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
+        makefile介绍
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
+        书写规则
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
+        书写命令
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
+        使用变量
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
+        使用条件判断
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
+        使用函数
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
+        make 的运行
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
+        隐含规则
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
+        使用make更新函数库文件
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="类" class="md-nav__link">
+    类
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="类的定义 :" class="md-nav__link">
+    类的定义 :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__init__" title="__init__方法:" class="md-nav__link">
+    __init__方法:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="实例变量" class="md-nav__link">
+    实例变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="动态属性与限定" class="md-nav__link">
+    动态属性与限定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property" title="@property" class="md-nav__link">
+    @property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="访问限制" class="md-nav__link">
+    访问限制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="基础方法" class="md-nav__link">
+    基础方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="经典类" class="md-nav__link">
+    经典类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="新式类" class="md-nav__link">
+    新式类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="定制类" class="md-nav__link">
+    定制类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="继承" class="md-nav__link">
+    继承
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="多重继承" class="md-nav__link">
+    多重继承
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+              
+                
+                <h1 id="python">python 类,继承<a class="headerlink" href="#python" title="Permanent link">&para;</a></h1>
+<h2 id="_1">类<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>python 是完全面向对象的语言，你可以定义自己的类，也可以继承.所有数据类型都为对象，以引用赋值</p>
-<h3 id="_2">类的定义 :<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span>  <span class="k">class</span> <span class="nc">DataType</span><span class="p">:</span>
+<h3 id="_2">类的定义 :<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>  <span class="k">class</span> <span class="nc">DataType</span><span class="p">:</span>
       <span class="k">pass</span>
 </pre></div>
 
 
 <p>class作为类声明，pass表示缩进，没有其他含义</p>
-<h3 id="__init__"><code>__init__</code>方法:<a class="headerlink" href="#__init__" title="Permanent link">#</a></h3>
+<h3 id="__init__"><code>__init__</code>方法:<a class="headerlink" href="#__init__" title="Permanent link">&para;</a></h3>
 <p>从形式上来看相当于java中的构造器，在类实例后调用,但是在执行INIT方法时，对象已经实例化好了</p>
-<div class="code"><pre><span></span>  <span class="k">class</span> <span class="nc">DataType</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span>  <span class="k">class</span> <span class="nc">DataType</span><span class="p">:</span>
       <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
           <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
@@ -703,9 +1241,9 @@
 
 
 <p><code>self</code> 相当于java中的this,指向该实例,实例化类flib =DataType() 并不像java中一样使用显式的new关键字</p>
-<h3 id="_3">实例变量<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<h3 id="_3">实例变量<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>用<code>self.</code>变量名来声明实例变量.</p>
-<div class="code"><pre><span></span>  <span class="k">class</span> <span class="nc">Flib</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span>  <span class="k">class</span> <span class="nc">Flib</span><span class="p">:</span>
       <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">max</span><span class="p">):</span>
           <span class="bp">self</span><span class="o">.</span><span class="n">max</span> <span class="o">=</span> <span class="nb">max</span>
       <span class="k">def</span> <span class="nf">iter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -721,10 +1259,10 @@
 </pre></div>
 
 
-<h3 id="_4">动态属性与限定<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<h3 id="_4">动态属性与限定<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><code>动态属性</code>:实例可以动态添加属性,不影响其他实例
 <code>__slots__</code>:限制实例的属性,子类实例允许定义的属性就是自身的<code>__slots__</code>加上父类的<code>__slots__</code></p>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
   <span class="n">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,)</span>
   <span class="sd">&quot;&quot;&quot;docstring for Student&quot;&quot;&quot;</span>
   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -751,8 +1289,8 @@
 </pre></div>
 
 
-<h3 id="property">@property<a class="headerlink" href="#property" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<h3 id="property">@property<a class="headerlink" href="#property" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="c1">#读</span>
   <span class="nd">@property</span>
@@ -777,9 +1315,9 @@
 </pre></div>
 
 
-<h3 id="_5">访问限制<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<h3 id="_5">访问限制<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>私有属性:属性的名称前加上两个下划线<code>__</code></p>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">score</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">name</span>
@@ -796,11 +1334,11 @@
 </pre></div>
 
 
-<h3 id="_6">基础方法<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
+<h3 id="_6">基础方法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>isinstance</code>:判断对象类型</li>
 </ul>
-<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">bart</span><span class="p">,</span><span class="n">Student</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">bart</span><span class="p">,</span><span class="n">Student</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">bart</span><span class="p">,</span><span class="nb">object</span><span class="p">))</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">True</span>
@@ -812,7 +1350,7 @@
 <ul>
 <li><code>type</code>:获取对象类型,创建新的类型</li>
 </ul>
-<div class="code"><pre><span></span><span class="k">def</span> <span class="nf">de_fun</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;far&quot;</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">de_fun</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;far&quot;</span><span class="p">):</span>
   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hi,</span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">name</span><span class="p">)</span>
 
 <span class="c1">#type(&quot;类名&quot;,(&quot;继承类&quot;,),dict(属性名=属性值))</span>
@@ -831,14 +1369,14 @@
 <li><code>dir</code>:获得一个对象的所有属性和方法</li>
 <li><code>hasattr</code>,<code>getattr</code>:动态获取对象方法</li>
 </ul>
-<div class="code"><pre><span></span><span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s1">&#39;power&#39;</span><span class="p">)</span> <span class="c1"># 有属性&#39;power&#39;吗？</span>
+<div class="codehilite"><pre><span></span><span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s1">&#39;power&#39;</span><span class="p">)</span> <span class="c1"># 有属性&#39;power&#39;吗？</span>
 <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s1">&#39;power&#39;</span><span class="p">)</span> <span class="c1"># 获取属性&#39;power&#39;</span>
 </pre></div>
 
 
-<h3 id="_7">经典类<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<h3 id="_7">经典类<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>定义:没有继承的类,注意：如果经典类被作为父类，子类调用父类的构造函数时会出错。<code>TypeError: must be type, not classobj</code></p>
-<div class="code"><pre><span></span><span class="c1">#基类（经典类）</span>
+<div class="codehilite"><pre><span></span><span class="c1">#基类（经典类）</span>
 <span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">print</span> <span class="s2">&quot;Hi, I am a person. &quot;</span>
@@ -854,10 +1392,10 @@
 </pre></div>
 
 
-<h3 id="_8">新式类<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
+<h3 id="_8">新式类<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>定义:每个类都继承于一个基类，可以是自定义类或者其它类，如果什么都不想继承，那就继承于object
 如果想用super调用父类的构造函数，请使用新式类！</p>
-<div class="code"><pre><span></span><span class="c1">#基类（新式类）</span>
+<div class="codehilite"><pre><span></span><span class="c1">#基类（新式类）</span>
 <span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">print</span> <span class="s2">&quot;Hi, I am a person.&quot;</span>
@@ -872,11 +1410,11 @@
 </pre></div>
 
 
-<h3 id="_9">定制类<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
+<h3 id="_9">定制类<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>__str__</code>:格式化输出</li>
 </ul>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
   <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -891,7 +1429,7 @@
 <li><code>__iter__</code>:格式化输出
 如果一个类想被用于<code>for ... in</code>循环，类似list或tuple那样，就必须实现一个<code>__iter__()</code>方法，该方法返回一个迭代对象，然后，Python的for循环就会不断调用该迭代对象的<code>__next__()</code>方法拿到循环的下一个值，直到遇到<code>StopIteration</code>错误时退出循环</li>
 </ul>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Fib</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Fib</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="c1"># 初始化两个计数器a，b</span>
 
@@ -912,7 +1450,7 @@
 <ul>
 <li><code>__getitem__</code>:下标方式访问对象</li>
 </ul>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">GetItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">GetItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;docstring for GetItem&quot;&quot;&quot;</span>
   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="nb">super</span><span class="p">(</span><span class="n">GetItem</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
@@ -944,7 +1482,7 @@
 <ul>
 <li><code>__getattr__</code>:获取属性的操作</li>
 </ul>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Michael&#39;</span>
@@ -963,7 +1501,7 @@
 <ul>
 <li><code>__call__</code>:用于实例自身的调用</li>
 </ul>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
@@ -985,10 +1523,10 @@
 </pre></div>
 
 
-<h2 id="_10">继承<a class="headerlink" href="#_10" title="Permanent link">#</a></h2>
+<h2 id="_10">继承<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>继承语法: 类(父类) Python不会自动调用基本类的constructor，你得亲自专门调用它
 可以多重继承</p>
-<div class="code"><pre><span></span>  <span class="k">class</span> <span class="nc">SchoolMember</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span>  <span class="k">class</span> <span class="nc">SchoolMember</span><span class="p">:</span>
       <span class="sd">&#39;&#39;&#39;Represents any school member.&#39;&#39;&#39;</span>
       <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
           <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
@@ -1028,8 +1566,8 @@
 </pre></div>
 
 
-<h3 id="_11">多重继承<a class="headerlink" href="#_11" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">class</span> <span class="nc">Mammal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<h3 id="_11">多重继承<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Mammal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
   <span class="k">def</span> <span class="nf">viviparity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;viviparity!!&quot;</span><span class="p">)</span>
 
@@ -1048,81 +1586,79 @@
 <span class="sd">eat meating!!</span>
 <span class="sd">&#39;&#39;&#39;</span>
 </pre></div>
-          <aside class="copyright" role="note">
-            
-              Copyright (c) 2016 farwmarth &ndash;
-            
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
               
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
+            </article>
+          </div>
+        </div>
+      </main>
       
-        <a href="../py6_organize/" title="组织">
-          <span class="direction">
-            Previous
-          </span>
-          <div class="page">
-            <div class="button button-previous" role="button" aria-label="Previous">
-              <i class="icon icon-back"></i>
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../py6_organize/" title="组织" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
-            <div class="stretch">
-              <div class="title">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
                 组织
-              </div>
+              </span>
             </div>
-          </div>
-        </a>
-      
-    </div>
-    <div class="next">
-      
-        <a href="../py_with/" title="with关键字">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
+          </a>
+        
+        
+          <a href="../py_with/" title="with关键字" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
                 with关键字
-              </div>
+              </span>
             </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
             </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) 2016 farwmarth
           </div>
-        </a>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
       
     </div>
-  </nav>
-
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      var base_url = '../..';
-      var repo_id  = '';
-    </script>
-    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+  </div>
+</footer>
+      
+    </div>
     
+      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
     
   </body>
 </html>

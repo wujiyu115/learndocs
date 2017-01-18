@@ -1,16 +1,10 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
-      
-        <title>基础语法 - farwmarth’s note</title>
-      
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
         <link rel="canonical" href="http://learndocs.farwmarth.com/cplus/cplus1_grammer/">
@@ -18,687 +12,1061 @@
       
         <meta name="author" content="farwmarth">
       
-    
-    <meta property="og:url" content="http://learndocs.farwmarth.com/cplus/cplus1_grammer/">
-    <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="http://learndocs.farwmarth.com/cplus/cplus1_grammer//../../">
-    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
-    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('../../assets/fonts/icon.eot?52m981');
-      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('../../assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('../../assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('../../assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
     
     
       
+        <title>基础语法 - farwmarth’s note</title>
       
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
-      <style>
-        body, input {
-          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
-        }
-      </style>
     
     
-    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
     
   </head>
   
   
   
-  <body class="palette-primary-blue-grey palette-accent-blue-grey">
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
-            
-              
-                c++基础 <i class="icon icon-link"></i>
-              
-            
-          </span>
-        
-        基础语法
-      </div>
-    </div>
-    
-    
-      
-      <div class="button button-github" role="button" aria-label="GitHub">
-        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
-      </div>
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
   
-  <a href="/" class="project">
-    <div class="banner">
-      
-      <div class="name">
-        <strong>
-          farwmarth’s note
-          <span class="version">
-            
-          </span>
-        </strong>
+    <body data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+  
+    <svg class="md-svg">
+      <defs>
         
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  c++基础
+                </span>
+              
+            
+            基础语法
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
       </div>
     </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-      <div class="toc">
-        <ul>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
           
             
-  <li>
-    <a class="" title="Home" href="../..">
-      Home
-    </a>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    farwmarth’s note
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
     
   </li>
 
-          
-            
-  <li>
-    <span class="section">数据结构与算法</span>
-    <ul>
+    
       
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据结构与算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        数据结构与算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-  <li>
-    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
-      排序算法介绍
-    </a>
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+        排序算法介绍
+      </a>
     
   </li>
 
-      
-    </ul>
+        
+      </ul>
+    </nav>
   </li>
 
-          
-            
-  <li>
-    <span class="section">c++基础</span>
-    <ul>
+    
       
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      c++基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        c++基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-  <li>
-    <a class="" title="c++环境搭建(Win)" href="../cplus_win/">
-      c++环境搭建(Win)
-    </a>
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+        c++环境搭建(Win)
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="current" title="基础语法" href="./">
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        基础语法
+      </label>
+    
+    <a href="./" title="基础语法" class="md-nav__link md-nav__link--active">
       基础语法
     </a>
     
       
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="一 定义变量:" href="#_1">
-                一 定义变量:
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="二 控制流程:" href="#_2">
-                二 控制流程:
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="三 数据类型" href="#_3">
-                三 数据类型
-              </a>
-            </li>
-          
-        </ul>
-      
+<nav class="md-nav md-nav--secondary">
+  
+  
     
-  </li>
-
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
       
-        
-  <li>
-    <a class="" title="类" href="../cplus2_class/">
-      类
-    </a>
-    
-  </li>
-
+        <li class="md-nav__item">
+  <a href="#_1" title="一 定义变量:" class="md-nav__link">
+    一 定义变量:
+  </a>
+  
+</li>
       
-        
-  <li>
-    <a class="" title="内存分配" href="../cplus3_memory/">
-      内存分配
-    </a>
-    
-  </li>
-
+        <li class="md-nav__item">
+  <a href="#_2" title="二 控制流程:" class="md-nav__link">
+    二 控制流程:
+  </a>
+  
+</li>
       
-        
-  <li>
-    <a class="" title="编译过程" href="../cplus4_complier/">
-      编译过程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="常量修饰符" href="../cplus5_const/">
-      常量修饰符
-    </a>
-    
-  </li>
-
+        <li class="md-nav__item">
+  <a href="#_3" title="三 数据类型" class="md-nav__link">
+    三 数据类型
+  </a>
+  
+</li>
       
     </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">python</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="语言简介" href="../../python/py1_intro/">
-      语言简介
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="数据类型" href="../../python/py2_data/">
-      数据类型
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="控制流程" href="../../python/py3_controller/">
-      控制流程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="函数" href="../../python/py4_func/">
-      函数
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="步骤" href="../../python/py5_step/">
-      步骤
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="组织" href="../../python/py6_organize/">
-      组织
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="类" href="../../python/py_class/">
-      类
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="with关键字" href="../../python/py_with/">
-      with关键字
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="变量作用域" href="../../python/py_scope/">
-      变量作用域
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="枚举" href="../../python/py_enum/">
-      枚举
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="异常捕捉" href="../../python/py_error/">
-      异常捕捉
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="调试" href="../../python/py_test/">
-      调试
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="文件io" href="../../python/py_fileio/">
-      文件io
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="模块" href="../../python/py_inmodule/">
-      模块
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="网络库" href="../../python/py_urllib/">
-      网络库
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="模块管理" href="../../python/py_module_manager/">
-      模块管理
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="线程" href="../../python/py_thread/">
-      线程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="协程" href="../../python/py_coroutine/">
-      协程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="图形界面编程" href="../../python/py_gui/">
-      图形界面编程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="python2/3对比" href="../../python/py_diff2/">
-      python2/3对比
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="常用库" href="../../python/py_modules/">
-      常用库
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="pyqt使用" href="../../python/py_qt/">
-      pyqt使用
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="tornado" href="../../python/py_tornado/">
-      tornado
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="爬虫" href="../../python/py_spider/">
-      爬虫
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="消息队列" href="../../python/py_mq/">
-      消息队列
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">lua</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="数据类型" href="../../lua/lua1_data/">
-      数据类型
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">swift</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
-      swift基础入门
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">php</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="基础介绍" href="../../php/php1_intro/">
-      基础介绍
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">git</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="git简介" href="../../versions/git_intro/">
-      git简介
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git操作" href="../../versions/git_oper/">
-      git操作
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git分支管理" href="../../versions/git_branch/">
-      git分支管理
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git工具" href="../../versions/git_tools/">
-      git工具
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git问题记录" href="../../versions/git_error/">
-      git问题记录
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git应用场景" href="../../versions/git_remark/">
-      git应用场景
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="github" href="../../versions/github/">
-      github
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">Vim编辑器</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="vim" href="../../ide/vim/">
-      vim
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">Sublime Text编辑器</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="sublimetext" href="../../ide/sublimetext/">
-      sublimetext
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-        </ul>
-        
-          <hr>
-          <span class="section">The author</span>
-          <ul>
-            
-            
-              
-              <li>
-                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
-                  @wujiyu115 on GitHub
-                </a>
-              </li>
-            
-          </ul>
-        
-      </div>
-    </div>
-  </div>
+  
 </nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
+    
+  </li>
+
+        
           
-          <h1 id="c">c++　第一章 基础语法,控制流程,数据类型<a class="headerlink" href="#c" title="Permanent link">#</a></h1>
-<h3 id="_1">一 定义变量:<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="kt">double</span> <span class="n">a</span><span class="o">=</span><span class="mf">2.0</span>
+          
+  <li class="md-nav__item">
+    
+      <a href="../cplus2_class/" title="类" class="md-nav__link">
+        类
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../cplus3_memory/" title="内存分配" class="md-nav__link">
+        内存分配
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../cplus4_complier/" title="编译过程" class="md-nav__link">
+        编译过程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../cplus5_const/" title="常量修饰符" class="md-nav__link">
+        常量修饰符
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py1_intro/" title="语言简介" class="md-nav__link">
+        语言简介
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py2_data/" title="数据类型" class="md-nav__link">
+        数据类型
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py3_controller/" title="控制流程" class="md-nav__link">
+        控制流程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py4_func/" title="函数" class="md-nav__link">
+        函数
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py5_step/" title="步骤" class="md-nav__link">
+        步骤
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py6_organize/" title="组织" class="md-nav__link">
+        组织
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_class/" title="类" class="md-nav__link">
+        类
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_with/" title="with关键字" class="md-nav__link">
+        with关键字
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_scope/" title="变量作用域" class="md-nav__link">
+        变量作用域
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_enum/" title="枚举" class="md-nav__link">
+        枚举
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_error/" title="异常捕捉" class="md-nav__link">
+        异常捕捉
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_test/" title="调试" class="md-nav__link">
+        调试
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_fileio/" title="文件io" class="md-nav__link">
+        文件io
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_inmodule/" title="模块" class="md-nav__link">
+        模块
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_urllib/" title="网络库" class="md-nav__link">
+        网络库
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_module_manager/" title="模块管理" class="md-nav__link">
+        模块管理
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_thread/" title="线程" class="md-nav__link">
+        线程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_coroutine/" title="协程" class="md-nav__link">
+        协程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_gui/" title="图形界面编程" class="md-nav__link">
+        图形界面编程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_diff2/" title="python2/3对比" class="md-nav__link">
+        python2/3对比
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_modules/" title="常用库" class="md-nav__link">
+        常用库
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_qt/" title="pyqt使用" class="md-nav__link">
+        pyqt使用
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_tornado/" title="tornado" class="md-nav__link">
+        tornado
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_spider/" title="爬虫" class="md-nav__link">
+        爬虫
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_mq/" title="消息队列" class="md-nav__link">
+        消息队列
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../python/py_selenium/" title="自动化测试" class="md-nav__link">
+        自动化测试
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-5">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+        数据类型
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      swift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-6">
+        swift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+        swift基础入门
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      php
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-7">
+        php
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+        基础介绍
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-8">
+        git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+        git简介
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+        git操作
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+        git分支管理
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+        git工具
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+        git问题记录
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+        git应用场景
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/github/" title="github" class="md-nav__link">
+        github
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Vim编辑器
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-9">
+        Vim编辑器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../ide/vim/" title="vim" class="md-nav__link">
+        vim
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Sublime Text编辑器
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-10">
+        Sublime Text编辑器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
+        sublimetext
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      MakeFile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-11">
+        MakeFile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/overview/" title="概述" class="md-nav__link">
+        概述
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
+        makefile介绍
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
+        书写规则
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
+        书写命令
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
+        使用变量
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
+        使用条件判断
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
+        使用函数
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
+        make 的运行
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
+        隐含规则
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
+        使用make更新函数库文件
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="一 定义变量:" class="md-nav__link">
+    一 定义变量:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="二 控制流程:" class="md-nav__link">
+    二 控制流程:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="三 数据类型" class="md-nav__link">
+    三 数据类型
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+              
+                
+                <h1 id="c">c++　第一章 基础语法,控制流程,数据类型<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
+<h3 id="_1">一 定义变量:<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kt">double</span> <span class="n">a</span><span class="o">=</span><span class="mf">2.0</span>
 </pre></div>
 
 
-<h3 id="_2">二 控制流程:<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<h3 id="_2">二 控制流程:<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>if ...else </strong></li>
 </ol>
-<div class="code"><pre><span></span>  <span class="kt">void</span> <span class="nf">control</span><span class="p">()</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span>  <span class="kt">void</span> <span class="nf">control</span><span class="p">()</span> <span class="p">{</span>
       <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
       <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
           <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;ok&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
@@ -712,7 +1080,7 @@
 <ol>
 <li><strong>switch:表达式只能是整型，字符型，枚举型</strong></li>
 </ol>
-<div class="code"><pre><span></span>  <span class="kt">void</span> <span class="nf">control</span><span class="p">()</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span>  <span class="kt">void</span> <span class="nf">control</span><span class="p">()</span> <span class="p">{</span>
       <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
       <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
           <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;ok&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
@@ -726,7 +1094,7 @@
 <ol>
 <li><strong>for..i</strong></li>
 </ol>
-<div class="code"><pre><span></span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
           <span class="n">cout</span> <span class="o">&lt;&lt;</span><span class="s">&quot;hello&quot;</span><span class="p">;</span>
   <span class="p">}</span>
 </pre></div>
@@ -735,7 +1103,7 @@
 <ol>
 <li><strong>while</strong></li>
 </ol>
-<div class="code"><pre><span></span>    <span class="kt">int</span> <span class="n">test</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span>    <span class="kt">int</span> <span class="n">test</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">test</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">test</span><span class="o">++</span><span class="p">;</span>
       <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">test</span><span class="o">&lt;&lt;</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
@@ -743,7 +1111,7 @@
 </pre></div>
 
 
-<h3 id="_3">三 数据类型<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<h3 id="_3">三 数据类型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p><code>int ,char,bool,float,double,int[],double&amp;amp;,char*,enum</code>
 + <strong>整数类型:int</strong>
 <a href="http://farwmarth.com/wp-content/uploads/2013/03/image18.png"><img alt="image" src="http://farwmarth.com/wp-content/uploads/2013/03/image_thumb18.png" title="image" /></a>
@@ -751,7 +1119,7 @@
 <ul>
 <li><strong>字符型:char</strong></li>
 </ul>
-<div class="code"><pre><span></span>  <span class="kt">char</span> <span class="n">ch</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span>  <span class="kt">char</span> <span class="n">ch</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ch</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 </pre></div>
 
@@ -760,7 +1128,7 @@
 <ul>
 <li><strong>枚举型:enum</strong></li>
 </ul>
-<div class="code"><pre><span></span>  <span class="k">enum</span> <span class="n">Week</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span>  <span class="k">enum</span> <span class="n">Week</span> <span class="p">{</span>
           <span class="n">Mon</span><span class="p">,</span> <span class="n">Tue</span><span class="p">,</span> <span class="n">Wed</span><span class="p">,</span> <span class="n">Thu</span><span class="p">,</span> <span class="n">Fri</span><span class="p">,</span> <span class="n">Sta</span><span class="p">,</span> <span class="n">Sun</span>
       <span class="p">};</span>
   <span class="n">Week</span> <span class="n">mon</span> <span class="o">=</span> <span class="n">Tue</span><span class="p">;</span>
@@ -779,7 +1147,7 @@
 c-串 :从c语言中延续的字符数组，以0结尾。字符长度要加1.</p>
 </li>
 </ul>
-<div class="code"><pre><span></span><span class="k">const</span> <span class="kt">char</span> <span class="n">str</span><span class="o">=</span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="k">const</span> <span class="kt">char</span> <span class="n">str</span><span class="o">=</span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
 <span class="kt">char</span> <span class="n">str</span><span class="o">=</span><span class="s">&quot;Hello&quot;</span><span class="p">;</span> <span class="c1">//字符串常量赋予char指针错误deprecated conversion from string constant to ‘char’</span>
 <span class="kt">char</span> <span class="n">str</span><span class="o">=</span><span class="s">&quot;Hello&quot;</span><span class="p">;</span> <span class="c1">//指针地址赋予char类型错误invalid conversion from ‘const char’ to ‘char’</span>
 <span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="n">str</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>  <span class="c1">//Hello</span>
@@ -800,7 +1168,7 @@ c-串 :从c语言中延续的字符数组，以0结尾。字符长度要加1.</p
 <li><strong>string:</strong>
 string是一种自定义类型，可以方便地操作。不像字符指针一样蛋疼。</li>
 </ul>
-<div class="code"><pre><span></span>  <span class="n">string</span> <span class="n">a</span><span class="p">,</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;hello&quot;</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span>  <span class="n">string</span> <span class="n">a</span><span class="p">,</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;hello&quot;</span><span class="p">;</span>
   <span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">&quot;123&quot;</span><span class="p">;</span>
   <span class="c1">//比较</span>
   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">s1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">//false</span>
@@ -817,7 +1185,7 @@ string是一种自定义类型，可以方便地操作。不像字符指针一�
 <li><strong>数组:</strong>
 定义格式:<code>类型名 数组名[常量表达式]</code></li>
 </ul>
-<div class="code"><pre><span></span>  <span class="kt">int</span> <span class="n">arr1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span> <span class="p">};</span>
+<div class="codehilite"><pre><span></span>  <span class="kt">int</span> <span class="n">arr1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span> <span class="p">};</span>
   <span class="kt">int</span> <span class="n">arr2</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
   <span class="kt">void</span> <span class="nf">arrays</span><span class="p">()</span> <span class="p">{</span>
       <span class="kt">int</span> <span class="n">arr3</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span> <span class="p">};</span>
@@ -852,7 +1220,7 @@ string是一种自定义类型，可以方便地操作。不像字符指针一�
 <ul>
 <li><strong>vector容器</strong></li>
 </ul>
-<div class="code"><pre><span></span>  <span class="kt">void</span> <span class="nf">vectors</span><span class="p">()</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span>  <span class="kt">void</span> <span class="nf">vectors</span><span class="p">()</span> <span class="p">{</span>
 
       <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ve</span><span class="p">;</span>
       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
@@ -866,81 +1234,79 @@ string是一种自定义类型，可以方便地操作。不像字符指针一�
 
   <span class="p">}</span>
 </pre></div>
-          <aside class="copyright" role="note">
-            
-              Copyright (c) 2016 farwmarth &ndash;
-            
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
               
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
+            </article>
+          </div>
+        </div>
+      </main>
       
-        <a href="../cplus_win/" title="c++环境搭建(Win)">
-          <span class="direction">
-            Previous
-          </span>
-          <div class="page">
-            <div class="button button-previous" role="button" aria-label="Previous">
-              <i class="icon icon-back"></i>
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../cplus_win/" title="c++环境搭建(Win)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
-            <div class="stretch">
-              <div class="title">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
                 c++环境搭建(Win)
-              </div>
+              </span>
             </div>
-          </div>
-        </a>
-      
-    </div>
-    <div class="next">
-      
-        <a href="../cplus2_class/" title="类">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
+          </a>
+        
+        
+          <a href="../cplus2_class/" title="类" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
                 类
-              </div>
+              </span>
             </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
             </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) 2016 farwmarth
           </div>
-        </a>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
       
     </div>
-  </nav>
-
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      var base_url = '../..';
-      var repo_id  = '';
-    </script>
-    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+  </div>
+</footer>
+      
+    </div>
     
+      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
     
   </body>
 </html>

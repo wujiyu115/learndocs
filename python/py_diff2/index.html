@@ -1,16 +1,10 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
-      
-        <title>python2/3对比 - farwmarth’s note</title>
-      
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
         <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_diff2/">
@@ -18,758 +12,1572 @@
       
         <meta name="author" content="farwmarth">
       
-    
-    <meta property="og:url" content="http://learndocs.farwmarth.com/python/py_diff2/">
-    <meta property="og:title" content="farwmarth’s note">
-    <meta property="og:image" content="http://learndocs.farwmarth.com/python/py_diff2//../../">
-    <meta name="apple-mobile-web-app-title" content="farwmarth’s note">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
-    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('../../assets/fonts/icon.eot?52m981');
-      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('../../assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('../../assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('../../assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
     
     
       
+        <title>python2/3对比 - farwmarth’s note</title>
       
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
-      <style>
-        body, input {
-          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
-        }
-      </style>
     
     
-    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
     
   </head>
   
   
   
-  <body class="palette-primary-blue-grey palette-accent-blue-grey">
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
-            
-              
-                python <i class="icon icon-link"></i>
-              
-            
-          </span>
-        
-        python2/3对比
-      </div>
-    </div>
-    
-    
-      
-      <div class="button button-github" role="button" aria-label="GitHub">
-        <a href="https://github.com/wujiyu115" title="@wujiyu115 on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
-      </div>
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
   
-  <a href="/" class="project">
-    <div class="banner">
-      
-      <div class="name">
-        <strong>
-          farwmarth’s note
-          <span class="version">
-            
-          </span>
-        </strong>
+    <body data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+  
+    <svg class="md-svg">
+      <defs>
         
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  python
+                </span>
+              
+            
+            python2/3对比
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
       </div>
     </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-      <div class="toc">
-        <ul>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
           
             
-  <li>
-    <a class="" title="Home" href="../..">
-      Home
-    </a>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    farwmarth’s note
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
     
   </li>
 
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      数据结构与算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        数据结构与算法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  <li>
-    <span class="section">数据结构与算法</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="排序算法介绍" href="../../data_algorithms/algorithms1_intro/">
-      排序算法介绍
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
           
-            
-  <li>
-    <span class="section">c++基础</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="c++环境搭建(Win)" href="../../cplus/cplus_win/">
-      c++环境搭建(Win)
-    </a>
+  <li class="md-nav__item">
+    
+      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+        排序算法介绍
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="基础语法" href="../../cplus/cplus1_grammer/">
-      基础语法
-    </a>
-    
+      </ul>
+    </nav>
   </li>
 
+    
       
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      c++基础
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        c++基础
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
-  <li>
-    <a class="" title="类" href="../../cplus/cplus2_class/">
-      类
-    </a>
-    
-  </li>
-
-      
         
-  <li>
-    <a class="" title="内存分配" href="../../cplus/cplus3_memory/">
-      内存分配
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="编译过程" href="../../cplus/cplus4_complier/">
-      编译过程
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="常量修饰符" href="../../cplus/cplus5_const/">
-      常量修饰符
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
           
-            
-  <li>
-    <span class="section">python</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="语言简介" href="../py1_intro/">
-      语言简介
-    </a>
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+        c++环境搭建(Win)
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="数据类型" href="../py2_data/">
-      数据类型
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
+        基础语法
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="控制流程" href="../py3_controller/">
-      控制流程
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
+        类
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="函数" href="../py4_func/">
-      函数
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
+        内存分配
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="步骤" href="../py5_step/">
-      步骤
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
+        编译过程
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="组织" href="../py6_organize/">
-      组织
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
+        常量修饰符
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="类" href="../py_class/">
-      类
-    </a>
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py1_intro/" title="语言简介" class="md-nav__link">
+        语言简介
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="with关键字" href="../py_with/">
-      with关键字
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py2_data/" title="数据类型" class="md-nav__link">
+        数据类型
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="变量作用域" href="../py_scope/">
-      变量作用域
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py3_controller/" title="控制流程" class="md-nav__link">
+        控制流程
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="枚举" href="../py_enum/">
-      枚举
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py4_func/" title="函数" class="md-nav__link">
+        函数
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="异常捕捉" href="../py_error/">
-      异常捕捉
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py5_step/" title="步骤" class="md-nav__link">
+        步骤
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="调试" href="../py_test/">
-      调试
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py6_organize/" title="组织" class="md-nav__link">
+        组织
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="文件io" href="../py_fileio/">
-      文件io
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_class/" title="类" class="md-nav__link">
+        类
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="模块" href="../py_inmodule/">
-      模块
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_with/" title="with关键字" class="md-nav__link">
+        with关键字
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="网络库" href="../py_urllib/">
-      网络库
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_scope/" title="变量作用域" class="md-nav__link">
+        变量作用域
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="模块管理" href="../py_module_manager/">
-      模块管理
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_enum/" title="枚举" class="md-nav__link">
+        枚举
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="线程" href="../py_thread/">
-      线程
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_error/" title="异常捕捉" class="md-nav__link">
+        异常捕捉
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="协程" href="../py_coroutine/">
-      协程
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_test/" title="调试" class="md-nav__link">
+        调试
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="" title="图形界面编程" href="../py_gui/">
-      图形界面编程
-    </a>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_fileio/" title="文件io" class="md-nav__link">
+        文件io
+      </a>
     
   </li>
 
-      
         
-  <li>
-    <a class="current" title="python2/3对比" href="./">
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_inmodule/" title="模块" class="md-nav__link">
+        模块
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_urllib/" title="网络库" class="md-nav__link">
+        网络库
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_module_manager/" title="模块管理" class="md-nav__link">
+        模块管理
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_thread/" title="线程" class="md-nav__link">
+        线程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_coroutine/" title="协程" class="md-nav__link">
+        协程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_gui/" title="图形界面编程" class="md-nav__link">
+        图形界面编程
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        python2/3对比
+      </label>
+    
+    <a href="./" title="python2/3对比" class="md-nav__link md-nav__link--active">
       python2/3对比
     </a>
     
       
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="使用 future 模块" href="#future">
-                使用 future 模块
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="print 函数" href="#print">
-                print 函数
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="整除 Integer division" href="#integer-division">
-                整除 Integer division
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Unicode" href="#unicode">
-                Unicode
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="xrange" href="#xrange">
-                xrange
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Raising exceptions" href="#raising-exceptions">
-                Raising exceptions
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Handling exceptions" href="#handling-exceptions">
-                Handling exceptions
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="next() 函数 和 .next() 方法" href="#next-next">
-                next() 函数 和 .next() 方法
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="For 循环变量和全局命名空间泄漏" href="#for">
-                For 循环变量和全局命名空间泄漏
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="比较不可排序类型" href="#_1">
-                比较不可排序类型
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="通过 input()解析用户的输入" href="#input">
-                通过 input()解析用户的输入
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="返回可迭代对象，而不是列表" href="#_2">
-                返回可迭代对象，而不是列表
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Link" href="#link">
-                Link
-              </a>
-            </li>
-          
-        </ul>
-      
+<nav class="md-nav md-nav--secondary">
+  
+  
     
-  </li>
-
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
       
-        
-  <li>
-    <a class="" title="常用库" href="../py_modules/">
-      常用库
-    </a>
-    
-  </li>
-
+        <li class="md-nav__item">
+  <a href="#future" title="使用 future 模块" class="md-nav__link">
+    使用 future 模块
+  </a>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#print" title="print 函数" class="md-nav__link">
+    print 函数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-  <li>
-    <a class="" title="pyqt使用" href="../py_qt/">
-      pyqt使用
-    </a>
-    
-  </li>
-
+          <li class="md-nav__item">
+  <a href="#python-2" title="Python 2" class="md-nav__link">
+    Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-3" title="Python 3" class="md-nav__link">
+    Python 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#integer-division" title="整除 Integer division" class="md-nav__link">
+    整除 Integer division
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-  <li>
-    <a class="" title="tornado" href="../py_tornado/">
-      tornado
-    </a>
-    
-  </li>
-
+          <li class="md-nav__item">
+  <a href="#python-2_1" title="Python 2" class="md-nav__link">
+    Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-3_1" title="Python 3" class="md-nav__link">
+    Python 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#unicode" title="Unicode" class="md-nav__link">
+    Unicode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-  <li>
-    <a class="" title="爬虫" href="../py_spider/">
-      爬虫
-    </a>
-    
-  </li>
-
+          <li class="md-nav__item">
+  <a href="#python-2_2" title="Python 2" class="md-nav__link">
+    Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-3_2" title="Python 3" class="md-nav__link">
+    Python 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
+        <li class="md-nav__item">
+  <a href="#xrange" title="xrange" class="md-nav__link">
+    xrange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raising-exceptions" title="Raising exceptions" class="md-nav__link">
+    Raising exceptions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-  <li>
-    <a class="" title="消息队列" href="../py_mq/">
-      消息队列
-    </a>
-    
-  </li>
-
+          <li class="md-nav__item">
+  <a href="#python2" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-exceptions" title="Handling exceptions" class="md-nav__link">
+    Handling exceptions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python2_1" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3_1" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-next" title="next() 函数 和 .next() 方法" class="md-nav__link">
+    next() 函数 和 .next() 方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python2_2" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3_2" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for" title="For 循环变量和全局命名空间泄漏" class="md-nav__link">
+    For 循环变量和全局命名空间泄漏
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python2_3" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3_3" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="比较不可排序类型" class="md-nav__link">
+    比较不可排序类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python2_4" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3_4" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" title="通过 input()解析用户的输入" class="md-nav__link">
+    通过 input()解析用户的输入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="返回可迭代对象，而不是列表" class="md-nav__link">
+    返回可迭代对象，而不是列表
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-2_3" title="Python 2" class="md-nav__link">
+    Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-3_3" title="Python 3" class="md-nav__link">
+    Python 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" title="Link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
       
     </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">lua</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="数据类型" href="../../lua/lua1_data/">
-      数据类型
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">swift</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="swift基础入门" href="../../swift/swift1_intro/">
-      swift基础入门
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">php</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="基础介绍" href="../../php/php1_intro/">
-      基础介绍
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">git</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="git简介" href="../../versions/git_intro/">
-      git简介
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git操作" href="../../versions/git_oper/">
-      git操作
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git分支管理" href="../../versions/git_branch/">
-      git分支管理
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git工具" href="../../versions/git_tools/">
-      git工具
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git问题记录" href="../../versions/git_error/">
-      git问题记录
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="git应用场景" href="../../versions/git_remark/">
-      git应用场景
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="github" href="../../versions/github/">
-      github
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">Vim编辑器</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="vim" href="../../ide/vim/">
-      vim
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-            
-  <li>
-    <span class="section">Sublime Text编辑器</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="sublimetext" href="../../ide/sublimetext/">
-      sublimetext
-    </a>
-    
-  </li>
-
-      
-    </ul>
-  </li>
-
-          
-        </ul>
-        
-          <hr>
-          <span class="section">The author</span>
-          <ul>
-            
-            
-              
-              <li>
-                <a href="https://github.com/wujiyu115" target="_blank" title="@wujiyu115 on GitHub">
-                  @wujiyu115 on GitHub
-                </a>
-              </li>
-            
-          </ul>
-        
-      </div>
-    </div>
-  </div>
+  
 </nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
+    
+  </li>
+
+        
           
-          <h1 id="python-27x-python-3x">Python 2.7.x 和 Python 3.x 的主要区别<a class="headerlink" href="#python-27x-python-3x" title="Permanent link">#</a></h1>
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_modules/" title="常用库" class="md-nav__link">
+        常用库
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_qt/" title="pyqt使用" class="md-nav__link">
+        pyqt使用
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_tornado/" title="tornado" class="md-nav__link">
+        tornado
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_spider/" title="爬虫" class="md-nav__link">
+        爬虫
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_mq/" title="消息队列" class="md-nav__link">
+        消息队列
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../py_selenium/" title="自动化测试" class="md-nav__link">
+        自动化测试
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-5">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+        数据类型
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      swift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-6">
+        swift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+        swift基础入门
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      php
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-7">
+        php
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+        基础介绍
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-8">
+        git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+        git简介
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+        git操作
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+        git分支管理
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+        git工具
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+        git问题记录
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+        git应用场景
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../versions/github/" title="github" class="md-nav__link">
+        github
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Vim编辑器
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-9">
+        Vim编辑器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../ide/vim/" title="vim" class="md-nav__link">
+        vim
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Sublime Text编辑器
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-10">
+        Sublime Text编辑器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
+        sublimetext
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      MakeFile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-11">
+        MakeFile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/overview/" title="概述" class="md-nav__link">
+        概述
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
+        makefile介绍
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
+        书写规则
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
+        书写命令
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
+        使用变量
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
+        使用条件判断
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
+        使用函数
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
+        make 的运行
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
+        隐含规则
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
+        使用make更新函数库文件
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#future" title="使用 future 模块" class="md-nav__link">
+    使用 future 模块
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print" title="print 函数" class="md-nav__link">
+    print 函数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-2" title="Python 2" class="md-nav__link">
+    Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-3" title="Python 3" class="md-nav__link">
+    Python 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integer-division" title="整除 Integer division" class="md-nav__link">
+    整除 Integer division
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-2_1" title="Python 2" class="md-nav__link">
+    Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-3_1" title="Python 3" class="md-nav__link">
+    Python 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unicode" title="Unicode" class="md-nav__link">
+    Unicode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-2_2" title="Python 2" class="md-nav__link">
+    Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-3_2" title="Python 3" class="md-nav__link">
+    Python 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xrange" title="xrange" class="md-nav__link">
+    xrange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raising-exceptions" title="Raising exceptions" class="md-nav__link">
+    Raising exceptions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python2" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-exceptions" title="Handling exceptions" class="md-nav__link">
+    Handling exceptions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python2_1" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3_1" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-next" title="next() 函数 和 .next() 方法" class="md-nav__link">
+    next() 函数 和 .next() 方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python2_2" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3_2" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for" title="For 循环变量和全局命名空间泄漏" class="md-nav__link">
+    For 循环变量和全局命名空间泄漏
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python2_3" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3_3" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="比较不可排序类型" class="md-nav__link">
+    比较不可排序类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python2_4" title="python2" class="md-nav__link">
+    python2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3_4" title="python3" class="md-nav__link">
+    python3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" title="通过 input()解析用户的输入" class="md-nav__link">
+    通过 input()解析用户的输入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="返回可迭代对象，而不是列表" class="md-nav__link">
+    返回可迭代对象，而不是列表
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-2_3" title="Python 2" class="md-nav__link">
+    Python 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-3_3" title="Python 3" class="md-nav__link">
+    Python 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" title="Link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+              
+                
+                <h1 id="python-27x-python-3x">Python 2.7.x 和 Python 3.x 的主要区别<a class="headerlink" href="#python-27x-python-3x" title="Permanent link">&para;</a></h1>
 <p>许多 Python 初学者想知道他们应该从 Python 的哪个版本开始学习。对于这个问题我的答案是 “你学习你喜欢的教程的版本，然后检查他们之间的不同。"</p>
 <p>但是如果你开始一个新项目，并且有选择权？我想说的是目前没有对错，只要你计划使用的库 Python 2.7.x 和 Python 3.x 双方都支持的话。尽管如此，当在编写它们中的任何一个的代码，或者是你计划移植你的项目的时候，是非常值得看看这两个主要流行的 Python 版本之间的差别的，以便避免常见的陷阱。</p>
-<h2 id="future">使用 <strong>future</strong> 模块<a class="headerlink" href="#future" title="Permanent link">#</a></h2>
+<h2 id="future">使用 <strong>future</strong> 模块<a class="headerlink" href="#future" title="Permanent link">&para;</a></h2>
 <p>用途:在 Python 2 里导入那些在 Python 3 里才生效的模块和函数:</p>
-<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
 </pre></div>
 
 
-<h2 id="print">print 函数<a class="headerlink" href="#print" title="Permanent link">#</a></h2>
+<h2 id="print">print 函数<a class="headerlink" href="#print" title="Permanent link">&para;</a></h2>
 <p>很琐碎，而 print 语法的变化可能是最广为人知的了，但是仍值得一提的是： Python 2 的 print 声明已经被 print() 函数取代了，这意味着我们必须包装我们想打印在小括号中的对象。
 Python 2 不具有额外的小括号问题。但对比一下，如果我们按照 Python 2 的方式不使用小括号调用 print 函数，Python 3 将抛出一个语法异常（SyntaxError）。</p>
-<h3 id="python-2">Python 2<a class="headerlink" href="#python-2" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">()</span>
+<h3 id="python-2">Python 2<a class="headerlink" href="#python-2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">()</span>
 <span class="k">print</span> <span class="s1">&#39;Hello, World!&#39;</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
 <span class="k">print</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="p">;</span> <span class="k">print</span> <span class="s1">&#39;print more text on the same line&#39;</span>
 </pre></div>
 
 
-<h3 id="python-3">Python 3<a class="headerlink" href="#python-3" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">())</span>
+<h3 id="python-3">Python 3<a class="headerlink" href="#python-3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">())</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;some text,&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> 
@@ -777,11 +1585,11 @@ Python 2 不具有额外的小括号问题。但对比一下，如果我们按�
 </pre></div>
 
 
-<h2 id="integer-division">整除 Integer division<a class="headerlink" href="#integer-division" title="Permanent link">#</a></h2>
+<h2 id="integer-division">整除 Integer division<a class="headerlink" href="#integer-division" title="Permanent link">&para;</a></h2>
 <p>如果你正在移植代码，这个变化是特别危险的。或者你在 Python 2 上执行 Python 3 的代码。因为这个整除的变化表现在它会被忽视（即它不会抛出语法异常）。</p>
 <p>因此，我还是倾向于使用一个 float(3)/2 或 3/2.0 代替在我的 Python 3 脚本保存在 Python 2 中的 3/2 的一些麻烦（并且反而过来也一样，我建议在你的 Python 2 脚本中使用 from <strong>future</strong> import division）</p>
-<h3 id="python-2_1">Python 2<a class="headerlink" href="#python-2_1" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">()</span>
+<h3 id="python-2_1">Python 2<a class="headerlink" href="#python-2_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">()</span>
 <span class="k">print</span> <span class="s1">&#39;3 / 2 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="k">print</span> <span class="s1">&#39;3 // 2 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span>
 <span class="k">print</span> <span class="s1">&#39;3 / 2.0 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mf">2.0</span>
@@ -797,8 +1605,8 @@ Python 2 不具有额外的小括号问题。但对比一下，如果我们按�
 </pre></div>
 
 
-<h3 id="python-3_1">Python 3<a class="headerlink" href="#python-3_1" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">())</span>
+<h3 id="python-3_1">Python 3<a class="headerlink" href="#python-3_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">())</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;3 / 2 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;3 // 2 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;3 / 2.0 =&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
@@ -813,11 +1621,11 @@ Python 2 不具有额外的小括号问题。但对比一下，如果我们按�
 </pre></div>
 
 
-<h2 id="unicode">Unicode<a class="headerlink" href="#unicode" title="Permanent link">#</a></h2>
+<h2 id="unicode">Unicode<a class="headerlink" href="#unicode" title="Permanent link">&para;</a></h2>
 <p>Python 2 有 <code>ASCII str()</code> 类型，<code>unicode()</code> 是单独的，不是<code>byte</code> 类型。
 现在， 在 Python 3，我们最终有了<code>Unicode (utf-8)</code> 字符串，以及一个字节类：<code>byte</code> 和<code>bytearrays</code>。</p>
-<h3 id="python-2_2">Python 2<a class="headerlink" href="#python-2_2" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="nb">unicode</span><span class="p">(</span><span class="s1">&#39;this is like a python3 str type&#39;</span><span class="p">))</span>
+<h3 id="python-2_2">Python 2<a class="headerlink" href="#python-2_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="nb">unicode</span><span class="p">(</span><span class="s1">&#39;this is like a python3 str type&#39;</span><span class="p">))</span>
 <span class="sd">&#39;&#39;&#39;output is :&lt;type &#39;unicode&#39;&gt;&#39;&#39;&#39;</span>
 
 <span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;byte type does not exist&#39;</span><span class="p">)</span>
@@ -831,8 +1639,8 @@ Python 2 不具有额外的小括号问题。但对比一下，如果我们按�
 </pre></div>
 
 
-<h3 id="python-3_2">Python 3<a class="headerlink" href="#python-3_2" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<h3 id="python-3_2">Python 3<a class="headerlink" href="#python-3_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39; has&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39; bytes for storing data&#39;</span><span class="p">))</span>
 <span class="sd">&#39;&#39;&#39;Python 3.4.1 has &lt;class &#39;bytes&#39;&gt;&#39;&#39;&#39;</span>
 
@@ -842,58 +1650,58 @@ Python 2 不具有额外的小括号问题。但对比一下，如果我们按�
 </pre></div>
 
 
-<h2 id="xrange">xrange<a class="headerlink" href="#xrange" title="Permanent link">#</a></h2>
+<h2 id="xrange">xrange<a class="headerlink" href="#xrange" title="Permanent link">&para;</a></h2>
 <p>Python 2 里的range() 和 xrange() 还是有点区别的. xrange() 更像一个生成器.range()生成的是list.
 Python 3 里取消了xrange() 代之以range() 实际上 Python 3 把很多返回为List的改成了itrable.</p>
-<h2 id="raising-exceptions">Raising exceptions<a class="headerlink" href="#raising-exceptions" title="Permanent link">#</a></h2>
-<h3 id="python2">python2<a class="headerlink" href="#python2" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">raise</span> <span class="ne">IOError</span><span class="p">,</span> <span class="s2">&quot;file error&quot;</span>
+<h2 id="raising-exceptions">Raising exceptions<a class="headerlink" href="#raising-exceptions" title="Permanent link">&para;</a></h2>
+<h3 id="python2">python2<a class="headerlink" href="#python2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">raise</span> <span class="ne">IOError</span><span class="p">,</span> <span class="s2">&quot;file error&quot;</span>
 </pre></div>
 
 
-<h3 id="python3">python3<a class="headerlink" href="#python3" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">raise</span> <span class="p">(</span><span class="ne">IOError</span><span class="p">,</span> <span class="s2">&quot;file error&quot;</span><span class="p">)</span>
+<h3 id="python3">python3<a class="headerlink" href="#python3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">raise</span> <span class="p">(</span><span class="ne">IOError</span><span class="p">,</span> <span class="s2">&quot;file error&quot;</span><span class="p">)</span>
 </pre></div>
 
 
-<h2 id="handling-exceptions">Handling exceptions<a class="headerlink" href="#handling-exceptions" title="Permanent link">#</a></h2>
-<h3 id="python2_1">python2<a class="headerlink" href="#python2_1" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<h2 id="handling-exceptions">Handling exceptions<a class="headerlink" href="#handling-exceptions" title="Permanent link">&para;</a></h2>
+<h3 id="python2_1">python2<a class="headerlink" href="#python2_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">let_us_cause_a_NameError</span>
 <span class="k">except</span> <span class="ne">NameError</span><span class="p">,</span> <span class="n">err</span><span class="p">:</span>
     <span class="k">print</span> <span class="n">err</span><span class="p">,</span> <span class="s1">&#39;--&gt; our error message&#39;</span>
 </pre></div>
 
 
-<h3 id="python3_1">python3<a class="headerlink" href="#python3_1" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<h3 id="python3_1">python3<a class="headerlink" href="#python3_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">let_us_cause_a_NameError</span>
 <span class="k">except</span> <span class="ne">NameError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="s1">&#39;--&gt; our error message&#39;</span><span class="p">)</span>
 </pre></div>
 
 
-<h2 id="next-next">next() 函数 和 .next() 方法<a class="headerlink" href="#next-next" title="Permanent link">#</a></h2>
+<h2 id="next-next">next() 函数 和 .next() 方法<a class="headerlink" href="#next-next" title="Permanent link">&para;</a></h2>
 <p><code>.next()</code>在python中被移除,两个版本都可以用<code>next()</code></p>
-<h3 id="python2_2">python2<a class="headerlink" href="#python2_2" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="n">my_generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">letter</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;abcdefg&#39;</span><span class="p">)</span>
+<h3 id="python2_2">python2<a class="headerlink" href="#python2_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">my_generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">letter</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;abcdefg&#39;</span><span class="p">)</span>
 
 <span class="nb">next</span><span class="p">(</span><span class="n">my_generator</span><span class="p">)</span>
 <span class="n">my_generator</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
 </pre></div>
 
 
-<h3 id="python3_2">python3<a class="headerlink" href="#python3_2" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="n">my_generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">letter</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;abcdefg&#39;</span><span class="p">)</span>
+<h3 id="python3_2">python3<a class="headerlink" href="#python3_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">my_generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">letter</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;abcdefg&#39;</span><span class="p">)</span>
 
 <span class="nb">next</span><span class="p">(</span><span class="n">my_generator</span><span class="p">)</span>
 </pre></div>
 
 
-<h2 id="for">For 循环变量和全局命名空间泄漏<a class="headerlink" href="#for" title="Permanent link">#</a></h2>
+<h2 id="for">For 循环变量和全局命名空间泄漏<a class="headerlink" href="#for" title="Permanent link">&para;</a></h2>
 <p>在 Python 3.x 中 for 循环变量不会再导致命名空间泄漏</p>
-<h3 id="python2_3">python2<a class="headerlink" href="#python2_3" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<h3 id="python2_3">python2<a class="headerlink" href="#python2_3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">print</span> <span class="s1">&#39;before: i =&#39;</span><span class="p">,</span> <span class="n">i</span>
 
 <span class="k">print</span> <span class="s1">&#39;comprehension: &#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
@@ -908,8 +1716,8 @@ Python 3 里取消了xrange() 代之以range() 实际上 Python 3 把很多返�
 </pre></div>
 
 
-<h3 id="python3_3">python3<a class="headerlink" href="#python3_3" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<h3 id="python3_3">python3<a class="headerlink" href="#python3_3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;before: i =&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;comprehension:&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)])</span>
@@ -924,30 +1732,30 @@ Python 3 里取消了xrange() 代之以range() 实际上 Python 3 把很多返�
 </pre></div>
 
 
-<h2 id="_1">比较不可排序类型<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h2 id="_1">比较不可排序类型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>在 Python 3 中的另外一个变化就是当对不可排序类型做比较的时候，会抛出一个类型错误。</p>
-<h3 id="python2_4">python2<a class="headerlink" href="#python2_4" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span> <span class="s2">&quot;(1, 2) &gt; &#39;foo&#39; = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="s1">&#39;foo&#39;</span>
+<h3 id="python2_4">python2<a class="headerlink" href="#python2_4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span> <span class="s2">&quot;(1, 2) &gt; &#39;foo&#39; = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="s1">&#39;foo&#39;</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">(1, 2) &gt; &#39;foo&#39; =  True</span>
 <span class="sd">&#39;&#39;&#39;</span>
 </pre></div>
 
 
-<h3 id="python3_4">python3<a class="headerlink" href="#python3_4" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;[1, 2] &gt; &#39;foo&#39; = &quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<h3 id="python3_4">python3<a class="headerlink" href="#python3_4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;[1, 2] &gt; &#39;foo&#39; = &quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">TypeError</span>
 <span class="sd">&#39;&#39;&#39;</span>
 </pre></div>
 
 
-<h2 id="input">通过 <code>input()</code>解析用户的输入<a class="headerlink" href="#input" title="Permanent link">#</a></h2>
+<h2 id="input">通过 <code>input()</code>解析用户的输入<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
 <p>python 2里 我们有<code>input()</code>和<code>raw_input()</code>,区别是<code>raw_input()</code>会讲输入返回str.而i<code>nput()</code>会试图执行输入.
 Python 3 里的<code>input()</code>返回字符串,不再有<code>raw_input()</code>,如果想执行输入,可以<code>eval(input())</code></p>
-<h2 id="_2">返回可迭代对象，而不是列表<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<h3 id="python-2_3">Python 2<a class="headerlink" href="#python-2_3" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">()</span> 
+<h2 id="_2">返回可迭代对象，而不是列表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="python-2_3">Python 2<a class="headerlink" href="#python-2_3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">()</span> 
 
 <span class="k">print</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> 
 <span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
@@ -960,8 +1768,8 @@ Python 3 里的<code>input()</code>返回字符串,不再有<code>raw_input()</c
 </pre></div>
 
 
-<h3 id="python-3_3">Python 3<a class="headerlink" href="#python-3_3" title="Permanent link">#</a></h3>
-<div class="code"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">())</span>
+<h3 id="python-3_3">Python 3<a class="headerlink" href="#python-3_3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="n">python_version</span><span class="p">())</span>
 
 <span class="k">print</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
@@ -983,85 +1791,83 @@ Python 3 里的<code>input()</code>返回字符串,不再有<code>raw_input()</c
 + dictionary's .keys() method
 + dictionary's .values() method
 + dictionary's .items() method</p>
-<h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">#</a></h2>
+<h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://docs.python.org/3/whatsnew/3.0.html">What’s New In Python 3.0?</a></li>
 </ul>
-          <aside class="copyright" role="note">
-            
-              Copyright (c) 2016 farwmarth &ndash;
-            
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
               
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
+            </article>
+          </div>
+        </div>
+      </main>
       
-        <a href="../py_gui/" title="图形界面编程">
-          <span class="direction">
-            Previous
-          </span>
-          <div class="page">
-            <div class="button button-previous" role="button" aria-label="Previous">
-              <i class="icon icon-back"></i>
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../py_gui/" title="图形界面编程" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
-            <div class="stretch">
-              <div class="title">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
                 图形界面编程
-              </div>
+              </span>
             </div>
-          </div>
-        </a>
-      
-    </div>
-    <div class="next">
-      
-        <a href="../py_modules/" title="常用库">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
+          </a>
+        
+        
+          <a href="../py_modules/" title="常用库" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
                 常用库
-              </div>
+              </span>
             </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
             </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) 2016 farwmarth
           </div>
-        </a>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
       
     </div>
-  </nav>
-
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      var base_url = '../..';
-      var repo_id  = '';
-    </script>
-    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+  </div>
+</footer>
+      
+    </div>
     
+      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
     
   </body>
 </html>
