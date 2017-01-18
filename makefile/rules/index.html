@@ -1017,11 +1017,13 @@
 是我们的目标， <code>foo.c</code> 和 <code>defs.h</code>
 是目标所依赖的源文件，而只有一个命令 <code>cc -c -g foo.c</code>
 （以Tab键开头）。这个规则告诉我们两件事：</p>
-<h1 id="fooo-fooc-defsh">. 文件的依赖关系， <code>foo.o</code> 依赖于 <code>foo.c</code> 和 <code>defs.h</code><a class="headerlink" href="#fooo-fooc-defsh" title="Permanent link">&para;</a></h1>
-<p>的文件，如果 <code>foo.c</code> 和 <code>defs.h</code> 的文件日期要比 <code>foo.o</code>
-   文件日期要新，或是 <code>foo.o</code> 不存在，那么依赖关系发生。</p>
-<h1 id="fooo-cc-fooo">. 生成或更新 <code>foo.o</code> 文件，就是那个cc命令。它说明了如何生成 <code>foo.o</code><a class="headerlink" href="#fooo-cc-fooo" title="Permanent link">&para;</a></h1>
-<p>这个文件。（当然，foo.c文件include了defs.h文件）</p>
+<ul>
+<li>文件的依赖关系， <code>foo.o</code> 依赖于 <code>foo.c</code> 和 <code>defs.h</code>
+   的文件，如果 <code>foo.c</code> 和 <code>defs.h</code> 的文件日期要比 <code>foo.o</code>
+   文件日期要新，或是 <code>foo.o</code> 不存在，那么依赖关系发生。</li>
+<li>生成或更新 <code>foo.o</code> 文件，就是那个cc命令。它说明了如何生成 <code>foo.o</code>
+   这个文件。（当然，foo.c文件include了defs.h文件）</li>
+</ul>
 <h1 id="_2">规则的语法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
 <p>.. code:: makefile</p>
 <div class="codehilite"><pre><span></span><span class="n">targets</span> <span class="o">:</span> <span class="n">prerequisites</span>
@@ -1098,20 +1100,26 @@ MS-DOS下，用户没有宿主目录，那么波浪号所指的目录则根据�
 
 
 <p>另给一个变量使用通配符的例子：</p>
-<h1 id="c">. 列出一确定文件夹中的所有 <code>.c</code> 文件。<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
+<ul>
+<li>列出一确定文件夹中的所有 <code>.c</code> 文件。</li>
+</ul>
 <p>.. code:: makefile</p>
 <div class="codehilite"><pre><span></span>   objects := $(wildcard *.c)
 </pre></div>
 
 
-<h1 id="1-o">. 列出(1)中所有文件对应的 <code>.o</code><a class="headerlink" href="#1-o" title="Permanent link">&para;</a></h1>
-<p>文件，在（3）中我们可以看到它是由make自动编译出的:</p>
+<ul>
+<li>列出(1)中所有文件对应的 <code>.o</code>
+   文件，在（3）中我们可以看到它是由make自动编译出的:</li>
+</ul>
 <p>::</p>
 <div class="codehilite"><pre><span></span>   $(patsubst %.c,%.o,$(wildcard *.c))
 </pre></div>
 
 
-<h1 id="12-c-o">. 由(1)(2)两步，可写出编译并链接所有 <code>.c</code> 和 <code>.o</code> 文件<a class="headerlink" href="#12-c-o" title="Permanent link">&para;</a></h1>
+<ul>
+<li>由(1)(2)两步，可写出编译并链接所有 <code>.c</code> 和 <code>.o</code> 文件</li>
+</ul>
 <p>.. code:: makefile</p>
 <div class="codehilite"><pre><span></span>   objects := $(patsubst %.c,%.o,$(wildcard *.c))
    foo : $(objects)
