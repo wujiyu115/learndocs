@@ -415,6 +415,10 @@ git stash clear
 git submodule foreach git submodule update
 #递归更新
 git submodule update --init --recursive
+# 删除submodule
+git submodule deinit <path_to_submodule-name>
+git rm --cached <path_to_submodule>
+rm -rf .git/modules/<path_to_submodule>
 ```
 
 
