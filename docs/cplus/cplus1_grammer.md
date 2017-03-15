@@ -1,5 +1,6 @@
 c++　第一章 基础语法,控制流程,数据类型
 ================================================
+![image](http://farwmarth.bestnewbee.com/images/uploads/2013/03/image18.png)
 
 ### 一 定义变量:
 ```c++
@@ -50,7 +51,7 @@ double a=2.0
 ### 三 数据类型
 `int ,char,bool,float,double,int[],double&amp;,char*,enum`
 + **整数类型:int**
-[![image](http://farwmarth.com/wp-content/uploads/2013/03/image_thumb18.png "image")](http://farwmarth.com/wp-content/uploads/2013/03/image18.png)
+![image](http://farwmarth.bestnewbee.com/images/uploads/2013/03/image18.png)
 所有的c++编译器都应该满足c++标准所规定的整数长度关系式: `char<short int<int<long int`
 
 + **字符型:char**
@@ -90,7 +91,7 @@ cout<<(is_char==is_char1)<<endl;  //false
 string s = "hello", s1 = "hello";
 cout<<(s==s1)<<endl;    //true
 ```
-[![image](http://farwmarth.com/wp-content/uploads/2013/03/image_thumb19.png "image")](http://farwmarth.com/wp-content/uploads/2013/03/image19.png)
+![image](http://farwmarth.bestnewbee.com/images/uploads/2013/03/image19.png)
 在比较同个字符相同的c-串是用==会不相等，因为是指向两个不同位置的指针。而应该用strcmp
 
 + **string:**
@@ -140,7 +141,7 @@ string是一种自定义类型，可以方便地操作。不像字符指针一�
       }
 
 ```
-[![image](http://farwmarth.com/wp-content/uploads/2013/03/image_thumb20.png "image")](http://farwmarth.com/wp-content/uploads/2013/03/image20.png)
+![image](http://farwmarth.bestnewbee.com/images/uploads/2013/03/image20.png)
 
 全局数组和静态数组未初始化，系统会默认为清零，局部数组未初始化会出现随机数。
 

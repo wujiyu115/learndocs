@@ -15,7 +15,7 @@ c++ 第四章  编译过程
 
 ## 二 **c++编译过程**
 
-[![image](http://farwmarth.com/wp-content/uploads/2013/08/image_thumb11.png "image")](http://farwmarth.com/wp-content/uploads/2013/08/image11.png)
+![image](http://farwmarth.bestnewbee.com/images/uploads/2013/08/image11.png)
 
 + `预处理`: 对预处理指令作一些替换操作,处理#include,#define,#if等，还有注释的删除工作.
 + `编译`:将预处理文件进行进行一系列**词法分析**（[lex](http://en.wikipedia.org/wiki/Lex_(software))）、**语法分析**（[yacc](http://en.wikipedia.org/wiki/Yacc)）、**语义分析**及**优化**后生成汇编代码
@@ -28,7 +28,7 @@ c++ 第四章  编译过程
 
 + `链接`:将多个目标文件,库，链接为一个可执行文件
 
-[![image](http://farwmarth.com/wp-content/uploads/2013/08/image_thumb12.png "image")](http://farwmarth.com/wp-content/uploads/2013/08/image12.png)
+![image](http://farwmarth.bestnewbee.com/images/uploads/2013/08/image12.png)
 
  链接器进行链接时，先确定各个编译单元的位置，然后遍历编译单元的未解决符号表，并且在所有导出符号表时查找匹配的符号并填上地址。最后将目标文件的内容写在各自的位置上。一个可执行文件就链接完成了。
 

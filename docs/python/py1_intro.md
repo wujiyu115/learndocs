@@ -16,7 +16,7 @@ Python是一种解释型、面向对象、动态数据类型的高级程序设�
 
 安装完pydev后 配置python解释器
 
-[![4](http://farwmarth.com/wp-content/uploads/2013/03/4.jpg)](http://farwmarth.com/?attachment_id=471)
+![image](http://farwmarth.bestnewbee.com/images/uploads/2013/03/4.jpg)](http://farwmarth.com/?attachment_id=471)
 
 
 ##  语法

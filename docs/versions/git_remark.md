@@ -6,7 +6,7 @@ Git 备忘录
 
 ### 下面是一张常用命令的图解
 
-![](http://farwmarth.com/wp-content/2010072023345292.png)
+![](http://farwmarth.bestnewbee.com/images/2010072023345292.png)
 
 
 ### 只checkout部分git文件

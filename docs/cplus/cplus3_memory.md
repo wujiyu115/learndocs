@@ -63,7 +63,7 @@ cout<<b<<endl; //地址0038FBC0
 
 图示指针内存分布:
 
-[![clip_image002](http://farwmarth.com/wp-content/uploads/2013/08/clip_image002_thumb.gif "clip_image002")](http://farwmarth.com/wp-content/uploads/2013/08/clip_image002.gif)
+![image](http://farwmarth.bestnewbee.com/images/uploads/2013/08/clip_image002.gif)
 
 c++ 传值，传址，传引用
 ```c++
@@ -147,7 +147,7 @@ public class Test {
 
 java的传值传引用都不会改变,交换两个引用参数不变原因如下:
 
-[![image](http://farwmarth.com/wp-content/uploads/2013/08/image_thumb10.png "image")](http://farwmarth.com/wp-content/uploads/2013/08/image10.png)
+![image](http://farwmarth.bestnewbee.com/images/uploads/2013/08/image10.png)
 
 m,n为外部变量new之后在堆区产生两个内存区。chang2方法所做的是复制引用，将复制的引用指向对象改变了，外部变量m,n却没有发生指向改变.
 
