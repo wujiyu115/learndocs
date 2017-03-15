@@ -13,9 +13,9 @@
         <meta name="author" content="farwmarth">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.3.0">
     
     
       
@@ -23,7 +23,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1d1da4857d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
     
     
       
@@ -35,12 +41,6 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
     
     
   </head>
@@ -60,13 +60,14 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
-          
-        </a>
+        
+          <a href="../.." title="farwmarth’s note" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -93,7 +94,7 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
     </form>
     <div class="md-search__output">
@@ -106,15 +107,17 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-          </div>
+        <div class="md-header-nav__source">
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -122,11 +125,11 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
-      
-    </i>
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
     farwmarth’s note
   </label>
   
@@ -134,17 +137,21 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Home" class="md-nav__link">
-        Home
-      </a>
-    
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
   </li>
 
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
@@ -152,7 +159,7 @@
     <label class="md-nav__link" for="nav-2">
       数据结构与算法
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         数据结构与算法
       </label>
@@ -161,12 +168,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
-        排序算法介绍
-      </a>
-    
+    <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+      排序算法介绍
+    </a>
   </li>
 
         
@@ -177,6 +185,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -184,7 +195,7 @@
     <label class="md-nav__link" for="nav-3">
       c++基础
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         c++基础
       </label>
@@ -193,67 +204,73 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
-        c++环境搭建(Win)
-      </a>
-    
+    <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+      c++环境搭建(Win)
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
-        基础语法
-      </a>
-    
+    <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
+      基础语法
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
-        内存分配
-      </a>
-    
+    <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
+      内存分配
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
-        编译过程
-      </a>
-    
+    <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
+      编译过程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
-        常量修饰符
-      </a>
-    
+    <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
+      常量修饰符
+    </a>
   </li>
 
         
@@ -264,6 +281,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
@@ -271,7 +291,7 @@
     <label class="md-nav__link" for="nav-4">
       python
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         python
       </label>
@@ -280,287 +300,313 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py1_intro/" title="语言简介" class="md-nav__link">
-        语言简介
-      </a>
-    
+    <a href="../../python/py1_intro/" title="语言简介" class="md-nav__link">
+      语言简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py2_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../../python/py2_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py3_controller/" title="控制流程" class="md-nav__link">
-        控制流程
-      </a>
-    
+    <a href="../../python/py3_controller/" title="控制流程" class="md-nav__link">
+      控制流程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py4_func/" title="函数" class="md-nav__link">
-        函数
-      </a>
-    
+    <a href="../../python/py4_func/" title="函数" class="md-nav__link">
+      函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py5_step/" title="步骤" class="md-nav__link">
-        步骤
-      </a>
-    
+    <a href="../../python/py5_step/" title="步骤" class="md-nav__link">
+      步骤
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py6_organize/" title="组织" class="md-nav__link">
-        组织
-      </a>
-    
+    <a href="../../python/py6_organize/" title="组织" class="md-nav__link">
+      组织
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../../python/py_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_with/" title="with关键字" class="md-nav__link">
-        with关键字
-      </a>
-    
+    <a href="../../python/py_with/" title="with关键字" class="md-nav__link">
+      with关键字
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_scope/" title="变量作用域" class="md-nav__link">
-        变量作用域
-      </a>
-    
+    <a href="../../python/py_scope/" title="变量作用域" class="md-nav__link">
+      变量作用域
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_enum/" title="枚举" class="md-nav__link">
-        枚举
-      </a>
-    
+    <a href="../../python/py_enum/" title="枚举" class="md-nav__link">
+      枚举
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_error/" title="异常捕捉" class="md-nav__link">
-        异常捕捉
-      </a>
-    
+    <a href="../../python/py_error/" title="异常捕捉" class="md-nav__link">
+      异常捕捉
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_test/" title="调试" class="md-nav__link">
-        调试
-      </a>
-    
+    <a href="../../python/py_test/" title="调试" class="md-nav__link">
+      调试
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_fileio/" title="文件io" class="md-nav__link">
-        文件io
-      </a>
-    
+    <a href="../../python/py_fileio/" title="文件io" class="md-nav__link">
+      文件io
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_inmodule/" title="模块" class="md-nav__link">
-        模块
-      </a>
-    
+    <a href="../../python/py_inmodule/" title="模块" class="md-nav__link">
+      模块
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_urllib/" title="网络库" class="md-nav__link">
-        网络库
-      </a>
-    
+    <a href="../../python/py_urllib/" title="网络库" class="md-nav__link">
+      网络库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_module_manager/" title="模块管理" class="md-nav__link">
-        模块管理
-      </a>
-    
+    <a href="../../python/py_module_manager/" title="模块管理" class="md-nav__link">
+      模块管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_thread/" title="线程" class="md-nav__link">
-        线程
-      </a>
-    
+    <a href="../../python/py_thread/" title="线程" class="md-nav__link">
+      线程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_coroutine/" title="协程" class="md-nav__link">
-        协程
-      </a>
-    
+    <a href="../../python/py_coroutine/" title="协程" class="md-nav__link">
+      协程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_gui/" title="图形界面编程" class="md-nav__link">
-        图形界面编程
-      </a>
-    
+    <a href="../../python/py_gui/" title="图形界面编程" class="md-nav__link">
+      图形界面编程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_diff2/" title="python2/3对比" class="md-nav__link">
-        python2/3对比
-      </a>
-    
+    <a href="../../python/py_diff2/" title="python2/3对比" class="md-nav__link">
+      python2/3对比
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_modules/" title="常用库" class="md-nav__link">
-        常用库
-      </a>
-    
+    <a href="../../python/py_modules/" title="常用库" class="md-nav__link">
+      常用库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_qt/" title="pyqt使用" class="md-nav__link">
-        pyqt使用
-      </a>
-    
+    <a href="../../python/py_qt/" title="pyqt使用" class="md-nav__link">
+      pyqt使用
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_tornado/" title="tornado" class="md-nav__link">
-        tornado
-      </a>
-    
+    <a href="../../python/py_tornado/" title="tornado" class="md-nav__link">
+      tornado
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_spider/" title="爬虫" class="md-nav__link">
-        爬虫
-      </a>
-    
+    <a href="../../python/py_spider/" title="爬虫" class="md-nav__link">
+      爬虫
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_mq/" title="消息队列" class="md-nav__link">
-        消息队列
-      </a>
-    
+    <a href="../../python/py_mq/" title="消息队列" class="md-nav__link">
+      消息队列
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_selenium/" title="自动化测试" class="md-nav__link">
-        自动化测试
-      </a>
-    
+    <a href="../../python/py_selenium/" title="自动化测试" class="md-nav__link">
+      自动化测试
+    </a>
   </li>
 
         
@@ -571,6 +617,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
@@ -578,7 +627,7 @@
     <label class="md-nav__link" for="nav-5">
       lua
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
         lua
       </label>
@@ -587,12 +636,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
@@ -603,6 +653,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
@@ -610,7 +663,7 @@
     <label class="md-nav__link" for="nav-6">
       swift
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
         swift
       </label>
@@ -619,12 +672,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
-        swift基础入门
-      </a>
-    
+    <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+      swift基础入门
+    </a>
   </li>
 
         
@@ -635,6 +689,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
@@ -642,7 +699,7 @@
     <label class="md-nav__link" for="nav-7">
       php
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
         php
       </label>
@@ -651,12 +708,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
-        基础介绍
-      </a>
-    
+    <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+      基础介绍
+    </a>
   </li>
 
         
@@ -667,6 +725,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
@@ -674,7 +735,7 @@
     <label class="md-nav__link" for="nav-8">
       git
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-8">
         git
       </label>
@@ -683,78 +744,85 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
-        git简介
-      </a>
-    
+    <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+      git简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
-        git操作
-      </a>
-    
+    <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+      git操作
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
-        git分支管理
-      </a>
-    
+    <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+      git分支管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
-        git工具
-      </a>
-    
+    <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+      git工具
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
-        git问题记录
-      </a>
-    
+    <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+      git问题记录
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
-        git应用场景
-      </a>
-    
+    <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+      git应用场景
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/github/" title="github" class="md-nav__link">
-        github
-      </a>
-    
+    <a href="../../versions/github/" title="github" class="md-nav__link">
+      github
+    </a>
   </li>
 
         
@@ -765,6 +833,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
@@ -772,7 +843,7 @@
     <label class="md-nav__link" for="nav-9">
       Vim编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-9">
         Vim编辑器
       </label>
@@ -781,12 +852,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/vim/" title="vim" class="md-nav__link">
-        vim
-      </a>
-    
+    <a href="../../ide/vim/" title="vim" class="md-nav__link">
+      vim
+    </a>
   </li>
 
         
@@ -797,6 +869,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
@@ -804,7 +879,7 @@
     <label class="md-nav__link" for="nav-10">
       Sublime Text编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-10">
         Sublime Text编辑器
       </label>
@@ -813,12 +888,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
-        sublimetext
-      </a>
-    
+    <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
+      sublimetext
+    </a>
   </li>
 
         
@@ -829,14 +905,19 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
     
     <label class="md-nav__link" for="nav-11">
       MakeFile
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-11">
         MakeFile
       </label>
@@ -845,73 +926,84 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../overview/" title="概述" class="md-nav__link">
-        概述
-      </a>
-    
+    <a href="../overview/" title="概述" class="md-nav__link">
+      概述
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../introduction/" title="makefile介绍" class="md-nav__link">
-        makefile介绍
-      </a>
-    
+    <a href="../introduction/" title="makefile介绍" class="md-nav__link">
+      makefile介绍
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../rules/" title="书写规则" class="md-nav__link">
-        书写规则
-      </a>
-    
+    <a href="../rules/" title="书写规则" class="md-nav__link">
+      书写规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../recipes/" title="书写命令" class="md-nav__link">
-        书写命令
-      </a>
-    
+    <a href="../recipes/" title="书写命令" class="md-nav__link">
+      书写命令
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../variables/" title="使用变量" class="md-nav__link">
-        使用变量
-      </a>
-    
+    <a href="../variables/" title="使用变量" class="md-nav__link">
+      使用变量
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../conditionals/" title="使用条件判断" class="md-nav__link">
-        使用条件判断
-      </a>
-    
+    <a href="../conditionals/" title="使用条件判断" class="md-nav__link">
+      使用条件判断
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -922,48 +1014,42 @@
       使用函数
     </a>
     
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-</nav>
-    
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../invoke/" title="make 的运行" class="md-nav__link">
-        make 的运行
-      </a>
-    
+    <a href="../invoke/" title="make 的运行" class="md-nav__link">
+      make 的运行
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../implicit_rules/" title="隐含规则" class="md-nav__link">
-        隐含规则
-      </a>
-    
+    <a href="../implicit_rules/" title="隐含规则" class="md-nav__link">
+      隐含规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../archives/" title="使用make更新函数库文件" class="md-nav__link">
-        使用make更新函数库文件
-      </a>
-    
+    <a href="../archives/" title="使用make更新函数库文件" class="md-nav__link">
+      使用make更新函数库文件
+    </a>
   </li>
 
         
@@ -997,8 +1083,8 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <p>========
 使用函数
@@ -1007,14 +1093,12 @@
 <h1 id="_1">函数的调用语法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>函数调用，很像变量的使用，也是以 <code>$</code> 来标识的，其語法如下：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(&lt;function&gt; &lt;arguments&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(&lt;function&gt; &lt;arguments&gt;)</code></pre>
 
 
 <p>或是:</p>
 <p>::</p>
-<div class="codehilite"><pre><span></span><span class="cp">${</span><span class="o">&lt;</span><span class="n">function</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">arguments</span><span class="o">&gt;</span><span class="cp">}</span>
-</pre></div>
+<pre class="codehilite"><code>${&lt;function&gt; &lt;arguments&gt;}</code></pre>
 
 
 <p>这里， <code>&lt;function&gt;</code> 就是函数名，make支持的函数不多。 <code>&lt;arguments&gt;</code>
@@ -1025,12 +1109,11 @@
 的形式。因为统一会更清楚，也会减少一些不必要的麻烦。</p>
 <p>还是来看一个示例：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>comma:= ,
+<pre class="codehilite"><code>comma:= ,
 empty:=
 space:= $(empty) $(empty)
 foo:= a b c
-bar:= $(subst $(space),$(comma),$(foo))
-</pre></div>
+bar:= $(subst $(space),$(comma),$(foo))</code></pre>
 
 
 <p>在这个示例中， <code>$(comma)</code> 的值是一个逗号。 <code>$(space)</code> 使用了
@@ -1041,8 +1124,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <h1 id="_2">字符串处理函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
 <h2 id="subst">subst<a class="headerlink" href="#subst" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(subst &lt;from&gt;,&lt;to&gt;,&lt;text&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(subst &lt;from&gt;,&lt;to&gt;,&lt;text&gt;)</code></pre>
 
 
 <ul>
@@ -1052,8 +1134,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <li>
 <p>示例：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>   $(subst ee,EE,feet on the street)
-</pre></div>
+<pre class="codehilite"><code>   $(subst ee,EE,feet on the street)</code></pre>
 
 
 </li>
@@ -1062,8 +1143,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <code>fEEt on the strEEt</code> 。</p>
 <h2 id="patsubst">patsubst<a class="headerlink" href="#patsubst" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(patsubst &lt;pattern&gt;,&lt;replacement&gt;,&lt;text&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(patsubst &lt;pattern&gt;,&lt;replacement&gt;,&lt;text&gt;)</code></pre>
 
 
 <ul>
@@ -1079,8 +1159,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <li>
 <p>示例：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>   $(patsubst %.c,%.o,x.c.c bar.c)
-</pre></div>
+<pre class="codehilite"><code>   $(patsubst %.c,%.o,x.c.c bar.c)</code></pre>
 
 
 </li>
@@ -1096,16 +1175,14 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <p>例如有:</p>
 <p>::</p>
-<div class="codehilite"><pre><span></span>   objects = foo.o bar.o baz.o，
-</pre></div>
+<pre class="codehilite"><code>   objects = foo.o bar.o baz.o，</code></pre>
 
 
 <p>那么， <code>$(objects:.o=.c)</code> 和 <code>$(patsubst %.o,%.c,$(objects))</code>
    是一样的。</p>
 <h2 id="strip">strip<a class="headerlink" href="#strip" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(strip &lt;string&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(strip &lt;string&gt;)</code></pre>
 
 
 <ul>
@@ -1115,8 +1192,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <li>
 <p>示例：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>   $(strip a b c )
-</pre></div>
+<pre class="codehilite"><code>   $(strip a b c )</code></pre>
 
 
 </li>
@@ -1124,8 +1200,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <p>把字串 <code>a b c</code> 去到开头和结尾的空格，结果是 <code>a b c</code> 。</p>
 <h2 id="findstring">findstring<a class="headerlink" href="#findstring" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(findstring &lt;find&gt;,&lt;in&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(findstring &lt;find&gt;,&lt;in&gt;)</code></pre>
 
 
 <ul>
@@ -1135,9 +1210,8 @@ bar:= $(subst $(space),$(comma),$(foo))
 <li>
 <p>示例：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>   $(findstring a,a b c)
-   $(findstring a,b c)
-</pre></div>
+<pre class="codehilite"><code>   $(findstring a,a b c)
+   $(findstring a,b c)</code></pre>
 
 
 </li>
@@ -1145,8 +1219,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <p>第一个函数返回 <code>a</code> 字符串，第二个返回空字符串</p>
 <h2 id="filter">filter<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(filter &lt;pattern...&gt;,&lt;text&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(filter &lt;pattern...&gt;,&lt;text&gt;)</code></pre>
 
 
 <ul>
@@ -1157,10 +1230,9 @@ bar:= $(subst $(space),$(comma),$(foo))
 <li>
 <p>示例：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>   sources := foo.c bar.c baz.s ugh.h
+<pre class="codehilite"><code>   sources := foo.c bar.c baz.s ugh.h
    foo: $(sources)
-       cc $(filter %.c %.s,$(sources)) -o foo
-</pre></div>
+       cc $(filter %.c %.s,$(sources)) -o foo</code></pre>
 
 
 </li>
@@ -1168,8 +1240,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <p><code>$(filter %.c %.s,$(sources))</code> 返回的值是 <code>foo.c bar.c baz.s</code> 。</p>
 <h2 id="filter-out">filter-out<a class="headerlink" href="#filter-out" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(filter-out &lt;pattern...&gt;,&lt;text&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(filter-out &lt;pattern...&gt;,&lt;text&gt;)</code></pre>
 
 
 <ul>
@@ -1180,9 +1251,8 @@ bar:= $(subst $(space),$(comma),$(foo))
 <li>
 <p>示例：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>   objects=main1.o foo.o main2.o bar.o
-   mains=main1.o main2.o
-</pre></div>
+<pre class="codehilite"><code>   objects=main1.o foo.o main2.o bar.o
+   mains=main1.o main2.o</code></pre>
 
 
 </li>
@@ -1190,8 +1260,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <p><code>$(filter-out $(mains),$(objects))</code> 返回值是 <code>foo.o bar.o</code> 。</p>
 <h2 id="sort">sort<a class="headerlink" href="#sort" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(sort &lt;list&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(sort &lt;list&gt;)</code></pre>
 
 
 <ul>
@@ -1203,8 +1272,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="word">word<a class="headerlink" href="#word" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(word &lt;n&gt;,&lt;text&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(word &lt;n&gt;,&lt;text&gt;)</code></pre>
 
 
 <ul>
@@ -1216,8 +1284,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="wordlist">wordlist<a class="headerlink" href="#wordlist" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(wordlist &lt;ss&gt;,&lt;e&gt;,&lt;text&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(wordlist &lt;ss&gt;,&lt;e&gt;,&lt;text&gt;)</code></pre>
 
 
 <ul>
@@ -1232,8 +1299,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="words">words<a class="headerlink" href="#words" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(words &lt;text&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(words &lt;text&gt;)</code></pre>
 
 
 <ul>
@@ -1246,8 +1312,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="firstword">firstword<a class="headerlink" href="#firstword" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(firstword &lt;text&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(firstword &lt;text&gt;)</code></pre>
 
 
 <ul>
@@ -1262,8 +1327,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 变量来指定“依赖文件”的搜索路径。于是，我们可以利用这个搜索路径来指定编译器对头文件的搜索路径参数
 <code>CFLAGS</code> ，如：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span><span class="nf">override CFLAGS += $(patsubst %,-I%,$(subst </span><span class="o">:</span><span class="p">,</span> <span class="p">,</span><span class="k">$(</span><span class="nv">VPATH</span><span class="k">)</span>))
-</pre></div>
+<pre class="codehilite"><code>override CFLAGS += $(patsubst %,-I%,$(subst :, ,$(VPATH)))</code></pre>
 
 
 <p>如果我们的 <code>$(VPATH)</code> 值是 <code>src:../headers</code> ，那么
@@ -1273,8 +1337,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <p>下面我们要介绍的函数主要是处理文件名的。每个函数的参数字符串都会被当做一个或是一系列的文件名来对待。</p>
 <h2 id="dir">dir<a class="headerlink" href="#dir" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(dir &lt;names...&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(dir &lt;names...&gt;)</code></pre>
 
 
 <ul>
@@ -1287,8 +1350,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="notdir">notdir<a class="headerlink" href="#notdir" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(notdir &lt;names...&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(notdir &lt;names...&gt;)</code></pre>
 
 
 <ul>
@@ -1300,8 +1362,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="suffix">suffix<a class="headerlink" href="#suffix" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(suffix &lt;names...&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(suffix &lt;names...&gt;)</code></pre>
 
 
 <ul>
@@ -1314,8 +1375,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="basename">basename<a class="headerlink" href="#basename" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(basename &lt;names...&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(basename &lt;names...&gt;)</code></pre>
 
 
 <ul>
@@ -1328,8 +1388,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="addsuffix">addsuffix<a class="headerlink" href="#addsuffix" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(addsuffix &lt;suffix&gt;,&lt;names...&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(addsuffix &lt;suffix&gt;,&lt;names...&gt;)</code></pre>
 
 
 <ul>
@@ -1340,8 +1399,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="addprefix">addprefix<a class="headerlink" href="#addprefix" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(addprefix &lt;prefix&gt;,&lt;names...&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(addprefix &lt;prefix&gt;,&lt;names...&gt;)</code></pre>
 
 
 <ul>
@@ -1352,8 +1410,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 </ul>
 <h2 id="join">join<a class="headerlink" href="#join" title="Permanent link">&para;</a></h2>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(join &lt;list1&gt;,&lt;list2&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(join &lt;list1&gt;,&lt;list2&gt;)</code></pre>
 
 
 <ul>
@@ -1370,8 +1427,7 @@ bar:= $(subst $(space),$(comma),$(foo))
 <h1 id="foreach">foreach 函数<a class="headerlink" href="#foreach" title="Permanent link">&para;</a></h1>
 <p>foreach函数和别的函数非常的不一样。因为这个函数是用来做循环用的，Makefile中的foreach函数几乎是仿照于Unix标准Shell（/bin/sh）中的for语句，或是C-Shell（/bin/csh）中的foreach语句而构建的。它的语法是：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(foreach &lt;var&gt;,&lt;list&gt;,&lt;text&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(foreach &lt;var&gt;,&lt;list&gt;,&lt;text&gt;)</code></pre>
 
 
 <p>这个函数的意思是，把参数 <code>&lt;list&gt;</code> 中的单词逐一取出放到参数 <code>&lt;var&gt;</code>
@@ -1383,10 +1439,9 @@ bar:= $(subst $(space),$(comma),$(foo))
 <code>&lt;text&gt;</code> 中一般会使用 <code>&lt;var&gt;</code> 这个参数来依次枚举 <code>&lt;list&gt;</code>
 中的单词。举个例子：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>names := a b c d
+<pre class="codehilite"><code>names := a b c d
 
-files := $(foreach n,$(names),$(n).o)
-</pre></div>
+files := $(foreach n,$(names),$(n).o)</code></pre>
 
 
 <p>上面的例子中， <code>$(name)</code> 中的单词会被挨个取出，并存到变量 <code>n</code> 中，
@@ -1399,14 +1454,12 @@ files := $(foreach n,$(names),$(n).o)
 <h1 id="if">if 函数<a class="headerlink" href="#if" title="Permanent link">&para;</a></h1>
 <p>if函数很像GNU的make所支持的条件语句——ifeq（参见前面所述的章节），if函数的语法是：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(if &lt;condition&gt;,&lt;then-part&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(if &lt;condition&gt;,&lt;then-part&gt;)</code></pre>
 
 
 <p>或是</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(if &lt;condition&gt;,&lt;then-part&gt;,&lt;else-part&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(if &lt;condition&gt;,&lt;then-part&gt;,&lt;else-part&gt;)</code></pre>
 
 
 <p>可见，if函数可以包含“else”部分，或是不含。即if函数的参数可以是两个，也可以是三个。
@@ -1421,27 +1474,24 @@ files := $(foreach n,$(names),$(n).o)
 <h1 id="call">call函数<a class="headerlink" href="#call" title="Permanent link">&para;</a></h1>
 <p>call函数是唯一一个可以用来创建新的参数化的函数。你可以写一个非常复杂的表达式，这个表达式中，你可以定义许多参数，然后你可以call函数来向这个表达式传递参数。其语法是：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(call &lt;expression&gt;,&lt;parm1&gt;,&lt;parm2&gt;,...,&lt;parmn&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(call &lt;expression&gt;,&lt;parm1&gt;,&lt;parm2&gt;,...,&lt;parmn&gt;)</code></pre>
 
 
 <p>当make执行这个函数时， <code>&lt;expression&gt;</code> 参数中的变量，如 <code>$(1)</code> 、
 <code>$(2)</code> 等，会被参数 <code>&lt;parm1&gt;</code> 、 <code>&lt;parm2&gt;</code> 、 <code>&lt;parm3&gt;</code>
 依次取代。而 <code>&lt;expression&gt;</code> 的返回值就是 call 函数的返回值。例如：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>reverse =  $(1) $(2)
+<pre class="codehilite"><code>reverse =  $(1) $(2)
 
-foo = $(call reverse,a,b)
-</pre></div>
+foo = $(call reverse,a,b)</code></pre>
 
 
 <p>那么， <code>foo</code> 的值就是 <code>a b</code>
 。当然，参数的次序是可以自定义的，不一定是顺序的，如：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>reverse =  $(2) $(1)
+<pre class="codehilite"><code>reverse =  $(2) $(1)
 
-foo = $(call reverse,a,b)
-</pre></div>
+foo = $(call reverse,a,b)</code></pre>
 
 
 <p>此时的 <code>foo</code> 的值就是 <code>b a</code> 。</p>
@@ -1450,8 +1500,7 @@ foo = $(call reverse,a,b)
 <h1 id="origin">origin函数<a class="headerlink" href="#origin" title="Permanent link">&para;</a></h1>
 <p>origin函数不像其它的函数，他并不操作变量的值，他只是告诉你你的这个变量是哪里来的？其语法是：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(origin &lt;variable&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(origin &lt;variable&gt;)</code></pre>
 
 
 <p>注意， <code>&lt;variable&gt;</code> 是变量的名字，不应该是引用。所以你最好不要在
@@ -1478,12 +1527,11 @@ foo = $(call reverse,a,b)
 <p>这些信息对于我们编写Makefile是非常有用的，例如，假设我们有一个Makefile其包了一个定义文件Make.def，在
 Make.def中定义了一个变量“bletch”，而我们的环境中也有一个环境变量“bletch”，此时，我们想判断一下，如果变量来源于环境，那么我们就把之重定义了，如果来源于Make.def或是命令行等非环境的，那么我们就不重新定义它。于是，在我们的Makefile中，我们可以这样写：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>ifdef bletch
+<pre class="codehilite"><code>ifdef bletch
     ifeq &quot;$(origin bletch)&quot; &quot;environment&quot;
         bletch = barf, gag, etc.
     endif
-endif
-</pre></div>
+endif</code></pre>
 
 
 <p>当然，你也许会说，使用 <code>override</code>
@@ -1493,46 +1541,47 @@ endif
 <h1 id="shell">shell函数<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h1>
 <p>shell函数也不像其它的函数。顾名思义，它的参数应该就是操作系统Shell的命令。它和反引号“”是相同的功能。这就是说，shell函数把执行操作系统命令后的输出作为函数返回。于是，我们可以用操作系统命令以及字符串处理命令awk，sed等等命令来生成一个变量，如：</p>
 <p>.. code-block:: makefile</p>
-<div class="codehilite"><pre><span></span>contents := $(shell cat foo)
-files := $(shell echo \*.c)
-</pre></div>
+<pre class="codehilite"><code>contents := $(shell cat foo)
+files := $(shell echo \*.c)</code></pre>
 
 
 <p>注意，这个函数会新生成一个Shell程序来执行命令，所以你要注意其运行性能，如果你的Makefile中有一些比较复杂的规则，并大量使用了这个函数，那么对于你的系统性能是有害的。特别是Makefile的隐晦的规则可能会让你的shell函数执行的次数比你想像的多得多。</p>
 <h2 id="make">控制make的函数<a class="headerlink" href="#make" title="Permanent link">&para;</a></h2>
 <p>make提供了一些函数来控制make的运行。通常，你需要检测一些运行Makefile时的运行时信息，并且根据这些信息来决定，你是让make继续执行，还是停止。</p>
 <p>.. code-block:: makefile</p>
-<div class="codehilite"><pre><span></span>$(error &lt;text ...&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(error &lt;text ...&gt;)</code></pre>
 
 
 <p>产生一个致命的错误， <text ...>`
 是错误信息。注意，error函数不会在一被使用就会产生错误信息，所以如果你把其定义在某个变量中，并在后续的脚本中使用这个变量，那么也是可以的。例如：</p>
 <p>示例一：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>ifdef ERROR_001
+<pre class="codehilite"><code>ifdef ERROR_001
     $(error error is $(ERROR_001))
-endif
-</pre></div>
+endif</code></pre>
 
 
 <p>示例二：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span><span class="nv">ERR</span> <span class="o">=</span> <span class="k">$(</span>error found an error!<span class="k">)</span>
+<pre class="codehilite"><code>ERR = $(error found an error!)
 
-<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">err</span>
+.PHONY: err
 
-<span class="nf">err</span><span class="o">:</span> <span class="k">$(</span><span class="nv">ERR</span><span class="k">)</span>
-</pre></div>
+err: $(ERR)</code></pre>
 
 
 <p>示例一会在变量ERROR_001定义了后执行时产生error调用，而示例二则在目录err被执行时才发生error调用。</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>$(warning &lt;text ...&gt;)
-</pre></div>
+<pre class="codehilite"><code>$(warning &lt;text ...&gt;)</code></pre>
 
 
 <p>这个函数很像error函数，只是它并不会让make退出，只是输出一段警告信息，而make继续执行。</p>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -1600,8 +1649,8 @@ endif
       
     </div>
     
-      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-7aa26ad9ec.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     

@@ -13,9 +13,9 @@
         <meta name="author" content="farwmarth">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.3.0">
     
     
       
@@ -23,7 +23,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1d1da4857d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
     
     
       
@@ -35,12 +41,6 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
     
     
   </head>
@@ -60,13 +60,14 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
-          
-        </a>
+        
+          <a href="../.." title="farwmarth’s note" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -93,7 +94,7 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
     </form>
     <div class="md-search__output">
@@ -106,15 +107,17 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-          </div>
+        <div class="md-header-nav__source">
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -122,11 +125,11 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
-      
-    </i>
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
     farwmarth’s note
   </label>
   
@@ -134,17 +137,21 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Home" class="md-nav__link">
-        Home
-      </a>
-    
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
   </li>
 
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
@@ -152,7 +159,7 @@
     <label class="md-nav__link" for="nav-2">
       数据结构与算法
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         数据结构与算法
       </label>
@@ -161,12 +168,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
-        排序算法介绍
-      </a>
-    
+    <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+      排序算法介绍
+    </a>
   </li>
 
         
@@ -177,6 +185,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -184,7 +195,7 @@
     <label class="md-nav__link" for="nav-3">
       c++基础
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         c++基础
       </label>
@@ -193,67 +204,73 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
-        c++环境搭建(Win)
-      </a>
-    
+    <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+      c++环境搭建(Win)
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
-        基础语法
-      </a>
-    
+    <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
+      基础语法
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
-        内存分配
-      </a>
-    
+    <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
+      内存分配
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
-        编译过程
-      </a>
-    
+    <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
+      编译过程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
-        常量修饰符
-      </a>
-    
+    <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
+      常量修饰符
+    </a>
   </li>
 
         
@@ -264,14 +281,19 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       python
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         python
       </label>
@@ -280,183 +302,204 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py1_intro/" title="语言简介" class="md-nav__link">
-        语言简介
-      </a>
-    
+    <a href="../py1_intro/" title="语言简介" class="md-nav__link">
+      语言简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py2_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../py2_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py3_controller/" title="控制流程" class="md-nav__link">
-        控制流程
-      </a>
-    
+    <a href="../py3_controller/" title="控制流程" class="md-nav__link">
+      控制流程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py4_func/" title="函数" class="md-nav__link">
-        函数
-      </a>
-    
+    <a href="../py4_func/" title="函数" class="md-nav__link">
+      函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py5_step/" title="步骤" class="md-nav__link">
-        步骤
-      </a>
-    
+    <a href="../py5_step/" title="步骤" class="md-nav__link">
+      步骤
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py6_organize/" title="组织" class="md-nav__link">
-        组织
-      </a>
-    
+    <a href="../py6_organize/" title="组织" class="md-nav__link">
+      组织
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../py_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_with/" title="with关键字" class="md-nav__link">
-        with关键字
-      </a>
-    
+    <a href="../py_with/" title="with关键字" class="md-nav__link">
+      with关键字
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_scope/" title="变量作用域" class="md-nav__link">
-        变量作用域
-      </a>
-    
+    <a href="../py_scope/" title="变量作用域" class="md-nav__link">
+      变量作用域
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_enum/" title="枚举" class="md-nav__link">
-        枚举
-      </a>
-    
+    <a href="../py_enum/" title="枚举" class="md-nav__link">
+      枚举
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_error/" title="异常捕捉" class="md-nav__link">
-        异常捕捉
-      </a>
-    
+    <a href="../py_error/" title="异常捕捉" class="md-nav__link">
+      异常捕捉
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_test/" title="调试" class="md-nav__link">
-        调试
-      </a>
-    
+    <a href="../py_test/" title="调试" class="md-nav__link">
+      调试
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_fileio/" title="文件io" class="md-nav__link">
-        文件io
-      </a>
-    
+    <a href="../py_fileio/" title="文件io" class="md-nav__link">
+      文件io
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_inmodule/" title="模块" class="md-nav__link">
-        模块
-      </a>
-    
+    <a href="../py_inmodule/" title="模块" class="md-nav__link">
+      模块
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_urllib/" title="网络库" class="md-nav__link">
-        网络库
-      </a>
-    
+    <a href="../py_urllib/" title="网络库" class="md-nav__link">
+      网络库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_module_manager/" title="模块管理" class="md-nav__link">
-        模块管理
-      </a>
-    
+    <a href="../py_module_manager/" title="模块管理" class="md-nav__link">
+      模块管理
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -700,6 +743,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -709,100 +754,109 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_coroutine/" title="协程" class="md-nav__link">
-        协程
-      </a>
-    
+    <a href="../py_coroutine/" title="协程" class="md-nav__link">
+      协程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_gui/" title="图形界面编程" class="md-nav__link">
-        图形界面编程
-      </a>
-    
+    <a href="../py_gui/" title="图形界面编程" class="md-nav__link">
+      图形界面编程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_diff2/" title="python2/3对比" class="md-nav__link">
-        python2/3对比
-      </a>
-    
+    <a href="../py_diff2/" title="python2/3对比" class="md-nav__link">
+      python2/3对比
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_modules/" title="常用库" class="md-nav__link">
-        常用库
-      </a>
-    
+    <a href="../py_modules/" title="常用库" class="md-nav__link">
+      常用库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_qt/" title="pyqt使用" class="md-nav__link">
-        pyqt使用
-      </a>
-    
+    <a href="../py_qt/" title="pyqt使用" class="md-nav__link">
+      pyqt使用
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_tornado/" title="tornado" class="md-nav__link">
-        tornado
-      </a>
-    
+    <a href="../py_tornado/" title="tornado" class="md-nav__link">
+      tornado
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_spider/" title="爬虫" class="md-nav__link">
-        爬虫
-      </a>
-    
+    <a href="../py_spider/" title="爬虫" class="md-nav__link">
+      爬虫
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_mq/" title="消息队列" class="md-nav__link">
-        消息队列
-      </a>
-    
+    <a href="../py_mq/" title="消息队列" class="md-nav__link">
+      消息队列
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_selenium/" title="自动化测试" class="md-nav__link">
-        自动化测试
-      </a>
-    
+    <a href="../py_selenium/" title="自动化测试" class="md-nav__link">
+      自动化测试
+    </a>
   </li>
 
         
@@ -813,6 +867,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
@@ -820,7 +877,7 @@
     <label class="md-nav__link" for="nav-5">
       lua
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
         lua
       </label>
@@ -829,12 +886,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
@@ -845,6 +903,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
@@ -852,7 +913,7 @@
     <label class="md-nav__link" for="nav-6">
       swift
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
         swift
       </label>
@@ -861,12 +922,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
-        swift基础入门
-      </a>
-    
+    <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+      swift基础入门
+    </a>
   </li>
 
         
@@ -877,6 +939,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
@@ -884,7 +949,7 @@
     <label class="md-nav__link" for="nav-7">
       php
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
         php
       </label>
@@ -893,12 +958,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
-        基础介绍
-      </a>
-    
+    <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+      基础介绍
+    </a>
   </li>
 
         
@@ -909,6 +975,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
@@ -916,7 +985,7 @@
     <label class="md-nav__link" for="nav-8">
       git
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-8">
         git
       </label>
@@ -925,78 +994,85 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
-        git简介
-      </a>
-    
+    <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+      git简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
-        git操作
-      </a>
-    
+    <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+      git操作
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
-        git分支管理
-      </a>
-    
+    <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+      git分支管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
-        git工具
-      </a>
-    
+    <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+      git工具
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
-        git问题记录
-      </a>
-    
+    <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+      git问题记录
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
-        git应用场景
-      </a>
-    
+    <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+      git应用场景
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/github/" title="github" class="md-nav__link">
-        github
-      </a>
-    
+    <a href="../../versions/github/" title="github" class="md-nav__link">
+      github
+    </a>
   </li>
 
         
@@ -1007,6 +1083,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
@@ -1014,7 +1093,7 @@
     <label class="md-nav__link" for="nav-9">
       Vim编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-9">
         Vim编辑器
       </label>
@@ -1023,12 +1102,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/vim/" title="vim" class="md-nav__link">
-        vim
-      </a>
-    
+    <a href="../../ide/vim/" title="vim" class="md-nav__link">
+      vim
+    </a>
   </li>
 
         
@@ -1039,6 +1119,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
@@ -1046,7 +1129,7 @@
     <label class="md-nav__link" for="nav-10">
       Sublime Text编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-10">
         Sublime Text编辑器
       </label>
@@ -1055,12 +1138,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
-        sublimetext
-      </a>
-    
+    <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
+      sublimetext
+    </a>
   </li>
 
         
@@ -1071,6 +1155,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
@@ -1078,7 +1165,7 @@
     <label class="md-nav__link" for="nav-11">
       MakeFile
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-11">
         MakeFile
       </label>
@@ -1087,111 +1174,121 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/overview/" title="概述" class="md-nav__link">
-        概述
-      </a>
-    
+    <a href="../../makefile/overview/" title="概述" class="md-nav__link">
+      概述
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
-        makefile介绍
-      </a>
-    
+    <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
+      makefile介绍
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
-        书写规则
-      </a>
-    
+    <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
+      书写规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
-        书写命令
-      </a>
-    
+    <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
+      书写命令
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
-        使用变量
-      </a>
-    
+    <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
+      使用变量
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
-        使用条件判断
-      </a>
-    
+    <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
+      使用条件判断
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
-        使用函数
-      </a>
-    
+    <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
+      使用函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
-        make 的运行
-      </a>
-    
+    <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
+      make 的运行
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
-        隐含规则
-      </a>
-    
+    <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
+      隐含规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
-        使用make更新函数库文件
-      </a>
-    
+    <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
+      使用make更新函数库文件
+    </a>
   </li>
 
         
@@ -1439,6 +1536,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -1449,8 +1548,8 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <h1 id="_1">进程与线程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">进程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -1484,124 +1583,120 @@
 </ul>
 <h3 id="python">python进程<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
 <h4 id="multiprocessing">multiprocessing<a class="headerlink" href="#multiprocessing" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<pre class="codehilite"><code class="language-py">from multiprocessing import Process
+import os
 
-<span class="c1"># 子进程要执行的代码</span>
-<span class="k">def</span> <span class="nf">run_proc</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Run child process </span><span class="si">%s</span><span class="s1"> (</span><span class="si">%s</span><span class="s1">)...&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()))</span>
+# 子进程要执行的代码
+def run_proc(name):
+    print('Run child process %s (%s)...' % (name, os.getpid()))
 
-<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Parent process </span><span class="si">%s</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">())</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">run_proc</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,))</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Child process will start.&#39;</span><span class="p">)</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Child process end.&#39;</span><span class="p">)</span>
+if __name__=='__main__':
+    print('Parent process %s.' % os.getpid())
+    p = Process(target=run_proc, args=('test',))
+    print('Child process will start.')
+    p.start()
+    p.join()
+    print('Child process end.')
 
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Parent process 928.</span>
-<span class="sd">Process will start.</span>
-<span class="sd">Run child process test (929)...</span>
-<span class="sd">Process end.</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+'''
+Parent process 928.
+Process will start.
+Run child process test (929)...
+Process end.
+'''</code></pre>
 
 
 <h4 id="pool">进程池(Pool)<a class="headerlink" href="#pool" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">random</span>
+<pre class="codehilite"><code class="language-py">from multiprocessing import Pool
+import os, time, random
 
-<span class="k">def</span> <span class="nf">long_time_task</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Run task </span><span class="si">%s</span><span class="s1"> (</span><span class="si">%s</span><span class="s1">)...&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()))</span>
-    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Task </span><span class="si">%s</span><span class="s1"> runs </span><span class="si">%0.2f</span><span class="s1"> seconds.&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)))</span>
+def long_time_task(name):
+    print('Run task %s (%s)...' % (name, os.getpid()))
+    start = time.time()
+    time.sleep(random.random() * 3)
+    end = time.time()
+    print('Task %s runs %0.2f seconds.' % (name, (end - start)))
 
-<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Parent process </span><span class="si">%s</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">())</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-        <span class="n">p</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">long_time_task</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">i</span><span class="p">,))</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Waiting for all subprocesses done...&#39;</span><span class="p">)</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;All subprocesses done.&#39;</span><span class="p">)</span>
+if __name__=='__main__':
+    print('Parent process %s.' % os.getpid())
+    p = Pool(4)
+    for i in range(5):
+        p.apply_async(long_time_task, args=(i,))
+    print('Waiting for all subprocesses done...')
+    p.close()
+    p.join()
+    print('All subprocesses done.')
 
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Parent process 669.</span>
-<span class="sd">Waiting for all subprocesses done...</span>
-<span class="sd">Run task 0 (671)...</span>
-<span class="sd">Run task 1 (672)...</span>
-<span class="sd">Run task 2 (673)...</span>
-<span class="sd">Run task 3 (674)...</span>
-<span class="sd">Task 2 runs 0.14 seconds.</span>
-<span class="sd">Run task 4 (673)...</span>
-<span class="sd">Task 1 runs 0.27 seconds.</span>
-<span class="sd">Task 3 runs 0.86 seconds.</span>
-<span class="sd">Task 0 runs 1.41 seconds.</span>
-<span class="sd">Task 4 runs 1.91 seconds.</span>
-<span class="sd">All subprocesses done.</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+'''
+Parent process 669.
+Waiting for all subprocesses done...
+Run task 0 (671)...
+Run task 1 (672)...
+Run task 2 (673)...
+Run task 3 (674)...
+Task 2 runs 0.14 seconds.
+Run task 4 (673)...
+Task 1 runs 0.27 seconds.
+Task 3 runs 0.86 seconds.
+Task 0 runs 1.41 seconds.
+Task 4 runs 1.91 seconds.
+All subprocesses done.
+'''</code></pre>
 
 
 <h4 id="subprocess">子进程 subprocess<a class="headerlink" href="#subprocess" title="Permanent link">&para;</a></h4>
 <p>我们都是在创建并运行一个进程。像Linux进程那样，一个进程可以fork一个子进程，并让这个子进程exec另外一个程序。在Python中，我们通过标准库中的subprocess包来fork一个子进程，并运行一个外部的程序
 <code>os.fork</code>也可以在Python程序中轻松创建子进程</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<pre class="codehilite"><code class="language-py">import subprocess
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;$ nslookup www.python.org&#39;</span><span class="p">)</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s1">&#39;nslookup&#39;</span><span class="p">,</span> <span class="s1">&#39;www.python.org&#39;</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Exit code:&#39;</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
-</pre></div>
+print('$ nslookup www.python.org')
+r = subprocess.call(['nslookup', 'www.python.org'])
+print('Exit code:', r)</code></pre>
 
 
 <h4 id="_8">进程间通信<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p><code>Queue</code></p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span><span class="p">,</span> <span class="n">Queue</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">random</span>
+<pre class="codehilite"><code class="language-py">from multiprocessing import Process, Queue
+import os, time, random
 
-<span class="c1"># 写数据进程执行的代码:</span>
-<span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Process to write: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">())</span>
-    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Put </span><span class="si">%s</span><span class="s1"> to queue...&#39;</span> <span class="o">%</span> <span class="n">value</span><span class="p">)</span>
-        <span class="n">q</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
+# 写数据进程执行的代码:
+def write(q):
+    print('Process to write: %s' % os.getpid())
+    for value in ['A', 'B', 'C']:
+        print('Put %s to queue...' % value)
+        q.put(value)
+        time.sleep(random.random())
 
-<span class="c1"># 读数据进程执行的代码:</span>
-<span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Process to read: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">())</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">value</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Get </span><span class="si">%s</span><span class="s1"> from queue.&#39;</span> <span class="o">%</span> <span class="n">value</span><span class="p">)</span>
+# 读数据进程执行的代码:
+def read(q):
+    print('Process to read: %s' % os.getpid())
+    while True:
+        value = q.get(True)
+        print('Get %s from queue.' % value)
 
-<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="c1"># 父进程创建Queue，并传给各个子进程：</span>
-    <span class="n">q</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
-    <span class="n">pw</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">write</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">q</span><span class="p">,))</span>
-    <span class="n">pr</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">read</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">q</span><span class="p">,))</span>
-    <span class="c1"># 启动子进程pw，写入:</span>
-    <span class="n">pw</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="c1"># 启动子进程pr，读取:</span>
-    <span class="n">pr</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="c1"># 等待pw结束:</span>
-    <span class="n">pw</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-    <span class="c1"># pr进程里是死循环，无法等待其结束，只能强行终止:</span>
-    <span class="n">pr</span><span class="o">.</span><span class="n">terminate</span><span class="p">()</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Process to write: 50563</span>
-<span class="sd">Put A to queue...</span>
-<span class="sd">Process to read: 50564</span>
-<span class="sd">Get A from queue.</span>
-<span class="sd">Put B to queue...</span>
-<span class="sd">Get B from queue.</span>
-<span class="sd">Put C to queue...</span>
-<span class="sd">Get C from queue.</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+if __name__=='__main__':
+    # 父进程创建Queue，并传给各个子进程：
+    q = Queue()
+    pw = Process(target=write, args=(q,))
+    pr = Process(target=read, args=(q,))
+    # 启动子进程pw，写入:
+    pw.start()
+    # 启动子进程pr，读取:
+    pr.start()
+    # 等待pw结束:
+    pw.join()
+    # pr进程里是死循环，无法等待其结束，只能强行终止:
+    pr.terminate()
+'''
+Process to write: 50563
+Put A to queue...
+Process to read: 50564
+Get A from queue.
+Put B to queue...
+Get B from queue.
+Put C to queue...
+Get C from queue.
+'''</code></pre>
 
 
 <p>在Unix/Linux下，multiprocessing模块封装了fork()调用，使我们不需要关注fork()的细节。由于Windows没有fork调用，因此，multiprocessing需要“模拟”出fork的效果，父进程所有Python对象都必须通过pickle序列化再传到子进程去，所有，如果multiprocessing在Windows下调用失败了，要先考虑是不是pickle失败了</p>
@@ -1610,89 +1705,87 @@
 <p>举个例子：如果我们已经有一个通过Queue通信的多进程程序在同一台机器上运行，现在，由于处理任务的进程任务繁重，希望把发送任务的进程和处理任务的进程分布到两台机器上。怎么用分布式进程实现？</p>
 <p>原有的Queue可以继续使用，但是，通过managers模块把Queue通过网络暴露出去，就可以让其他机器的进程访问Queue了。</p>
 <p>我们先看服务进程，服务进程负责启动Queue，把Queue注册到网络上，然后往Queue里面写入任务</p>
-<div class="codehilite"><pre><span></span><span class="c1"># task_master.py</span>
+<pre class="codehilite"><code class="language-py"># task_master.py
 
-<span class="kn">import</span> <span class="nn">random</span><span class="o">,</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">queue</span>
-<span class="kn">from</span> <span class="nn">multiprocessing.managers</span> <span class="kn">import</span> <span class="n">BaseManager</span>
+import random, time, queue
+from multiprocessing.managers import BaseManager
 
-<span class="c1"># 发送任务的队列:</span>
-<span class="n">task_queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
-<span class="c1"># 接收结果的队列:</span>
-<span class="n">result_queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+# 发送任务的队列:
+task_queue = queue.Queue()
+# 接收结果的队列:
+result_queue = queue.Queue()
 
-<span class="c1"># 从BaseManager继承的QueueManager:</span>
-<span class="k">class</span> <span class="nc">QueueManager</span><span class="p">(</span><span class="n">BaseManager</span><span class="p">):</span>
-    <span class="k">pass</span>
+# 从BaseManager继承的QueueManager:
+class QueueManager(BaseManager):
+    pass
 
-<span class="c1"># 把两个Queue都注册到网络上, callable参数关联了Queue对象:</span>
-<span class="n">QueueManager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;get_task_queue&#39;</span><span class="p">,</span> <span class="nb">callable</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">task_queue</span><span class="p">)</span>
-<span class="n">QueueManager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;get_result_queue&#39;</span><span class="p">,</span> <span class="nb">callable</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">result_queue</span><span class="p">)</span>
-<span class="c1"># 绑定端口5000, 设置验证码&#39;abc&#39;:</span>
-<span class="n">manager</span> <span class="o">=</span> <span class="n">QueueManager</span><span class="p">(</span><span class="n">address</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">5000</span><span class="p">),</span> <span class="n">authkey</span><span class="o">=</span><span class="n">b</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
-<span class="c1"># 启动Queue:</span>
-<span class="n">manager</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<span class="c1"># 获得通过网络访问的Queue对象:</span>
-<span class="n">task</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">get_task_queue</span><span class="p">()</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">get_result_queue</span><span class="p">()</span>
-<span class="c1"># 放几个任务进去:</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Put task </span><span class="si">%d</span><span class="s1">...&#39;</span> <span class="o">%</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">task</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<span class="c1"># 从result队列读取结果:</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Try get results...&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Result: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">r</span><span class="p">)</span>
-<span class="c1"># 关闭:</span>
-<span class="n">manager</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;master exit.&#39;</span><span class="p">)</span>
-</pre></div>
+# 把两个Queue都注册到网络上, callable参数关联了Queue对象:
+QueueManager.register('get_task_queue', callable=lambda: task_queue)
+QueueManager.register('get_result_queue', callable=lambda: result_queue)
+# 绑定端口5000, 设置验证码'abc':
+manager = QueueManager(address=('', 5000), authkey=b'abc')
+# 启动Queue:
+manager.start()
+# 获得通过网络访问的Queue对象:
+task = manager.get_task_queue()
+result = manager.get_result_queue()
+# 放几个任务进去:
+for i in range(10):
+    n = random.randint(0, 10000)
+    print('Put task %d...' % n)
+    task.put(n)
+# 从result队列读取结果:
+print('Try get results...')
+for i in range(10):
+    r = result.get(timeout=10)
+    print('Result: %s' % r)
+# 关闭:
+manager.shutdown()
+print('master exit.')</code></pre>
 
 
 <p>请注意，当我们在一台机器上写多进程程序时，创建的Queue可以直接拿来用，但是，在分布式多进程环境下，添加任务到Queue不可以直接对原始的task_queue进行操作，那样就绕过了QueueManager的封装，必须通过manager.get_task_queue()获得的Queue接口添加。</p>
 <p>然后，在另一台机器上启动任务进程（本机上启动也可以）：</p>
-<div class="codehilite"><pre><span></span><span class="c1"># task_worker.py</span>
+<pre class="codehilite"><code class="language-py"># task_worker.py
 
-<span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">queue</span>
-<span class="kn">from</span> <span class="nn">multiprocessing.managers</span> <span class="kn">import</span> <span class="n">BaseManager</span>
+import time, sys, queue
+from multiprocessing.managers import BaseManager
 
-<span class="c1"># 创建类似的QueueManager:</span>
-<span class="k">class</span> <span class="nc">QueueManager</span><span class="p">(</span><span class="n">BaseManager</span><span class="p">):</span>
-    <span class="k">pass</span>
+# 创建类似的QueueManager:
+class QueueManager(BaseManager):
+    pass
 
-<span class="c1"># 由于这个QueueManager只从网络上获取Queue，所以注册时只提供名字:</span>
-<span class="n">QueueManager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;get_task_queue&#39;</span><span class="p">)</span>
-<span class="n">QueueManager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;get_result_queue&#39;</span><span class="p">)</span>
+# 由于这个QueueManager只从网络上获取Queue，所以注册时只提供名字:
+QueueManager.register('get_task_queue')
+QueueManager.register('get_result_queue')
 
-<span class="c1"># 连接到服务器，也就是运行task_master.py的机器:</span>
-<span class="n">server_addr</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Connect to server </span><span class="si">%s</span><span class="s1">...&#39;</span> <span class="o">%</span> <span class="n">server_addr</span><span class="p">)</span>
-<span class="c1"># 端口和验证码注意保持与task_master.py设置的完全一致:</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">QueueManager</span><span class="p">(</span><span class="n">address</span><span class="o">=</span><span class="p">(</span><span class="n">server_addr</span><span class="p">,</span> <span class="mi">5000</span><span class="p">),</span> <span class="n">authkey</span><span class="o">=</span><span class="n">b</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
-<span class="c1"># 从网络连接:</span>
-<span class="n">m</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<span class="c1"># 获取Queue的对象:</span>
-<span class="n">task</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_task_queue</span><span class="p">()</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_result_queue</span><span class="p">()</span>
-<span class="c1"># 从task队列取任务,并把结果写入result队列:</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;run task </span><span class="si">%d</span><span class="s1"> * </span><span class="si">%d</span><span class="s1">...&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
-        <span class="n">r</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> * </span><span class="si">%d</span><span class="s1"> = </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">result</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">Queue</span><span class="o">.</span><span class="n">Empty</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;task queue is empty.&#39;</span><span class="p">)</span>
-<span class="c1"># 处理结束:</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;worker exit.&#39;</span><span class="p">)</span>
-</pre></div>
+# 连接到服务器，也就是运行task_master.py的机器:
+server_addr = '127.0.0.1'
+print('Connect to server %s...' % server_addr)
+# 端口和验证码注意保持与task_master.py设置的完全一致:
+m = QueueManager(address=(server_addr, 5000), authkey=b'abc')
+# 从网络连接:
+m.connect()
+# 获取Queue的对象:
+task = m.get_task_queue()
+result = m.get_result_queue()
+# 从task队列取任务,并把结果写入result队列:
+for i in range(10):
+    try:
+        n = task.get(timeout=1)
+        print('run task %d * %d...' % (n, n))
+        r = '%d * %d = %d' % (n, n, n*n)
+        time.sleep(1)
+        result.put(r)
+    except Queue.Empty:
+        print('task queue is empty.')
+# 处理结束:
+print('worker exit.')</code></pre>
 
 
 <p>任务进程要通过网络连接到服务进程，所以要指定服务进程的IP。</p>
 <p>现在，可以试试分布式进程的工作效果了。先启动task_master.py服务进程：</p>
-<div class="codehilite"><pre><span></span>$ python3 task_master.py 
+<pre class="codehilite"><code class="language-shell">$ python3 task_master.py 
 Put task 3411...
 Put task 1605...
 Put task 1398...
@@ -1703,39 +1796,36 @@ Put task 68...
 Put task 4219...
 Put task 339...
 Put task 7866...
-Try get results...
-</pre></div>
+Try get results...</code></pre>
 
 
 <p><code>task_master.py</code>进程发送完任务后，开始等待result队列的结果。现在启动<code>task_worker.py</code>进程：</p>
-<div class="codehilite"><pre><span></span>$ python3 task_worker.py
+<pre class="codehilite"><code class="language-shell">$ python3 task_worker.py
 Connect to server 127.0.0.1...
-run task <span class="m">3411</span> * 3411...
-run task <span class="m">1605</span> * 1605...
-run task <span class="m">1398</span> * 1398...
-run task <span class="m">4729</span> * 4729...
-run task <span class="m">5300</span> * 5300...
-run task <span class="m">7471</span> * 7471...
-run task <span class="m">68</span> * 68...
-run task <span class="m">4219</span> * 4219...
-run task <span class="m">339</span> * 339...
-run task <span class="m">7866</span> * 7866...
-worker exit.
-</pre></div>
+run task 3411 * 3411...
+run task 1605 * 1605...
+run task 1398 * 1398...
+run task 4729 * 4729...
+run task 5300 * 5300...
+run task 7471 * 7471...
+run task 68 * 68...
+run task 4219 * 4219...
+run task 339 * 339...
+run task 7866 * 7866...
+worker exit.</code></pre>
 
 
 <p><code>task_worker.py</code>进程结束，在<code>task_master.py</code>进程中会继续打印出结果：</p>
-<div class="codehilite"><pre><span></span>Result: <span class="m">3411</span> * <span class="nv">3411</span> <span class="o">=</span> 11634921
-Result: <span class="m">1605</span> * <span class="nv">1605</span> <span class="o">=</span> 2576025
-Result: <span class="m">1398</span> * <span class="nv">1398</span> <span class="o">=</span> 1954404
-Result: <span class="m">4729</span> * <span class="nv">4729</span> <span class="o">=</span> 22363441
-Result: <span class="m">5300</span> * <span class="nv">5300</span> <span class="o">=</span> 28090000
-Result: <span class="m">7471</span> * <span class="nv">7471</span> <span class="o">=</span> 55815841
-Result: <span class="m">68</span> * <span class="nv">68</span> <span class="o">=</span> 4624
-Result: <span class="m">4219</span> * <span class="nv">4219</span> <span class="o">=</span> 17799961
-Result: <span class="m">339</span> * <span class="nv">339</span> <span class="o">=</span> 114921
-Result: <span class="m">7866</span> * <span class="nv">7866</span> <span class="o">=</span> 61873956
-</pre></div>
+<pre class="codehilite"><code class="language-shell">Result: 3411 * 3411 = 11634921
+Result: 1605 * 1605 = 2576025
+Result: 1398 * 1398 = 1954404
+Result: 4729 * 4729 = 22363441
+Result: 5300 * 5300 = 28090000
+Result: 7471 * 7471 = 55815841
+Result: 68 * 68 = 4624
+Result: 4219 * 4219 = 17799961
+Result: 339 * 339 = 114921
+Result: 7866 * 7866 = 61873956</code></pre>
 
 
 <p>个简单的Master/Worker模型有什么用？其实这就是一个简单但真正的分布式计算，把代码稍加改造，启动多个worker，就可以把任务分布到几台甚至几十台机器上，比如把计算n*n的代码换成发送邮件，就实现了邮件队列的异步发送。</p>
@@ -1753,54 +1843,53 @@ Result: <span class="m">7866</span> * <span class="nv">7866</span> <span class="
 <p>语言层面实现轻量级进程的比较少，stackless python，erlang 支持，java 并不支持。</p>
 <h3 id="python_1">python线程<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h3>
 <p>Python的标准库提供了两个模块：<code>_thread</code>和<code>threading</code>，_<code>thread</code>是低级模块，<code>threading</code>是高级模块，对<code>_thread</code>进行了封装。绝大多数情况下，我们只需要使用<code>threading</code>这个高级模块</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">FetchUrls</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-  <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">  下载URL内容的线程</span>
-<span class="sd">  &quot;&quot;&quot;</span>
+<pre class="codehilite"><code class="language-py">class FetchUrls(threading.Thread):
+  &quot;&quot;&quot;
+  下载URL内容的线程
+  &quot;&quot;&quot;
 
-  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urls</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    构造器</span>
+  def __init__(self, urls, output):
+    &quot;&quot;&quot;
+    构造器
 
-<span class="sd">    @param urls 需要下载的URL列表</span>
-<span class="sd">    @param output 写URL内容的输出文件</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">urls</span> <span class="o">=</span> <span class="n">urls</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">output</span>
+    @param urls 需要下载的URL列表
+    @param output 写URL内容的输出文件
+    &quot;&quot;&quot;
+    threading.Thread.__init__(self)
+    self.urls = urls
+    self.output = output
 
-  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    实现父类Thread的run方法，打开URL，并且一个一个的下载URL的内容</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">urls</span><span class="p">:</span>
-      <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">urls</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-      <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-      <span class="k">try</span><span class="p">:</span>
-        <span class="n">d</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
-      <span class="k">except</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">URLError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s1">&#39;URL </span><span class="si">%s</span><span class="s1"> failed: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-      <span class="k">print</span> <span class="s1">&#39;write done by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-      <span class="k">print</span> <span class="s1">&#39;URL </span><span class="si">%s</span><span class="s1"> fetched by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+  def run(self):
+    &quot;&quot;&quot;
+    实现父类Thread的run方法，打开URL，并且一个一个的下载URL的内容
+    &quot;&quot;&quot;
+    while self.urls:
+      url = self.urls.pop()
+      req = urllib2.Request(url)
+      try:
+        d = urllib2.urlopen(req)
+      except urllib2.URLError, e:
+        print 'URL %s failed: %s' % (url, e.reason)
+      self.output.write(d.read())
+      print 'write done by %s' % self.name
+      print 'URL %s fetched by %s' % (url, self.name)
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-  <span class="c1"># URL列表1</span>
-  <span class="n">urls1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://www.google.com&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.facebook.com&#39;</span><span class="p">]</span>
-  <span class="c1"># URL列表2</span>
-  <span class="n">urls2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://www.yahoo.com&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.youtube.com&#39;</span><span class="p">]</span>
-  <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span>
-  <span class="n">t1</span> <span class="o">=</span> <span class="n">FetchUrls</span><span class="p">(</span><span class="n">urls1</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-  <span class="n">t2</span> <span class="o">=</span> <span class="n">FetchUrls</span><span class="p">(</span><span class="n">urls2</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-  <span class="n">t1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-  <span class="n">t2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-  <span class="n">t1</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-  <span class="n">t2</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-  <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+def main():
+  # URL列表1
+  urls1 = ['http://www.google.com', 'http://www.facebook.com']
+  # URL列表2
+  urls2 = ['http://www.yahoo.com', 'http://www.youtube.com']
+  f = open('output.txt', 'w+')
+  t1 = FetchUrls(urls1, f)
+  t2 = FetchUrls(urls2, f)
+  t1.start()
+  t2.start()
+  t1.join()
+  t2.join()
+  f.close()
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-  <span class="n">main</span><span class="p">()</span>
-</pre></div>
+if __name__ == '__main__':
+  main()</code></pre>
 
 
 <p><code>FetchUrls</code>继承自<code>threading.Thread</code>启动两个<code>FetchUrls</code>线程使用不同的urls列表写同一份文件,因为线程调度不一样写文件会出现未写完一次<code>response</code>切换到另外一个<code>response</code>,要保证写有序可引入锁机制</p>
@@ -1814,235 +1903,229 @@ Result: <span class="m">7866</span> * <span class="nv">7866</span> <span class="
 <li>如果一个锁的状态是locked，调用release()方法改变它的状态为unlocked。</li>
 </ul>
 <p>解决上面两个线程同时写一个文件的问题的方法就是：我们给类FetchUrls的构造器中传入一个锁（lock），使用这个锁来保护文件操作，实现在给定的时间只有一个线程写文件</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">urllib2</span>
-<span class="kn">import</span> <span class="nn">threading</span>
+<pre class="codehilite"><code class="language-py">import time
+import urllib2
+import threading
 
-<span class="k">class</span> <span class="nc">FetchUrls</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Thread checking URLs.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+class FetchUrls(threading.Thread):
+    &quot;&quot;&quot;
+    Thread checking URLs.
+    &quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urls</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">lock</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor.</span>
-<span class="sd">        @param urls list of urls to check</span>
-<span class="sd">        @param output file to write urls output</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">urls</span> <span class="o">=</span> <span class="n">urls</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">output</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lock</span> <span class="o">=</span> <span class="n">lock</span>
+    def __init__(self, urls, output, lock):
+        &quot;&quot;&quot;
+        Constructor.
+        @param urls list of urls to check
+        @param output file to write urls output
+        &quot;&quot;&quot;
+        threading.Thread.__init__(self)
+        self.urls = urls
+        self.output = output
+        self.lock = lock
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Thread run method. Check URLs one by one.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">urls</span><span class="p">:</span>
-            <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">urls</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-            <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">d</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
-            <span class="k">except</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">URLError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-                <span class="k">print</span> <span class="s1">&#39;URL </span><span class="si">%s</span><span class="s1"> failed: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-            <span class="k">print</span> <span class="s1">&#39;lock acquired by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-            <span class="k">print</span> <span class="s1">&#39;write done by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-            <span class="k">print</span> <span class="s1">&#39;lock released by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-            <span class="k">print</span> <span class="s1">&#39;URL </span><span class="si">%s</span><span class="s1"> fetched by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    def run(self):
+        &quot;&quot;&quot;
+        Thread run method. Check URLs one by one.
+        &quot;&quot;&quot;
+        while self.urls:
+            url = self.urls.pop()
+            req = urllib2.Request(url)
+            try:
+                d = urllib2.urlopen(req)
+            except urllib2.URLError, e:
+                print 'URL %s failed: %s' % (url, e.reason)
+            self.lock.acquire()
+            print 'lock acquired by %s' % self.name
+            self.output.write(d.read())
+            print 'write done by %s' % self.name
+            print 'lock released by %s' % self.name
+            self.lock.release()
+            print 'URL %s fetched by %s' % (url, self.name)
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="c1"># list 1 of urls to fetch</span>
-    <span class="n">urls1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://www.google.com&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.facebook.com&#39;</span><span class="p">]</span>
-    <span class="c1"># list 2 of urls to fetch</span>
-    <span class="n">urls2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://www.yahoo.com&#39;</span><span class="p">,</span> <span class="s1">&#39;http://www.youtube.com&#39;</span><span class="p">]</span>
-    <span class="n">lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span>
-    <span class="n">t1</span> <span class="o">=</span> <span class="n">FetchUrls</span><span class="p">(</span><span class="n">urls1</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">lock</span><span class="p">)</span>
-    <span class="n">t2</span> <span class="o">=</span> <span class="n">FetchUrls</span><span class="p">(</span><span class="n">urls2</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">lock</span><span class="p">)</span>
-    <span class="n">t1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">t2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">t1</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-    <span class="n">t2</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+def main():
+    # list 1 of urls to fetch
+    urls1 = ['http://www.google.com', 'http://www.facebook.com']
+    # list 2 of urls to fetch
+    urls2 = ['http://www.yahoo.com', 'http://www.youtube.com']
+    lock = threading.Lock()
+    f = open('output.txt', 'w+')
+    t1 = FetchUrls(urls1, f, lock)
+    t2 = FetchUrls(urls2, f, lock)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    f.close()
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
+if __name__ == '__main__':
+    main()
 
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">lock acquired by Thread-2</span>
-<span class="sd">write done by Thread-2</span>
-<span class="sd">lock released by Thread-2</span>
-<span class="sd">URL http://www.youtube.com fetched by Thread-2</span>
-<span class="sd">lock acquired by Thread-1</span>
-<span class="sd">write done by Thread-1</span>
-<span class="sd">lock released by Thread-1</span>
-<span class="sd">URL http://www.facebook.com fetched by Thread-1</span>
-<span class="sd">lock acquired by Thread-2</span>
-<span class="sd">write done by Thread-2</span>
-<span class="sd">lock released by Thread-2</span>
-<span class="sd">URL http://www.yahoo.com fetched by Thread-2</span>
-<span class="sd">lock acquired by Thread-1</span>
-<span class="sd">write done by Thread-1</span>
-<span class="sd">lock released by Thread-1</span>
-<span class="sd">URL http://www.google.com fetched by Thread-1</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+'''
+lock acquired by Thread-2
+write done by Thread-2
+lock released by Thread-2
+URL http://www.youtube.com fetched by Thread-2
+lock acquired by Thread-1
+write done by Thread-1
+lock released by Thread-1
+URL http://www.facebook.com fetched by Thread-1
+lock acquired by Thread-2
+write done by Thread-2
+lock released by Thread-2
+URL http://www.yahoo.com fetched by Thread-2
+lock acquired by Thread-1
+write done by Thread-1
+lock released by Thread-1
+URL http://www.google.com fetched by Thread-1
+'''</code></pre>
 
 
 <p><img alt="lock" src="../../_static/lock.png" /></p>
 <h4 id="rlock">可重入锁（RLock）<a class="headerlink" href="#rlock" title="Permanent link">&para;</a></h4>
 <p>RLock是可重入锁（reentrant lock），acquire()能够不被阻塞的被同一个线程调用多次。要注意的是release()需要调用与acquire()相同的次数才能释放锁。</p>
 <p>使用Lock，下面的代码第二次调用acquire()时将被阻塞：</p>
-<div class="codehilite"><pre><span></span><span class="n">lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
-<span class="n">lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-<span class="n">lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">lock = threading.Lock()
+lock.acquire()
+lock.acquire()</code></pre>
 
 
 <p>如果你使用的是RLock，下面的代码第二次调用acquire()不会被阻塞:</p>
-<div class="codehilite"><pre><span></span><span class="n">rlock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">RLock</span><span class="p">()</span>
-<span class="n">rlock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-<span class="n">rlock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">rlock = threading.RLock()
+rlock.acquire()
+rlock.acquire()</code></pre>
 
 
 <p>RLock使用的同样是thread.allocate_lock()，不同的是他跟踪宿主线程（the owner thread）来实现可重入的特性。下面是RLock的acquire()实现。如果调用acquire()的线程是资源的所有者，记录调用acquire()次数的计数器就会加1。如果不是，就将试图去获取锁。线程第一次获得锁时，锁的拥有者将会被保存，同时计数器初始化为1。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blocking</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">me</span> <span class="o">=</span> <span class="n">_get_ident</span><span class="p">()</span>
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__owner</span> <span class="o">==</span> <span class="n">me</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__count</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="o">...</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="n">rc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__block</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="n">blocking</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">rc</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__owner</span> <span class="o">=</span> <span class="n">me</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__count</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="o">...</span>
-    <span class="o">...</span>
-    <span class="k">return</span> <span class="n">rc</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def acquire(self, blocking=1):
+    me = _get_ident()
+    if self.__owner == me:
+        self.__count = self.__count + 1
+        ...
+        return 1
+    rc = self.__block.acquire(blocking)
+    if rc:
+        self.__owner = me
+        self.__count = 1
+        ...
+    ...
+    return rc</code></pre>
 
 
 <p>可重入锁（RLock）的release()方法。首先它会去确认调用者是否是锁的拥有者。如果是的话，计数器减1；如果计数器为0，那么锁将会被释放，这时其他线程就可以去获取锁了</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">release</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__owner</span> <span class="o">!=</span> <span class="n">_get_ident</span><span class="p">():</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;cannot release un-acquired lock&quot;</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__count</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">count</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__owner</span> <span class="o">=</span> <span class="bp">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__block</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-        <span class="o">...</span>
-    <span class="o">...</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def release(self):
+    if self.__owner != _get_ident():
+        raise RuntimeError(&quot;cannot release un-acquired lock&quot;)
+    self.__count = count = self.__count - 1
+    if not count:
+        self.__owner = None
+        self.__block.release()
+        ...
+    ...</code></pre>
 
 
 <h4 id="condition">条件(Condition)<a class="headerlink" href="#condition" title="Permanent link">&para;</a></h4>
 <p>条件同步机制是指：一个线程等待特定条件，而另一个线程发出特定条件满足的信号。 解释条件同步机制的一个很好的例子就是生产者/消费者（producer/consumer）模型。生产者随机的往列表中“生产”一个随机整数，而消费者从列表中“消费”整数。完整的源码可以在threads/condition.py中找到</p>
 <p>在producer类中，producer获得锁，生产一个随机整数，通知消费者有了可用的“商品”，并且释放锁。producer无限地向列表中添加整数，同时在两个添加操作中间随机的停顿一会儿。</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">urllib2</span>
-<span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<pre class="codehilite"><code class="language-py">import time
+import urllib2
+import threading
+import random
 
-<span class="k">class</span> <span class="nc">Producer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Produces random integers to a list</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+class Producer(threading.Thread):
+    &quot;&quot;&quot;
+    Produces random integers to a list
+    &quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">integers</span><span class="p">,</span> <span class="n">condition</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor.</span>
-<span class="sd">        @param integers list of integers</span>
-<span class="sd">        @param condition condition synchronization object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">integers</span> <span class="o">=</span> <span class="n">integers</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">condition</span> <span class="o">=</span> <span class="n">condition</span>
+    def __init__(self, integers, condition):
+        &quot;&quot;&quot;
+        Constructor.
+        @param integers list of integers
+        @param condition condition synchronization object
+        &quot;&quot;&quot;
+        threading.Thread.__init__(self)
+        self.integers = integers
+        self.condition = condition
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Thread run method. Append random integers to the integers list at</span>
-<span class="sd">        random time.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-            <span class="n">integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-            <span class="k">print</span> <span class="s1">&#39;condition acquired by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">integers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">integer</span><span class="p">)</span>
-            <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> appended to list by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-            <span class="k">print</span> <span class="s1">&#39;condition notified by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">notify</span><span class="p">()</span>
-            <span class="k">print</span> <span class="s1">&#39;condition released by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    def run(self):
+        &quot;&quot;&quot;
+        Thread run method. Append random integers to the integers list at
+        random time.
+        &quot;&quot;&quot;
+        for i in range(10):
+            integer = random.randint(0, 256)
+            self.condition.acquire()
+            print 'condition acquired by %s' % self.name
+            self.integers.append(integer)
+            print '%d appended to list by %s' % (integer, self.name)
+            print 'condition notified by %s' % self.name
+            self.condition.notify()
+            print 'condition released by %s' % self.name
+            self.condition.release()
+            time.sleep(1)
 
-<span class="k">class</span> <span class="nc">Consumer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Consumes random integers from a list</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+class Consumer(threading.Thread):
+    &quot;&quot;&quot;
+    Consumes random integers from a list
+    &quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">integers</span><span class="p">,</span> <span class="n">condition</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor.</span>
-<span class="sd">        @param integers list of integers</span>
-<span class="sd">        @param condition condition synchronization object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">integers</span> <span class="o">=</span> <span class="n">integers</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">condition</span> <span class="o">=</span> <span class="n">condition</span>
+    def __init__(self, integers, condition):
+        &quot;&quot;&quot;
+        Constructor.
+        @param integers list of integers
+        @param condition condition synchronization object
+        &quot;&quot;&quot;
+        threading.Thread.__init__(self)
+        self.integers = integers
+        self.condition = condition
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Thread run method. Consumes integers from list</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-            <span class="k">print</span> <span class="s1">&#39;condition acquired by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">integers</span><span class="p">:</span>
-                    <span class="n">integer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">integers</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-                    <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> popped from list by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-                    <span class="k">break</span>
-                <span class="k">print</span> <span class="s1">&#39;condition wait by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
-            <span class="k">print</span> <span class="s1">&#39;condition released by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+    def run(self):
+        &quot;&quot;&quot;
+        Thread run method. Consumes integers from list
+        &quot;&quot;&quot;
+        while True:
+            self.condition.acquire()
+            print 'condition acquired by %s' % self.name
+            while True:
+                if self.integers:
+                    integer = self.integers.pop()
+                    print '%d popped from list by %s' % (integer, self.name)
+                    break
+                print 'condition wait by %s' % self.name
+                self.condition.wait()
+            print 'condition released by %s' % self.name
+            self.condition.release()
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">integers</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">condition</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Condition</span><span class="p">()</span>
-    <span class="n">t1</span> <span class="o">=</span> <span class="n">Producer</span><span class="p">(</span><span class="n">integers</span><span class="p">,</span> <span class="n">condition</span><span class="p">)</span>
-    <span class="n">t2</span> <span class="o">=</span> <span class="n">Consumer</span><span class="p">(</span><span class="n">integers</span><span class="p">,</span> <span class="n">condition</span><span class="p">)</span>
-    <span class="n">t1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">t2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">t1</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-    <span class="n">t2</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+def main():
+    integers = []
+    condition = threading.Condition()
+    t1 = Producer(integers, condition)
+    t2 = Consumer(integers, condition)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">condition acquired by Thread-1</span>
-<span class="sd">159 appended to list by Thread-1</span>
-<span class="sd">condition notified by Thread-1</span>
-<span class="sd">condition released by Thread-1</span>
-<span class="sd">condition acquired by Thread-2</span>
-<span class="sd">159 popped from list by Thread-2</span>
-<span class="sd">condition released by Thread-2</span>
-<span class="sd">condition acquired by Thread-2</span>
-<span class="sd">condition wait by Thread-2</span>
-<span class="sd">condition acquired by Thread-1</span>
-<span class="sd">116 appended to list by Thread-1</span>
-<span class="sd">condition notified by Thread-1</span>
-<span class="sd">condition released by Thread-1</span>
-<span class="sd">116 popped from list by Thread-2</span>
-<span class="sd">condition released by Thread-2</span>
-<span class="sd">condition acquired by Thread-2</span>
-<span class="sd">condition wait by Thread-2</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+if __name__ == '__main__':
+    main()
+'''
+condition acquired by Thread-1
+159 appended to list by Thread-1
+condition notified by Thread-1
+condition released by Thread-1
+condition acquired by Thread-2
+159 popped from list by Thread-2
+condition released by Thread-2
+condition acquired by Thread-2
+condition wait by Thread-2
+condition acquired by Thread-1
+116 appended to list by Thread-1
+condition notified by Thread-1
+condition released by Thread-1
+116 popped from list by Thread-2
+condition released by Thread-2
+condition acquired by Thread-2
+condition wait by Thread-2
+'''</code></pre>
 
 
 <p>在producer类中，producer获得锁，生产一个随机整数，通知消费者有了可用的“商品”，并且释放锁。producer无限地向列表中添加整数，同时在两个添加操作中间随机的停顿一会儿
@@ -2051,222 +2134,207 @@ Result: <span class="m">7866</span> * <span class="nv">7866</span> <span class="
 <img alt="condition" src="../../_static/condition.png" /></p>
 <p>Thread-1添加159到列表中，通知消费者同时释放锁，Thread-2获得锁，取回159，并且释放锁。此时因为执行time.sleep(1)，生产者正在睡眠，当消费者再次试图获取整数时，列表中并没有整数，这时消费者进入等待状态，等待生产者的通知。当wait()被调用时，它会释放资源，从而生产者能够利用资源生产整数。</p>
 <p>下面我们看一下Python内部是如何实现条件同步机制的。如果用户没有传入锁（lock）对象，condition类的构造器创建一个可重入锁（RLock），这个锁将会在调用acquire()和release()时使用</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">_Condition</span><span class="p">(</span><span class="n">_Verbose</span><span class="p">):</span>
+<pre class="codehilite"><code class="language-py">class _Condition(_Verbose):
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="n">_Verbose</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">lock</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="n">lock</span> <span class="o">=</span> <span class="n">RLock</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__lock</span> <span class="o">=</span> <span class="n">lock</span>
-</pre></div>
+    def __init__(self, lock=None, verbose=None):
+        _Verbose.__init__(self, verbose)
+        if lock is None:
+            lock = RLock()
+        self.__lock = lock</code></pre>
 
 
 <p>接下来是wait()方法。为了简化说明，我们假定在调用wait()方法时不使用timeout参数。wait()方法创建了一个名为waiter的锁，并且设置锁的状态为locked。这个waiter锁用于线程间的通讯，这样生产者（在生产完整数之后）就可以通知消费者释放waiter()锁。锁对象将会被添加到等待者列表，并且在调用waiter.acquire()时被阻塞。一开始condition锁的状态被保存，并且在wait()结束时被恢复。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">wait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="o">...</span>
-    <span class="n">waiter</span> <span class="o">=</span> <span class="n">_allocate_lock</span><span class="p">()</span>
-    <span class="n">waiter</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__waiters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">waiter</span><span class="p">)</span>
-    <span class="n">saved_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_release_save</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>    <span class="c1"># 无论如何恢复状态 (例如, KeyboardInterrupt)</span>
-        <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="n">waiter</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-            <span class="o">...</span>
-        <span class="o">...</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_acquire_restore</span><span class="p">(</span><span class="n">saved_state</span><span class="p">)</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def wait(self, timeout=None):
+    ...
+    waiter = _allocate_lock()
+    waiter.acquire()
+    self.__waiters.append(waiter)
+    saved_state = self._release_save()
+    try:    # 无论如何恢复状态 (例如, KeyboardInterrupt)
+        if timeout is None:
+            waiter.acquire()
+            ...
+        ...
+    finally:
+        self._acquire_restore(saved_state)</code></pre>
 
 
 <p>当生产者调用notify()方法时，notify()释放waiter锁，唤醒被阻塞的消费者。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">notify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="o">...</span>
-    <span class="n">__waiters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__waiters</span>
-    <span class="n">waiters</span> <span class="o">=</span> <span class="n">__waiters</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span>
-    <span class="o">...</span>
-    <span class="k">for</span> <span class="n">waiter</span> <span class="ow">in</span> <span class="n">waiters</span><span class="p">:</span>
-        <span class="n">waiter</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">__waiters</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">waiter</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="k">pass</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def notify(self, n=1):
+    ...
+    __waiters = self.__waiters
+    waiters = __waiters[:n]
+    ...
+    for waiter in waiters:
+        waiter.release()
+        try:
+            __waiters.remove(waiter)
+        except ValueError:
+            pass</code></pre>
 
 
 <p>同样Condition对象也可以和“with”语句一起使用，这样“with”语句上下文会帮我们调用acquire()和release()方法。下面的代码使用“with”语句改写了生产者和消费者类。</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Producer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-  <span class="o">...</span>
-  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-      <span class="n">integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
-      <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s1">&#39;condition acquired by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">integers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">integer</span><span class="p">)</span>
-        <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> appended to list by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">print</span> <span class="s1">&#39;condition notified by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">notify</span><span class="p">()</span>
-        <span class="k">print</span> <span class="s1">&#39;condition released by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<pre class="codehilite"><code class="language-py">class Producer(threading.Thread):
+  ...
+  def run(self):
+    while True:
+      integer = random.randint(0, 256)
+      with self.condition:
+        print 'condition acquired by %s' % self.name
+        self.integers.append(integer)
+        print '%d appended to list by %s' % (integer, self.name)
+        print 'condition notified by %s' % self.name
+        self.condition.notify()
+        print 'condition released by %s' % self.name
+      time.sleep(1)
 
-<span class="k">class</span> <span class="nc">Consumer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-  <span class="o">...</span>
-  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-      <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s1">&#39;condition acquired by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-          <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">integers</span><span class="p">:</span>
-            <span class="n">integer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">integers</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-            <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> popped from list by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-            <span class="k">break</span>
-          <span class="k">print</span> <span class="s1">&#39;condition wait by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-          <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
-        <span class="k">print</span> <span class="s1">&#39;condition released by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-</pre></div>
+class Consumer(threading.Thread):
+  ...
+  def run(self):
+    while True:
+      with self.condition:
+        print 'condition acquired by %s' % self.name
+        while True:
+          if self.integers:
+            integer = self.integers.pop()
+            print '%d popped from list by %s' % (integer, self.name)
+            break
+          print 'condition wait by %s' % self.name
+          self.condition.wait()
+        print 'condition released by %s' % self.name</code></pre>
 
 
 <h4 id="semaphore">信号量（Semaphore）<a class="headerlink" href="#semaphore" title="Permanent link">&para;</a></h4>
 <p>信号量同步基于内部计数器，每调用一次acquire()，计数器减1；每调用一次release()，计数器加1.当计数器为0时，acquire()调用被阻塞。这是迪科斯彻（Dijkstra）信号量概念P()和V()的Python实现。信号量同步机制适用于访问像服务器这样的有限资源。
 信号量同步的例子：</p>
-<div class="codehilite"><pre><span></span><span class="n">semaphore</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">()</span>
-<span class="n">semaphore</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
- <span class="c1"># 使用共享资源</span>
-<span class="o">...</span>
-<span class="n">semaphore</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">semaphore = threading.Semaphore()
+semaphore.acquire()
+ # 使用共享资源
+...
+semaphore.release()</code></pre>
 
 
 <p>让我们看一下信号量同步在Python内部是如何实现的。构造器使用参数value来表示计数器的初始值，默认值为1。一个条件锁实例用于保护计数器，同时当信号量被释放时通知其他线程。</p>
-<div class="codehilite"><pre><span></span><span class="n">lass</span> <span class="n">_Semaphore</span><span class="p">(</span><span class="n">_Verbose</span><span class="p">):</span>
-    <span class="o">...</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="n">_Verbose</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">(</span><span class="n">Lock</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">=</span> <span class="n">value</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">lass _Semaphore(_Verbose):
+    ...
+    def __init__(self, value=1, verbose=None):
+        _Verbose.__init__(self, verbose)
+        self.__cond = Condition(Lock())
+        self.__value = value</code></pre>
 
 
 <p>acquire()方法。如果信号量为0，线程被条件锁的wait()方法阻塞，直到被其他线程唤醒；如果计数器大于0，调用acquire()使计数器减1。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blocking</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">rc</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="o">...</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="n">rc</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">rc</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def acquire(self, blocking=1):
+    rc = False
+    self.__cond.acquire()
+    while self.__value == 0:
+        ...
+        self.__cond.wait()
+    else:
+        self.__value = self.__value - 1
+        rc = True
+    self.__cond.release()
+    return rc</code></pre>
 
 
 <p>信号量类的release()方法增加计数器的值并且唤醒其他线程。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">release</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__value</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">notify</span><span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def release(self):
+    self.__cond.acquire()
+    self.__value = self.__value + 1
+    self.__cond.notify()
+    self.__cond.release()</code></pre>
 
 
 <p>还有一个“有限”(bounded)信号量类，可以确保release()方法的调用次数不能超过给定的初始信号量数值(value参数)，下面是“有限”信号量类的Python代码：</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">_BoundedSemaphore</span><span class="p">(</span><span class="n">_Semaphore</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;检查release()的调用次数是否小于等于acquire()次数&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="n">_Semaphore</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_initial_value</span> <span class="o">=</span> <span class="n">value</span>
+<pre class="codehilite"><code class="language-py">class _BoundedSemaphore(_Semaphore):
+    &quot;&quot;&quot;检查release()的调用次数是否小于等于acquire()次数&quot;&quot;&quot;
+    def __init__(self, value=1, verbose=None):
+        _Semaphore.__init__(self, value, verbose)
+        self._initial_value = value
 
-    <span class="k">def</span> <span class="nf">release</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Semaphore__value</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_initial_value</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="s2">&quot;Semaphore released too many times&quot;</span>
-        <span class="k">return</span> <span class="n">_Semaphore</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-</pre></div>
+    def release(self):
+        if self._Semaphore__value &gt;= self._initial_value:
+            raise ValueError, &quot;Semaphore released too many times&quot;
+        return _Semaphore.release(self)</code></pre>
 
 
 <p>同样信号量(Semaphore)对象可以和“with”一起使用：</p>
-<div class="codehilite"><pre><span></span><span class="n">semaphore</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">()</span>
-<span class="k">with</span> <span class="n">semaphore</span><span class="p">:</span>
-  <span class="c1"># 使用共享资源</span>
-  <span class="o">...</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">semaphore = threading.Semaphore()
+with semaphore:
+  # 使用共享资源
+  ...</code></pre>
 
 
 <h4 id="event">事件（Event）<a class="headerlink" href="#event" title="Permanent link">&para;</a></h4>
 <p>基于事件的同步是指：一个线程发送/传递事件，另外的线程等待事件的触发。 让我们再来看看前面的生产者和消费者的例子，现在我们把它转换成使用事件同步而不是条件同步。完整的源码可以在threads/event.py里面找到。</p>
 <p>首先是生产者类，我们传入一个Event实例给构造器而不是Condition实例。一旦整数被添加进列表，事件(event)被设置和发送去唤醒消费者。注意事件(event)实例默认是被发送的。</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Producer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-  <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">  向列表中生产随机整数</span>
-<span class="sd">  &quot;&quot;&quot;</span>
+<pre class="codehilite"><code class="language-py">class Producer(threading.Thread):
+  &quot;&quot;&quot;
+  向列表中生产随机整数
+  &quot;&quot;&quot;
 
-  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">integers</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    构造器</span>
+  def __init__(self, integers, event):
+    &quot;&quot;&quot;
+    构造器
 
-<span class="sd">    @param integers 整数列表</span>
-<span class="sd">    @param event 事件同步对象</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">integers</span> <span class="o">=</span> <span class="n">integers</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">event</span> <span class="o">=</span> <span class="n">event</span>
+    @param integers 整数列表
+    @param event 事件同步对象
+    &quot;&quot;&quot;
+    threading.Thread.__init__(self)
+    self.integers = integers
+    self.event = event
 
-  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    实现Thread的run方法。在随机时间向列表中添加一个随机整数</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-      <span class="n">integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">integers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">integer</span><span class="p">)</span>
-      <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> appended to list by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-      <span class="k">print</span> <span class="s1">&#39;event set by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>      <span class="c1">#设置事件</span>
-      <span class="bp">self</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>    <span class="c1">#发送事件</span>
-      <span class="k">print</span> <span class="s1">&#39;event cleared by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
-      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
+  def run(self):
+    &quot;&quot;&quot;
+    实现Thread的run方法。在随机时间向列表中添加一个随机整数
+    &quot;&quot;&quot;
+    while True:
+      integer = random.randint(0, 256)
+      self.integers.append(integer)
+      print '%d appended to list by %s' % (integer, self.name)
+      print 'event set by %s' % self.name
+      self.event.set()      #设置事件
+      self.event.clear()    #发送事件
+      print 'event cleared by %s' % self.name
+      time.sleep(1)</code></pre>
 
 
 <p><img alt="event" src="../../_static/event.png" /></p>
 <p>事件锁的Python内部实现，首先是Event锁的构造器。构造器中创建了一个条件（Condition）锁，来保护事件标志（event flag）,同事唤醒其他线程当事件被设置时。</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">_Event</span><span class="p">(</span><span class="n">_Verbose</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="n">_Verbose</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span> <span class="o">=</span> <span class="n">Condition</span><span class="p">(</span><span class="n">Lock</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__flag</span> <span class="o">=</span> <span class="bp">False</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">class _Event(_Verbose):
+    def __init__(self, verbose=None):
+        _Verbose.__init__(self, verbose)
+        self.__cond = Condition(Lock())
+        self.__flag = False</code></pre>
 
 
 <p>接下来是set()方法，它设置事件标志为True，并且唤醒其他线程。条件锁对象保护程序修改事件标志状态的关键部分。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__flag</span> <span class="o">=</span> <span class="bp">True</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">notify_all</span><span class="p">()</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def set(self):
+    self.__cond.acquire()
+    try:
+        self.__flag = True
+        self.__cond.notify_all()
+    finally:
+        self.__cond.release()</code></pre>
 
 
 <p>而clear()方法正好相反，它设置时间标志为False。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__flag</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def clear(self):
+    self.__cond.acquire()
+    try:
+        self.__flag = False
+    finally:
+        self.__cond.release()</code></pre>
 
 
 <p>最后，wait()方法将阻塞直到调用了set()方法，当事件标志为True时，wait()方法就什么也不做。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">wait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">__flag</span><span class="p">:</span> <span class="c1">#如果flag不为真</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__cond</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def wait(self, timeout=None):
+    self.__cond.acquire()
+    try:
+        if not self.__flag: #如果flag不为真
+            self.__cond.wait(timeout)
+    finally:
+        self.__cond.release()</code></pre>
 
 
 <h4 id="queue">队列（Queue）<a class="headerlink" href="#queue" title="Permanent link">&para;</a></h4>
@@ -2279,173 +2347,167 @@ Result: <span class="m">7866</span> * <span class="nv">7866</span> <span class="
 下面我们将上面的生产者/消费者的例子转换成使用队列。源代码可以在threads/queue.py中找到。</li>
 </ul>
 <p>首先是生产者类，我们不需要传入一个整数列表，因为我们使用队列就可以存储生成的整数。生产者线程在一个无限循环中生成整数并将生成的整数添加到队列中。</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">Queue</span>
+<pre class="codehilite"><code class="language-py">import time
+import threading
+import random
+import Queue
 
-<span class="k">class</span> <span class="nc">Producer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Produces random integers to a list</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+class Producer(threading.Thread):
+    &quot;&quot;&quot;
+    Produces random integers to a list
+    &quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor.</span>
-<span class="sd">        @param integers list of integers</span>
-<span class="sd">        @param queue queue synchronization object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span>
+    def __init__(self, queue):
+        &quot;&quot;&quot;
+        Constructor.
+        @param integers list of integers
+        @param queue queue synchronization object
+        &quot;&quot;&quot;
+        threading.Thread.__init__(self)
+        self.queue = queue
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Thread run method. Append random integers to the integers</span>
-<span class="sd">        list at random time.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="n">integer</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">integer</span><span class="p">)</span>
-            <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> put to queue by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    def run(self):
+        &quot;&quot;&quot;
+        Thread run method. Append random integers to the integers
+        list at random time.
+        &quot;&quot;&quot;
+        while True:
+            integer = random.randint(0, 256)
+            self.queue.put(integer)
+            print '%d put to queue by %s' % (integer, self.name)
+            time.sleep(1)
 
-<span class="k">class</span> <span class="nc">Consumer</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Consumes random integers from a list</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+class Consumer(threading.Thread):
+    &quot;&quot;&quot;
+    Consumes random integers from a list
+    &quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Constructor.</span>
-<span class="sd">        @param integers list of integers</span>
-<span class="sd">        @param queue queue synchronization object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span>
+    def __init__(self, queue):
+        &quot;&quot;&quot;
+        Constructor.
+        @param integers list of integers
+        @param queue queue synchronization object
+        &quot;&quot;&quot;
+        threading.Thread.__init__(self)
+        self.queue = queue
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Thread run method. Consumes integers from list</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="n">integer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-            <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> popped from list by </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">task_done</span><span class="p">()</span>
+    def run(self):
+        &quot;&quot;&quot;
+        Thread run method. Consumes integers from list
+        &quot;&quot;&quot;
+        while True:
+            integer = self.queue.get()
+            print '%d popped from list by %s' % (integer, self.name)
+            self.queue.task_done()
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">integers</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">queue</span> <span class="o">=</span> <span class="n">Queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
-    <span class="n">t1</span> <span class="o">=</span> <span class="n">Producer</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
-    <span class="n">t2</span> <span class="o">=</span> <span class="n">Consumer</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
-    <span class="n">t1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">t2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">t1</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-    <span class="n">t2</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+def main():
+    integers = []
+    queue = Queue.Queue()
+    t1 = Producer(queue)
+    t2 = Consumer(queue)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div>
+if __name__ == '__main__':
+    main()</code></pre>
 
 
 <p>队列同步的最大好处就是队列帮我们处理了锁。现在让我们去看看在Python内部是如何实现队列同步机制的。</p>
 <p>队列（Queue）构造器创建一个锁，保护队列元素的添加和删除操作。同时创建了一些条件锁对象处理队列事件，比如队列不空事件（削除get()的阻塞），队列不满事件（削除put()的阻塞）和所有项目都被处理完事件（削除join()的阻塞）。</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Queue</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxsize</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="o">...</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">mutex</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">not_empty</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Condition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">not_full</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Condition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">all_tasks_done</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Condition</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mutex</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">unfinished_tasks</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">class Queue:
+    def __init__(self, maxsize=0):
+        ...
+        self.mutex = threading.Lock()
+        self.not_empty = threading.Condition(self.mutex)
+        self.not_full = threading.Condition(self.mutex)
+        self.all_tasks_done = threading.Condition(self.mutex)
+        self.unfinished_tasks = 0</code></pre>
 
 
 <p>put()方法向队列中添加一个项，或者阻塞如果队列已满。这时队列非空，它唤醒阻塞在get()方法中的线程。更多关于Condition锁的内容请查看上面的讲解。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">block</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="o">...</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">not_full</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxsize</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="o">...</span>
-            <span class="k">elif</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-                <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qsize</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxsize</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">not_full</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_put</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">unfinished_tasks</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">not_empty</span><span class="o">.</span><span class="n">notify</span><span class="p">()</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">not_full</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def put(self, item, block=True, timeout=None):
+    ...
+    self.not_full.acquire()
+    try:
+        if self.maxsize &gt; 0:
+            ...
+            elif timeout is None:
+                while self._qsize() == self.maxsize:
+                    self.not_full.wait()
+        self._put(item)
+        self.unfinished_tasks += 1
+        self.not_empty.notify()
+    finally:
+        self.not_full.release()</code></pre>
 
 
 <p>get()方法从队列中获得并删除一个项，或者阻塞当队列为空时。这时队列不满，他唤醒阻塞在put()方法中的线程。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">block</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="o">...</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">not_empty</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="o">...</span>
-        <span class="k">elif</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qsize</span><span class="p">():</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">not_empty</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
-        <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">not_full</span><span class="o">.</span><span class="n">notify</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">item</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">not_empty</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">def get(self, block=True, timeout=None):
+    ...
+    self.not_empty.acquire()
+    try:
+        ...
+        elif timeout is None:
+            while not self._qsize():
+                self.not_empty.wait()
+        item = self._get()
+        self.not_full.notify()
+        return item
+    finally:
+        self.not_empty.release()</code></pre>
 
 
 <p>当调用task_done()方法时，未完成任务的数量减1。如果未完成任务的数量为0，线程等待队列完成join()方法。</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">task_done</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">all_tasks_done</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">unfinished</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unfinished_tasks</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="k">if</span> <span class="n">unfinished</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">unfinished</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;task_done() called too many times&#39;</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">all_tasks_done</span><span class="o">.</span><span class="n">notify_all</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">unfinished_tasks</span> <span class="o">=</span> <span class="n">unfinished</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">all_tasks_done</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<pre class="codehilite"><code class="language-py">def task_done(self):
+    self.all_tasks_done.acquire()
+    try:
+        unfinished = self.unfinished_tasks - 1
+        if unfinished &lt;= 0:
+            if unfinished &lt; 0:
+                raise ValueError('task_done() called too many times')
+            self.all_tasks_done.notify_all()
+        self.unfinished_tasks = unfinished
+    finally:
+        self.all_tasks_done.release()
 
-<span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">all_tasks_done</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">unfinished_tasks</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">all_tasks_done</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">all_tasks_done</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</pre></div>
+def join(self):
+    self.all_tasks_done.acquire()
+    try:
+        while self.unfinished_tasks:
+            self.all_tasks_done.wait()
+    finally:
+        self.all_tasks_done.release()</code></pre>
 
 
 <p><img alt="queue" src="../../_static/queue.png" /></p>
 <h4 id="threadlocal">ThreadLocal<a class="headerlink" href="#threadlocal" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
+<pre class="codehilite"><code class="language-py">import threading
 
-<span class="c1"># 创建全局ThreadLocal对象:</span>
-<span class="n">local_school</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">()</span>
+# 创建全局ThreadLocal对象:
+local_school = threading.local()
 
-<span class="k">def</span> <span class="nf">process_student</span><span class="p">():</span>
-    <span class="c1"># 获取当前线程关联的student:</span>
-    <span class="n">std</span> <span class="o">=</span> <span class="n">local_school</span><span class="o">.</span><span class="n">student</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello, </span><span class="si">%s</span><span class="s1"> (in </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">std</span><span class="p">,</span> <span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+def process_student():
+    # 获取当前线程关联的student:
+    std = local_school.student
+    print('Hello, %s (in %s)' % (std, threading.current_thread().name))
 
-<span class="k">def</span> <span class="nf">process_thread</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="c1"># 绑定ThreadLocal的student:</span>
-    <span class="n">local_school</span><span class="o">.</span><span class="n">student</span> <span class="o">=</span> <span class="n">name</span>
-    <span class="n">process_student</span><span class="p">()</span>
+def process_thread(name):
+    # 绑定ThreadLocal的student:
+    local_school.student = name
+    process_student()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span> <span class="n">process_thread</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Thread-A&#39;</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span> <span class="n">process_thread</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">,),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Thread-B&#39;</span><span class="p">)</span>
-<span class="n">t1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<span class="n">t2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<span class="n">t1</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-<span class="n">t2</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Hello, Alice (in Thread-A)</span>
-<span class="sd">Hello, Bob (in Thread-B)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+t1 = threading.Thread(target= process_thread, args=('Alice',), name='Thread-A')
+t2 = threading.Thread(target= process_thread, args=('Bob',), name='Thread-B')
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+'''
+Hello, Alice (in Thread-A)
+Hello, Bob (in Thread-B)
+'''</code></pre>
 
 
 <p>全局变量local_school就是一个ThreadLocal对象，每个Thread对它都可以读写student属性，但互不影响。你可以把local_school看成全局变量，但每个属性如local_school.student都是线程的局部变量，可以任意读写而互不干扰，也不用管理锁的问题，ThreadLocal内部会处理</p>
@@ -2457,17 +2519,16 @@ Result: <span class="m">7866</span> * <span class="nv">7866</span> <span class="
 <p>如果有两个死循环线程，在多核CPU中，可以监控到会占用200%的CPU，也就是占用两个CPU核心。</p>
 <p>要想把N核CPU的核心全部跑满，就必须启动N个死循环线程。</p>
 <p>试试用Python写个死循环：</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span><span class="o">,</span> <span class="nn">multiprocessing</span>
+<pre class="codehilite"><code class="language-py">import threading, multiprocessing
 
-<span class="k">def</span> <span class="nf">loop</span><span class="p">():</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">^</span> <span class="mi">1</span>
+def loop():
+    x = 0
+    while True:
+        x = x ^ 1
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()):</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">loop</span><span class="p">)</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-</pre></div>
+for i in range(multiprocessing.cpu_count()):
+    t = threading.Thread(target=loop)
+    t.start()</code></pre>
 
 
 <p>启动与CPU核心数量相同的N个线程，在4核CPU上可以监控到CPU占用率仅有102%，也就是仅使用了一核。</p>
@@ -2558,6 +2619,12 @@ Result: <span class="m">7866</span> * <span class="nv">7866</span> <span class="
 <p><a href="http://boolan.com/lecture/1000001045">http://boolan.com/lecture/1000001045</a></p>
 <p><a href="http://www.cnblogs.com/shenguanpu/archive/2013/05/05/3060616.html">http://www.cnblogs.com/shenguanpu/archive/2013/05/05/3060616.html</a></p>
 <p><a href="http://yoyzhou.github.io/blog/2013/02/28/python-threads-synchronization-locks/">http://yoyzhou.github.io/blog/2013/02/28/python-threads-synchronization-locks/</a></p>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -2625,8 +2692,8 @@ Result: <span class="m">7866</span> * <span class="nv">7866</span> <span class="
       
     </div>
     
-      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-7aa26ad9ec.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     

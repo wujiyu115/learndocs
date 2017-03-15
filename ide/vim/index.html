@@ -13,9 +13,9 @@
         <meta name="author" content="farwmarth">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.3.0">
     
     
       
@@ -23,7 +23,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1d1da4857d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
     
     
       
@@ -35,12 +41,6 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
     
     
   </head>
@@ -60,13 +60,14 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
-          
-        </a>
+        
+          <a href="../.." title="farwmarth’s note" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -93,7 +94,7 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
     </form>
     <div class="md-search__output">
@@ -106,15 +107,17 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-          </div>
+        <div class="md-header-nav__source">
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -122,11 +125,11 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
-      
-    </i>
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
     farwmarth’s note
   </label>
   
@@ -134,17 +137,21 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Home" class="md-nav__link">
-        Home
-      </a>
-    
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
   </li>
 
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
@@ -152,7 +159,7 @@
     <label class="md-nav__link" for="nav-2">
       数据结构与算法
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         数据结构与算法
       </label>
@@ -161,12 +168,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
-        排序算法介绍
-      </a>
-    
+    <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+      排序算法介绍
+    </a>
   </li>
 
         
@@ -177,6 +185,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -184,7 +195,7 @@
     <label class="md-nav__link" for="nav-3">
       c++基础
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         c++基础
       </label>
@@ -193,67 +204,73 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
-        c++环境搭建(Win)
-      </a>
-    
+    <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+      c++环境搭建(Win)
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
-        基础语法
-      </a>
-    
+    <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
+      基础语法
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
-        内存分配
-      </a>
-    
+    <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
+      内存分配
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
-        编译过程
-      </a>
-    
+    <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
+      编译过程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
-        常量修饰符
-      </a>
-    
+    <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
+      常量修饰符
+    </a>
   </li>
 
         
@@ -264,6 +281,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
@@ -271,7 +291,7 @@
     <label class="md-nav__link" for="nav-4">
       python
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         python
       </label>
@@ -280,287 +300,313 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py1_intro/" title="语言简介" class="md-nav__link">
-        语言简介
-      </a>
-    
+    <a href="../../python/py1_intro/" title="语言简介" class="md-nav__link">
+      语言简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py2_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../../python/py2_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py3_controller/" title="控制流程" class="md-nav__link">
-        控制流程
-      </a>
-    
+    <a href="../../python/py3_controller/" title="控制流程" class="md-nav__link">
+      控制流程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py4_func/" title="函数" class="md-nav__link">
-        函数
-      </a>
-    
+    <a href="../../python/py4_func/" title="函数" class="md-nav__link">
+      函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py5_step/" title="步骤" class="md-nav__link">
-        步骤
-      </a>
-    
+    <a href="../../python/py5_step/" title="步骤" class="md-nav__link">
+      步骤
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py6_organize/" title="组织" class="md-nav__link">
-        组织
-      </a>
-    
+    <a href="../../python/py6_organize/" title="组织" class="md-nav__link">
+      组织
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../../python/py_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_with/" title="with关键字" class="md-nav__link">
-        with关键字
-      </a>
-    
+    <a href="../../python/py_with/" title="with关键字" class="md-nav__link">
+      with关键字
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_scope/" title="变量作用域" class="md-nav__link">
-        变量作用域
-      </a>
-    
+    <a href="../../python/py_scope/" title="变量作用域" class="md-nav__link">
+      变量作用域
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_enum/" title="枚举" class="md-nav__link">
-        枚举
-      </a>
-    
+    <a href="../../python/py_enum/" title="枚举" class="md-nav__link">
+      枚举
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_error/" title="异常捕捉" class="md-nav__link">
-        异常捕捉
-      </a>
-    
+    <a href="../../python/py_error/" title="异常捕捉" class="md-nav__link">
+      异常捕捉
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_test/" title="调试" class="md-nav__link">
-        调试
-      </a>
-    
+    <a href="../../python/py_test/" title="调试" class="md-nav__link">
+      调试
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_fileio/" title="文件io" class="md-nav__link">
-        文件io
-      </a>
-    
+    <a href="../../python/py_fileio/" title="文件io" class="md-nav__link">
+      文件io
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_inmodule/" title="模块" class="md-nav__link">
-        模块
-      </a>
-    
+    <a href="../../python/py_inmodule/" title="模块" class="md-nav__link">
+      模块
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_urllib/" title="网络库" class="md-nav__link">
-        网络库
-      </a>
-    
+    <a href="../../python/py_urllib/" title="网络库" class="md-nav__link">
+      网络库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_module_manager/" title="模块管理" class="md-nav__link">
-        模块管理
-      </a>
-    
+    <a href="../../python/py_module_manager/" title="模块管理" class="md-nav__link">
+      模块管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_thread/" title="线程" class="md-nav__link">
-        线程
-      </a>
-    
+    <a href="../../python/py_thread/" title="线程" class="md-nav__link">
+      线程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_coroutine/" title="协程" class="md-nav__link">
-        协程
-      </a>
-    
+    <a href="../../python/py_coroutine/" title="协程" class="md-nav__link">
+      协程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_gui/" title="图形界面编程" class="md-nav__link">
-        图形界面编程
-      </a>
-    
+    <a href="../../python/py_gui/" title="图形界面编程" class="md-nav__link">
+      图形界面编程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_diff2/" title="python2/3对比" class="md-nav__link">
-        python2/3对比
-      </a>
-    
+    <a href="../../python/py_diff2/" title="python2/3对比" class="md-nav__link">
+      python2/3对比
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_modules/" title="常用库" class="md-nav__link">
-        常用库
-      </a>
-    
+    <a href="../../python/py_modules/" title="常用库" class="md-nav__link">
+      常用库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_qt/" title="pyqt使用" class="md-nav__link">
-        pyqt使用
-      </a>
-    
+    <a href="../../python/py_qt/" title="pyqt使用" class="md-nav__link">
+      pyqt使用
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_tornado/" title="tornado" class="md-nav__link">
-        tornado
-      </a>
-    
+    <a href="../../python/py_tornado/" title="tornado" class="md-nav__link">
+      tornado
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_spider/" title="爬虫" class="md-nav__link">
-        爬虫
-      </a>
-    
+    <a href="../../python/py_spider/" title="爬虫" class="md-nav__link">
+      爬虫
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_mq/" title="消息队列" class="md-nav__link">
-        消息队列
-      </a>
-    
+    <a href="../../python/py_mq/" title="消息队列" class="md-nav__link">
+      消息队列
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_selenium/" title="自动化测试" class="md-nav__link">
-        自动化测试
-      </a>
-    
+    <a href="../../python/py_selenium/" title="自动化测试" class="md-nav__link">
+      自动化测试
+    </a>
   </li>
 
         
@@ -571,6 +617,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
@@ -578,7 +627,7 @@
     <label class="md-nav__link" for="nav-5">
       lua
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
         lua
       </label>
@@ -587,12 +636,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
@@ -603,6 +653,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
@@ -610,7 +663,7 @@
     <label class="md-nav__link" for="nav-6">
       swift
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
         swift
       </label>
@@ -619,12 +672,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
-        swift基础入门
-      </a>
-    
+    <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+      swift基础入门
+    </a>
   </li>
 
         
@@ -635,6 +689,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
@@ -642,7 +699,7 @@
     <label class="md-nav__link" for="nav-7">
       php
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
         php
       </label>
@@ -651,12 +708,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
-        基础介绍
-      </a>
-    
+    <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+      基础介绍
+    </a>
   </li>
 
         
@@ -667,6 +725,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
@@ -674,7 +735,7 @@
     <label class="md-nav__link" for="nav-8">
       git
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-8">
         git
       </label>
@@ -683,78 +744,85 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
-        git简介
-      </a>
-    
+    <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+      git简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
-        git操作
-      </a>
-    
+    <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+      git操作
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
-        git分支管理
-      </a>
-    
+    <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+      git分支管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
-        git工具
-      </a>
-    
+    <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+      git工具
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
-        git问题记录
-      </a>
-    
+    <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+      git问题记录
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
-        git应用场景
-      </a>
-    
+    <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+      git应用场景
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/github/" title="github" class="md-nav__link">
-        github
-      </a>
-    
+    <a href="../../versions/github/" title="github" class="md-nav__link">
+      github
+    </a>
   </li>
 
         
@@ -765,14 +833,19 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
     
     <label class="md-nav__link" for="nav-9">
       Vim编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-9">
         Vim编辑器
       </label>
@@ -781,7 +854,12 @@
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -890,18 +968,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" title="窗口操作" class="md-nav__link">
+  <a href="#_12" title="缓冲区操作" class="md-nav__link">
+    缓冲区操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="窗口操作" class="md-nav__link">
     窗口操作
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_13" title="放两张速记图" class="md-nav__link">
+  <a href="#_14" title="放两张速记图" class="md-nav__link">
     放两张速记图
   </a>
   
 </li>
+      
+      
       
     </ul>
   
@@ -917,6 +1004,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
@@ -924,7 +1014,7 @@
     <label class="md-nav__link" for="nav-10">
       Sublime Text编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-10">
         Sublime Text编辑器
       </label>
@@ -933,12 +1023,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../sublimetext/" title="sublimetext" class="md-nav__link">
-        sublimetext
-      </a>
-    
+    <a href="../sublimetext/" title="sublimetext" class="md-nav__link">
+      sublimetext
+    </a>
   </li>
 
         
@@ -949,6 +1040,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
@@ -956,7 +1050,7 @@
     <label class="md-nav__link" for="nav-11">
       MakeFile
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-11">
         MakeFile
       </label>
@@ -965,111 +1059,121 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/overview/" title="概述" class="md-nav__link">
-        概述
-      </a>
-    
+    <a href="../../makefile/overview/" title="概述" class="md-nav__link">
+      概述
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
-        makefile介绍
-      </a>
-    
+    <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
+      makefile介绍
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
-        书写规则
-      </a>
-    
+    <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
+      书写规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
-        书写命令
-      </a>
-    
+    <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
+      书写命令
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
-        使用变量
-      </a>
-    
+    <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
+      使用变量
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
-        使用条件判断
-      </a>
-    
+    <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
+      使用条件判断
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
-        使用函数
-      </a>
-    
+    <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
+      使用函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
-        make 的运行
-      </a>
-    
+    <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
+      make 的运行
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
-        隐含规则
-      </a>
-    
+    <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
+      隐含规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
-        使用make更新函数库文件
-      </a>
-    
+    <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
+      使用make更新函数库文件
+    </a>
   </li>
 
         
@@ -1182,18 +1286,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" title="窗口操作" class="md-nav__link">
+  <a href="#_12" title="缓冲区操作" class="md-nav__link">
+    缓冲区操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="窗口操作" class="md-nav__link">
     窗口操作
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_13" title="放两张速记图" class="md-nav__link">
+  <a href="#_14" title="放两张速记图" class="md-nav__link">
     放两张速记图
   </a>
   
 </li>
+      
+      
       
     </ul>
   
@@ -1205,27 +1318,27 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <h1 id="vim">vim<a class="headerlink" href="#vim" title="Permanent link">&para;</a></h1>
 <h2 id="_1">入门<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ol>
-<li>启 动Vim后，vim在 Normal 模式下。</li>
-<li>让我们进入 Insert 模式，请按下键 i 。(陈皓注：你会看到vim左下角有一个–insert–字样，表示，你可以以插入的方式输入了）</li>
+<li>启动Vim后，vim在 Normal 模式下。</li>
+<li>让我们进入 Insert 模式，请按下键 <code>i</code></li>
 <li>此时，你可以输入文本了，就像你用“记事本”一样。</li>
 <li>
-<p>如果你想返回 Normal 模式，请按 ESC 键。
+<p>如果你想返回 Normal 模式，请按 <code>ESC</code> 键。
 现在，你知道如何在 Insert 和 Normal 模式下切换了。下面是一些命令：</p>
 <blockquote>
 <ul>
-<li>i → Insert 模式，按 ESC 回到 Normal 模式.</li>
-<li>x → 删当前光标所在的一个字符。</li>
-<li>:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （陈皓注：:w 后可以跟文件名）</li>
-<li>dd → 删除当前行，并把删除的行存到剪贴板里</li>
-<li>p → 粘贴剪贴板</li>
-<li>hjkl (强例推荐使用其移动光标，但不必需) →你也可以使用光标键 (←↓↑→). 注: j 就像下箭头。</li>
-<li>:help <command> → 显示相关命令的帮助。你也可以就输入 :help 而不跟命令。（陈皓注：退出帮助需要输入:q）</li>
+<li><code>i</code> → Insert 模式，按 ESC 回到 Normal 模式.</li>
+<li><code>x</code> → 删当前光标所在的一个字符。</li>
+<li><code>:wq</code> → 存盘 + 退出 (:w 存盘, :q 退出)   （陈皓注：:w 后可以跟文件名）</li>
+<li><code>dd</code> → 删除当前行，并把删除的行存到剪贴板里</li>
+<li><code>p</code> → 粘贴剪贴板</li>
+<li><code>hjkl</code> (强例推荐使用其移动光标，但不必需) →你也可以使用光标键 (←↓↑→). 注: j 就像下箭头。</li>
+<li><code>:help &lt;command&gt;</code> → 显示相关命令的帮助。你也可以就输入 :help 而不跟命令。（陈皓注：退出帮助需要输入:q）</li>
 </ul>
 </blockquote>
 </li>
@@ -1236,10 +1349,10 @@
 <p>各种插入模式</p>
 <blockquote>
 <ul>
-<li>a → 在光标后插入</li>
-<li>o → 在当前行后插入一个新行</li>
-<li>O → 在当前行前插入一个新行</li>
-<li>cw → 替换从光标所在位置后到一个单词结尾的字符</li>
+<li><code>a</code> → 在光标后插入</li>
+<li><code>o</code> → 在当前行后插入一个新行</li>
+<li><code>O</code> → 在当前行前插入一个新行</li>
+<li><code>cw</code> → 替换从光标所在位置后到一个单词结尾的字符</li>
 </ul>
 </blockquote>
 </li>
@@ -1247,11 +1360,11 @@
 <p>简单的移动光标</p>
 <blockquote>
 <ul>
-<li>0 → 数字零，到行头</li>
-<li>^ → 到本行第一个不是blank字符的位置（所谓blank字符就是空格，tab，换行，回车等）</li>
-<li>$ → 到本行行尾</li>
-<li>g_ → 到本行最后一个不是blank字符的位置。</li>
-<li>/pattern → 搜索 pattern 的字符串（陈皓注：如果搜索出多个匹配，可按n键到下一个）</li>
+<li><code>0</code> → 数字零，到行头</li>
+<li><code>^</code> → 到本行第一个不是blank字符的位置（所谓blank字符就是空格，tab，换行，回车等）</li>
+<li><code>$</code> → 到本行行尾</li>
+<li><code>g_</code> → 到本行最后一个不是blank字符的位置。</li>
+<li><code>/pattern</code> → 搜索 pattern 的字符串（陈皓注：如果搜索出多个匹配，可按n键到下一个）</li>
 </ul>
 </blockquote>
 </li>
@@ -1259,8 +1372,8 @@
 <p>拷贝/粘贴</p>
 <blockquote>
 <ul>
-<li>P → 粘贴</li>
-<li>yy → 拷贝当前行当行于 ddP</li>
+<li><code>P</code> → 粘贴</li>
+<li><code>yy</code> → 拷贝当前行当行于 ddP</li>
 </ul>
 </blockquote>
 </li>
@@ -1268,8 +1381,8 @@
 <p>Undo/Redo</p>
 <blockquote>
 <ul>
-<li>u → undo</li>
-<li><C-r> → redo</li>
+<li><code>u</code> → undo</li>
+<li><code>&lt;C-r&gt;</code> → redo</li>
 </ul>
 </blockquote>
 </li>
@@ -1277,60 +1390,51 @@
 <p>打开/保存/退出/改变文件</p>
 <blockquote>
 <ul>
-<li>:e <path/to/file> → 打开一个文件</li>
-<li>:w → 存盘</li>
-<li>:saveas <path/to/file> → 另存为 <path/to/file></li>
-<li>:x， ZZ 或 :wq → 保存并退出 (:x 表示仅在需要时保存，ZZ不需要输入冒号并回车)</li>
-<li>:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。</li>
-<li>:bn 和 :bp → 你可以同时打开很多文件，使用这两个命令来切换下一个或上一个文件。（陈皓注：我喜欢使用:n到下一个文件）</li>
+<li><code>:e</code> <path/to/file> → 打开一个文件</li>
+<li><code>:w</code> → 存盘</li>
+<li><code>:saveas &lt;path/to/file&gt;</code> → 另存为 <path/to/file></li>
+<li><code>:x， ZZ 或 :wq</code> → 保存并退出 (:x 表示仅在需要时保存，ZZ不需要输入冒号并回车)</li>
+<li><code>:q!</code> → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。</li>
+<li><code>:bn, :bp</code> → 你可以同时打开很多文件，使用这两个命令来切换下一个或上一个文件。（陈皓注：我喜欢使用:n到下一个文件）</li>
 </ul>
 </blockquote>
 </li>
 <li>
 <p>查找</p>
 <blockquote>
-<p>/开始查找,n查找下一个,N向上查找</p>
+<p><code>/</code> → 开始查找,n查找下一个,N向上查找</p>
 </blockquote>
 </li>
 </ol>
 <h2 id="_3">进阶<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ol>
-<li>. → (小数点) 可以重复上一次的命令</li>
-<li>N<command> → 重复某个命令N次<blockquote>
+<li><code>.</code> → (小数点) 可以重复上一次的命令</li>
+<li><code>N&lt;command&gt;</code> → 重复某个命令N次<blockquote>
 <ul>
-<li>2dd → 删除2行</li>
-<li>3p → 粘贴文本3次</li>
-<li>100idesu [ESC] → 会写下 “desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu “</li>
-<li>. → 重复上一个命令—— 100 “desu “.</li>
+<li><code>2dd</code> → 删除2行</li>
+<li><code>3p</code> → 粘贴文本3次</li>
 </ul>
 </blockquote>
 </li>
 </ol>
 <h3 id="_4">光标移动更有效率<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ol>
-<li>NG → 到第 N 行 （陈皓注：注意命令中的G是大写的，另我一般使用 : N 到第N行，如 :137 到第137行）</li>
-<li>gg → 到第一行。（陈皓注：相当于1G，或 :1）</li>
-<li>G → 到最后一行。</li>
+<li><code>5G or :5</code> → 到第 N 行 </li>
+<li><code>gg</code> → 到第一行。（陈皓注：相当于1G，或 :1）</li>
+<li><code>G</code> → 到最后一行。</li>
 <li>按单词移动：<blockquote>
 <ul>
-<li>w → 到下一个单词的开头。</li>
-<li>e → 到下一个单词的结尾。</li>
-<li>% : 匹配括号移动，包括 (, {, [. （陈皓注：你需要把光标先移到括号上）</li>
-<li>* 和 #: 匹配光标当前所在的单词，移动光标到下一个（或上一个）匹配单词（*是下一个，#是上一个）</li>
+<li><code>w</code> → 到下一个单词的开头。</li>
+<li><code>e</code> → 到下一个单词的结尾。</li>
+<li><code>%</code> : 匹配括号移动，包括 (, {, [. （陈皓注：你需要把光标先移到括号上）</li>
+<li><code>\*</code> 和 <code>#</code>: 匹配光标当前所在的单词，移动光标到下一个（或上一个）匹配单词（*是下一个，#是上一个）</li>
 </ul>
 </blockquote>
 </li>
 </ol>
 <h3 id="_5">更快的拷贝<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ol>
-<li><code>0y$</code>命令解释:<blockquote>
-<ul>
-<li>0 → 先到行头</li>
-<li>y → 从这里开始拷贝</li>
-<li>$ → 拷贝到本行最后一个字符</li>
-</ul>
-</blockquote>
-</li>
+<li><code>0y$</code>/<code>yy</code>: 拷贝当前行</li>
 <li><code>ye</code>:从当前位置拷贝到本单词的最后一个字符</li>
 <li><code>y2/foo</code>:拷贝2个 “foo” 之间的字符串</li>
 </ol>
@@ -1340,14 +1444,14 @@
 <p>在当前行上移动光标: <code>0 ^ $ f F t T , ;</code></p>
 <blockquote>
 <ul>
-<li>0 → 到行头</li>
-<li>^ → 到本行的第一个非blank字符</li>
-<li>$ → 到行尾</li>
-<li>g_ → 到本行最后一个不是blank字符的位置。</li>
-<li>fa → 到下一个为a的字符处，你也可以fs到下一个为s的字符。</li>
-<li>t, → 到逗号前的第一个字符。逗号可以变成其它字符。</li>
-<li>3fa → 在当前行查找第三个出现的a。</li>
-<li>F 和 T → 和 f 和 t 一样，只不过是相反方向
+<li><code>0</code> → 到行头</li>
+<li><code>^</code> → 到本行的第一个非blank字符</li>
+<li><code>$</code> → 到行尾</li>
+<li><code>g_</code> → 到本行最后一个不是blank字符的位置。</li>
+<li><code>fa</code> → 到下一个为a的字符处，你也可以fs到下一个为s的字符。</li>
+<li><code>t,</code> → 到逗号前的第一个字符。逗号可以变成其它字符。</li>
+<li><code>3fa</code> → 在当前行查找第三个出现的a。</li>
+<li><code>F</code> 和 <code>T</code> → 和 <code>f</code> 和 <code>t</code> 一样，只不过是相反方向
 <img alt="vim_move.jpg" src="../../_static/vim_move.jpg" /></li>
 </ul>
 </blockquote>
@@ -1366,168 +1470,201 @@
 <h2 id="_7">移动<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <blockquote>
 <ul>
-<li>h,j,k,l: 左，下，上，右。</li>
-<li>w: 下一个词的词首。</li>
-<li>e:下一个词的词尾。</li>
-<li>b:上一个词的词首。</li>
-<li>&lt;&gt;: v 模式选中后进行缩进。</li>
+<li><code>h,j,k,l</code>: 左，下，上，右。</li>
+<li><code>w</code>: 下一个词的词首。</li>
+<li><code>e</code>:下一个词的词尾。</li>
+<li><code>b</code>:上一个词的词首。</li>
+<li><code>&lt;&gt;</code>: v 模式选中后进行缩进。</li>
 </ul>
 </blockquote>
 <h2 id="_8">跳转：<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <blockquote>
 <ul>
-<li>%: 可以匹配{},"",(),[]之间跳转。</li>
-<li>H、M、L：直接跳转到当前屏幕的顶部、中部、底部。</li>
-<li>#H：跳转到当前屏的第#行。</li>
-<li>#L：跳转到当前屏的倒数第#行。</li>
-<li>zt: 当前编辑行置为屏顶。</li>
-<li>zz: 当前编辑行置为屏中。</li>
-<li>zb: 当前编辑行置为屏底。</li>
-<li>G：直接跳转到文件的底部。</li>
-<li>gg: 跳转到文件首。</li>
-<li>():跳转到当前的行首、行尾。</li>
-<li>{}：向上、向下跳转到最近的空行。</li>
-<li>[{：跳转到目前区块开头。</li>
-<li>]}：跳转到目前区块结尾。</li>
-<li>0: 跳转到行首。</li>
-<li>$: 跳转到行尾。</li>
-<li>2$: 跳转到下一行的行尾。</li>
-<li>#：跳转到该行的第#个位置。</li>
-<li>#G: 15G,跳转到15行。</li>
-<li>:#：跳转到#行。</li>
-<li>f'n'：跳转到下一个"n"字母后。</li>
-<li>ctrl+b: 向后翻一页。</li>
-<li>ctrl+f：向前翻一页。</li>
-<li>ctrl+u: 向后翻半页。</li>
-<li>ctrl+d: 向前翻半页。</li>
-<li>ctry+e: 下滚一行。</li>
+<li><code>%</code>: 可以匹配{},"",(),[]之间跳转。</li>
+<li><code>H、M、L</code>：直接跳转到当前屏幕的顶部、中部、底部。</li>
+<li><code>nH</code>：跳转到当前屏的第n行。</li>
+<li><code>nL</code>：跳转到当前屏的倒数第n行。</li>
+<li><code>zt</code>: 当前编辑行置为屏顶。</li>
+<li><code>zz</code>: 当前编辑行置为屏中。</li>
+<li><code>zb</code>: 当前编辑行置为屏底。</li>
+<li><code>G</code>：直接跳转到文件的底部。</li>
+<li><code>gg</code>: 跳转到文件首。</li>
+<li><code>()</code>:跳转到当前的行首、行尾。</li>
+<li><code>{}</code>：向上、向下跳转到最近的空行。</li>
+<li><code>[{</code>：跳转到目前区块开头。</li>
+<li><code>]}</code>：跳转到目前区块结尾。</li>
+<li><code>0</code>: 跳转到行首。</li>
+<li><code>$</code>: 跳转到行尾。</li>
+<li><code>2$</code>: 跳转到下一行的行尾。</li>
+<li><code>n</code>：跳转到该行的第<code>n</code>个位置。</li>
+<li><code>15G</code>: ,跳转到15行。</li>
+<li><code>:15</code>：跳转到15行。</li>
+<li><code>ctrl+b</code>: 向后翻一页。</li>
+<li><code>ctrl+f</code>：向前翻一页。</li>
+<li><code>ctrl+u</code>: 向后翻半页。</li>
+<li><code>ctrl+d</code>: 向前翻半页。</li>
+<li><code>ctry+e</code>: 下滚一行。</li>
 </ul>
 </blockquote>
 <h2 id="_9">选择：<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <blockquote>
 <ul>
-<li>V: 选择一行。</li>
-<li>^V: 矩形选择。</li>
-<li>v3w: 选择三个字符。</li>
+<li><code>V</code>: 选择一行。</li>
+<li><code>^V</code>: 矩形选择。</li>
+<li><code>v3w</code>: 选择三个字符。</li>
 </ul>
 </blockquote>
 <h2 id="_10">编辑<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ol>
-<li>新增：<blockquote>
-<ul>
-<li>i: 光标前插入。</li>
-<li>I: 在当前行首插入。</li>
-<li>a: 光标后插入。</li>
-<li>A: 当前行尾插入。</li>
-<li>O: 在当前行之前插入新行。</li>
-<li>o: 在当前行之后插入新行。</li>
-</ul>
-</blockquote>
-</li>
-<li>修改 c(change) 为主：<blockquote>
-<ul>
-<li>r: 替换光标所在处的字符。</li>
-<li>R：替换光标所到之处的字符。</li>
-<li>cw: 更改光标所在处的字到字尾处。</li>
-<li>c#w: c3w 修改3个字符。</li>
-<li>C：修改到行尾。</li>
-<li>ci'：修改配对标点符号中的文本内容。</li>
-<li>di'：删除配对标点符号中的文本内容。</li>
-<li>yi'：复制配对标点符号中的文本内容。</li>
-<li>vi'：选中配对标点符号中的文本内容。</li>
-<li>s：替换当前一个光标所处字符。</li>
-<li>#S：删除 # 行，并以新文本代替。</li>
-</ul>
-</blockquote>
-</li>
-<li>删除 d(delete) 为主：<blockquote>
-<ul>
-<li>D：删除到行尾。</li>
-<li>X: 每按一次，删除光标所在位置的前面一个字符。</li>
-<li>x: 每按一次，删除光标所在位置的后面一个字符。</li>
-<li>#x: 删除光标所在位置后面6个字符。</li>
-<li>d^: 删至行首。</li>
-<li>d$: 删至行尾。</li>
-<li>dd:(剪切)删除光标所在行。</li>
-<li>dw: 删除一个单词/光标之后的单词剩余部分。</li>
-<li>d4w: 删除4个word。</li>
-<li>#dd: 从光标所在行开始删除#行。</li>
-<li>daB: 删除{}及其内的内容。</li>
-<li>diB: 删除{}中的内容。</li>
-<li>n1,n2 d：将n1,n2行之间的内容删除。</li>
-</ul>
-</blockquote>
-</li>
-<li>查找：<blockquote>
-<ul>
-<li>/： 输入关键字，发现不是要找的，直接在按n，向后查找直到找到为止。</li>
-<li>?： 输入关键字，发现不是要找的，直接在按n，向前查找直到找到为止。</li>
-<li>*: 在当前页向后查找同一字。</li>
-<li>#: 在当前页向前查找同一字。</li>
-</ul>
-</blockquote>
-</li>
-<li>复制 y(yank)为主：<blockquote>
-<ul>
-<li>yw: 将光标所在之处到字尾的字符复制到缓冲区中。</li>
-<li>#yw: 复制#个字到缓冲区。</li>
-<li>Y：相当于yy, 复制整行。</li>
-<li>#yy:表示复制从光标所在的该行往下数#行文字。</li>
-<li>p: 粘贴。所有与y相关的操作必用p来结合粘贴。</li>
-<li>n1,n2 co n3：复制第n1行到第n2行之间的内容到第n3行后面。</li>
-<li>:normal kVyp ：复制上一行</li>
-</ul>
-</blockquote>
-</li>
-<li>大小写转换：<blockquote>
-<ul>
-<li>gUU: 将当前行的字母改为大写。</li>
-<li>guu: 将当前行的字母改为小写。</li>
-<li>gUw: 将当前光标下的单词改为大写。</li>
-<li>guw: 将当前光标下的单词改为小写。</li>
-<li>a. 整篇大写:</li>
-<li>ggguG</li>
-<li>gg: 光标到文件第一个字符。</li>
-<li>gu: 把选择范围全部小写。</li>
-<li>G: 到文件结束。</li>
-<li>b. 整篇小写：gggUG</li>
-</ul>
-</blockquote>
-</li>
-<li>其它：<blockquote>
-<ul>
-<li>J：当前行和下一行合并成一行。</li>
-</ul>
-</blockquote>
-</li>
-<li>移动：<blockquote>
-<ul>
-<li>n1,n2 m n3：将n1行到n2行之间的内容移至n3行下。</li>
-</ul>
-</blockquote>
-</li>
+<li>新增：</li>
 </ol>
+<blockquote>
+<ul>
+<li><code>i</code>: 光标前插入。</li>
+<li><code>I</code>: 在当前行首插入。</li>
+<li><code>a</code>: 光标后插入。</li>
+<li><code>A</code>: 当前行尾插入。</li>
+<li><code>O</code>: 在当前行之前插入新行。</li>
+<li><code>o</code>: 在当前行之后插入新行。</li>
+</ul>
+</blockquote>
+<ol>
+<li>修改 <code>c</code>(change) 为主：</li>
+</ol>
+<blockquote>
+<ul>
+<li><code>r</code>: 替换光标所在处的字符。</li>
+<li><code>R</code>：替换光标所到之处的字符。</li>
+<li><code>cw</code>: 更改光标所在处的字到字尾处。</li>
+<li><code>c3w</code>: 修改3个字符。</li>
+<li><code>C</code>：修改到行尾。</li>
+<li><code>ci'</code>：修改配对标点符号中的文本内容。</li>
+<li><code>di'</code>：删除配对标点符号中的文本内容。</li>
+<li><code>yi'</code>：复制配对标点符号中的文本内容。</li>
+<li><code>vi'</code>：选中配对标点符号中的文本内容。</li>
+<li>s``：替换当前一个光标所处字符。</li>
+<li><code>1S</code>：删除1行，并以新文本代替。</li>
+</ul>
+</blockquote>
+<ol>
+<li>删除 d(delete) 为主：</li>
+</ol>
+<blockquote>
+<ul>
+<li><code>D</code>：删除到行尾。</li>
+<li><code>X</code>: 每按一次，删除光标所在位置的前面一个字符。</li>
+<li><code>x</code>: 每按一次，删除光标所在位置的后面一个字符。</li>
+<li><code>6x</code>: 删除光标所在位置后面6个字符。</li>
+<li><code>d^</code>: 删至行首。</li>
+<li><code>d$</code>: 删至行尾。</li>
+<li><code>dd</code>:(剪切)删除光标所在行。</li>
+<li><code>dw</code>: 删除一个单词/光标之后的单词剩余部分。</li>
+<li><code>d4w</code>: 删除4个word。</li>
+<li><code>1dd</code>: 从光标所在行开始删除1行。</li>
+<li><code>daB</code>: 删除{}及其内的内容。</li>
+<li><code>diB</code>: 删除{}中的内容。</li>
+<li><code>n1,n2 d</code>：将n1,n2行之间的内容删除。</li>
+</ul>
+</blockquote>
+<ol>
+<li>查找：</li>
+</ol>
+<blockquote>
+<ul>
+<li><code>/</code>： 输入关键字，发现不是要找的，直接在按n，向后查找直到找到为止。</li>
+<li><code>?</code>： 输入关键字，发现不是要找的，直接在按n，向前查找直到找到为止。</li>
+<li><code>*</code>: 在当前页向后查找同一字。</li>
+</ul>
+</blockquote>
+<ol>
+<li>复制 y(yank)为主：</li>
+</ol>
+<blockquote>
+<ul>
+<li><code>yw</code>: 将光标所在之处到字尾的字符复制到缓冲区中。</li>
+<li><code>5yw</code>: 复制5个字到缓冲区。</li>
+<li><code>Y</code>：相当于yy, 复制整行。</li>
+<li><code>5yy</code>:表示复制从光标所在的该行往下数5行文字。</li>
+<li><code>p</code>: 粘贴。所有与y相关的操作必用p来结合粘贴。</li>
+<li><code>n1,n2 co n3</code>：复制第n1行到第n2行之间的内容到第n3行后面。</li>
+<li><code>:normal kVyp</code> ：复制上一行</li>
+</ul>
+</blockquote>
+<ol>
+<li>大小写转换：</li>
+</ol>
+<blockquote>
+<ul>
+<li><code>gUU</code>: 将当前行的字母改为大写。</li>
+<li><code>guu</code>: 将当前行的字母改为小写。</li>
+<li><code>gUw</code>: 将当前光标下的单词改为大写。</li>
+<li><code>guw</code>: 将当前光标下的单词改为小写。</li>
+<li><code>gg</code>: 光标到文件第一个字符。</li>
+<li><code>gu</code>: 把选择范围全部小写。</li>
+<li><code>G</code>: 到文件结束。</li>
+</ul>
+</blockquote>
+<ol>
+<li>其它：</li>
+</ol>
+<blockquote>
+<ul>
+<li><code>J</code>：当前行和下一行合并成一行。</li>
+</ul>
+</blockquote>
+<ol>
+<li>移动：</li>
+</ol>
+<blockquote>
+<ul>
+<li><code>n1,n2 m n3</code>：将n1行到n2行之间的内容移至n3行下。</li>
+</ul>
+</blockquote>
 <h2 id="_11">退出<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <blockquote>
 <ul>
-<li>w filename: 保存正在编辑的文件filename</li>
-<li>wq filename: 保存后退出正在编辑的文件filename</li>
-<li>q：退出不保存。</li>
+<li><code>w filename</code>: 保存正在编辑的文件filename</li>
+<li><code>wq filename</code>: 保存后退出正在编辑的文件filename</li>
+<li><code>q</code>：退出不保存。</li>
 </ul>
 </blockquote>
-<h2 id="_12">窗口操作<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h2 id="_12">缓冲区操作<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <blockquote>
 <ul>
-<li>ctrl+w p: 在两个分割窗口之间来回切换。</li>
-<li>ctrl+w j: 跳到下面的分割窗</li>
-<li>ctrl+w h: 跳到左边的分割窗。</li>
-<li>ctrl+w k: 跳到上面的分割窗。</li>
-<li>ctrl+w l: 跳到右边的分割窗。</li>
+<li><code>:buffers</code>/<code>:ls</code>     列示缓冲区状态</li>
+<li><code>:buffer</code>    编辑指定缓冲区</li>
+<li><code>:ball</code>  编辑所有缓冲区</li>
+<li><code>:bn[ext]</code>   到下一缓冲区</li>
+<li><code>:bp[revious]</code>   到前一缓冲区</li>
+<li><code>:blast</code> 到最后一个缓冲区</li>
+<li><code>:bfirst</code>    到第一个缓冲区</li>
+<li><code>:badd</code>  增加缓冲区</li>
+<li><code>:bd[elete]</code> 删除缓冲区</li>
+<li><code>:bunload</code>   卸载缓冲区</li>
 </ul>
 </blockquote>
-<h2 id="_13">放两张速记图<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h2 id="_13">窗口操作<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<blockquote>
+<ul>
+<li><code>ctrl+w p</code>: 在两个分割窗口之间来回切换。</li>
+<li><code>ctrl+w j</code>: 跳到下面的分割窗</li>
+<li><code>ctrl+w h</code>: 跳到左边的分割窗。</li>
+<li><code>ctrl+w k</code>: 跳到上面的分割窗。</li>
+<li><code>ctrl+w l</code>: 跳到右边的分割窗。</li>
+<li><code>ctrl+w c</code>: 关闭当前窗口</li>
+<li><code>ctrl+W s</code>: 上下分割当前打开的文件</li>
+<li><code>ctrl+w v</code>: 左右分割当前打开的文件</li>
+</ul>
+</blockquote>
+<h2 id="_14">放两张速记图<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
 <p><img alt="vim_go" src="../../_static/vim_go.png" />
 <img alt="vim_cheat_sheet_for_programmers_print" src="../../_static/vim_cheat_sheet_for_programmers_print.png" /></p>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -1595,8 +1732,8 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-7aa26ad9ec.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     

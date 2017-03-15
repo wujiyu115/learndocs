@@ -13,9 +13,9 @@
         <meta name="author" content="farwmarth">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.3.0">
     
     
       
@@ -23,7 +23,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1d1da4857d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
     
     
       
@@ -35,12 +41,6 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
     
     
   </head>
@@ -60,13 +60,14 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
-          
-        </a>
+        
+          <a href="../.." title="farwmarth’s note" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -93,7 +94,7 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
     </form>
     <div class="md-search__output">
@@ -106,15 +107,17 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-          </div>
+        <div class="md-header-nav__source">
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -122,11 +125,11 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
-      
-    </i>
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
     farwmarth’s note
   </label>
   
@@ -134,17 +137,21 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Home" class="md-nav__link">
-        Home
-      </a>
-    
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
   </li>
 
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
@@ -152,7 +159,7 @@
     <label class="md-nav__link" for="nav-2">
       数据结构与算法
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         数据结构与算法
       </label>
@@ -161,12 +168,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
-        排序算法介绍
-      </a>
-    
+    <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+      排序算法介绍
+    </a>
   </li>
 
         
@@ -177,6 +185,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -184,7 +195,7 @@
     <label class="md-nav__link" for="nav-3">
       c++基础
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         c++基础
       </label>
@@ -193,67 +204,73 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
-        c++环境搭建(Win)
-      </a>
-    
+    <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+      c++环境搭建(Win)
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
-        基础语法
-      </a>
-    
+    <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
+      基础语法
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
-        内存分配
-      </a>
-    
+    <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
+      内存分配
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
-        编译过程
-      </a>
-    
+    <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
+      编译过程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
-        常量修饰符
-      </a>
-    
+    <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
+      常量修饰符
+    </a>
   </li>
 
         
@@ -264,14 +281,19 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       python
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         python
       </label>
@@ -280,150 +302,168 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py1_intro/" title="语言简介" class="md-nav__link">
-        语言简介
-      </a>
-    
+    <a href="../py1_intro/" title="语言简介" class="md-nav__link">
+      语言简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py2_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../py2_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py3_controller/" title="控制流程" class="md-nav__link">
-        控制流程
-      </a>
-    
+    <a href="../py3_controller/" title="控制流程" class="md-nav__link">
+      控制流程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py4_func/" title="函数" class="md-nav__link">
-        函数
-      </a>
-    
+    <a href="../py4_func/" title="函数" class="md-nav__link">
+      函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py5_step/" title="步骤" class="md-nav__link">
-        步骤
-      </a>
-    
+    <a href="../py5_step/" title="步骤" class="md-nav__link">
+      步骤
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py6_organize/" title="组织" class="md-nav__link">
-        组织
-      </a>
-    
+    <a href="../py6_organize/" title="组织" class="md-nav__link">
+      组织
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../py_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_with/" title="with关键字" class="md-nav__link">
-        with关键字
-      </a>
-    
+    <a href="../py_with/" title="with关键字" class="md-nav__link">
+      with关键字
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_scope/" title="变量作用域" class="md-nav__link">
-        变量作用域
-      </a>
-    
+    <a href="../py_scope/" title="变量作用域" class="md-nav__link">
+      变量作用域
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_enum/" title="枚举" class="md-nav__link">
-        枚举
-      </a>
-    
+    <a href="../py_enum/" title="枚举" class="md-nav__link">
+      枚举
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_error/" title="异常捕捉" class="md-nav__link">
-        异常捕捉
-      </a>
-    
+    <a href="../py_error/" title="异常捕捉" class="md-nav__link">
+      异常捕捉
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_test/" title="调试" class="md-nav__link">
-        调试
-      </a>
-    
+    <a href="../py_test/" title="调试" class="md-nav__link">
+      调试
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_fileio/" title="文件io" class="md-nav__link">
-        文件io
-      </a>
-    
+    <a href="../py_fileio/" title="文件io" class="md-nav__link">
+      文件io
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -579,6 +619,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -588,133 +630,145 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_urllib/" title="网络库" class="md-nav__link">
-        网络库
-      </a>
-    
+    <a href="../py_urllib/" title="网络库" class="md-nav__link">
+      网络库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_module_manager/" title="模块管理" class="md-nav__link">
-        模块管理
-      </a>
-    
+    <a href="../py_module_manager/" title="模块管理" class="md-nav__link">
+      模块管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_thread/" title="线程" class="md-nav__link">
-        线程
-      </a>
-    
+    <a href="../py_thread/" title="线程" class="md-nav__link">
+      线程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_coroutine/" title="协程" class="md-nav__link">
-        协程
-      </a>
-    
+    <a href="../py_coroutine/" title="协程" class="md-nav__link">
+      协程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_gui/" title="图形界面编程" class="md-nav__link">
-        图形界面编程
-      </a>
-    
+    <a href="../py_gui/" title="图形界面编程" class="md-nav__link">
+      图形界面编程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_diff2/" title="python2/3对比" class="md-nav__link">
-        python2/3对比
-      </a>
-    
+    <a href="../py_diff2/" title="python2/3对比" class="md-nav__link">
+      python2/3对比
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_modules/" title="常用库" class="md-nav__link">
-        常用库
-      </a>
-    
+    <a href="../py_modules/" title="常用库" class="md-nav__link">
+      常用库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_qt/" title="pyqt使用" class="md-nav__link">
-        pyqt使用
-      </a>
-    
+    <a href="../py_qt/" title="pyqt使用" class="md-nav__link">
+      pyqt使用
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_tornado/" title="tornado" class="md-nav__link">
-        tornado
-      </a>
-    
+    <a href="../py_tornado/" title="tornado" class="md-nav__link">
+      tornado
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_spider/" title="爬虫" class="md-nav__link">
-        爬虫
-      </a>
-    
+    <a href="../py_spider/" title="爬虫" class="md-nav__link">
+      爬虫
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_mq/" title="消息队列" class="md-nav__link">
-        消息队列
-      </a>
-    
+    <a href="../py_mq/" title="消息队列" class="md-nav__link">
+      消息队列
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_selenium/" title="自动化测试" class="md-nav__link">
-        自动化测试
-      </a>
-    
+    <a href="../py_selenium/" title="自动化测试" class="md-nav__link">
+      自动化测试
+    </a>
   </li>
 
         
@@ -725,6 +779,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
@@ -732,7 +789,7 @@
     <label class="md-nav__link" for="nav-5">
       lua
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
         lua
       </label>
@@ -741,12 +798,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
@@ -757,6 +815,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
@@ -764,7 +825,7 @@
     <label class="md-nav__link" for="nav-6">
       swift
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
         swift
       </label>
@@ -773,12 +834,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
-        swift基础入门
-      </a>
-    
+    <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+      swift基础入门
+    </a>
   </li>
 
         
@@ -789,6 +851,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
@@ -796,7 +861,7 @@
     <label class="md-nav__link" for="nav-7">
       php
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
         php
       </label>
@@ -805,12 +870,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
-        基础介绍
-      </a>
-    
+    <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+      基础介绍
+    </a>
   </li>
 
         
@@ -821,6 +887,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
@@ -828,7 +897,7 @@
     <label class="md-nav__link" for="nav-8">
       git
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-8">
         git
       </label>
@@ -837,78 +906,85 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
-        git简介
-      </a>
-    
+    <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+      git简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
-        git操作
-      </a>
-    
+    <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+      git操作
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
-        git分支管理
-      </a>
-    
+    <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+      git分支管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
-        git工具
-      </a>
-    
+    <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+      git工具
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
-        git问题记录
-      </a>
-    
+    <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+      git问题记录
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
-        git应用场景
-      </a>
-    
+    <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+      git应用场景
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/github/" title="github" class="md-nav__link">
-        github
-      </a>
-    
+    <a href="../../versions/github/" title="github" class="md-nav__link">
+      github
+    </a>
   </li>
 
         
@@ -919,6 +995,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
@@ -926,7 +1005,7 @@
     <label class="md-nav__link" for="nav-9">
       Vim编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-9">
         Vim编辑器
       </label>
@@ -935,12 +1014,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/vim/" title="vim" class="md-nav__link">
-        vim
-      </a>
-    
+    <a href="../../ide/vim/" title="vim" class="md-nav__link">
+      vim
+    </a>
   </li>
 
         
@@ -951,6 +1031,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
@@ -958,7 +1041,7 @@
     <label class="md-nav__link" for="nav-10">
       Sublime Text编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-10">
         Sublime Text编辑器
       </label>
@@ -967,12 +1050,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
-        sublimetext
-      </a>
-    
+    <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
+      sublimetext
+    </a>
   </li>
 
         
@@ -983,6 +1067,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
@@ -990,7 +1077,7 @@
     <label class="md-nav__link" for="nav-11">
       MakeFile
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-11">
         MakeFile
       </label>
@@ -999,111 +1086,121 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/overview/" title="概述" class="md-nav__link">
-        概述
-      </a>
-    
+    <a href="../../makefile/overview/" title="概述" class="md-nav__link">
+      概述
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
-        makefile介绍
-      </a>
-    
+    <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
+      makefile介绍
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
-        书写规则
-      </a>
-    
+    <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
+      书写规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
-        书写命令
-      </a>
-    
+    <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
+      书写命令
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
-        使用变量
-      </a>
-    
+    <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
+      使用变量
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
-        使用条件判断
-      </a>
-    
+    <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
+      使用条件判断
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
-        使用函数
-      </a>
-    
+    <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
+      使用函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
-        make 的运行
-      </a>
-    
+    <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
+      make 的运行
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
-        隐含规则
-      </a>
-    
+    <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
+      隐含规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
-        使用make更新函数库文件
-      </a>
-    
+    <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
+      使用make更新函数库文件
+    </a>
   </li>
 
         
@@ -1263,6 +1360,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -1273,290 +1372,281 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <h1 id="_1">常用内建模块<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="re">re模块(正则)<a class="headerlink" href="#re" title="Permanent link">&para;</a></h2>
 <h3 id="match"><code>match</code>判定是否有匹配<a class="headerlink" href="#match" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">test</span> <span class="o">=</span> <span class="s1">&#39;qqq&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">r&#39;q&#39;</span><span class="p">,</span> <span class="n">test</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">r&#39;s&#39;</span><span class="p">,</span> <span class="n">test</span><span class="p">))</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">&lt;_sre.SRE_Match object at 0x01D07A30&gt;</span>
-<span class="sd">None</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">import re
+test = 'qqq'
+print(re.match(r'q', test))
+print(re.match(r's', test))
+'''
+&lt;_sre.SRE_Match object at 0x01D07A30&gt;
+None
+'''</code></pre>
 
 
 <h3 id="split">split<a class="headerlink" href="#split" title="Permanent link">&para;</a></h3>
 <p>空格分割</p>
-<div class="codehilite"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">r&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39;a b   c&#39;</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">re.split(r'\s+', 'a b   c')
+'''
+['a', 'b', 'c']
+'''</code></pre>
 
 
 <h3 id="_2">分组提取<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><code>()</code>用于分组,下面是提取区号和电话号码<code>group(0)</code>返回原始字符串</p>
-<div class="codehilite"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">r&#39;^(\d{3})-(\d{3,8})$&#39;</span><span class="p">,</span> <span class="s1">&#39;010-12345&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">(&#39;010-12345&#39;, &#39;010&#39;, &#39;12345&#39;)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">m = re.match(r'^(\d{3})-(\d{3,8})$', '010-12345')
+print(m.group(0),m.group(1),m.group(2))
+'''
+('010-12345', '010', '12345')
+'''</code></pre>
 
 
 <h3 id="_3">贪婪匹配<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p><code>?</code>为非贪婪匹配</p>
-<div class="codehilite"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">r&#39;^(\d+)(0*)$&#39;</span><span class="p">,</span> <span class="s1">&#39;102300&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
-<span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">r&#39;^(\d+?)(0*)$&#39;</span><span class="p">,</span> <span class="s1">&#39;102300&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">(&#39;102300&#39;, &#39;&#39;)</span>
-<span class="sd">(&#39;1023&#39;, &#39;00&#39;)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">re.match(r'^(\d+)(0*)$', '102300').groups()
+re.match(r'^(\d+?)(0*)$', '102300').groups()
+'''
+('102300', '')
+('1023', '00')
+'''</code></pre>
 
 
 <h3 id="_4">预编译正则表达式<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">re_telephone</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">r&#39;^(\d{3})-(\d{3,8})$&#39;</span><span class="p">)</span>
-<span class="n">re_telephone</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;010-12345&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">re_telephone = re.compile(r'^(\d{3})-(\d{3,8})$')
+re_telephone.match('010-12345').groups()</code></pre>
 
 
 <h2 id="datetime">datetime(时间处理)<a class="headerlink" href="#datetime" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span><span class="n">timedelta</span><span class="p">,</span><span class="n">timezone</span>
+<pre class="codehilite"><code class="language-py">from datetime import datetime,timedelta,timezone
 
-<span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+print(datetime.now())
 
-<span class="c1">#指定时间创建对象</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">dt</span><span class="p">),</span><span class="n">dt</span><span class="p">)</span>
+#指定时间创建对象
+dt = datetime(2016, 7, 26, 12, 0,0)
+print(type(dt),dt)
 
-<span class="c1">#datetime转换为timestamp</span>
-<span class="c1">#1970年1月1日 00:00:00 UTC+00:00时区的时刻称为epoch time，记为0</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;datetime转换为timestamp&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">timestamp</span><span class="p">())</span>
+#datetime转换为timestamp
+#1970年1月1日 00:00:00 UTC+00:00时区的时刻称为epoch time，记为0
+print(&quot;datetime转换为timestamp&quot;)
+print(dt.timestamp())
 
-<span class="c1">#timestamp转换为datetime</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;timestamp转换为datetime&quot;</span><span class="p">)</span>
-<span class="n">t</span> <span class="o">=</span> <span class="mi">1469505600</span>
-<span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="c1"># 本地时间,东八区</span>
-<span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="c1"># UTC时间</span>
+#timestamp转换为datetime
+print(&quot;timestamp转换为datetime&quot;)
+t = 1469505600
+print(datetime.fromtimestamp(t))# 本地时间,东八区
+print(datetime.utcfromtimestamp(t)) # UTC时间
 
-<span class="c1">#str转换为datetime</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;str转换为datetime&quot;</span><span class="p">)</span>
-<span class="n">cday</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;2016-7-26 12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">cday</span><span class="p">)</span>
+#str转换为datetime
+print(&quot;str转换为datetime&quot;)
+cday = datetime.strptime('2016-7-26 12:00:00', '%Y-%m-%d %H:%M:%S')
+print(cday)
 
-<span class="c1"># datetime转换为str</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;datetime转换为str&quot;</span><span class="p">)</span>
-<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">))</span>
+# datetime转换为str
+print(&quot;datetime转换为str&quot;)
+now = datetime.now()
+print(now.strftime('%Y-%m-%d %H:%M:%S'))
 
-<span class="c1">#datetime加减</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;datetime加减&quot;</span><span class="p">)</span>
-<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
-<span class="n">now</span> <span class="o">=</span><span class="n">now</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+#datetime加减
+print(&quot;datetime加减&quot;)
+now = datetime.now()
+print(now)
+now =now + timedelta(days=2, hours=12)
+print(now)
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;时区转换&quot;</span><span class="p">)</span>
-<span class="c1"># 拿到UTC时间，并强制设置时区为UTC+0:00:</span>
-<span class="n">utc_dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">utc_dt</span><span class="p">)</span>
-<span class="c1"># astimezone()将转换时区为北京时间:</span>
-<span class="n">bj_dt</span> <span class="o">=</span> <span class="n">utc_dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">8</span><span class="p">)))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">bj_dt</span><span class="p">)</span>
-<span class="c1"># astimezone()将转换时区为东京时间:</span>
-<span class="n">tokyo_dt</span> <span class="o">=</span> <span class="n">utc_dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">9</span><span class="p">)))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">tokyo_dt</span><span class="p">)</span>
-<span class="c1"># astimezone()将bj_dt转换时区为东京时间:</span>
-<span class="n">tokyo_dt2</span> <span class="o">=</span> <span class="n">bj_dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">9</span><span class="p">)))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">tokyo_dt2</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">2016-07-27 12:46:08.216245</span>
-<span class="sd">&lt;class &#39;datetime.datetime&#39;&gt; 2016-07-26 12:00:00</span>
-<span class="sd">datetime转换为timestamp</span>
-<span class="sd">1469505600.0</span>
-<span class="sd">timestamp转换为datetime</span>
-<span class="sd">2016-07-26 12:00:00</span>
-<span class="sd">2016-07-26 04:00:00</span>
-<span class="sd">str转换为datetime</span>
-<span class="sd">2016-07-26 12:00:00</span>
-<span class="sd">datetime转换为str</span>
-<span class="sd">2016-07-27 12:46:08</span>
-<span class="sd">datetime加减</span>
-<span class="sd">2016-07-27 12:46:08.235246</span>
-<span class="sd">2016-07-30 00:46:08.235246</span>
-<span class="sd">时区转换</span>
-<span class="sd">2016-07-27 04:46:08.236246+00:00</span>
-<span class="sd">2016-07-27 12:46:08.236246+08:00</span>
-<span class="sd">2016-07-27 13:46:08.236246+09:00</span>
-<span class="sd">2016-07-27 13:46:08.236246+09:00</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+print(&quot;时区转换&quot;)
+# 拿到UTC时间，并强制设置时区为UTC+0:00:
+utc_dt = datetime.utcnow().replace(tzinfo=timezone.utc)
+print(utc_dt)
+# astimezone()将转换时区为北京时间:
+bj_dt = utc_dt.astimezone(timezone(timedelta(hours=8)))
+print(bj_dt)
+# astimezone()将转换时区为东京时间:
+tokyo_dt = utc_dt.astimezone(timezone(timedelta(hours=9)))
+print(tokyo_dt)
+# astimezone()将bj_dt转换时区为东京时间:
+tokyo_dt2 = bj_dt.astimezone(timezone(timedelta(hours=9)))
+print(tokyo_dt2)
+'''
+2016-07-27 12:46:08.216245
+&lt;class 'datetime.datetime'&gt; 2016-07-26 12:00:00
+datetime转换为timestamp
+1469505600.0
+timestamp转换为datetime
+2016-07-26 12:00:00
+2016-07-26 04:00:00
+str转换为datetime
+2016-07-26 12:00:00
+datetime转换为str
+2016-07-27 12:46:08
+datetime加减
+2016-07-27 12:46:08.235246
+2016-07-30 00:46:08.235246
+时区转换
+2016-07-27 04:46:08.236246+00:00
+2016-07-27 12:46:08.236246+08:00
+2016-07-27 13:46:08.236246+09:00
+2016-07-27 13:46:08.236246+09:00
+'''</code></pre>
 
 
 <h2 id="collections">collections<a class="headerlink" href="#collections" title="Permanent link">&para;</a></h2>
 <h3 id="namedtuple">namedtuple<a class="headerlink" href="#namedtuple" title="Permanent link">&para;</a></h3>
 <p><code>namedtuple</code>是一个函数，它用来创建一个自定义的<code>tuple</code>对象，并且规定了<code>tuple</code>元素的个数，并可以用属性而不是索引来引用<code>tuple</code>的某个元素</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
-<span class="n">Point</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">])</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">Point</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="nb">tuple</span><span class="p">))</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Point(x=1, y=2) 1 2</span>
-<span class="sd">True</span>
-<span class="sd">True</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">from collections import namedtuple
+Point = namedtuple('Point', ['x', 'y'])
+p = Point(1, 2)
+print(p,p.x,p.y)
+print(isinstance(p,Point))
+print(isinstance(p,tuple))
+'''
+Point(x=1, y=2) 1 2
+True
+True
+'''</code></pre>
 
 
 <h3 id="deque">deque<a class="headerlink" href="#deque" title="Permanent link">&para;</a></h3>
 <p>deque是为了高效实现插入和删除操作的双向列表，适合用于队列和栈</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
-<span class="n">q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
-<span class="n">q</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-<span class="n">q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
-<span class="n">q</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">q</span><span class="o">.</span><span class="n">appendleft</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">deque([&#39;y&#39;, &#39;b&#39;, &#39;x&#39;])</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">from collections import deque
+q = deque(['a', 'b', 'c'])
+q.pop()
+q.popleft()
+q.append('x')
+q.appendleft('y')
+print(q)
+'''
+deque(['y', 'b', 'x'])
+'''</code></pre>
 
 
 <h3 id="defaultdict">defaultdict<a class="headerlink" href="#defaultdict" title="Permanent link">&para;</a></h3>
 <p>使用dict时，如果引用的Key不存在，就会抛出KeyError。如果希望key不存在时，返回一个默认值，就可以用defaultdict：</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-<span class="n">dd</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
-<span class="n">dd</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s1">&#39;key1&#39;</span><span class="p">]</span> <span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s1">&#39;key2&#39;</span><span class="p">]</span> <span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">abc</span>
-<span class="sd">N/A</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">from collections import defaultdict
+dd = defaultdict(lambda: 'N/A')
+dd['key1'] = 'abc'
+print(dd['key1'] )
+print(dd['key2'] )
+'''
+abc
+N/A
+'''</code></pre>
 
 
 <h3 id="ordereddict">OrderedDict<a class="headerlink" href="#ordereddict" title="Permanent link">&para;</a></h3>
 <p>使用dict时，Key是无序的,使用dict时，Key是无序的,OrderedDict保证了插入顺序</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
-<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)])</span>
-<span class="n">od</span> <span class="o">=</span><span class="n">OrderedDict</span><span class="p">([(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)])</span>
-<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-<span class="k">print</span><span class="p">(</span><span class="n">od</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">dict_keys([&#39;a&#39;, &#39;c&#39;, &#39;b&#39;])</span>
-<span class="sd">odict_keys([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;])</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">from collections import OrderedDict
+d = dict([('a', 1), ('b', 2), ('c', 3)])
+od =OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+print(d.keys())
+print(od.keys())
+'''
+dict_keys(['a', 'c', 'b'])
+odict_keys(['a', 'b', 'c'])
+'''</code></pre>
 
 
 <h3 id="counter">Counter<a class="headerlink" href="#counter" title="Permanent link">&para;</a></h3>
 <p><code>Counter</code>是一个简单的计数器</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="s1">&#39;programming&#39;</span><span class="p">:</span>
-     <span class="n">c</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Counter({&#39;m&#39;: 2, &#39;g&#39;: 2, &#39;r&#39;: 2, &#39;n&#39;: 1, &#39;i&#39;: 1, &#39;o&#39;: 1, &#39;a&#39;: 1, &#39;p&#39;: 1})</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">from collections import Counter
+c = Counter()
+for ch in 'programming':
+     c[ch] = c[ch] + 1
+print(c)
+'''
+Counter({'m': 2, 'g': 2, 'r': 2, 'n': 1, 'i': 1, 'o': 1, 'a': 1, 'p': 1})
+'''</code></pre>
 
 
 <h2 id="base64">base64<a class="headerlink" href="#base64" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">base64</span>
-<span class="n">b</span><span class="o">=</span><span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;binary</span><span class="se">\x00</span><span class="s1">string&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="n">s</span>  <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="c1">#由于标准的Base64编码后可能出现字符+和/，在URL中就不能直接作为参数，所以又有一种&quot;url safe&quot;的base64编码，其实就是把字符+和/分别变成-和_：</span>
-<span class="n">bu</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64encode</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;i</span><span class="se">\xb7\x1d\xfb\xef\xff</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">bu</span><span class="p">)</span>
-<span class="n">su</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64decode</span><span class="p">(</span><span class="n">bu</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">su</span><span class="p">)</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">import base64
+b=base64.b64encode(b'binary\x00string')
+print(b)
+s  = base64.b64decode(b)
+print(s)
+#由于标准的Base64编码后可能出现字符+和/，在URL中就不能直接作为参数，所以又有一种&quot;url safe&quot;的base64编码，其实就是把字符+和/分别变成-和_：
+bu = base64.urlsafe_b64encode(b'i\xb7\x1d\xfb\xef\xff')
+print(bu)
+su = base64.urlsafe_b64decode(bu)
+print(su)</code></pre>
 
 
 <h2 id="struct">struct(进制数据类型的转换)<a class="headerlink" href="#struct" title="Permanent link">&para;</a></h2>
 <p><code>&gt;</code>表示字节顺序是<code>big-endian</code>，也就是网络序，<code>I</code>表示4字节无符号整数</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">struct</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;I&#39;</span><span class="p">,</span> <span class="mi">10240099</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="n">v</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&gt;I&#39;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">b&#39;\x00\x9c@c&#39;</span>
-<span class="sd">(10240099,)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-py">import struct
+b = struct.pack('&gt;I', 10240099)
+print(b)
+v = struct.unpack('&gt;I',b)
+print(v)
+'''
+b'\x00\x9c@c'
+(10240099,)
+'''</code></pre>
 
 
 <p>struct模块定义的数据类型可以参考Python官方文档：
 https://docs.python.org/3/library/struct.html#format-characters</p>
 <h2 id="hashlib">hashlib<a class="headerlink" href="#hashlib" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<pre class="codehilite"><code class="language-py">import hashlib
 
-<span class="n">md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">()</span>
-<span class="n">md5</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-<span class="n">md5</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&quot;world&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">md5</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
+md5 = hashlib.md5()
+md5.update(&quot;hello&quot;.encode('utf-8'))
+md5.update(&quot;world&quot;.encode('utf-8'))
+print(md5.hexdigest())
 
-<span class="c1">#sha1</span>
-<span class="n">sha1</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">()</span>
-<span class="n">sha1</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s1">&#39;how to use sha1 in &#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-<span class="n">sha1</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s1">&#39;python hashlib?&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sha1</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">fc5e038d38a57032085441e7fe7010b0</span>
-<span class="sd">2c76b57293ce30acef38d98f6046927161b46a44</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+#sha1
+sha1 = hashlib.sha1()
+sha1.update('how to use sha1 in '.encode('utf-8'))
+sha1.update('python hashlib?'.encode('utf-8'))
+print(sha1.hexdigest())
+'''
+fc5e038d38a57032085441e7fe7010b0
+2c76b57293ce30acef38d98f6046927161b46a44
+'''</code></pre>
 
 
 <h2 id="itertools">itertools<a class="headerlink" href="#itertools" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
-<span class="c1">#创建无限迭代器</span>
-<span class="n">na</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">na</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="k">pass</span>
-<span class="sd">&#39;&#39;&#39;12345...&#39;&#39;&#39;</span>
+<pre class="codehilite"><code class="language-py">import itertools
+#创建无限迭代器
+na = itertools.count(1)
+for x in na:
+    print(x)
+    pass
+'''12345...'''
 
-<span class="c1">#循环重复迭代</span>
-<span class="n">cs</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">cycle</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;ABCABC&#39;&#39;&#39;</span>
+#循环重复迭代
+cs = itertools.cycle('ABC')
+'''ABCABC'''
 
-<span class="c1">#指定次数重复</span>
-<span class="n">ns</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ns</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="k">pass</span>
-<span class="sd">&#39;&#39;&#39;AAAA&#39;&#39;&#39;</span>
+#指定次数重复
+ns = itertools.repeat('A', 4)
+for x in ns:
+    print(x)
+    pass
+'''AAAA'''
 
-<span class="c1">#迭代对象串联起来</span>
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">,</span> <span class="s1">&#39;XYZ&#39;</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;ABCXYZ&#39;&#39;&#39;</span>
+#迭代对象串联起来
+for c in itertools.chain('ABC', 'XYZ'):
+    print(c)
+'''ABCXYZ'''
 
-<span class="c1">#相邻的重复元素分级</span>
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;AaBBAA&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="n">c</span><span class="o">.</span><span class="n">upper</span><span class="p">()):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">group</span><span class="p">))</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">A [&#39;A&#39;, &#39;a&#39;]</span>
-<span class="sd">B [&#39;B&#39;, &#39;B&#39;]</span>
-<span class="sd">A [&#39;A&#39;, &#39;A&#39;]</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
+#相邻的重复元素分级
+for key, group in itertools.groupby('AaBBAA', lambda c: c.upper()):
+    print(key, list(group))
+'''
+A ['A', 'a']
+B ['B', 'B']
+A ['A', 'A']
+'''</code></pre>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -1624,8 +1714,8 @@ https://docs.python.org/3/library/struct.html#format-characters</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-7aa26ad9ec.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     

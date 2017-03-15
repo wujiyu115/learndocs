@@ -13,9 +13,9 @@
         <meta name="author" content="farwmarth">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.3.0">
     
     
       
@@ -23,7 +23,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1d1da4857d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
     
     
       
@@ -35,12 +41,6 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
     
     
   </head>
@@ -60,13 +60,14 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
-          
-        </a>
+        
+          <a href="../.." title="farwmarth’s note" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -93,7 +94,7 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
     </form>
     <div class="md-search__output">
@@ -106,15 +107,17 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-          </div>
+        <div class="md-header-nav__source">
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -122,11 +125,11 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
-      
-    </i>
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
     farwmarth’s note
   </label>
   
@@ -134,17 +137,21 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Home" class="md-nav__link">
-        Home
-      </a>
-    
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
   </li>
 
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
@@ -152,7 +159,7 @@
     <label class="md-nav__link" for="nav-2">
       数据结构与算法
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         数据结构与算法
       </label>
@@ -161,12 +168,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
-        排序算法介绍
-      </a>
-    
+    <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+      排序算法介绍
+    </a>
   </li>
 
         
@@ -177,6 +185,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -184,7 +195,7 @@
     <label class="md-nav__link" for="nav-3">
       c++基础
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         c++基础
       </label>
@@ -193,67 +204,73 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
-        c++环境搭建(Win)
-      </a>
-    
+    <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+      c++环境搭建(Win)
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
-        基础语法
-      </a>
-    
+    <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
+      基础语法
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
-        内存分配
-      </a>
-    
+    <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
+      内存分配
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
-        编译过程
-      </a>
-    
+    <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
+      编译过程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
-        常量修饰符
-      </a>
-    
+    <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
+      常量修饰符
+    </a>
   </li>
 
         
@@ -264,14 +281,19 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       python
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         python
       </label>
@@ -280,249 +302,276 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py1_intro/" title="语言简介" class="md-nav__link">
-        语言简介
-      </a>
-    
+    <a href="../py1_intro/" title="语言简介" class="md-nav__link">
+      语言简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py2_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../py2_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py3_controller/" title="控制流程" class="md-nav__link">
-        控制流程
-      </a>
-    
+    <a href="../py3_controller/" title="控制流程" class="md-nav__link">
+      控制流程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py4_func/" title="函数" class="md-nav__link">
-        函数
-      </a>
-    
+    <a href="../py4_func/" title="函数" class="md-nav__link">
+      函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py5_step/" title="步骤" class="md-nav__link">
-        步骤
-      </a>
-    
+    <a href="../py5_step/" title="步骤" class="md-nav__link">
+      步骤
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py6_organize/" title="组织" class="md-nav__link">
-        组织
-      </a>
-    
+    <a href="../py6_organize/" title="组织" class="md-nav__link">
+      组织
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../py_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_with/" title="with关键字" class="md-nav__link">
-        with关键字
-      </a>
-    
+    <a href="../py_with/" title="with关键字" class="md-nav__link">
+      with关键字
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_scope/" title="变量作用域" class="md-nav__link">
-        变量作用域
-      </a>
-    
+    <a href="../py_scope/" title="变量作用域" class="md-nav__link">
+      变量作用域
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_enum/" title="枚举" class="md-nav__link">
-        枚举
-      </a>
-    
+    <a href="../py_enum/" title="枚举" class="md-nav__link">
+      枚举
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_error/" title="异常捕捉" class="md-nav__link">
-        异常捕捉
-      </a>
-    
+    <a href="../py_error/" title="异常捕捉" class="md-nav__link">
+      异常捕捉
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_test/" title="调试" class="md-nav__link">
-        调试
-      </a>
-    
+    <a href="../py_test/" title="调试" class="md-nav__link">
+      调试
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_fileio/" title="文件io" class="md-nav__link">
-        文件io
-      </a>
-    
+    <a href="../py_fileio/" title="文件io" class="md-nav__link">
+      文件io
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_inmodule/" title="模块" class="md-nav__link">
-        模块
-      </a>
-    
+    <a href="../py_inmodule/" title="模块" class="md-nav__link">
+      模块
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_urllib/" title="网络库" class="md-nav__link">
-        网络库
-      </a>
-    
+    <a href="../py_urllib/" title="网络库" class="md-nav__link">
+      网络库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_module_manager/" title="模块管理" class="md-nav__link">
-        模块管理
-      </a>
-    
+    <a href="../py_module_manager/" title="模块管理" class="md-nav__link">
+      模块管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_thread/" title="线程" class="md-nav__link">
-        线程
-      </a>
-    
+    <a href="../py_thread/" title="线程" class="md-nav__link">
+      线程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_coroutine/" title="协程" class="md-nav__link">
-        协程
-      </a>
-    
+    <a href="../py_coroutine/" title="协程" class="md-nav__link">
+      协程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_gui/" title="图形界面编程" class="md-nav__link">
-        图形界面编程
-      </a>
-    
+    <a href="../py_gui/" title="图形界面编程" class="md-nav__link">
+      图形界面编程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_diff2/" title="python2/3对比" class="md-nav__link">
-        python2/3对比
-      </a>
-    
+    <a href="../py_diff2/" title="python2/3对比" class="md-nav__link">
+      python2/3对比
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_modules/" title="常用库" class="md-nav__link">
-        常用库
-      </a>
-    
+    <a href="../py_modules/" title="常用库" class="md-nav__link">
+      常用库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_qt/" title="pyqt使用" class="md-nav__link">
-        pyqt使用
-      </a>
-    
+    <a href="../py_qt/" title="pyqt使用" class="md-nav__link">
+      pyqt使用
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -629,6 +678,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -638,34 +689,37 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_spider/" title="爬虫" class="md-nav__link">
-        爬虫
-      </a>
-    
+    <a href="../py_spider/" title="爬虫" class="md-nav__link">
+      爬虫
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_mq/" title="消息队列" class="md-nav__link">
-        消息队列
-      </a>
-    
+    <a href="../py_mq/" title="消息队列" class="md-nav__link">
+      消息队列
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../py_selenium/" title="自动化测试" class="md-nav__link">
-        自动化测试
-      </a>
-    
+    <a href="../py_selenium/" title="自动化测试" class="md-nav__link">
+      自动化测试
+    </a>
   </li>
 
         
@@ -676,6 +730,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
@@ -683,7 +740,7 @@
     <label class="md-nav__link" for="nav-5">
       lua
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
         lua
       </label>
@@ -692,12 +749,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
@@ -708,6 +766,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
@@ -715,7 +776,7 @@
     <label class="md-nav__link" for="nav-6">
       swift
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
         swift
       </label>
@@ -724,12 +785,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
-        swift基础入门
-      </a>
-    
+    <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+      swift基础入门
+    </a>
   </li>
 
         
@@ -740,6 +802,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
@@ -747,7 +812,7 @@
     <label class="md-nav__link" for="nav-7">
       php
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
         php
       </label>
@@ -756,12 +821,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
-        基础介绍
-      </a>
-    
+    <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+      基础介绍
+    </a>
   </li>
 
         
@@ -772,6 +838,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
@@ -779,7 +848,7 @@
     <label class="md-nav__link" for="nav-8">
       git
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-8">
         git
       </label>
@@ -788,78 +857,85 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
-        git简介
-      </a>
-    
+    <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+      git简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
-        git操作
-      </a>
-    
+    <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+      git操作
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
-        git分支管理
-      </a>
-    
+    <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+      git分支管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
-        git工具
-      </a>
-    
+    <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+      git工具
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
-        git问题记录
-      </a>
-    
+    <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+      git问题记录
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
-        git应用场景
-      </a>
-    
+    <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+      git应用场景
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/github/" title="github" class="md-nav__link">
-        github
-      </a>
-    
+    <a href="../../versions/github/" title="github" class="md-nav__link">
+      github
+    </a>
   </li>
 
         
@@ -870,6 +946,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
@@ -877,7 +956,7 @@
     <label class="md-nav__link" for="nav-9">
       Vim编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-9">
         Vim编辑器
       </label>
@@ -886,12 +965,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/vim/" title="vim" class="md-nav__link">
-        vim
-      </a>
-    
+    <a href="../../ide/vim/" title="vim" class="md-nav__link">
+      vim
+    </a>
   </li>
 
         
@@ -902,6 +982,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
@@ -909,7 +992,7 @@
     <label class="md-nav__link" for="nav-10">
       Sublime Text编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-10">
         Sublime Text编辑器
       </label>
@@ -918,12 +1001,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
-        sublimetext
-      </a>
-    
+    <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
+      sublimetext
+    </a>
   </li>
 
         
@@ -934,6 +1018,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
@@ -941,7 +1028,7 @@
     <label class="md-nav__link" for="nav-11">
       MakeFile
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-11">
         MakeFile
       </label>
@@ -950,111 +1037,121 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/overview/" title="概述" class="md-nav__link">
-        概述
-      </a>
-    
+    <a href="../../makefile/overview/" title="概述" class="md-nav__link">
+      概述
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
-        makefile介绍
-      </a>
-    
+    <a href="../../makefile/introduction/" title="makefile介绍" class="md-nav__link">
+      makefile介绍
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
-        书写规则
-      </a>
-    
+    <a href="../../makefile/rules/" title="书写规则" class="md-nav__link">
+      书写规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
-        书写命令
-      </a>
-    
+    <a href="../../makefile/recipes/" title="书写命令" class="md-nav__link">
+      书写命令
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
-        使用变量
-      </a>
-    
+    <a href="../../makefile/variables/" title="使用变量" class="md-nav__link">
+      使用变量
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
-        使用条件判断
-      </a>
-    
+    <a href="../../makefile/conditionals/" title="使用条件判断" class="md-nav__link">
+      使用条件判断
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
-        使用函数
-      </a>
-    
+    <a href="../../makefile/functions/" title="使用函数" class="md-nav__link">
+      使用函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
-        make 的运行
-      </a>
-    
+    <a href="../../makefile/invoke/" title="make 的运行" class="md-nav__link">
+      make 的运行
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
-        隐含规则
-      </a>
-    
+    <a href="../../makefile/implicit_rules/" title="隐含规则" class="md-nav__link">
+      隐含规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
-        使用make更新函数库文件
-      </a>
-    
+    <a href="../../makefile/archives/" title="使用make更新函数库文件" class="md-nav__link">
+      使用make更新函数库文件
+    </a>
   </li>
 
         
@@ -1165,6 +1262,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -1175,8 +1274,8 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <h1 id="python-web-tornado">python web框架 tornado 初探<a class="headerlink" href="#python-web-tornado" title="Permanent link">&para;</a></h1>
 <h2 id="tornado">Tornado<a class="headerlink" href="#tornado" title="Permanent link">&para;</a></h2>
@@ -1245,49 +1344,46 @@
 </li>
 </ul>
 <h3 id="hello-world">hello world<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tornado.ioloop</span>
-<span class="kn">import</span> <span class="nn">tornado.web</span>
-<span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
-  <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, world,&quot;</span><span class="o">+</span><span class="n">subdomain</span><span class="p">)</span>
+<pre class="codehilite"><code class="language-py">import tornado.ioloop
+import tornado.web
+class MainHandler(tornado.web.RequestHandler):
+  def get(self):
+    self.write(&quot;Hello, world,&quot;+subdomain)
 
-<span class="k">def</span> <span class="nf">make_app</span><span class="p">():</span>
-  <span class="k">return</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
-    <span class="p">(</span><span class="s2">r&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
-  <span class="p">])</span>
+def make_app():
+  return tornado.web.Application([
+    (r&quot;/&quot;, MainHandler),
+  ])
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-  <span class="n">app</span> <span class="o">=</span> <span class="n">make_app</span><span class="p">()</span>
-  <span class="n">app</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">8888</span><span class="p">)</span>
-  <span class="n">tornado</span><span class="o">.</span><span class="n">ioloop</span><span class="o">.</span><span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+if __name__ == &quot;__main__&quot;:
+  app = make_app()
+  app.listen(8888)
+  tornado.ioloop.IOLoop.current().start()
 
-  <span class="c1">#在浏览器中输入`http://localhost:8888/` 可以看到`Hello,world`的输出</span>
-</pre></div>
+  #在浏览器中输入`http://localhost:8888/` 可以看到`Hello,world`的输出</code></pre>
 
 
 <h3 id="handler">handler<a class="headerlink" href="#handler" title="Permanent link">&para;</a></h3>
 <h4 id="staticfilehandler">StaticFileHandler<a class="headerlink" href="#staticfilehandler" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">make_app</span><span class="p">():</span>
-  <span class="k">return</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
-    <span class="p">(</span><span class="s2">r&quot;/static/(.*)&quot;</span><span class="p">,</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">StaticFileHandler</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">Administrator.PC-20150720QKHJ</span><span class="se">\\</span><span class="s2">Desktop</span><span class="se">\\</span><span class="s2">static&quot;</span><span class="p">}),</span>
-  <span class="p">])</span>
+<pre class="codehilite"><code class="language-py">def make_app():
+  return tornado.web.Application([
+    (r&quot;/static/(.*)&quot;, tornado.web.StaticFileHandler, {&quot;path&quot;: &quot;C:\\Users\\Administrator.PC-20150720QKHJ\\Desktop\\static&quot;}),
+  ])
 
-  <span class="c1"># 输入: http://localhost:8888/static/a.txt 可访问static目录下的文件内容</span>
-</pre></div>
+  # 输入: http://localhost:8888/static/a.txt 可访问static目录下的文件内容</code></pre>
 
 
 <h4 id="get_argument">get_argument 获取参数<a class="headerlink" href="#get_argument" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&lt;html&gt;&lt;body&gt;&lt;form action=&quot;/&quot; method=&quot;post&quot;&gt;&#39;</span>
-                   <span class="s1">&#39;&lt;input type=&quot;text&quot; name=&quot;message&quot;&gt;&#39;</span>
-                   <span class="s1">&#39;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&#39;</span>
-                   <span class="s1">&#39;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;&#39;</span><span class="p">)</span>
+<pre class="codehilite"><code class="language-py">class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write('&lt;html&gt;&lt;body&gt;&lt;form action=&quot;/&quot; method=&quot;post&quot;&gt;'
+                   '&lt;input type=&quot;text&quot; name=&quot;message&quot;&gt;'
+                   '&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;'
+                   '&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;')
 
-    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">set_header</span><span class="p">(</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;You wrote &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_argument</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
-</pre></div>
+    def post(self):
+        self.set_header(&quot;Content-Type&quot;, &quot;text/plain&quot;)
+        self.write(&quot;You wrote &quot; + self.get_argument(&quot;message&quot;))</code></pre>
 
 
 <ul>
@@ -1297,115 +1393,117 @@
 <li>headers - 请求的开头信息</li>
 </ul>
 <h3 id="coroutine">coroutine<a class="headerlink" href="#coroutine" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tornado.ioloop</span>
-<span class="kn">import</span> <span class="nn">tornado.web</span>
-<span class="kn">from</span> <span class="nn">tornado</span> <span class="kn">import</span> <span class="n">gen</span>
-<span class="kn">from</span> <span class="nn">tornado.httpclient</span> <span class="kn">import</span> <span class="n">AsyncHTTPClient</span>
+<pre class="codehilite"><code class="language-py">import tornado.ioloop
+import tornado.web
+from tornado import gen
+from tornado.httpclient import AsyncHTTPClient
 
-<span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
-    <span class="nd">@gen.coroutine</span>
-    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">fetch_json</span><span class="p">(</span><span class="s2">&quot;http://www.baidu.com&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+class MainHandler(tornado.web.RequestHandler):
+    @gen.coroutine
+    def get(self):
+        response = yield self.fetch_json(&quot;http://www.baidu.com&quot;)
+        self.write(response)
 
-    <span class="nd">@gen.coroutine</span>
-    <span class="k">def</span> <span class="nf">fetch_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">AsyncHTTPClient</span><span class="p">()</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="k">raise</span> <span class="n">gen</span><span class="o">.</span><span class="n">Return</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">body</span><span class="p">)</span>
+    @gen.coroutine
+    def fetch_json(self, url):
+        response = yield AsyncHTTPClient().fetch(url)
+        raise gen.Return(response.body)
 
-<span class="n">application</span> <span class="o">=</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
-    <span class="p">(</span><span class="s2">r&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
-<span class="p">])</span>
+application = tornado.web.Application([
+    (r&quot;/&quot;, MainHandler),
+])
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">application</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">8888</span><span class="p">)</span>
-    <span class="n">tornado</span><span class="o">.</span><span class="n">ioloop</span><span class="o">.</span><span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-</pre></div>
+if __name__ == &quot;__main__&quot;:
+    application.listen(8888)
+    tornado.ioloop.IOLoop.current().start()</code></pre>
 
 
 <h3 id="tornado_1">tornado   泛域名<a class="headerlink" href="#tornado_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tornado.ioloop</span>
-<span class="kn">import</span> <span class="nn">tornado.web</span>
-<span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
-  <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="n">subdomain</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, world,&quot;</span><span class="o">+</span><span class="n">subdomain</span><span class="p">)</span>
+<pre class="codehilite"><code class="language-py">import tornado.ioloop
+import tornado.web
+class MainHandler(tornado.web.RequestHandler):
+  def get(self):
+    subdomain = self.request.host.split(&quot;.&quot;)[0]
+    self.write(&quot;Hello, world,&quot;+subdomain)
 
-<span class="k">class</span> <span class="nc">DomainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
-  <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, a.com&quot;</span><span class="p">)</span>
+class DomainHandler(tornado.web.RequestHandler):
+  def get(self):
+    self.write(&quot;Hello, a.com&quot;)
 
-<span class="k">def</span> <span class="nf">make_app</span><span class="p">():</span>
-  <span class="k">return</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
-    <span class="p">(</span><span class="s2">r&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
-  <span class="p">])</span>
+def make_app():
+  return tornado.web.Application([
+    (r&quot;/&quot;, MainHandler),
+  ])
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-  <span class="n">app</span> <span class="o">=</span> <span class="n">make_app</span><span class="p">()</span>
-  <span class="n">app</span><span class="o">.</span><span class="n">add_handlers</span><span class="p">(</span><span class="s2">r&quot;^(www\.)?a\.com$&quot;</span><span class="p">,</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s2">r&quot;/&quot;</span><span class="p">,</span> <span class="n">DomainHandler</span><span class="p">),</span>
-  <span class="p">])</span>
-  <span class="n">app</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">8888</span><span class="p">)</span>
-  <span class="n">tornado</span><span class="o">.</span><span class="n">ioloop</span><span class="o">.</span><span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+if __name__ == &quot;__main__&quot;:
+  app = make_app()
+  app.add_handlers(r&quot;^(www\.)?a\.com$&quot;, [
+    (r&quot;/&quot;, DomainHandler),
+  ])
+  app.listen(8888)
+  tornado.ioloop.IOLoop.current().start()
 
-  <span class="c1"># 在Host中加入这行 127.0.0.1 a.com</span>
-  <span class="c1">#浏览器中输入:http://a.com:8888  则输出:Hello, a.com</span>
-</pre></div>
+  # 在Host中加入这行 127.0.0.1 a.com
+  #浏览器中输入:http://a.com:8888  则输出:Hello, a.com</code></pre>
 
 
 <h3 id="tornado-ngnix">tornado ngnix 反向代理配置<a class="headerlink" href="#tornado-ngnix" title="Permanent link">&para;</a></h3>
 <p>如果在tornado层不想做泛域名解析,可以通过ngnix的反向代理指向tornado的端口,ngnix配置如下:</p>
-<div class="codehilite"><pre><span></span><span class="nt">upstream</span> <span class="nt">tornado</span> <span class="p">{</span>
-    <span class="n">server</span> <span class="m">127</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">1</span><span class="o">:</span><span class="m">8888</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">server</span> <span class="p">{</span>
-      <span class="n">listen</span> <span class="m">80</span><span class="p">;</span>
-      <span class="n">server_name</span> <span class="n">test</span><span class="o">.</span><span class="n">com</span> <span class="n">www</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">com</span><span class="p">;</span>
-      <span class="n">location</span> <span class="o">=</span> <span class="o">/</span><span class="n">favicon</span><span class="o">.</span><span class="n">ico</span> <span class="err">{</span>
-          <span class="n">rewrite</span> <span class="p">(</span><span class="o">.*</span><span class="p">)</span> <span class="o">/</span><span class="nb">static</span><span class="o">/</span><span class="n">favicon</span><span class="o">.</span><span class="n">ico</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="nt">location</span> <span class="o">=</span> <span class="o">/</span><span class="nt">robots</span><span class="nc">.txt</span> <span class="p">{</span>
-          <span class="n">rewrite</span> <span class="p">(</span><span class="o">.*</span><span class="p">)</span> <span class="o">/</span><span class="nb">static</span><span class="o">/</span><span class="n">robots</span><span class="o">.</span><span class="n">txt</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="nt">location</span> <span class="o">/</span> <span class="p">{</span>
-          <span class="n">proxy_pass_header</span> <span class="n">Server</span><span class="p">;</span>
-          <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">http_host</span><span class="p">;</span>
-          <span class="n">proxy_redirect</span> <span class="n">off</span><span class="p">;</span>
-          <span class="n">proxy</span> <span class="n">_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Real</span><span class="o">-</span><span class="n">IP</span> <span class="err">$</span><span class="n">remote_addr</span><span class="p">;</span>
-          <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Scheme</span> <span class="err">$</span><span class="n">scheme</span><span class="p">;</span>
-          <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">tornado</span><span class="p">;</span>
-      <span class="p">}</span>
-<span class="err">}</span>
-</pre></div>
+<pre class="codehilite"><code>upstream tornado {
+    server 127.0.0.1:8888;
+}
+server {
+      listen 80;
+      server_name test.com www.test.com;
+      location = /favicon.ico {
+          rewrite (.*) /static/favicon.ico;
+      }
+      location = /robots.txt {
+          rewrite (.*) /static/robots.txt;
+      }
+      location / {
+          proxy_pass_header Server;
+          proxy_set_header Host $http_host;
+          proxy_redirect off;
+          proxy _set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Scheme $scheme;
+          proxy_pass http://tornado;
+      }
+}</code></pre>
 
 
 <h3 id="nginx">nginx反向代理长链接<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="nt">upstream</span> <span class="nt">chat_cluster</span><span class="p">{</span>
-     <span class="err">##多</span><span class="n">server</span><span class="err">负载</span><span class="o">,</span><span class="err">根据</span><span class="n">ip_hash</span><span class="err">作分流也可以用</span><span class="n">weight</span><span class="err">权重分流</span>
-    <span class="n">server</span> <span class="m">127</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">1</span><span class="o">:</span><span class="m">10000</span><span class="p">;</span>
-    <span class="n">server</span> <span class="m">127</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">0</span><span class="o">.</span><span class="m">1</span><span class="o">:</span><span class="m">10001</span><span class="p">;</span>
-    <span class="n">ip_hash</span><span class="p">;</span>
-    <span class="n">keepalive</span> <span class="m">1024</span><span class="p">;</span>
-<span class="p">}</span>
+<pre class="codehilite"><code>upstream chat_cluster{
+     ##多server负载,根据ip_hash作分流也可以用weight权重分流
+    server 127.0.0.1:10000;
+    server 127.0.0.1:10001;
+    ip_hash;
+    keepalive 1024;
+}
 
-<span class="nt">server</span>
-<span class="p">{</span>
-    <span class="n">listen</span> <span class="m">80</span><span class="p">;</span>
-    <span class="n">server_name</span> <span class="n">chat</span><span class="o">.</span><span class="n">rootk</span><span class="o">.</span><span class="n">com</span><span class="p">;</span>
+server
+{
+    listen 80;
+    server_name chat.rootk.com;
 
-    <span class="n">location</span> <span class="o">/</span> <span class="err">{</span>
-        <span class="n">proxy_pass</span> <span class="n">http</span><span class="o">://</span><span class="n">chat_cluster</span><span class="p">;</span>
-        <span class="n">proxy_http_version</span> <span class="m">1</span><span class="o">.</span><span class="m">1</span><span class="p">;</span>
-        <span class="err">#</span> <span class="n">very</span> <span class="n">important</span><span class="o">,</span> <span class="n">nginx</span> <span class="n">will</span> <span class="n">waitting</span> <span class="n">for</span> <span class="n">the</span> <span class="n">response</span> <span class="n">from</span> <span class="n">tornado</span>
-        <span class="err">#</span> <span class="n">if</span> <span class="n">the</span> <span class="n">time</span> <span class="n">have</span> <span class="n">passed</span> <span class="n">more</span> <span class="n">than</span> <span class="m">7200</span><span class="o">,</span> <span class="n">nginx</span> <span class="n">send</span> <span class="n">http</span> <span class="m">504</span> <span class="n">to</span> <span class="n">client</span>
-        <span class="n">proxy_read_timeout</span> <span class="m">7200</span><span class="p">;</span>
-        <span class="n">proxy_set_header</span> <span class="n">Connection</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-        <span class="n">proxy_set_header</span> <span class="n">Host</span> <span class="err">$</span><span class="n">host</span><span class="p">;</span>
-        <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="n">Real</span><span class="o">-</span><span class="n">Ip</span> <span class="err">$</span><span class="n">remote_addr</span><span class="p">;</span>
-        <span class="n">proxy_set_header</span>   <span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span>  <span class="err">$</span><span class="n">proxy_add_x_forwarded_for</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="err">}</span>
-</pre></div>
+    location / {
+        proxy_pass http://chat_cluster;
+        proxy_http_version 1.1;
+        # very important, nginx will waitting for the response from tornado
+        # if the time have passed more than 7200, nginx send http 504 to client
+        proxy_read_timeout 7200;
+        proxy_set_header Connection &quot;&quot;;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-Ip $remote_addr;
+        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+    }
+}</code></pre>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -1473,8 +1571,8 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-7aa26ad9ec.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     

@@ -13,9 +13,9 @@
         <meta name="author" content="farwmarth">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.2">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.3.0">
     
     
       
@@ -23,7 +23,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-1d1da4857d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
     
     
       
@@ -35,12 +41,6 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-1b8b9fdf68.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
     
     
   </head>
@@ -60,13 +60,14 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="farwmarth’s note" class=" md-icon md-icon--home  md-header-nav__button">
-          
-        </a>
+        
+          <a href="../.." title="farwmarth’s note" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -93,7 +94,7 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
     </form>
     <div class="md-search__output">
@@ -106,15 +107,17 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-          </div>
+        <div class="md-header-nav__source">
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -122,11 +125,11 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
-      
-    </i>
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
     farwmarth’s note
   </label>
   
@@ -134,17 +137,21 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Home" class="md-nav__link">
-        Home
-      </a>
-    
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
   </li>
 
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
@@ -152,7 +159,7 @@
     <label class="md-nav__link" for="nav-2">
       数据结构与算法
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         数据结构与算法
       </label>
@@ -161,12 +168,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
-        排序算法介绍
-      </a>
-    
+    <a href="../../data_algorithms/algorithms1_intro/" title="排序算法介绍" class="md-nav__link">
+      排序算法介绍
+    </a>
   </li>
 
         
@@ -177,6 +185,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -184,7 +195,7 @@
     <label class="md-nav__link" for="nav-3">
       c++基础
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         c++基础
       </label>
@@ -193,67 +204,73 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
-        c++环境搭建(Win)
-      </a>
-    
+    <a href="../../cplus/cplus_win/" title="c++环境搭建(Win)" class="md-nav__link">
+      c++环境搭建(Win)
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
-        基础语法
-      </a>
-    
+    <a href="../../cplus/cplus1_grammer/" title="基础语法" class="md-nav__link">
+      基础语法
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../../cplus/cplus2_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
-        内存分配
-      </a>
-    
+    <a href="../../cplus/cplus3_memory/" title="内存分配" class="md-nav__link">
+      内存分配
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
-        编译过程
-      </a>
-    
+    <a href="../../cplus/cplus4_complier/" title="编译过程" class="md-nav__link">
+      编译过程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
-        常量修饰符
-      </a>
-    
+    <a href="../../cplus/cplus5_const/" title="常量修饰符" class="md-nav__link">
+      常量修饰符
+    </a>
   </li>
 
         
@@ -264,6 +281,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
@@ -271,7 +291,7 @@
     <label class="md-nav__link" for="nav-4">
       python
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         python
       </label>
@@ -280,287 +300,313 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py1_intro/" title="语言简介" class="md-nav__link">
-        语言简介
-      </a>
-    
+    <a href="../../python/py1_intro/" title="语言简介" class="md-nav__link">
+      语言简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py2_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../../python/py2_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py3_controller/" title="控制流程" class="md-nav__link">
-        控制流程
-      </a>
-    
+    <a href="../../python/py3_controller/" title="控制流程" class="md-nav__link">
+      控制流程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py4_func/" title="函数" class="md-nav__link">
-        函数
-      </a>
-    
+    <a href="../../python/py4_func/" title="函数" class="md-nav__link">
+      函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py5_step/" title="步骤" class="md-nav__link">
-        步骤
-      </a>
-    
+    <a href="../../python/py5_step/" title="步骤" class="md-nav__link">
+      步骤
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py6_organize/" title="组织" class="md-nav__link">
-        组织
-      </a>
-    
+    <a href="../../python/py6_organize/" title="组织" class="md-nav__link">
+      组织
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_class/" title="类" class="md-nav__link">
-        类
-      </a>
-    
+    <a href="../../python/py_class/" title="类" class="md-nav__link">
+      类
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_with/" title="with关键字" class="md-nav__link">
-        with关键字
-      </a>
-    
+    <a href="../../python/py_with/" title="with关键字" class="md-nav__link">
+      with关键字
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_scope/" title="变量作用域" class="md-nav__link">
-        变量作用域
-      </a>
-    
+    <a href="../../python/py_scope/" title="变量作用域" class="md-nav__link">
+      变量作用域
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_enum/" title="枚举" class="md-nav__link">
-        枚举
-      </a>
-    
+    <a href="../../python/py_enum/" title="枚举" class="md-nav__link">
+      枚举
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_error/" title="异常捕捉" class="md-nav__link">
-        异常捕捉
-      </a>
-    
+    <a href="../../python/py_error/" title="异常捕捉" class="md-nav__link">
+      异常捕捉
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_test/" title="调试" class="md-nav__link">
-        调试
-      </a>
-    
+    <a href="../../python/py_test/" title="调试" class="md-nav__link">
+      调试
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_fileio/" title="文件io" class="md-nav__link">
-        文件io
-      </a>
-    
+    <a href="../../python/py_fileio/" title="文件io" class="md-nav__link">
+      文件io
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_inmodule/" title="模块" class="md-nav__link">
-        模块
-      </a>
-    
+    <a href="../../python/py_inmodule/" title="模块" class="md-nav__link">
+      模块
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_urllib/" title="网络库" class="md-nav__link">
-        网络库
-      </a>
-    
+    <a href="../../python/py_urllib/" title="网络库" class="md-nav__link">
+      网络库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_module_manager/" title="模块管理" class="md-nav__link">
-        模块管理
-      </a>
-    
+    <a href="../../python/py_module_manager/" title="模块管理" class="md-nav__link">
+      模块管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_thread/" title="线程" class="md-nav__link">
-        线程
-      </a>
-    
+    <a href="../../python/py_thread/" title="线程" class="md-nav__link">
+      线程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_coroutine/" title="协程" class="md-nav__link">
-        协程
-      </a>
-    
+    <a href="../../python/py_coroutine/" title="协程" class="md-nav__link">
+      协程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_gui/" title="图形界面编程" class="md-nav__link">
-        图形界面编程
-      </a>
-    
+    <a href="../../python/py_gui/" title="图形界面编程" class="md-nav__link">
+      图形界面编程
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_diff2/" title="python2/3对比" class="md-nav__link">
-        python2/3对比
-      </a>
-    
+    <a href="../../python/py_diff2/" title="python2/3对比" class="md-nav__link">
+      python2/3对比
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_modules/" title="常用库" class="md-nav__link">
-        常用库
-      </a>
-    
+    <a href="../../python/py_modules/" title="常用库" class="md-nav__link">
+      常用库
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_qt/" title="pyqt使用" class="md-nav__link">
-        pyqt使用
-      </a>
-    
+    <a href="../../python/py_qt/" title="pyqt使用" class="md-nav__link">
+      pyqt使用
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_tornado/" title="tornado" class="md-nav__link">
-        tornado
-      </a>
-    
+    <a href="../../python/py_tornado/" title="tornado" class="md-nav__link">
+      tornado
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_spider/" title="爬虫" class="md-nav__link">
-        爬虫
-      </a>
-    
+    <a href="../../python/py_spider/" title="爬虫" class="md-nav__link">
+      爬虫
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_mq/" title="消息队列" class="md-nav__link">
-        消息队列
-      </a>
-    
+    <a href="../../python/py_mq/" title="消息队列" class="md-nav__link">
+      消息队列
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../python/py_selenium/" title="自动化测试" class="md-nav__link">
-        自动化测试
-      </a>
-    
+    <a href="../../python/py_selenium/" title="自动化测试" class="md-nav__link">
+      自动化测试
+    </a>
   </li>
 
         
@@ -571,6 +617,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
@@ -578,7 +627,7 @@
     <label class="md-nav__link" for="nav-5">
       lua
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
         lua
       </label>
@@ -587,12 +636,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
-        数据类型
-      </a>
-    
+    <a href="../../lua/lua1_data/" title="数据类型" class="md-nav__link">
+      数据类型
+    </a>
   </li>
 
         
@@ -603,6 +653,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
@@ -610,7 +663,7 @@
     <label class="md-nav__link" for="nav-6">
       swift
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
         swift
       </label>
@@ -619,12 +672,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
-        swift基础入门
-      </a>
-    
+    <a href="../../swift/swift1_intro/" title="swift基础入门" class="md-nav__link">
+      swift基础入门
+    </a>
   </li>
 
         
@@ -635,6 +689,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
@@ -642,7 +699,7 @@
     <label class="md-nav__link" for="nav-7">
       php
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
         php
       </label>
@@ -651,12 +708,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
-        基础介绍
-      </a>
-    
+    <a href="../../php/php1_intro/" title="基础介绍" class="md-nav__link">
+      基础介绍
+    </a>
   </li>
 
         
@@ -667,6 +725,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
@@ -674,7 +735,7 @@
     <label class="md-nav__link" for="nav-8">
       git
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-8">
         git
       </label>
@@ -683,78 +744,85 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
-        git简介
-      </a>
-    
+    <a href="../../versions/git_intro/" title="git简介" class="md-nav__link">
+      git简介
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
-        git操作
-      </a>
-    
+    <a href="../../versions/git_oper/" title="git操作" class="md-nav__link">
+      git操作
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
-        git分支管理
-      </a>
-    
+    <a href="../../versions/git_branch/" title="git分支管理" class="md-nav__link">
+      git分支管理
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
-        git工具
-      </a>
-    
+    <a href="../../versions/git_tools/" title="git工具" class="md-nav__link">
+      git工具
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
-        git问题记录
-      </a>
-    
+    <a href="../../versions/git_error/" title="git问题记录" class="md-nav__link">
+      git问题记录
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
-        git应用场景
-      </a>
-    
+    <a href="../../versions/git_remark/" title="git应用场景" class="md-nav__link">
+      git应用场景
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../versions/github/" title="github" class="md-nav__link">
-        github
-      </a>
-    
+    <a href="../../versions/github/" title="github" class="md-nav__link">
+      github
+    </a>
   </li>
 
         
@@ -765,6 +833,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
@@ -772,7 +843,7 @@
     <label class="md-nav__link" for="nav-9">
       Vim编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-9">
         Vim编辑器
       </label>
@@ -781,12 +852,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/vim/" title="vim" class="md-nav__link">
-        vim
-      </a>
-    
+    <a href="../../ide/vim/" title="vim" class="md-nav__link">
+      vim
+    </a>
   </li>
 
         
@@ -797,6 +869,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
@@ -804,7 +879,7 @@
     <label class="md-nav__link" for="nav-10">
       Sublime Text编辑器
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-10">
         Sublime Text编辑器
       </label>
@@ -813,12 +888,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
-        sublimetext
-      </a>
-    
+    <a href="../../ide/sublimetext/" title="sublimetext" class="md-nav__link">
+      sublimetext
+    </a>
   </li>
 
         
@@ -829,14 +905,19 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
     
     <label class="md-nav__link" for="nav-11">
       MakeFile
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-11">
         MakeFile
       </label>
@@ -845,40 +926,48 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../overview/" title="概述" class="md-nav__link">
-        概述
-      </a>
-    
+    <a href="../overview/" title="概述" class="md-nav__link">
+      概述
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../introduction/" title="makefile介绍" class="md-nav__link">
-        makefile介绍
-      </a>
-    
+    <a href="../introduction/" title="makefile介绍" class="md-nav__link">
+      makefile介绍
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../rules/" title="书写规则" class="md-nav__link">
-        书写规则
-      </a>
-    
+    <a href="../rules/" title="书写规则" class="md-nav__link">
+      书写规则
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -889,81 +978,78 @@
       书写命令
     </a>
     
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-</nav>
-    
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../variables/" title="使用变量" class="md-nav__link">
-        使用变量
-      </a>
-    
+    <a href="../variables/" title="使用变量" class="md-nav__link">
+      使用变量
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../conditionals/" title="使用条件判断" class="md-nav__link">
-        使用条件判断
-      </a>
-    
+    <a href="../conditionals/" title="使用条件判断" class="md-nav__link">
+      使用条件判断
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../functions/" title="使用函数" class="md-nav__link">
-        使用函数
-      </a>
-    
+    <a href="../functions/" title="使用函数" class="md-nav__link">
+      使用函数
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../invoke/" title="make 的运行" class="md-nav__link">
-        make 的运行
-      </a>
-    
+    <a href="../invoke/" title="make 的运行" class="md-nav__link">
+      make 的运行
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../implicit_rules/" title="隐含规则" class="md-nav__link">
-        隐含规则
-      </a>
-    
+    <a href="../implicit_rules/" title="隐含规则" class="md-nav__link">
+      隐含规则
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../archives/" title="使用make更新函数库文件" class="md-nav__link">
-        使用make更新函数库文件
-      </a>
-    
+    <a href="../archives/" title="使用make更新函数库文件" class="md-nav__link">
+      使用make更新函数库文件
+    </a>
   </li>
 
         
@@ -997,8 +1083,8 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
               
+                
                 
                 <p>========
 书写命令
@@ -1013,15 +1099,13 @@
 <p>通常，make会把其要执行的命令行在命令执行前输出到屏幕上。当我们用 <code>@</code>
 字符在命令行前，那么，这个命令将不被make显示出来，最具代表性的例子是，我们用这个功能来向屏幕显示一些信息。如:</p>
 <p>::</p>
-<div class="codehilite"><pre><span></span>@echo 正在编译XXX模块......
-</pre></div>
+<pre class="codehilite"><code>@echo 正在编译XXX模块......</code></pre>
 
 
 <p>当make执行时，会输出“正在编译XXX模块......”字串，但不会输出命令，如果没有“@”，那么，make将输出:</p>
 <p>::</p>
-<div class="codehilite"><pre><span></span>echo 正在编译XXX模块......
-正在编译XXX模块......
-</pre></div>
+<pre class="codehilite"><code>echo 正在编译XXX模块......
+正在编译XXX模块......</code></pre>
 
 
 <p>如果make执行时，带入make参数 <code>-n</code> 或 <code>--just-print</code>
@@ -1034,19 +1118,17 @@
 <li>示例一：</li>
 </ul>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span><span class="n">exec</span><span class="o">:</span>
-    <span class="n">cd</span> <span class="sr">/home/</span><span class="n">hchen</span>
-    <span class="n">pwd</span>
-</pre></div>
+<pre class="codehilite"><code>exec:
+    cd /home/hchen
+    pwd</code></pre>
 
 
 <ul>
 <li>示例二：</li>
 </ul>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span><span class="n">exec</span><span class="o">:</span>
-    <span class="n">cd</span> <span class="sr">/home/</span><span class="n">hchen</span><span class="o">;</span> <span class="n">pwd</span>
-</pre></div>
+<pre class="codehilite"><code>exec:
+    cd /home/hchen; pwd</code></pre>
 
 
 <p>当我们执行 <code>make exec</code>
@@ -1059,9 +1141,8 @@
 <p>为了做到这一点，忽略命令的出错，我们可以在Makefile的命令行前加一个减号
 <code>-</code> （在Tab键之后），标记为不管命令出不出错都认为是成功的。如：</p>
 <p>.. code:: bash</p>
-<div class="codehilite"><pre><span></span>clean:
-    -rm -f *.o
-</pre></div>
+<pre class="codehilite"><code>clean:
+    -rm -f *.o</code></pre>
 
 
 <p>还有一个全局的办法是，给make加上 <code>-i</code> 或是 <code>--ignore-errors</code>
@@ -1074,16 +1155,14 @@
 <p>在一些大的工程中，我们会把我们不同模块或是不同功能的源文件放在不同的目录中，我们可以在每个目录中都书写一个该目录的Makefile，这有利于让我们的Makefile变得更加地简洁，而不至于把所有的东西全部写在一个Makefile中，这样会很难维护我们的Makefile，这个技术对于我们模块编译和分段编译有着非常大的好处。</p>
 <p>例如，我们有一个子目录叫subdir，这个目录下有个Makefile文件，来指明了这个目录下文件的编译规则。那么我们总控的Makefile可以这样书写：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span><span class="n">subsystem</span><span class="o">:</span>
-    <span class="n">cd</span> <span class="n">subdir</span> <span class="o">&amp;&amp;</span> <span class="n">$</span><span class="o">(</span><span class="n">MAKE</span><span class="o">)</span>
-</pre></div>
+<pre class="codehilite"><code>subsystem:
+    cd subdir &amp;&amp; $(MAKE)</code></pre>
 
 
 <p>其等价于：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span><span class="nf">subsystem</span><span class="o">:</span>
-    <span class="k">$(</span>MAKE<span class="k">)</span> -C subdir
-</pre></div>
+<pre class="codehilite"><code>subsystem:
+    $(MAKE) -C subdir</code></pre>
 
 
 <p>定义$(MAKE)宏变量的意思是，也许我们的make需要一些参数，所以定义成一个变量比较利于维护。这两个例子的意思都是先进入“subdir”目录，然后执行make命令。</p>
@@ -1091,54 +1170,46 @@
 <code>-e</code> 参数。</p>
 <p>如果你要传递变量到下级Makefile中，那么你可以使用这样的声明:</p>
 <p>::</p>
-<div class="codehilite"><pre><span></span>export &lt;variable ...&gt;;
-</pre></div>
+<pre class="codehilite"><code>export &lt;variable ...&gt;;</code></pre>
 
 
 <p>如果你不想让某些变量传递到下级Makefile中，那么你可以这样声明:</p>
 <p>::</p>
-<div class="codehilite"><pre><span></span>unexport &lt;variable ...&gt;;
-</pre></div>
+<pre class="codehilite"><code>unexport &lt;variable ...&gt;;</code></pre>
 
 
 <p>如：</p>
 <p>示例一：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>export variable = value
-</pre></div>
+<pre class="codehilite"><code>export variable = value</code></pre>
 
 
 <p>其等价于：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>variable = value
-export variable
-</pre></div>
+<pre class="codehilite"><code>variable = value
+export variable</code></pre>
 
 
 <p>其等价于：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>export variable := value
-</pre></div>
+<pre class="codehilite"><code>export variable := value</code></pre>
 
 
 <p>其等价于：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>variable := value
-export variable
-</pre></div>
+<pre class="codehilite"><code>variable := value
+export variable</code></pre>
 
 
 <p>示例二：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>export variable += value
-</pre></div>
+<pre class="codehilite"><code>export variable += value</code></pre>
 
 
 <p>其等价于：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>variable += value
-export variable
-</pre></div>
+<pre class="codehilite"><code>variable += value
+export variable</code></pre>
 
 
 <p>如果你要传递所有的变量，那么，只要一个export就行了。后面什么也不用跟，表示传递所有的变量。</p>
@@ -1152,9 +1223,8 @@ Makefile中定义了这个变量，那么 <code>MAKEFLAGS</code>
 <code>-o</code> 和 <code>-W</code>
 （有关Makefile参数的细节将在后面说明），如果你不想往下层传递参数，那么，你可以这样来：</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span><span class="n">subsystem</span><span class="o">:</span>
-    <span class="n">cd</span> <span class="n">subdir</span> <span class="o">&amp;&amp;</span> <span class="n">$</span><span class="o">(</span><span class="n">MAKE</span><span class="o">)</span> <span class="n">MAKEFLAGS</span><span class="o">=</span>
-</pre></div>
+<pre class="codehilite"><code>subsystem:
+    cd subdir &amp;&amp; $(MAKE) MAKEFLAGS=</code></pre>
 
 
 <p>如果你定义了环境变量 <code>MAKEFLAGS</code>
@@ -1164,14 +1234,12 @@ Makefile中定义了这个变量，那么 <code>MAKEFLAGS</code>
 会在make的过程中输出一些信息，让你看到目前的工作目录。比如，如果我们的下级make目录是“/home/hchen/gnu/make”，如果我们使用
 <code>make -w</code> 来执行，那么当进入该目录时，我们会看到:</p>
 <p>::</p>
-<div class="codehilite"><pre><span></span><span class="n">make</span><span class="o">:</span> <span class="n">Entering</span> <span class="n">directory</span> <span class="err">`</span><span class="sr">/home/hchen/gnu/</span><span class="n">make</span><span class="err">&#39;</span><span class="o">.</span>
-</pre></div>
+<pre class="codehilite"><code>make: Entering directory `/home/hchen/gnu/make'.</code></pre>
 
 
 <p>而在完成下层make后离开目录时，我们会看到:</p>
 <p>::</p>
-<div class="codehilite"><pre><span></span><span class="n">make</span><span class="o">:</span> <span class="n">Leaving</span> <span class="n">directory</span> <span class="err">`</span><span class="sr">/home/hchen/gnu/</span><span class="n">make</span><span class="err">&#39;</span>
-</pre></div>
+<pre class="codehilite"><code>make: Leaving directory `/home/hchen/gnu/make'</code></pre>
 
 
 <p>当你使用 <code>-C</code> 参数来指定make下层Makefile时， <code>-w</code>
@@ -1181,25 +1249,29 @@ Makefile中定义了这个变量，那么 <code>MAKEFLAGS</code>
 <p>如果Makefile中出现一些相同命令序列，那么我们可以为这些相同的命令序列定义一个变量。定义这种命令序列的语法以
 <code>define</code> 开始，以 <code>endef</code> 结束，如:</p>
 <p>::</p>
-<div class="codehilite"><pre><span></span>define run-yacc
+<pre class="codehilite"><code>define run-yacc
 yacc $(firstword $^)
 mv y.tab.c $@
-endef
-</pre></div>
+endef</code></pre>
 
 
 <p>这里，“run-yacc”是这个命令包的名字，其不要和Makefile中的变量重名。在
 <code>define</code> 和 <code>endef</code>
 中的两行就是命令序列。这个命令包中的第一个命令是运行Yacc程序，因为Yacc程序总是生成“y.tab.c”的文件，所以第二行的命令就是把这个文件改改名字。还是把这个命令包放到一个示例中来看看吧。</p>
 <p>.. code:: makefile</p>
-<div class="codehilite"><pre><span></span>foo.c : foo.y
-    $(run-yacc)
-</pre></div>
+<pre class="codehilite"><code>foo.c : foo.y
+    $(run-yacc)</code></pre>
 
 
 <p>我们可以看见，要使用这个命令包，我们就好像使用变量一样。在这个命令包的使用中，命令包“run-yacc”中的
 <code>$^</code> 就是 <code>foo.y</code> ， <code>$@</code> 就是 <code>foo.c</code> （有关这种以 <code>$</code>
 开头的特殊变量，我们会在后面介绍），make在执行命令包时，命令包中的每个命令会被依次独立执行。</p>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -1267,8 +1339,8 @@ endef
       
     </div>
     
-      <script src="../../assets/javascripts/application-16f434a21a.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-7aa26ad9ec.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     
