@@ -2,6 +2,9 @@ title: atom
 date: 2016-9-2 19:10:39
 tags: atom
 ---
+
+转载自: [https://github.com/atom-china/manual](https://github.com/atom-china/manual)
+
 ## atom 介绍
 >Atom是Github专为hacker推出的开源的文本编辑器，支持linux、window等多平台
 

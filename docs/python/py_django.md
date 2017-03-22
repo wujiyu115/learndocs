@@ -3,19 +3,16 @@ python django
 
 
 ----
-## django 错误提示
-+ ImportError: No module named mysqldb
-```
-pip install MySQL-python
-pip install configparser
-```
+
 ## django 安装
 ```pip install django```
 
 ## django 结构
+
 + 建立一个网站模板
 ```django-admin startproject mysite```
 结构如下
+
 ```
 mysite/
     manage.py
@@ -25,14 +22,17 @@ mysite/
         urls.py
         wsgi.py
 ```
+
 ## django-admin 和 manage.py
 ### manage.py
 + migrate
+
 ```
 根据 mysite/settings.py的配置加载依赖库和文件
 ```
 + runserver 8000 --noreload
 ```
+
 启动服务器 
 端口:0.0.0.0:8000
 更改python代码不自动load:--noreload
@@ -42,6 +42,7 @@ mysite/
 ## django 配置
 + DATABASES 
   默认用sqllite
+  
 ```
 默认用sqllite
 DATABASES = {
@@ -66,5 +67,4 @@ DATABASES = {
 'django.db.backends.mysql'
 'django.db.backends.sqlite3'
 'django.db.backends.oracle'
-
 ```
