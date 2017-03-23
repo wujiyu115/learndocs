@@ -26,21 +26,18 @@ mysite/
         wsgi.py
 ```
 ## django-admin 和 manage.py
+
 ### manage.py
-+ migrate
-```
-根据 mysite/settings.py的配置加载依赖库和文件
-```
-+ runserver 8000 --noreload
-```
-启动服务器 
-端口:0.0.0.0:8000
-更改python代码不自动load:--noreload
-单线程:--nothreading(默认多线程)
+```shell
+#根据 mysite/settings.py的配置加载依赖库和文件
+python manage.py migrate --run-syncdb
+#启动服务器
+python manage.py runserver 8000 --noreload
 ```
 
+
 ## django 配置
-+ DATABASES 
++ DATABASES
   默认用sqllite
 ```
 默认用sqllite
