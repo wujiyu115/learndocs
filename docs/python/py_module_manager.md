@@ -1,4 +1,4 @@
-﻿Python 模块管理
+Python 模块管理
 ==========================
 
 ## Python 包管理工具
@@ -210,7 +210,41 @@ rmvirtualenv [虚拟环境名称]
 deactivate
 ```
 
-## python技巧
+## python 多版本管理
+### pyenv 版本管理
+```shell
+pyenv命令:
+   commands    列出所有pyenv命令
+   local       设置或者显示local的python版本
+   global      设置或者显示global的python版本
+   shell       设置或者显示shell的python版本
+   install     安装一个python版本
+   uninstall   卸载一个python版本
+   rehash      Rehash pyenv shims (run this after installing executables)
+   version     显示当前版本
+   versions    显示所有python版本
+   which       显示可执行python的路径
+   whence      显示带执行路径的所有版本
+
+########安装其他版本的python
+#依赖
+sudo brew install homebrew/dupes/zlib
+bash brew install readline; brew link readline;
+#安装
+CFLAGS='-g -O2'
+CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
+CFLAGS="-I$(brew --prefix openssl)/include" \
+LDFLAGS="-L$(brew --prefix openssl)/lib" \
+pyenv install 2.7.5
+#环境变量
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=${PATH}:$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+#移除版本
+rm -rf .pyenv/versions/2.7.5
+```
+
+## python杂症
 
 
 ### Consider a more secure location (set with .set_extraction_path or the PYTHON_EGG_CACHE environment variable)
@@ -255,3 +289,4 @@ python C:\Python33\Tools\Scripts\2to3.py -w 2to3Test.py
 ```
 https://github.com/mitsuhiko/python-modernize
 http://haoluobo.com/2013/01/python2and3/
+

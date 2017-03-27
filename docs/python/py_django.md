@@ -3,28 +3,31 @@ python django
 
 
 ----
-## django 错误提示
-+ ImportError: No module named mysqldb
-```
-pip install MySQL-python
-pip install configparser
-```
+
 ## django 安装
-```pip install django```
+```
+pip install django
+```
 
 ## django 结构
+
 + 建立一个网站模板
-```django-admin startproject mysite```
-结构如下
 ```
-mysite/
+django-admin startproject mysite
+```
+
+结构如下
+
+```
+mysite
     manage.py
-    mysite/
+    mysite
         __init__.py
-        settings.py 网站设置
+        settings.py
         urls.py
         wsgi.py
 ```
+
 ## django-admin 和 manage.py
 
 ### manage.py
@@ -36,9 +39,11 @@ python manage.py runserver 8000 --noreload
 ```
 
 
+
 ## django 配置
 + DATABASES
-  默认用sqllite
+默认用sqllite
+
 ```
 默认用sqllite
 DATABASES = {
@@ -63,5 +68,4 @@ DATABASES = {
 'django.db.backends.mysql'
 'django.db.backends.sqlite3'
 'django.db.backends.oracle'
-
 ```
