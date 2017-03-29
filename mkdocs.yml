@@ -33,6 +33,10 @@ markdown_extensions:
 
 pages:
 - Home: 'index.md'
+- 游戏服务器:
+    - skynet:
+        - 'skynet简介': 'game_server/skynet/skynet_intro.md'
+        - 'skynet快速入门': 'game_server/skynet/skynet_build.md'
 - 数据结构与算法:
     - '排序算法介绍': 'data_algorithms/algorithms1_intro.md'
 - c++基础:
