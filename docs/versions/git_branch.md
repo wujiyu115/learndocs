@@ -117,3 +117,12 @@ git rebase -i  51c5b4850060ff675f4541b8b7cd479f94b743e8
 cherry-pick命令"复制"一个提交节点并在当前分支做一次完全一样的新提交。
 
 ![](img/cherry-pick.svg)
+
+
+## 删除远程分支
+```shell
+#删除本地分支
+git branch -D test
+#删除远程分支
+git push origin :test
+```
