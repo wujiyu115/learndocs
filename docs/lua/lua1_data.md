@@ -227,23 +227,23 @@ print(getkeyn(weakKey)) --1
 
 ``` lua
 function foo (a)
-       print("[step2] foo", a)
-       return coroutine.yield(2*a)
- end
+    print("[step2] foo", a)
+    return coroutine.yield(2*a)
+end
 
-local  co = coroutine.create(function (a,b)
-       print("[step1] co-body", a, b)
-       local r = foo(a+1)
-       print("[step4] co-body", r)
-       local r, s = coroutine.yield(a+b, a-b)
-       print("[step6] co-body", r, s)
-       return b, "end"
- end)
+local co = coroutine.create(function (a,b)
+    print("[step1] co-body", a, b)
+    local r = foo(a+1)
+    print("[step4] co-body", r)
+    local r, s = coroutine.yield(a+b, a-b)
+    print("[step6] co-body", r, s)
+    return b, "end"
+end)
 
- print("[step3] main", coroutine.resume(co, 1, 10))
- print("[step5] main", coroutine.resume(co, "r"))
- print("[step7] main", coroutine.resume(co, "x", "y"))
- print("[step8] main", coroutine.resume(co, "x", "y"))
+print("[step3] main", coroutine.resume(co, 1, 10))
+print("[step5] main", coroutine.resume(co, "r"))
+print("[step7] main", coroutine.resume(co, "x", "y"))
+print("[step8] main", coroutine.resume(co, "x", "y"))
 
 --[[
 [step1] co-body 1   10

@@ -436,6 +436,11 @@ git clean -nf
 git clean -nfds
 ```
 
+## 推送到远程分支
+```shell
+git push origin local_branch:remote_branch
+```
+
 ## 操作序列附加指令
 ### --continue
 Continue the operation in progress using the information in .git/sequencer. Can be used to continue after resolving conflicts in a failed cherry-pick or revert.
