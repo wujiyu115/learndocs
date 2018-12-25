@@ -40,7 +40,6 @@ vim插件
 
 ### 查找
 + ack(搜索): https://github.com/mileszs/ack.vim
-+ ag(搜索) https://github.com/rking/ag.vim
 + fuzzysearch(模糊查找) https://github.com/ggVGc/vim-fuzzysearch
 
 ### 替换
