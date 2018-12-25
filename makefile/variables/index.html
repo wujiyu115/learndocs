@@ -1,10 +1,16 @@
 
+
+
+
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="farwmarth’s document">
       
       
         <link rel="canonical" href="http://learndocs.farwmarth.com/makefile/variables/">
@@ -13,9 +19,26 @@
         <meta name="author" content="farwmarth">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+        <meta name="lang:clipboard.copy" content="复制">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
       
@@ -23,32 +46,35 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
-    
-    
       
         
         
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <meta name="theme-color" content="#546e7a">
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue-gray">
   
     <svg class="md-svg">
       <defs>
@@ -56,52 +82,62 @@
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <a href="../.." title="farwmarth’s note" class="md-icon md-icon--home md-header-nav__button">
-          </a>
-        
+        <a href="http://learndocs.farwmarth.com/" title="farwmarth’s note" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  MakeFile
-                </span>
-              
+              <span class="md-header-nav__topic">
+                farwmarth’s note
+              </span>
+              <span class="md-header-nav__topic">
+                使用变量
+              </span>
             
-            使用变量
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
-  <div class="md-search__inner">
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
-            Type to start searching
+          <div class="md-search-result__meta">
+            键入以开始搜索
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -109,18 +145,17 @@
     </div>
   </div>
 </div>
+          
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source">
-          
-        </div>
-      </div>
+      
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+        
       
       
       <main class="md-main">
@@ -131,10 +166,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-icon md-icon--home md-nav__button"></i>
-    
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://learndocs.farwmarth.com/" title="farwmarth’s note" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
     farwmarth’s note
   </label>
   
@@ -162,10 +199,82 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      数据结构与算法
+      游戏服务器
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        游戏服务器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      skynet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        skynet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../game_server/skynet/skynet_intro/" title="skynet简介" class="md-nav__link">
+      skynet简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../game_server/skynet/skynet_build/" title="skynet快速入门" class="md-nav__link">
+      skynet快速入门
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数据结构与算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
         数据结构与算法
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -195,13 +304,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-4">
       c++基础
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         c++基础
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -291,13 +400,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -627,6 +736,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/py_exceptions/" title="疑难杂症" class="md-nav__link">
+      疑难杂症
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -639,13 +760,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       lua
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         lua
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -675,13 +796,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       swift
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         swift
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -711,13 +832,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       php
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         php
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -747,13 +868,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       git
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         git
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -855,13 +976,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-10">
       Vim编辑器
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-10">
         Vim编辑器
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -876,558 +997,6 @@
     <a href="../../ide/vim/" title="vim" class="md-nav__link">
       vim
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Atom编辑器
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Atom编辑器
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/" title="atom" class="md-nav__link">
-      atom
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2">
-    
-    <label class="md-nav__link" for="nav-10-2">
-      新手入门
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-2">
-        新手入门
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.1-Why-Atom/" title="为什么选择Atom？" class="md-nav__link">
-      为什么选择Atom？
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.2-Installing-Atom/" title="安装Atom" class="md-nav__link">
-      安装Atom
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.3-Atom-Basics/" title="Atom基础" class="md-nav__link">
-      Atom基础
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.4-Summary/" title="小结" class="md-nav__link">
-      小结
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-3" type="checkbox" id="nav-10-3">
-    
-    <label class="md-nav__link" for="nav-10-3">
-      使用Atom
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-3">
-        使用Atom
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.1-Atom-Packages/" title="Atom中的包" class="md-nav__link">
-      Atom中的包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.2-Moving-in-Atom/" title="在Atom中移动" class="md-nav__link">
-      在Atom中移动
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.3-Atom-Selections/" title="文本选择" class="md-nav__link">
-      文本选择
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.4-Editing-and-Deleting-Text/" title="编辑和删除文本" class="md-nav__link">
-      编辑和删除文本
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.5-Find-and-Replace/" title="查找和替换" class="md-nav__link">
-      查找和替换
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.6-Snippets/" title="代码段" class="md-nav__link">
-      代码段
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.7-Autocomplete/" title="自动补全" class="md-nav__link">
-      自动补全
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.8-Folding/" title="折叠" class="md-nav__link">
-      折叠
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.9-Panes/" title="面板" class="md-nav__link">
-      面板
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.10-Grammar/" title="语法" class="md-nav__link">
-      语法
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.11-Version-Control-in-Atom/" title="Atom中的版本控制" class="md-nav__link">
-      Atom中的版本控制
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.12-Writing-in-Atom/" title="在Atom中写作" class="md-nav__link">
-      在Atom中写作
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.13-Basic-Customization/" title="基本的自定义" class="md-nav__link">
-      基本的自定义
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.14-Summary/" title="小结" class="md-nav__link">
-      小结
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4">
-    
-    <label class="md-nav__link" for="nav-10-4">
-      Hacking Atom
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-4">
-        Hacking Atom
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.1-Tools-of-the-Trade/" title="所需工具" class="md-nav__link">
-      所需工具
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.2-The-Init-File/" title="初始文件" class="md-nav__link">
-      初始文件
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.3-Package-Word-Count/" title="字数统计包" class="md-nav__link">
-      字数统计包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.4-Package-Modifying-Text/" title="文本处理包" class="md-nav__link">
-      文本处理包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.5-Creating-a-Theme/" title="创建主题" class="md-nav__link">
-      创建主题
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.6-Iconography/" title="图标" class="md-nav__link">
-      图标
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.7-Debugging/" title="调试" class="md-nav__link">
-      调试
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.8-Writing-specs/" title="编写 spec" class="md-nav__link">
-      编写 spec
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.9-Converting-from-TextMate/" title="从Textmate中转换" class="md-nav__link">
-      从Textmate中转换
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-5" type="checkbox" id="nav-10-5">
-    
-    <label class="md-nav__link" for="nav-10-5">
-      在Atom背后
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-5">
-        在Atom背后
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.1-Configuration-API/" title="配置API" class="md-nav__link">
-      配置API
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.2-Keymaps-In-Depth/" title="深入键表（keymap）" class="md-nav__link">
-      深入键表（keymap）
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.3-Scoped-Settings-Scopes-and-Scope-Descriptors/" title="作用域设置、作用域和作用域描述符" class="md-nav__link">
-      作用域设置、作用域和作用域描述符
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.4-Serialization-in-Atom/" title="Atom中的序列化" class="md-nav__link">
-      Atom中的序列化
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.5-Developing-Node-Modules/" title="开发Node模块" class="md-nav__link">
-      开发Node模块
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.6-Interacting-With-Other-Packages-Via-Services/" title="通过服务和其它包交互" class="md-nav__link">
-      通过服务和其它包交互
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.7-Maintaining-Your-Packages/" title="维护你的包" class="md-nav__link">
-      维护你的包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.8-Summary/" title="小结" class="md-nav__link">
-      小结
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1550,7 +1119,7 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
@@ -1673,24 +1242,27 @@ MakeFlags。这样可以避免和系统的变量冲突，而发生意外的事�
 来表示。</p>
 <p>变量可以使用在许多地方，如规则中的“目标”、“依赖”、“命令”以及新的变量中。先看一个例子：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>objects = program.o foo.o utils.o
+<div class="codehilite"><pre><span></span>objects = program.o foo.o utils.o
 program : $(objects)
     cc -o program $(objects)
 
-$(objects) : defs.h</code></pre>
+$(objects) : defs.h
+</pre></div>
 
 
 <p>变量会在使用它的地方精确地展开，就像C/C++中的宏一样，例如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>foo = c
+<div class="codehilite"><pre><span></span>foo = c
 prog.o : prog.$(foo)
-    $(foo)$(foo) -$(foo) prog.$(foo)</code></pre>
+    $(foo)$(foo) -$(foo) prog.$(foo)
+</pre></div>
 
 
 <p>展开后得到：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>prog.o : prog.c
-    cc -c prog.c</code></pre>
+<div class="codehilite"><pre><span></span>prog.o : prog.c
+    cc -c prog.c
+</pre></div>
 
 
 <p>当然，千万不要在你的Makefile中这样干，这里只是举个例子来表明Makefile中的变量在使用处展开的真实样子。可见其就是一个“替代”的原理。</p>
@@ -1700,12 +1272,13 @@ prog.o : prog.$(foo)
 <p>先看第一种方式，也就是简单的使用 <code>=</code> 号，在 <code>=</code>
 左侧是变量，右侧是变量的值，右侧变量的值可以定义在文件的任何一处，也就是说，右侧中的变量不一定非要是已定义好的值，其也可以使用后面定义的值。如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>foo = $(bar)
+<div class="codehilite"><pre><span></span>foo = $(bar)
 bar = $(ugh)
 ugh = Huh?
 
 all:
-    echo $(foo)</code></pre>
+    echo $(foo)
+</pre></div>
 
 
 <p>我们执行“make all”将会打出变量 <code>$(foo)</code> 的值是 <code>Huh?</code> （ <code>$(foo)</code>
@@ -1713,77 +1286,88 @@ all:
 <code>Huh?</code> ）可见，变量是可以使用后面的变量来定义的。</p>
 <p>这个功能有好的地方，也有不好的地方，好的地方是，我们可以把变量的真实值推到后面来定义，如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>CFLAGS = $(include_dirs) -O
-include_dirs = -Ifoo -Ibar</code></pre>
+<div class="codehilite"><pre><span></span>CFLAGS = $(include_dirs) -O
+include_dirs = -Ifoo -Ibar
+</pre></div>
 
 
 <p>当 <code>CFLAGS</code> 在命令中被展开时，会是 <code>-Ifoo -Ibar -O</code>
 。但这种形式也有不好的地方，那就是递归定义，如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>CFLAGS = $(CFLAGS) -O</code></pre>
+<div class="codehilite"><pre><span></span><span class="nv">CFLAGS</span> <span class="o">=</span> <span class="k">$(</span>CFLAGS<span class="k">)</span> -O
+</pre></div>
 
 
 <p>或：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>A = $(B)
-B = $(A)</code></pre>
+<div class="codehilite"><pre><span></span><span class="nv">A</span> <span class="o">=</span> <span class="k">$(</span>B<span class="k">)</span>
+<span class="nv">B</span> <span class="o">=</span> <span class="k">$(</span>A<span class="k">)</span>
+</pre></div>
 
 
 <p>这会让make陷入无限的变量展开过程中去，当然，我们的make是有能力检测这样的定义，并会报错。还有就是如果在变量中使用函数，那么，这种方式会让我们的make运行时非常慢，更糟糕的是，他会使用得两个make的函数“wildcard”和“shell”发生不可预知的错误。因为你不会知道这两个函数会被调用多少次。</p>
 <p>为了避免上面的这种方法，我们可以使用make中的另一种用变量来定义变量的方法。这种方法使用的是
 <code>:=</code> 操作符，如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>x := foo
+<div class="codehilite"><pre><span></span>x := foo
 y := $(x) bar
-x := later</code></pre>
+x := later
+</pre></div>
 
 
 <p>其等价于：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>y := foo bar
-x := later</code></pre>
+<div class="codehilite"><pre><span></span>y := foo bar
+x := later
+</pre></div>
 
 
 <p>值得一提的是，这种方法，前面的变量不能使用后面的变量，只能使用前面已定义好了的变量。如果是这样：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>y := $(x) bar
-x := foo</code></pre>
+<div class="codehilite"><pre><span></span>y := $(x) bar
+x := foo
+</pre></div>
 
 
 <p>那么，y的值是“bar”，而不是“foo bar”。</p>
 <p>上面都是一些比较简单的变量使用了，让我们来看一个复杂的例子，其中包括了make的函数、条件表达式和一个系统变量“MAKELEVEL”的使用：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>ifeq (0,${MAKELEVEL})
+<div class="codehilite"><pre><span></span>ifeq (0,<span class="cp">${</span><span class="n">MAKELEVEL</span><span class="cp">}</span>)
 cur-dir   := $(shell pwd)
 whoami    := $(shell whoami)
 host-type := $(shell arch)
-MAKE := ${MAKE} host-type=${host-type} whoami=${whoami}
-endif</code></pre>
+MAKE := <span class="cp">${</span><span class="n">MAKE</span><span class="cp">}</span> host-type=<span class="cp">${</span><span class="n">host</span><span class="o">-</span><span class="nb">type</span><span class="cp">}</span> whoami=<span class="cp">${</span><span class="n">whoami</span><span class="cp">}</span>
+endif
+</pre></div>
 
 
 <p>关于条件表达式和函数，我们在后面再说，对于系统变量“MAKELEVEL”，其意思是，如果我们的make有一个嵌套执行的动作（参见前面的“嵌套使用make”），那么，这个变量会记录了我们的当前Makefile的调用层数。</p>
 <p>下面再介绍两个定义变量时我们需要知道的，请先看一个例子，如果我们要定义一个变量，其值是一个空格，那么我们可以这样来：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>nullstring :=
-space := $(nullstring) # end of the line</code></pre>
+<div class="codehilite"><pre><span></span>nullstring :=
+space := $(nullstring) # end of the line
+</pre></div>
 
 
 <p>nullstring是一个Empty变量，其中什么也没有，而我们的space的值是一个空格。因为在操作符的右边是很难描述一个空格的，这里采用的技术很管用，先用一个Empty变量来标明变量的值开始了，而后面采用“#”注释符来表示变量定义的终止，这样，我们可以定义出其值是一个空格的变量。请注意这里关于“#”的使用，注释符“#”的这种特性值得我们注意，如果我们这样定义一个变量：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>dir := /foo/bar    # directory to put the frobs in</code></pre>
+<div class="codehilite"><pre><span></span>dir := /foo/bar    # directory to put the frobs in
+</pre></div>
 
 
 <p>dir这个变量的值是“/foo/bar”，后面还跟了4个空格，如果我们这样使用这样变量来指定别的目录——“$(dir)/file”那么就完蛋了。</p>
 <p>还有一个比较有用的操作符是 <code>?=</code> ，先看示例：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>FOO ?= bar</code></pre>
+<div class="codehilite"><pre><span></span>FOO ?= bar
+</pre></div>
 
 
 <p>其含义是，如果FOO没有被定义过，那么变量FOO的值就是“bar”，如果FOO先前被定义过，那么这条语将什么也不做，其等价于：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>ifeq ($(origin FOO), undefined)
+<div class="codehilite"><pre><span></span>ifeq ($(origin FOO), undefined)
     FOO = bar
-endif</code></pre>
+endif
+</pre></div>
 
 
 <h1 id="_3">变量高级用法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
@@ -1793,8 +1377,9 @@ endif</code></pre>
 ，其意思是，把变量“var”中所有以“a”字串“结尾”的“a”替换成“b”字串。这里的“结尾”意思是“空格”或是“结束符”。</p>
 <p>还是看一个示例吧：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>foo := a.o b.o c.o
-bar := $(foo:.o=.c)</code></pre>
+<div class="codehilite"><pre><span></span>foo := a.o b.o c.o
+bar := $(foo:.o=.c)
+</pre></div>
 
 
 <p>这个示例中，我们先定义了一个 <code>$(foo)</code> 变量，而第二行的意思是把
@@ -1802,46 +1387,51 @@ bar := $(foo:.o=.c)</code></pre>
 <code>$(bar)</code> 的值就是“a.c b.c c.c”。</p>
 <p>另外一种变量替换的技术是以“静态模式”（参见前面章节）定义的，如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>foo := a.o b.o c.o
-bar := $(foo:%.o=%.c)</code></pre>
+<div class="codehilite"><pre><span></span>foo := a.o b.o c.o
+bar := $(foo:%.o=%.c)
+</pre></div>
 
 
 <p>这依赖于被替换字串中的有相同的模式，模式中必须包含一个 <code>%</code>
 字符，这个例子同样让 <code>$(bar)</code> 变量的值为“a.c b.c c.c”。</p>
 <p>第二种高级用法是——“把变量的值再当成变量”。先看一个例子：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>x = y
+<div class="codehilite"><pre><span></span>x = y
 y = z
-a := $($(x))</code></pre>
+a := $($(x))
+</pre></div>
 
 
 <p>在这个例子中，$(x)的值是“y”，所以$($(x))就是$(y)，于是$(a)的值就是“z”。（注意，是“x=y”，而不是“x=$(y)”）</p>
 <p>我们还可以使用更多的层次：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>x = y
+<div class="codehilite"><pre><span></span>x = y
 y = z
 z = u
-a := $($($(x)))</code></pre>
+a := $($($(x)))
+</pre></div>
 
 
 <p>这里的 <code>$(a)</code> 的值是“u”，相关的推导留给读者自己去做吧。</p>
 <p>让我们再复杂一点，使用上“在变量定义中使用变量”的第一个方式，来看一个例子：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>x = $(y)
+<div class="codehilite"><pre><span></span>x = $(y)
 y = z
 z = Hello
-a := $($(x))</code></pre>
+a := $($(x))
+</pre></div>
 
 
 <p>这里的 <code>$($(x))</code> 被替换成了 <code>$($(y))</code> ，因为 <code>$(y)</code>
 值是“z”，所以，最终结果是： <code>a:=$(z)</code> ，也就是“Hello”。</p>
 <p>再复杂一点，我们再加上函数：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>x = variable1
+<div class="codehilite"><pre><span></span>x = variable1
 variable2 := Hello
 y = $(subst 1,2,$(x))
 z = y
-a := $($($(z)))</code></pre>
+a := $($($(z)))
+</pre></div>
 
 
 <p>这个例子中， <code>$($($(z)))</code> 扩展为 <code>$($(y))</code> ，而其再次被扩展为
@@ -1851,20 +1441,22 @@ a := $($($(z)))</code></pre>
 的值——“Hello”。（喔，好不容易）</p>
 <p>在这种方式中，或要可以使用多个变量来组成一个变量的名字，然后再取其值：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>first_second = Hello
+<div class="codehilite"><pre><span></span>first_second = Hello
 a = first
 b = second
-all = $($a_$b)</code></pre>
+all = $($a_$b)
+</pre></div>
 
 
 <p>这里的 <code>$a_$b</code> 组成了“first_second”，于是， <code>$(all)</code>
 的值就是“Hello”。</p>
 <p>再来看看结合第一种技术的例子：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>a_objects := a.o b.o c.o
+<div class="codehilite"><pre><span></span>a_objects := a.o b.o c.o
 1_objects := 1.o 2.o 3.o
 
-sources := $($(a1)_objects:.o=.c)</code></pre>
+sources := $($(a1)_objects:.o=.c)
+</pre></div>
 
 
 <p>这个例子中，如果 <code>$(a1)</code> 的值是“a”的话，那么， <code>$(sources)</code>
@@ -1872,7 +1464,7 @@ sources := $($(a1)_objects:.o=.c)</code></pre>
 的值是“1.c 2.c 3.c”。</p>
 <p>再来看一个这种技术和“函数”与“条件语句”一同使用的例子：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>ifdef do_sort
+<div class="codehilite"><pre><span></span>ifdef do_sort
     func := sort
 else
     func := strip
@@ -1880,7 +1472,8 @@ endif
 
 bar := a d b g q c
 
-foo := $($(func) $(bar))</code></pre>
+foo := $($(func) $(bar))
+</pre></div>
 
 
 <p>这个示例中，如果定义了“do_sort”，那么： <code>foo := $(sort a d b g q c)</code>
@@ -1889,27 +1482,30 @@ q”，而如果没有定义“do_sort”，那么： <code>foo := $(strip a d b
 ，调用的就是strip函数。</p>
 <p>当然，“把变量的值再当成变量”这种技术，同样可以用在操作符的左边:</p>
 <p>::</p>
-<pre class="codehilite"><code>dir = foo
+<div class="codehilite"><pre><span></span>dir = foo
 $(dir)_sources := $(wildcard $(dir)/*.c)
 define $(dir)_print
 lpr $($(dir)_sources)
-endef</code></pre>
+endef
+</pre></div>
 
 
 <p>这个例子中定义了三个变量：“dir”，“foo_sources”和“foo_print”。</p>
 <h1 id="_4">追加变量值<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
 <p>我们可以使用 <code>+=</code> 操作符给变量追加值，如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>objects = main.o foo.o bar.o utils.o
-objects += another.o</code></pre>
+<div class="codehilite"><pre><span></span>objects = main.o foo.o bar.o utils.o
+objects += another.o
+</pre></div>
 
 
 <p>于是，我们的 <code>$(objects)</code> 值变成：“main.o foo.o bar.o utils.o
 another.o”（another.o被追加进去了）</p>
 <p>使用 <code>+=</code> 操作符，可以模拟为下面的这种例子：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>objects = main.o foo.o bar.o utils.o
-objects := $(objects) another.o</code></pre>
+<div class="codehilite"><pre><span></span>objects = main.o foo.o bar.o utils.o
+objects := $(objects) another.o
+</pre></div>
 
 
 <p>所不同的是，用 <code>+=</code> 更为简洁。</p>
@@ -1918,20 +1514,23 @@ objects := $(objects) another.o</code></pre>
 会继承于前次操作的赋值符。如果前一次的是 <code>:=</code> ，那么 <code>+=</code> 会以
 <code>:=</code> 作为其赋值符，如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>variable := value
-variable += more</code></pre>
+<div class="codehilite"><pre><span></span>variable := value
+variable += more
+</pre></div>
 
 
 <p>等价于：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>variable := value
-variable := $(variable) more</code></pre>
+<div class="codehilite"><pre><span></span>variable := value
+variable := $(variable) more
+</pre></div>
 
 
 <p>但如果是这种情况：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>variable = value
-variable += more</code></pre>
+<div class="codehilite"><pre><span></span>variable = value
+variable += more
+</pre></div>
 
 
 <p>由于前次的赋值符是 <code>=</code> ，所以 <code>+=</code> 也会以 <code>=</code>
@@ -1939,21 +1538,24 @@ variable += more</code></pre>
 <h1 id="override">override 指示符<a class="headerlink" href="#override" title="Permanent link">&para;</a></h1>
 <p>如果有变量是通常make的命令行参数设置的，那么Makefile中对这个变量的赋值会被忽略。如果你想在Makefile中设置这类参数的值，那么，你可以使用“override”指示符。其语法是:</p>
 <p>::</p>
-<pre class="codehilite"><code>override &lt;variable&gt;; = &lt;value&gt;;
+<div class="codehilite"><pre><span></span>override &amp;lt;variable&amp;gt;; = &amp;lt;value&amp;gt;;
 
-override &lt;variable&gt;; := &lt;value&gt;;</code></pre>
+override &amp;lt;variable&amp;gt;; := &amp;lt;value&amp;gt;;
+</pre></div>
 
 
 <p>当然，你还可以追加:</p>
 <p>::</p>
-<pre class="codehilite"><code>override &lt;variable&gt;; += &lt;more text&gt;;</code></pre>
+<div class="codehilite"><pre><span></span>override &amp;lt;variable&amp;gt;; += &amp;lt;more text&amp;gt;;
+</pre></div>
 
 
 <p>对于多行的变量定义，我们用define指示符，在define指示符前，也同样可以使用override指示符，如:</p>
 <p>::</p>
-<pre class="codehilite"><code>override define foo
+<div class="codehilite"><pre><span></span>override define foo
 bar
-endef</code></pre>
+endef
+</pre></div>
 
 
 <h1 id="_5">多行变量<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
@@ -1963,10 +1565,11 @@ endef</code></pre>
 <code>Tab</code> 键开头，那么make 就不会把其认为是命令。</p>
 <p>下面的这个示例展示了define的用法:</p>
 <p>::</p>
-<pre class="codehilite"><code>define two-lines
+<div class="codehilite"><pre><span></span>define two-lines
 echo foo
 echo $(bar)
-endef</code></pre>
+endef
+</pre></div>
 
 
 <h1 id="_6">环境变量<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
@@ -1984,9 +1587,10 @@ endef</code></pre>
 Variable”，它可以和“全局变量”同名，因为它的作用范围只在这条规则以及连带规则中，所以其值也只在作用范围内有效。而不会影响规则链以外的全局变量的值。</p>
 <p>其语法是：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>&lt;target ...&gt; : &lt;variable-assignment&gt;;
+<div class="codehilite"><pre><span></span>&amp;lt;target ...&amp;gt; : &amp;lt;variable-assignment&amp;gt;;
 
-&lt;target ...&gt; : overide &lt;variable-assignment&gt;</code></pre>
+&amp;lt;target ...&amp;gt; : overide &amp;lt;variable-assignment&amp;gt;
+</pre></div>
 
 
 <p><variable-assignment>;可以是前面讲过的各种赋值表达式，如 <code>=</code> 、 <code>:=</code>
@@ -1994,18 +1598,19 @@ Variable”，它可以和“全局变量”同名，因为它的作用范围只
 。第二个语法是针对于make命令行带入的变量，或是系统环境变量。</p>
 <p>这个特性非常的有用，当我们设置了这样一个变量，这个变量会作用到由这个目标所引发的所有的规则中去。如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>prog : CFLAGS = -g
-prog : prog.o foo.o bar.o
-    $(CC) $(CFLAGS) prog.o foo.o bar.o
+<div class="codehilite"><pre><span></span><span class="n">prog</span> <span class="o">:</span> <span class="n">CFLAGS</span> <span class="o">=</span> <span class="o">-</span><span class="n">g</span>
+<span class="n">prog</span> <span class="o">:</span> <span class="n">prog</span><span class="o">.</span><span class="na">o</span> <span class="n">foo</span><span class="o">.</span><span class="na">o</span> <span class="n">bar</span><span class="o">.</span><span class="na">o</span>
+    <span class="n">$</span><span class="o">(</span><span class="n">CC</span><span class="o">)</span> <span class="n">$</span><span class="o">(</span><span class="n">CFLAGS</span><span class="o">)</span> <span class="n">prog</span><span class="o">.</span><span class="na">o</span> <span class="n">foo</span><span class="o">.</span><span class="na">o</span> <span class="n">bar</span><span class="o">.</span><span class="na">o</span>
 
-prog.o : prog.c
-    $(CC) $(CFLAGS) prog.c
+<span class="n">prog</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">prog</span><span class="o">.</span><span class="na">c</span>
+    <span class="n">$</span><span class="o">(</span><span class="n">CC</span><span class="o">)</span> <span class="n">$</span><span class="o">(</span><span class="n">CFLAGS</span><span class="o">)</span> <span class="n">prog</span><span class="o">.</span><span class="na">c</span>
 
-foo.o : foo.c
-    $(CC) $(CFLAGS) foo.c
+<span class="n">foo</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">foo</span><span class="o">.</span><span class="na">c</span>
+    <span class="n">$</span><span class="o">(</span><span class="n">CC</span><span class="o">)</span> <span class="n">$</span><span class="o">(</span><span class="n">CFLAGS</span><span class="o">)</span> <span class="n">foo</span><span class="o">.</span><span class="na">c</span>
 
-bar.o : bar.c
-    $(CC) $(CFLAGS) bar.c</code></pre>
+<span class="n">bar</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">bar</span><span class="o">.</span><span class="na">c</span>
+    <span class="n">$</span><span class="o">(</span><span class="n">CC</span><span class="o">)</span> <span class="n">$</span><span class="o">(</span><span class="n">CFLAGS</span><span class="o">)</span> <span class="n">bar</span><span class="o">.</span><span class="na">c</span>
+</pre></div>
 
 
 <p>在这个示例中，不管全局的 <code>$(CFLAGS)</code>
@@ -2017,14 +1622,16 @@ Variable），通过上面的目标变量中，我们知道，变量可以定义
 <p>我们知道，make的“模式”一般是至少含有一个 <code>%</code>
 的，所以，我们可以以如下方式给所有以 <code>.o</code> 结尾的目标定义目标变量：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>%.o : CFLAGS = -O</code></pre>
+<div class="codehilite"><pre><span></span><span class="c">%.o : CFLAGS = -O</span>
+</pre></div>
 
 
 <p>同样，模式变量的语法和“目标变量”一样：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>&lt;pattern ...&gt;; : &lt;variable-assignment&gt;;
+<div class="codehilite"><pre><span></span>&amp;lt;pattern ...&amp;gt;; : &amp;lt;variable-assignment&amp;gt;;
 
-&lt;pattern ...&gt;; : override &lt;variable-assignment&gt;;</code></pre>
+&amp;lt;pattern ...&amp;gt;; : override &amp;lt;variable-assignment&amp;gt;;
+</pre></div>
 
 
 <p>override同样是针对于系统环境传入的变量，或是make命令行指定的变量。</p>
@@ -2034,6 +1641,8 @@ Variable），通过上面的目标变量中，我们知道，变量可以定义
               
               
                 
+
+
               
             </article>
           </div>
@@ -2053,7 +1662,7 @@ Variable），通过上面的目标变量中，我们知道，变量可以定义
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Previous
+                  后退
                 </span>
                 书写命令
               </span>
@@ -2065,7 +1674,7 @@ Variable），通过上面的目标变量中，我们知道，变量可以定义
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Next
+                  前进
                 </span>
                 使用条件判断
               </span>
@@ -2083,13 +1692,13 @@ Variable），通过上面的目标变量中，我们知道，变量可以定义
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright (c) 2016 farwmarth
+            Copyright &copy; 2016 - 2018 farwmarth
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -2101,8 +1710,26 @@ Variable），通过上面的目标变量中，我们知道，变量可以定义
       
     </div>
     
-      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
-      <script>app.initialize({url:{base:"../.."}})</script>
+      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     

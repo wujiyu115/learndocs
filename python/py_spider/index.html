@@ -1,10 +1,16 @@
 
+
+
+
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="farwmarth’s document">
       
       
         <link rel="canonical" href="http://learndocs.farwmarth.com/python/py_spider/">
@@ -13,9 +19,26 @@
         <meta name="author" content="farwmarth">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+        <meta name="lang:clipboard.copy" content="复制">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
       
@@ -23,32 +46,35 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
-    
-    
       
         
         
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <meta name="theme-color" content="#546e7a">
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue-gray">
   
     <svg class="md-svg">
       <defs>
@@ -56,52 +82,62 @@
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#python" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <a href="../.." title="farwmarth’s note" class="md-icon md-icon--home md-header-nav__button">
-          </a>
-        
+        <a href="http://learndocs.farwmarth.com/" title="farwmarth’s note" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  python
-                </span>
-              
+              <span class="md-header-nav__topic">
+                farwmarth’s note
+              </span>
+              <span class="md-header-nav__topic">
+                爬虫
+              </span>
             
-            爬虫
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
-  <div class="md-search__inner">
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
-            Type to start searching
+          <div class="md-search-result__meta">
+            键入以开始搜索
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -109,18 +145,17 @@
     </div>
   </div>
 </div>
+          
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source">
-          
-        </div>
-      </div>
+      
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+        
       
       
       <main class="md-main">
@@ -131,10 +166,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-icon md-icon--home md-nav__button"></i>
-    
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://learndocs.farwmarth.com/" title="farwmarth’s note" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
     farwmarth’s note
   </label>
   
@@ -162,10 +199,82 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      数据结构与算法
+      游戏服务器
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        游戏服务器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      skynet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        skynet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../game_server/skynet/skynet_intro/" title="skynet简介" class="md-nav__link">
+      skynet简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../game_server/skynet/skynet_build/" title="skynet快速入门" class="md-nav__link">
+      skynet快速入门
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数据结构与算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
         数据结构与算法
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -195,13 +304,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-4">
       c++基础
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         c++基础
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -293,13 +402,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -602,12 +711,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         爬虫
       </label>
     
@@ -622,7 +731,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -722,6 +831,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -753,6 +864,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../py_exceptions/" title="疑难杂症" class="md-nav__link">
+      疑难杂症
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -765,13 +888,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       lua
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         lua
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -801,13 +924,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       swift
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         swift
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -837,13 +960,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       php
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         php
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -873,13 +996,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       git
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         git
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -981,13 +1104,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-10">
       Vim编辑器
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-10">
         Vim编辑器
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1002,558 +1125,6 @@
     <a href="../../ide/vim/" title="vim" class="md-nav__link">
       vim
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Atom编辑器
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Atom编辑器
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/" title="atom" class="md-nav__link">
-      atom
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2">
-    
-    <label class="md-nav__link" for="nav-10-2">
-      新手入门
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-2">
-        新手入门
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.1-Why-Atom/" title="为什么选择Atom？" class="md-nav__link">
-      为什么选择Atom？
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.2-Installing-Atom/" title="安装Atom" class="md-nav__link">
-      安装Atom
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.3-Atom-Basics/" title="Atom基础" class="md-nav__link">
-      Atom基础
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.4-Summary/" title="小结" class="md-nav__link">
-      小结
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-3" type="checkbox" id="nav-10-3">
-    
-    <label class="md-nav__link" for="nav-10-3">
-      使用Atom
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-3">
-        使用Atom
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.1-Atom-Packages/" title="Atom中的包" class="md-nav__link">
-      Atom中的包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.2-Moving-in-Atom/" title="在Atom中移动" class="md-nav__link">
-      在Atom中移动
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.3-Atom-Selections/" title="文本选择" class="md-nav__link">
-      文本选择
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.4-Editing-and-Deleting-Text/" title="编辑和删除文本" class="md-nav__link">
-      编辑和删除文本
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.5-Find-and-Replace/" title="查找和替换" class="md-nav__link">
-      查找和替换
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.6-Snippets/" title="代码段" class="md-nav__link">
-      代码段
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.7-Autocomplete/" title="自动补全" class="md-nav__link">
-      自动补全
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.8-Folding/" title="折叠" class="md-nav__link">
-      折叠
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.9-Panes/" title="面板" class="md-nav__link">
-      面板
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.10-Grammar/" title="语法" class="md-nav__link">
-      语法
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.11-Version-Control-in-Atom/" title="Atom中的版本控制" class="md-nav__link">
-      Atom中的版本控制
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.12-Writing-in-Atom/" title="在Atom中写作" class="md-nav__link">
-      在Atom中写作
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.13-Basic-Customization/" title="基本的自定义" class="md-nav__link">
-      基本的自定义
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.14-Summary/" title="小结" class="md-nav__link">
-      小结
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4">
-    
-    <label class="md-nav__link" for="nav-10-4">
-      Hacking Atom
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-4">
-        Hacking Atom
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.1-Tools-of-the-Trade/" title="所需工具" class="md-nav__link">
-      所需工具
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.2-The-Init-File/" title="初始文件" class="md-nav__link">
-      初始文件
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.3-Package-Word-Count/" title="字数统计包" class="md-nav__link">
-      字数统计包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.4-Package-Modifying-Text/" title="文本处理包" class="md-nav__link">
-      文本处理包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.5-Creating-a-Theme/" title="创建主题" class="md-nav__link">
-      创建主题
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.6-Iconography/" title="图标" class="md-nav__link">
-      图标
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.7-Debugging/" title="调试" class="md-nav__link">
-      调试
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.8-Writing-specs/" title="编写 spec" class="md-nav__link">
-      编写 spec
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.9-Converting-from-TextMate/" title="从Textmate中转换" class="md-nav__link">
-      从Textmate中转换
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-5" type="checkbox" id="nav-10-5">
-    
-    <label class="md-nav__link" for="nav-10-5">
-      在Atom背后
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-5">
-        在Atom背后
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.1-Configuration-API/" title="配置API" class="md-nav__link">
-      配置API
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.2-Keymaps-In-Depth/" title="深入键表（keymap）" class="md-nav__link">
-      深入键表（keymap）
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.3-Scoped-Settings-Scopes-and-Scope-Descriptors/" title="作用域设置、作用域和作用域描述符" class="md-nav__link">
-      作用域设置、作用域和作用域描述符
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.4-Serialization-in-Atom/" title="Atom中的序列化" class="md-nav__link">
-      Atom中的序列化
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.5-Developing-Node-Modules/" title="开发Node模块" class="md-nav__link">
-      开发Node模块
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.6-Interacting-With-Other-Packages-Via-Services/" title="通过服务和其它包交互" class="md-nav__link">
-      通过服务和其它包交互
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.7-Maintaining-Your-Packages/" title="维护你的包" class="md-nav__link">
-      维护你的包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.8-Summary/" title="小结" class="md-nav__link">
-      小结
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1759,7 +1330,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">目录</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -1859,6 +1430,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -1880,125 +1453,135 @@
 + <a href="http://blog.binux.me/2015/01/pyspider-tutorial-level-1-html-and-css-selector/">http://blog.binux.me/2015/01/pyspider-tutorial-level-1-html-and-css-selector/</a></p>
 <h3 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <h3 id="python_1">安装依赖环境和python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="language-shell">sudo apt-get install python python-dev python-distribute python-pip libcurl4-openssl-dev libxml2-dev libxslt1-dev python-lxml
-sudo apt-get install python-pip</code></pre>
+<div class="codehilite"><pre><span></span>sudo apt-get install python python-dev python-distribute python-pip libcurl4-openssl-dev libxml2-dev libxslt1-dev python-lxml
+sudo apt-get install python-pip
+</pre></div>
 
 
 <h4 id="phantomjs">安装PhantomJS<a class="headerlink" href="#phantomjs" title="Permanent link">&para;</a></h4>
 <p>官网:<a href="http://phantomjs.org/">http://phantomjs.org/</a>
 PhantomJS是一个基于 WebKit 的非界面渲染html的引擎,用于 页面自动化 ， 网络监测 ， 网页截屏 ，以及 无界面测试 等</p>
-<pre class="codehilite"><code class="language-shell">sudo apt-get install phantomjs</code></pre>
+<div class="codehilite"><pre><span></span>sudo apt-get install phantomjs
+</pre></div>
 
 
 <h4 id="pyspider_1">安装pyspider<a class="headerlink" href="#pyspider_1" title="Permanent link">&para;</a></h4>
-<pre class="codehilite"><code class="language-shell">pip install pyspider</code></pre>
+<div class="codehilite"><pre><span></span>pip install pyspider
+</pre></div>
 
 
 <h4 id="_2">错误<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ul>
 <li>connect to scheduler rpc error: error(111, 'Connection refused')</li>
 </ul>
-<pre class="codehilite"><code class="language-shell">pip install -U supernova</code></pre>
+<div class="codehilite"><pre><span></span>pip install -U supernova
+</pre></div>
 
 
 <h3 id="_3">启动<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="language-shell">pyspider</code></pre>
+<div class="codehilite"><pre><span></span>pyspider
+</pre></div>
 
 
 <h3 id="_4">创建项目<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>打开<code>localhost:5000</code>打开<code>dashboard</code>,<code>create new project</code>
-<img alt="spider" src="../../_static/spider.png" /></p>
+<img alt="spider" src="/_static/spider.png" /></p>
 <p>创建脚本:我这里以抓取一下云风的所有博文链接为例:</p>
-<pre class="codehilite"><code class="language-python"># -*- coding: utf-8 -*-
-from pyspider.libs.base_handler import *
-import re
-class Handler(BaseHandler):
-    crawl_config = {
-        &quot;message_queue&quot;: &quot;redis://localhost:6379/db&quot;
-    }
-    #开启启动任务入口,一般为主页
-    @every(minutes=24 * 60)
-    def on_start(self):
-        self.crawl('http://blog.codingnow.com/', callback=self.index_page)
+<div class="codehilite"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">pyspider.libs.base_handler</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="k">class</span> <span class="nc">Handler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
+    <span class="n">crawl_config</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;message_queue&quot;</span><span class="p">:</span> <span class="s2">&quot;redis://localhost:6379/db&quot;</span>
+    <span class="p">}</span>
+    <span class="c1">#开启启动任务入口,一般为主页</span>
+    <span class="nd">@every</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">on_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="s1">&#39;http://blog.codingnow.com/&#39;</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">index_page</span><span class="p">)</span>
 
-    #根据标签过滤,页面上有个[enable css selector helper]可以快速定位
-    @config(age=10 * 24 * 60 * 60)
-    def index_page(self, response):
-        for each in response.doc('.module-archives li &gt; a[href^=&quot;http&quot;]').items():
-            if re.match(&quot;^http://blog.codingnow.com.*/$&quot;, each.attr.href):
-                self.crawl(each.attr.href, callback=self.second_index_page)
+    <span class="c1">#根据标签过滤,页面上有个[enable css selector helper]可以快速定位</span>
+    <span class="nd">@config</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">10</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">index_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">doc</span><span class="p">(</span><span class="s1">&#39;.module-archives li &gt; a[href^=&quot;http&quot;]&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^http://blog.codingnow.com.*/$&quot;</span><span class="p">,</span> <span class="n">each</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">each</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">second_index_page</span><span class="p">)</span>
 
-    #我这里做了一个二级抓取,第一级为日期分类
-    @config(age=10 * 24 * 60 * 60)
-    def second_index_page(self, response):
-        for each in response.doc('.permalink[href^=&quot;http&quot;]').items():
-            if re.match(&quot;^http://blog.codingnow.com&quot;, each.attr.href):
-                self.crawl(each.attr.href, callback=self.detail_page)
+    <span class="c1">#我这里做了一个二级抓取,第一级为日期分类</span>
+    <span class="nd">@config</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">10</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">second_index_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">doc</span><span class="p">(</span><span class="s1">&#39;.permalink[href^=&quot;http&quot;]&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^http://blog.codingnow.com&quot;</span><span class="p">,</span> <span class="n">each</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">each</span><span class="o">.</span><span class="n">attr</span><span class="o">.</span><span class="n">href</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">detail_page</span><span class="p">)</span>
 
-     #详情页我只抓了title和url.这里也可以分析正文
-    @config(priority=2)
-    def detail_page(self, response):
-        return {
-            &quot;url&quot;: response.url,
-            &quot;title&quot;: response.doc('title').text(),
-        }</code></pre>
+     <span class="c1">#详情页我只抓了title和url.这里也可以分析正文</span>
+    <span class="nd">@config</span><span class="p">(</span><span class="n">priority</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">detail_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+            <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">doc</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(),</span>
+        <span class="p">}</span>
+</pre></div>
 
 
-<p><img alt="spider_result.png" src="../../_static/spider_result.png" /></p>
+<p><img alt="spider_result.png" src="/_static/spider_result.png" /></p>
 <p><a href="http://demo.pyspider.org/">http://demo.pyspider.org/</a></p>
 <h2 id="scrapy">scrapy<a class="headerlink" href="#scrapy" title="Permanent link">&para;</a></h2>
 <p><code>doc</code> : <a href="http://doc.scrapy.org/en/0.24/">http://doc.scrapy.org/en/0.24/</a></p>
 <h3 id="scrapy_1">安装scrapy<a class="headerlink" href="#scrapy_1" title="Permanent link">&para;</a></h3>
 <p>liux安装</p>
-<pre class="codehilite"><code class="language-shell">pip install scrapy</code></pre>
+<div class="codehilite"><pre><span></span>pip install scrapy
+</pre></div>
 
 
 <p>windows上安装
 <a href="https://pypi.python.org/packages/2.7/T/Twisted/Twisted-13.0.0.win32-py2.7.msi">Twisted</a>
 <a href="https://pypi.python.org/packages/cb/b6/848494ec3987338fada4c33644300f43f038490bc34700ce4494d9c7baa0/lxml-3.5.0.win32-py2.7.exe#md5=3fb7a9fb71b7d0f53881291614bd323c">lxml</a></p>
-<pre class="codehilite"><code class="language-shell">#Twisted， lxml先下载编译好的包安装再安装scrapy
-pip install scrapy</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1">#Twisted， lxml先下载编译好的包安装再安装scrapy</span>
+pip install scrapy
+</pre></div>
 
 
 <h3 id="_5">创建工程<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p><code>scrapy startproject codeingnow</code></p>
 <p>结构如下:</p>
-<pre class="codehilite"><code class="language-shell">codeingnow
-│  scrapy.cfg  # 项目配置文件
+<div class="codehilite"><pre><span></span>codeingnow
+│  scrapy.cfg  <span class="c1"># 项目配置文件</span>
 └─codeingnow
-    │  items.py #项目items文件
-    │  pipelines.py #项目管道文件
-    │  settings.py #项目配置文件
-    └─spiders</code></pre>
+    │  items.py <span class="c1">#项目items文件</span>
+    │  pipelines.py <span class="c1">#项目管道文件</span>
+    │  settings.py <span class="c1">#项目配置文件</span>
+    └─spiders
+</pre></div>
 
 
 <p>在<code>spiders</code>创建爬虫程序 <code>codeingnow_scrapy.py</code> </p>
-<pre class="codehilite"><code class="language-py"># -*- coding: utf-8 -*-
-import scrapy
-class CodeingNowSpider(scrapy.Spider):
-    name = 'codeingnow'
-    start_urls = ['http://blog.codingnow.com/']
+<div class="codehilite"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="k">class</span> <span class="nc">CodeingNowSpider</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;codeingnow&#39;</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://blog.codingnow.com/&#39;</span><span class="p">]</span>
 
-    def parse(self, response):
-        for url in response.css('div[class*=module-archives]  a::attr(href)').re('^http://blog.codingnow.com.*/$'):
-            yield scrapy.Request(url, self.parse_content_url)
-            # break
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;div[class*=module-archives]  a::attr(href)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">re</span><span class="p">(</span><span class="s1">&#39;^http://blog.codingnow.com.*/$&#39;</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_content_url</span><span class="p">)</span>
+            <span class="c1"># break</span>
 
-    def parse_content_url(self, response):
-        for content_url in response.css('a[class*=permalink]::attr(href)').extract():
-            yield {'content_url': content_url}</code></pre>
+    <span class="k">def</span> <span class="nf">parse_content_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">content_url</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;a[class*=permalink]::attr(href)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract</span><span class="p">():</span>
+            <span class="k">yield</span> <span class="p">{</span><span class="s1">&#39;content_url&#39;</span><span class="p">:</span> <span class="n">content_url</span><span class="p">}</span>
+</pre></div>
 
 
 <ul>
 <li>
 <p>直接运行spider:<code>scrapy runspider codeingnow_scrapy.py</code>
-<img alt="scrapy.png" src="../../_static/scrapy.png" /></p>
+<img alt="scrapy.png" src="/_static/scrapy.png" /></p>
 </li>
 <li>
 <p>在工程目录中运行,并导出数据为json
 <code>scrapy crawl codeingnow -o items.json -t json</code>
 结果:
-<img alt="scrapy.png" src="../../_static/scrapy_json.png" /></p>
+<img alt="scrapy.png" src="/_static/scrapy_json.png" /></p>
 </li>
 </ul>
                 
@@ -2007,6 +1590,8 @@ class CodeingNowSpider(scrapy.Spider):
               
               
                 
+
+
               
             </article>
           </div>
@@ -2026,7 +1611,7 @@ class CodeingNowSpider(scrapy.Spider):
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Previous
+                  后退
                 </span>
                 django
               </span>
@@ -2038,7 +1623,7 @@ class CodeingNowSpider(scrapy.Spider):
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Next
+                  前进
                 </span>
                 消息队列
               </span>
@@ -2056,13 +1641,13 @@ class CodeingNowSpider(scrapy.Spider):
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright (c) 2016 farwmarth
+            Copyright &copy; 2016 - 2018 farwmarth
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -2074,8 +1659,26 @@ class CodeingNowSpider(scrapy.Spider):
       
     </div>
     
-      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
-      <script>app.initialize({url:{base:"../.."}})</script>
+      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     

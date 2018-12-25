@@ -1,10 +1,16 @@
 
+
+
+
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="farwmarth’s document">
       
       
         <link rel="canonical" href="http://learndocs.farwmarth.com/makefile/introduction/">
@@ -13,9 +19,26 @@
         <meta name="author" content="farwmarth">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+        <meta name="lang:clipboard.copy" content="复制">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
       
@@ -23,32 +46,35 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
-    
-    
       
         
         
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <meta name="theme-color" content="#546e7a">
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue-gray">
   
     <svg class="md-svg">
       <defs>
@@ -56,52 +82,62 @@
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#makefile" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <a href="../.." title="farwmarth’s note" class="md-icon md-icon--home md-header-nav__button">
-          </a>
-        
+        <a href="http://learndocs.farwmarth.com/" title="farwmarth’s note" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  MakeFile
-                </span>
-              
+              <span class="md-header-nav__topic">
+                farwmarth’s note
+              </span>
+              <span class="md-header-nav__topic">
+                makefile介绍
+              </span>
             
-            makefile介绍
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
-  <div class="md-search__inner">
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
-            Type to start searching
+          <div class="md-search-result__meta">
+            键入以开始搜索
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -109,18 +145,17 @@
     </div>
   </div>
 </div>
+          
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source">
-          
-        </div>
-      </div>
+      
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+        
       
       
       <main class="md-main">
@@ -131,10 +166,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-icon md-icon--home md-nav__button"></i>
-    
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://learndocs.farwmarth.com/" title="farwmarth’s note" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
     farwmarth’s note
   </label>
   
@@ -162,10 +199,82 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      数据结构与算法
+      游戏服务器
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        游戏服务器
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      skynet
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        skynet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../game_server/skynet/skynet_intro/" title="skynet简介" class="md-nav__link">
+      skynet简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../game_server/skynet/skynet_build/" title="skynet快速入门" class="md-nav__link">
+      skynet快速入门
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      数据结构与算法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
         数据结构与算法
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -195,13 +304,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-4">
       c++基础
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         c++基础
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -291,13 +400,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -627,6 +736,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/py_exceptions/" title="疑难杂症" class="md-nav__link">
+      疑难杂症
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -639,13 +760,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       lua
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         lua
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -675,13 +796,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       swift
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         swift
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -711,13 +832,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       php
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         php
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -747,13 +868,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       git
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         git
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -855,13 +976,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-10">
       Vim编辑器
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-10">
         Vim编辑器
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -876,558 +997,6 @@
     <a href="../../ide/vim/" title="vim" class="md-nav__link">
       vim
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Atom编辑器
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Atom编辑器
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/" title="atom" class="md-nav__link">
-      atom
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2">
-    
-    <label class="md-nav__link" for="nav-10-2">
-      新手入门
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-2">
-        新手入门
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.1-Why-Atom/" title="为什么选择Atom？" class="md-nav__link">
-      为什么选择Atom？
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.2-Installing-Atom/" title="安装Atom" class="md-nav__link">
-      安装Atom
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.3-Atom-Basics/" title="Atom基础" class="md-nav__link">
-      Atom基础
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/1.4-Summary/" title="小结" class="md-nav__link">
-      小结
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-3" type="checkbox" id="nav-10-3">
-    
-    <label class="md-nav__link" for="nav-10-3">
-      使用Atom
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-3">
-        使用Atom
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.1-Atom-Packages/" title="Atom中的包" class="md-nav__link">
-      Atom中的包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.2-Moving-in-Atom/" title="在Atom中移动" class="md-nav__link">
-      在Atom中移动
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.3-Atom-Selections/" title="文本选择" class="md-nav__link">
-      文本选择
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.4-Editing-and-Deleting-Text/" title="编辑和删除文本" class="md-nav__link">
-      编辑和删除文本
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.5-Find-and-Replace/" title="查找和替换" class="md-nav__link">
-      查找和替换
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.6-Snippets/" title="代码段" class="md-nav__link">
-      代码段
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.7-Autocomplete/" title="自动补全" class="md-nav__link">
-      自动补全
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.8-Folding/" title="折叠" class="md-nav__link">
-      折叠
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.9-Panes/" title="面板" class="md-nav__link">
-      面板
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.10-Grammar/" title="语法" class="md-nav__link">
-      语法
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.11-Version-Control-in-Atom/" title="Atom中的版本控制" class="md-nav__link">
-      Atom中的版本控制
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.12-Writing-in-Atom/" title="在Atom中写作" class="md-nav__link">
-      在Atom中写作
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.13-Basic-Customization/" title="基本的自定义" class="md-nav__link">
-      基本的自定义
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/2.14-Summary/" title="小结" class="md-nav__link">
-      小结
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4">
-    
-    <label class="md-nav__link" for="nav-10-4">
-      Hacking Atom
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-4">
-        Hacking Atom
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.1-Tools-of-the-Trade/" title="所需工具" class="md-nav__link">
-      所需工具
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.2-The-Init-File/" title="初始文件" class="md-nav__link">
-      初始文件
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.3-Package-Word-Count/" title="字数统计包" class="md-nav__link">
-      字数统计包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.4-Package-Modifying-Text/" title="文本处理包" class="md-nav__link">
-      文本处理包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.5-Creating-a-Theme/" title="创建主题" class="md-nav__link">
-      创建主题
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.6-Iconography/" title="图标" class="md-nav__link">
-      图标
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.7-Debugging/" title="调试" class="md-nav__link">
-      调试
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.8-Writing-specs/" title="编写 spec" class="md-nav__link">
-      编写 spec
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/3.9-Converting-from-TextMate/" title="从Textmate中转换" class="md-nav__link">
-      从Textmate中转换
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-5" type="checkbox" id="nav-10-5">
-    
-    <label class="md-nav__link" for="nav-10-5">
-      在Atom背后
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-10-5">
-        在Atom背后
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.1-Configuration-API/" title="配置API" class="md-nav__link">
-      配置API
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.2-Keymaps-In-Depth/" title="深入键表（keymap）" class="md-nav__link">
-      深入键表（keymap）
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.3-Scoped-Settings-Scopes-and-Scope-Descriptors/" title="作用域设置、作用域和作用域描述符" class="md-nav__link">
-      作用域设置、作用域和作用域描述符
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.4-Serialization-in-Atom/" title="Atom中的序列化" class="md-nav__link">
-      Atom中的序列化
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.5-Developing-Node-Modules/" title="开发Node模块" class="md-nav__link">
-      开发Node模块
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.6-Interacting-With-Other-Packages-Via-Services/" title="通过服务和其它包交互" class="md-nav__link">
-      通过服务和其它包交互
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.7-Maintaining-Your-Packages/" title="维护你的包" class="md-nav__link">
-      维护你的包
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ide/atom/4.8-Summary/" title="小结" class="md-nav__link">
-      小结
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1514,7 +1083,7 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
@@ -1669,10 +1238,11 @@ makefile介绍
 <h1 id="makefile">makefile的规则<a class="headerlink" href="#makefile" title="Permanent link">&para;</a></h1>
 <p>在讲述这个makefile之前，还是让我们先来粗略地看一看makefile的规则。</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>target ... : prerequisites ...
+<div class="codehilite"><pre><span></span>target ... : prerequisites ...
     command
     ...
-    ...</code></pre>
+    ...
+</pre></div>
 
 
 <p>target
@@ -1684,7 +1254,8 @@ makefile介绍
     该target要执行的命令（任意的shell命令）</p>
 <p>这是一个文件的依赖关系，也就是说，target这一个或多个的目标文件依赖于prerequisites中的文件，其生成规则定义在command中。说白一点就是说:</p>
 <p>::</p>
-<pre class="codehilite"><code>prerequisites中如果有一个以上的文件比target文件要新的话，command所定义的命令就会被执行。</code></pre>
+<div class="codehilite"><pre><span></span>prerequisites中如果有一个以上的文件比target文件要新的话，command所定义的命令就会被执行。
+</pre></div>
 
 
 <p>这就是makefile的规则，也就是makefile中最核心的内容。</p>
@@ -1692,30 +1263,31 @@ makefile介绍
 <h1 id="_1">一个示例<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>正如前面所说，如果一个工程有3个头文件和8个c文件，为了完成前面所述的那三个规则，我们的makefile应该是下面的这个样子的。</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>edit : main.o kbd.o command.o display.o \
-        insert.o search.o files.o utils.o
-    cc -o edit main.o kbd.o command.o display.o \
-        insert.o search.o files.o utils.o
+<div class="codehilite"><pre><span></span><span class="n">edit</span> <span class="o">:</span> <span class="n">main</span><span class="o">.</span><span class="na">o</span> <span class="n">kbd</span><span class="o">.</span><span class="na">o</span> <span class="n">command</span><span class="o">.</span><span class="na">o</span> <span class="n">display</span><span class="o">.</span><span class="na">o</span> <span class="o">\</span>
+        <span class="n">insert</span><span class="o">.</span><span class="na">o</span> <span class="n">search</span><span class="o">.</span><span class="na">o</span> <span class="n">files</span><span class="o">.</span><span class="na">o</span> <span class="n">utils</span><span class="o">.</span><span class="na">o</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">o</span> <span class="n">edit</span> <span class="n">main</span><span class="o">.</span><span class="na">o</span> <span class="n">kbd</span><span class="o">.</span><span class="na">o</span> <span class="n">command</span><span class="o">.</span><span class="na">o</span> <span class="n">display</span><span class="o">.</span><span class="na">o</span> <span class="o">\</span>
+        <span class="n">insert</span><span class="o">.</span><span class="na">o</span> <span class="n">search</span><span class="o">.</span><span class="na">o</span> <span class="n">files</span><span class="o">.</span><span class="na">o</span> <span class="n">utils</span><span class="o">.</span><span class="na">o</span>
 
-main.o : main.c defs.h
-    cc -c main.c
-kbd.o : kbd.c defs.h command.h
-    cc -c kbd.c
-command.o : command.c defs.h command.h
-    cc -c command.c
-display.o : display.c defs.h buffer.h
-    cc -c display.c
-insert.o : insert.c defs.h buffer.h
-    cc -c insert.c
-search.o : search.c defs.h buffer.h
-    cc -c search.c
-files.o : files.c defs.h buffer.h command.h
-    cc -c files.c
-utils.o : utils.c defs.h
-    cc -c utils.c
-clean :
-    rm edit main.o kbd.o command.o display.o \
-        insert.o search.o files.o utils.o</code></pre>
+<span class="n">main</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">main</span><span class="o">.</span><span class="na">c</span> <span class="n">defs</span><span class="o">.</span><span class="na">h</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">c</span> <span class="n">main</span><span class="o">.</span><span class="na">c</span>
+<span class="n">kbd</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">kbd</span><span class="o">.</span><span class="na">c</span> <span class="n">defs</span><span class="o">.</span><span class="na">h</span> <span class="n">command</span><span class="o">.</span><span class="na">h</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">c</span> <span class="n">kbd</span><span class="o">.</span><span class="na">c</span>
+<span class="n">command</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">command</span><span class="o">.</span><span class="na">c</span> <span class="n">defs</span><span class="o">.</span><span class="na">h</span> <span class="n">command</span><span class="o">.</span><span class="na">h</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">c</span> <span class="n">command</span><span class="o">.</span><span class="na">c</span>
+<span class="n">display</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">display</span><span class="o">.</span><span class="na">c</span> <span class="n">defs</span><span class="o">.</span><span class="na">h</span> <span class="n">buffer</span><span class="o">.</span><span class="na">h</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">c</span> <span class="n">display</span><span class="o">.</span><span class="na">c</span>
+<span class="n">insert</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">insert</span><span class="o">.</span><span class="na">c</span> <span class="n">defs</span><span class="o">.</span><span class="na">h</span> <span class="n">buffer</span><span class="o">.</span><span class="na">h</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">c</span> <span class="n">insert</span><span class="o">.</span><span class="na">c</span>
+<span class="n">search</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">search</span><span class="o">.</span><span class="na">c</span> <span class="n">defs</span><span class="o">.</span><span class="na">h</span> <span class="n">buffer</span><span class="o">.</span><span class="na">h</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">c</span> <span class="n">search</span><span class="o">.</span><span class="na">c</span>
+<span class="n">files</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">files</span><span class="o">.</span><span class="na">c</span> <span class="n">defs</span><span class="o">.</span><span class="na">h</span> <span class="n">buffer</span><span class="o">.</span><span class="na">h</span> <span class="n">command</span><span class="o">.</span><span class="na">h</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">c</span> <span class="n">files</span><span class="o">.</span><span class="na">c</span>
+<span class="n">utils</span><span class="o">.</span><span class="na">o</span> <span class="o">:</span> <span class="n">utils</span><span class="o">.</span><span class="na">c</span> <span class="n">defs</span><span class="o">.</span><span class="na">h</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">c</span> <span class="n">utils</span><span class="o">.</span><span class="na">c</span>
+<span class="n">clean</span> <span class="o">:</span>
+    <span class="n">rm</span> <span class="n">edit</span> <span class="n">main</span><span class="o">.</span><span class="na">o</span> <span class="n">kbd</span><span class="o">.</span><span class="na">o</span> <span class="n">command</span><span class="o">.</span><span class="na">o</span> <span class="n">display</span><span class="o">.</span><span class="na">o</span> <span class="o">\</span>
+        <span class="n">insert</span><span class="o">.</span><span class="na">o</span> <span class="n">search</span><span class="o">.</span><span class="na">o</span> <span class="n">files</span><span class="o">.</span><span class="na">o</span> <span class="n">utils</span><span class="o">.</span><span class="na">o</span>
+</pre></div>
 
 
 <p>反斜杠（ <code>\</code>
@@ -1764,10 +1336,11 @@ clean :
 <h1 id="makefile_1">makefile中使用变量<a class="headerlink" href="#makefile_1" title="Permanent link">&para;</a></h1>
 <p>在上面的例子中，先让我们看看edit的规则：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>edit : main.o kbd.o command.o display.o \
-        insert.o search.o files.o utils.o
-    cc -o edit main.o kbd.o command.o display.o \
-        insert.o search.o files.o utils.o</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">edit</span> <span class="o">:</span> <span class="n">main</span><span class="o">.</span><span class="na">o</span> <span class="n">kbd</span><span class="o">.</span><span class="na">o</span> <span class="n">command</span><span class="o">.</span><span class="na">o</span> <span class="n">display</span><span class="o">.</span><span class="na">o</span> <span class="o">\</span>
+        <span class="n">insert</span><span class="o">.</span><span class="na">o</span> <span class="n">search</span><span class="o">.</span><span class="na">o</span> <span class="n">files</span><span class="o">.</span><span class="na">o</span> <span class="n">utils</span><span class="o">.</span><span class="na">o</span>
+    <span class="n">cc</span> <span class="o">-</span><span class="n">o</span> <span class="n">edit</span> <span class="n">main</span><span class="o">.</span><span class="na">o</span> <span class="n">kbd</span><span class="o">.</span><span class="na">o</span> <span class="n">command</span><span class="o">.</span><span class="na">o</span> <span class="n">display</span><span class="o">.</span><span class="na">o</span> <span class="o">\</span>
+        <span class="n">insert</span><span class="o">.</span><span class="na">o</span> <span class="n">search</span><span class="o">.</span><span class="na">o</span> <span class="n">files</span><span class="o">.</span><span class="na">o</span> <span class="n">utils</span><span class="o">.</span><span class="na">o</span>
+</pre></div>
 
 
 <p>我们可以看到 <code>.o</code>
@@ -1777,14 +1350,15 @@ clean :
 <code>OBJS</code> ， <code>obj</code> 或是
 <code>OBJ</code>\ ，反正不管什么啦，只要能够表示obj文件就行了。我们在makefile一开始就这样定义：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>objects = main.o kbd.o command.o display.o \
-     insert.o search.o files.o utils.o</code></pre>
+<div class="codehilite"><pre><span></span>objects = main.o kbd.o command.o display.o \
+     insert.o search.o files.o utils.o
+</pre></div>
 
 
 <p>于是，我们就可以很方便地在我们的makefile中以 <code>$(objects)</code>
 的方式来使用这个变量了，于是我们的改良版makefile就变成下面这个样子：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>objects = main.o kbd.o command.o display.o \
+<div class="codehilite"><pre><span></span>objects = main.o kbd.o command.o display.o \
     insert.o search.o files.o utils.o
 
 edit : $(objects)
@@ -1806,7 +1380,8 @@ files.o : files.c defs.h buffer.h command.h
 utils.o : utils.c defs.h
     cc -c utils.c
 clean :
-    rm edit $(objects)</code></pre>
+    rm edit $(objects)
+</pre></div>
 
 
 <p>于是如果有新的 <code>.o</code> 文件加入，我们只需简单地修改一下 <code>objects</code>
@@ -1822,7 +1397,7 @@ clean :
 <code>cc -c whatever.c</code>
 也会被推导出来，于是，我们的makefile再也不用写得这么复杂。我们的新makefile又出炉了。</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>objects = main.o kbd.o command.o display.o \
+<div class="codehilite"><pre><span></span>objects = main.o kbd.o command.o display.o \
     insert.o search.o files.o utils.o
 
 edit : $(objects)
@@ -1839,7 +1414,8 @@ utils.o : defs.h
 
 .PHONY : clean
 clean :
-    rm edit $(objects)</code></pre>
+    rm edit $(objects)
+</pre></div>
 
 
 <p>这种方法，也就是make的“隐晦规则”。上面文件内容中， <code>.PHONY</code> 表示
@@ -1850,7 +1426,7 @@ clean :
 的依赖就有点不爽，那么多的重复的 <code>.h</code>
 ，能不能把其收拢起来，好吧，没有问题，这个对于make来说很容易，谁叫它提供了自动推导命令和文件的功能呢？来看看最新风格的makefile吧。</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>objects = main.o kbd.o command.o display.o \
+<div class="codehilite"><pre><span></span>objects = main.o kbd.o command.o display.o \
     insert.o search.o files.o utils.o
 
 edit : $(objects)
@@ -1862,7 +1438,8 @@ display.o insert.o search.o files.o : buffer.h
 
 .PHONY : clean
 clean :
-    rm edit $(objects)</code></pre>
+    rm edit $(objects)
+</pre></div>
 
 
 <p>这种风格，让我们的makefile变得很简单，但我们的文件依赖关系就显得有点凌乱了。鱼和熊掌不可兼得。还看你的喜好了。我是不喜欢这种风格的，一是文件的依赖关系看不清楚，二是如果文件一多，要加入几个新的
@@ -1871,15 +1448,17 @@ clean :
 <p>每个Makefile中都应该写一个清空目标文件（ <code>.o</code>
 和执行文件）的规则，这不仅便于重编译，也很利于保持文件的清洁。这是一个“修养”（呵呵，还记得我的《编程修养》吗）。一般的风格都是：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>clean:
-    rm edit $(objects)</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">clean</span><span class="o">:</span>
+    <span class="n">rm</span> <span class="n">edit</span> <span class="n">$</span><span class="o">(</span><span class="n">objects</span><span class="o">)</span>
+</pre></div>
 
 
 <p>更为稳健的做法是：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>.PHONY : clean
-clean :
-    -rm edit $(objects)</code></pre>
+<div class="codehilite"><pre><span></span><span class="na">.PHONY</span> <span class="p">:</span> <span class="no">clean</span>
+<span class="nf">clean</span> <span class="p">:</span>
+    <span class="err">-</span><span class="nf">rm</span> <span class="no">edit</span> <span class="no">$</span><span class="p">(</span><span class="no">objects</span><span class="p">)</span>
+</pre></div>
 
 
 <p>前面说过， <code>.PHONY</code> 表示 <code>clean</code> 是一个“伪目标”。而在 <code>rm</code>
@@ -1910,7 +1489,8 @@ clean :
 ，被包含的文件会原模原样的放在当前文件的包含位置。 <code>include</code>
 的语法是：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>include &lt;filename&gt;</code></pre>
+<div class="codehilite"><pre><span></span>include &amp;lt;filename&amp;gt;
+</pre></div>
 
 
 <p><code>filename</code> 可以是当前操作系统Shell的文件模式（可以包含路径和通配符）。</p>
@@ -1920,12 +1500,14 @@ clean :
 <code>b.mk</code> 、 <code>c.mk</code> ，还有一个文件叫 <code>foo.make</code> ，以及一个变量
 <code>$(bar)</code> ，其包含了 <code>e.mk</code> 和 <code>f.mk</code> ，那么，下面的语句：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>include foo.make *.mk $(bar)</code></pre>
+<div class="codehilite"><pre><span></span>include foo.make *.mk $(bar)
+</pre></div>
 
 
 <p>等价于：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>include foo.make a.mk b.mk c.mk e.mk f.mk</code></pre>
+<div class="codehilite"><pre><span></span>include foo.make a.mk b.mk c.mk e.mk f.mk
+</pre></div>
 
 
 <p>make命令开始时，会找寻 <code>include</code>
@@ -1940,7 +1522,8 @@ clean :
 </ul>
 <p>如果有文件没有找到的话，make会生成一条警告信息，但不会马上出现致命错误。它会继续载入其它的文件，一旦完成makefile的读取，make会再重试这些没有找到，或是不能读取的文件，如果还是不行，make才会出现一条致命信息。如果你想让make不理那些无法读取的文件，而继续执行，你可以在include前加一个减号“-”。如：</p>
 <p>.. code:: makefile</p>
-<pre class="codehilite"><code>-include &lt;filename&gt;</code></pre>
+<div class="codehilite"><pre><span></span>-include &amp;lt;filename&amp;gt;
+</pre></div>
 
 
 <p>其表示，无论include过程中出现什么错误，都不要报错继续执行。和其它版本make兼容的相关命令是sinclude，其作用和这一个是一样的。</p>
@@ -1970,6 +1553,8 @@ clean :
               
               
                 
+
+
               
             </article>
           </div>
@@ -1989,7 +1574,7 @@ clean :
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Previous
+                  后退
                 </span>
                 概述
               </span>
@@ -2001,7 +1586,7 @@ clean :
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Next
+                  前进
                 </span>
                 书写规则
               </span>
@@ -2019,13 +1604,13 @@ clean :
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright (c) 2016 farwmarth
+            Copyright &copy; 2016 - 2018 farwmarth
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -2037,8 +1622,26 @@ clean :
       
     </div>
     
-      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
-      <script>app.initialize({url:{base:"../.."}})</script>
+      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     
