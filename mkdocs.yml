@@ -22,16 +22,13 @@ theme:
 
     # Default values, taken from mkdocs_theme.yml
     language: zh
-    feature:
-        tabs: false
+    features:
     palette:
         primary: 'blue grey'
         accent: 'blue gray'
     font:
         text: Roboto
         code: Roboto Mono
-    logo:
-        icon: "\uE80C"
 
 
 # Extensions
